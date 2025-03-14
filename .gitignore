@@ -3,6 +3,9 @@
 # General
 /_ignore
 _ignore
+/src/assets/font
+/src/assets/img
+/src/assets/vid
 
 # Compiled output
 /dist
