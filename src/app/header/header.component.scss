@@ -1,0 +1,7 @@
+@import './../../assets/styles/mixins.scss';
+
+header {
+    @include dFlex(center, center);
+    background-color: rgb(255, 174, 0);
+    z-index: 20;
+}

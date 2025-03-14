@@ -1,0 +1,6 @@
+@import './../../../assets/styles/mixins.scss';
+
+.skills {
+    @include dFlex(center, center);
+    background-color: rgb(0, 255, 179);
+}

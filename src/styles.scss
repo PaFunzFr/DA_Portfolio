@@ -11,7 +11,7 @@ body {
 
 *{
     scrollbar-width: thin;
-    scrollbar-color: #FD5B4F #dddddd00;
+    scrollbar-color: $col-des-main $col-bg-main;
 }
 
 ::-webkit-scrollbar {
@@ -20,11 +20,23 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #FD5B4F;
-    border-radius: 2px;
+    background-color: $col-des-main;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #00000000;
-    border: 1px solid #00000000;
+    background-color: $col-bg-main;
+    border: 1px solid $col-bg-main;
+}
+
+// color classes
+.col-des {
+    color: $col-des-main;
+}
+
+.col-dev {
+    color: $col-dev-main;
+}
+
+.col-bg-main {
+    background-color: $col-bg-main;
 }

@@ -1,0 +1,6 @@
+@import './../../../assets/styles/mixins.scss';
+
+.contact {
+    @include dFlex(center, center);
+    background-color: rgb(34, 255, 0);
+}

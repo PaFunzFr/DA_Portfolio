@@ -1,0 +1,6 @@
+@import './../../../assets/styles/mixins.scss';
+
+.projects {
+    @include dFlex(center, center);
+    background-color: blue;
+}
