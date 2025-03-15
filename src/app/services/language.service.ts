@@ -10,7 +10,7 @@ export class LanguageService {
   private translation: { [key:string]: any} = {
     en: {
       landingPage: {
-        welcome: 'Welcome, I am Patrick,',
+        welcome: 'Hello, I am Patrick Frey,',
         title: `<span class="col-dev">Web-Developer</span> and<br>
                 <span class="col-des">Designer</span> with an <br>
                 architectural Background`,
@@ -19,7 +19,7 @@ export class LanguageService {
     },
     de: {
       landingPage: {
-        welcome: 'Hallo, Ich bin Patrick,',
+        welcome: 'Hallo, Ich bin Patrick Frey,',
         title: `<span class="col-dev">Web-Developer</span> und<br>
                 <span class="col-des">Designer</span> mit einem <br>
                 Architektur Hintergrund`,
@@ -28,6 +28,7 @@ export class LanguageService {
   }
 }
 
+  //used in html tags
   getTranslation(section: string, content: string): string {
     const language = this.currentLanguage(); // get signal
     return this.translation[language][section][content];

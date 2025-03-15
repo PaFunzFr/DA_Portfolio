@@ -1,0 +1,5 @@
+@import './../../assets/styles/mixins.scss';
+
+section {
+    @include header(sticky, $zi: 20);
+}

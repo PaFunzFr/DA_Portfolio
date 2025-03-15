@@ -3,4 +3,5 @@
 .about {
     @include dFlex(center, center);
     background-color: rgb(255, 0, 170);
+    height: 300vh;
 }

@@ -1,7 +1,19 @@
 @import './../../assets/styles/mixins.scss';
 
 header {
-    @include dFlex(center, center);
-    background-color: rgb(255, 174, 0);
-    z-index: 20;
+    @include dFlex(space-between, center, 0);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    max-width: 1440px;
+
+    .main-logo {
+        @include dFlex(center, center, 15px);
+    }
+
+    nav {
+        @include dFlex(center, center, 15px);
+    }
 }

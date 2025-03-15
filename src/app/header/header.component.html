@@ -1,1 +1,15 @@
-<header>header works!</header>
+<header>
+    <div class="main-logo">
+        <p>Logo</p>
+        <p>Patrick <br> Frey</p>
+    </div>
+    <nav>
+        <a>Home</a>
+        <a>About</a>
+        <a>Skills</a>
+        <a>Contact</a>
+    </nav>
+    <section class="lang-toggle">
+        <button (click)="toggleLang()">{{ languages }}</button>
+    </section>
+</header>
