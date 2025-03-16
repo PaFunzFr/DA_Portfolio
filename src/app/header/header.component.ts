@@ -10,7 +10,8 @@ import { LanguageService } from '../services/language.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  languages = inject(LanguageService)
+  languages = inject(LanguageService);
+  currentLanguage = this.languages.currentLanguage;
 
     toggleLang(): void {
       this.languages.toggleLanguage();
