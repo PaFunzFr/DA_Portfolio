@@ -2,6 +2,45 @@
 
 .about {
     @include dFlex(center, center);
-    background-color: rgb(255, 0, 170);
-    height: 300vh;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .about-title {
+        @include dFlex(center, center);
+
+        .contact-ref {
+            @include dFlex(center, center, 0, absolute);
+            right: 0;
+        }
+    }
+
+    .about-content {
+        @include dFlex(center, center, 10%);
+        .about-left,
+        .about-right {
+            flex: 1;
+        }
+
+        .about-left {
+            @include dFlex(space-between, center);
+
+            >figure {
+                @include dFlex(center, center);
+                flex-direction: column;
+            }
+        }
+
+        .about-right {
+            min-width: 120px;  
+            max-width: 50%;
+            text-align: justify;
+        
+            > p {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+        }
+    }
+
 }

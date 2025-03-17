@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-about',
@@ -9,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  languages = inject(LanguageService);
+
+  get aboutTitle(): string {
+    return this.languages.getTranslation('about' , 'title');
+  }
+
+  get aboutText(): string {
+    return this.languages.getTranslation('about' , 'text');
+  }
 }

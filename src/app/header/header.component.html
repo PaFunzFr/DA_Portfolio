@@ -1,16 +1,20 @@
 <header>
     <div class="main-logo">
-        <p>Logo</p>
-        <p>Patrick <br> Frey</p>
+        <img src="./assets/img/header/logo.png" alt="">
+        <div class="header-name white-roboto">
+            <p>Patrick Frey</p>
+            <p>Web-Developer</p>
+        </div>
     </div>
-    <nav>
+    <nav class="white-roboto">
         <a>Home</a>
         <a>About</a>
         <a>Skills</a>
         <a>Contact</a>
+        <section class="lang-toggle">
+            <button (click)="toggleLang('en')">EN</button>
+            <button (click)="toggleLang('de')">DE</button>
+        </section>
     </nav>
-    <section class="lang-toggle">
-        <button (click)="toggleLang('en')">EN</button>
-        <button (click)="toggleLang('de')">DE</button>
-    </section>
+
 </header>

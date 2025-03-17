@@ -3,7 +3,8 @@
 
 .header {
     @include header(fixed);
-    border-bottom: 1px solid $col-bg-main;
+    border-bottom: 3px solid $col-bg-main;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.411));
 }
 
 .landing-page {

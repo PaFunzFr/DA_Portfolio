@@ -1,4 +1,5 @@
 @import './../../assets/styles/mixins.scss';
+@import './../../assets/styles/colors.scss';
 
 header {
     @include dFlex(space-between, center, 0);
@@ -8,9 +9,30 @@ header {
     height: 100%;
     flex: 1;
     max-width: 1440px;
+    padding: 0 20px;
 
     .main-logo {
-        @include dFlex(center, center, 15px);
+        @include dFlex(center, center, 8px);
+        >img {
+            width: 45px;
+            background: $col-bg-main;
+            border: 1px solid $col-bg-main;
+            border-radius: 50%;
+        }
+        .header-name {
+            >p {
+                filter: drop-shadow(0 0 3px $col-bg-main);
+            }
+            &>p:first-child {
+                font-family: 'Patrick Hand';
+                font-size: 21px;
+            }
+            &>p:nth-child(2) {
+                margin-top: -4px;
+                font-size: 12px;
+                color: lightgrey;
+            }
+        }
     }
 
     nav {
