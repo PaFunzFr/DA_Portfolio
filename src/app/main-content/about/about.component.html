@@ -1,6 +1,6 @@
 <section class="about">
     <div class="about-title">
-        <h2>{{ aboutTitle }}</h2>
+        <h3>{{ aboutTitle }}</h3>
         <nav class="contact-ref">
             @for (ref of socialReference.socialRefs; track ref.title) {
                 <a [href]="ref.url"><img [src]='ref.imgSource' [alt]='ref.title'></a>

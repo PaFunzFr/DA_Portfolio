@@ -1,4 +1,4 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, inject, signal, HostListener } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { HeaderComponent } from '../../header/header.component';
 
@@ -11,6 +11,7 @@ import { HeaderComponent } from '../../header/header.component';
 })
 export class LandingPageComponent {
 
+  scrollY = signal<number>(window.scrollY);
   // set texts
   languages = inject(LanguageService);
 
@@ -22,7 +23,6 @@ export class LandingPageComponent {
     return this.languages.getTranslation('landingPage', 'title');
   }
 
-
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     const viewportHeight = window.innerHeight; // => 100vh
@@ -31,4 +31,18 @@ export class LandingPageComponent {
     }
     return viewportHeight + 1; // 1 => little offset
   }
+
+  setFontSize(): string {
+    return window.scrollY / 10 + 'px';
+  }
+
+  setFontOpacity(): number {
+    const viewportHeight = window.innerHeight; // => 100vh
+    if (window.scrollY >= 2.3 * viewportHeight) {
+      return 0;
+    } else {
+      return 1
+    }
+  }
+
 }

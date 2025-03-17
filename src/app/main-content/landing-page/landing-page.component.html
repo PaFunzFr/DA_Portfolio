@@ -3,10 +3,16 @@
         <app-header></app-header>
     </header>
     <div class="intro-message">
-        <h2>{{ welcome }}</h2>
-        <h1 [innerHTML]="title"></h1>
+        <h1>{{ welcome }}</h1>
+        <h2 [innerHTML]="title"></h2>
     </div>
     <div class="welcome-overlay col-bg-main" [style]="{ height: onScroll() + 'px' }">
-        <h2 class="welcome-title">Welcome</h2>
+        <p class="welcome-title"
+            [style]="{
+                fontSize: setFontSize(),
+                opacity: setFontOpacity()
+            }">
+            Welcome
+        </p>
     </div>
 </section>

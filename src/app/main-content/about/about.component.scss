@@ -3,19 +3,16 @@
 .about {
     @include dFlex(center, center);
     flex-direction: column;
-    max-width: 1440px;
+    max-width: 1480px;
+    padding: 0 20px;
     margin: 70px auto;
 
     .about-title {
         @include dFlex(center, center);
         width: 100%;
-        >h2 {
-            color: white;
-            font-size: 40px;
-            margin-bottom: 40px;
-        }
+
         .contact-ref {
-            @include dFlex(center, center, 8px, absolute);
+            @include dFlex(center, center, 12px, absolute);
             right: 0;
             top: 0;
         }
@@ -29,13 +26,13 @@
         }
 
         .about-left {
-            @include dFlex(space-between, center);
+            @include dFlex(space-between, flex-end);
 
             >figure {
                 >img {
                     height: 80px;
                 }
-                @include dFlex(center, center);
+                @include dFlex(center, center, 5px);
                 flex-direction: column;
                 text-align: center;
             }

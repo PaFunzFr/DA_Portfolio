@@ -1,12 +1,25 @@
+@import './colors.scss';
+
 h1 {
-    font-size: 40px;
-    font-family: 'Roboto';
+    font-size: 60px;
+    font-family: 'Patrick Hand';
     font-weight: 400;
+    color: $col-bg-main;
 }
 
 h2 {
+    font-family: 'Roboto';
+    font-size: 40px;
+    color: $col-bg-main;
+}
+
+h3 {
     font-family: 'Patrick Hand';
-    font-size: 30px;
+    color: white;
+    font-size: 50px;
+    line-height: 50px;
+    margin: -8px 0 40px 0;
+    padding: 0;
 }
 
 .white-roboto {
