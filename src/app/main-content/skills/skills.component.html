@@ -1,4 +1,23 @@
 <section class="skills">
-    <p>skills works!</p>
+    <h3>Skills</h3>
+    <div class="skill-container">
+        <img src="./assets/img/skills/bg_skills.png" alt="">
+        <div class="skills-des">
+            @for (skill of skillsDes; track skill) {
+                <div class="skill">
+                    <img [src]="skill.imgSource" alt="">
+                    <p [innerHTML]="skill.title"></p>
+                </div>
+            } 
+        </div>
+        <div class="skills-dev">
+            @for (skill of skillsDev; track skill) {
+                <div class="skill">
+                    <img [src]="skill.imgSource" alt="">
+                    <p [innerHTML]="skill.title"></p>
+                </div>
+            } 
+        </div>
+    </div>
 </section>
 

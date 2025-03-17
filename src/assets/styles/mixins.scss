@@ -16,3 +16,9 @@
     background-color: $col-bg-header;
     z-index: $zi;
 }
+
+@mixin sectionPaddingMargin() {
+    max-width: 1480px;
+    padding: 80px 20px;
+    margin: 0px auto;
+}

@@ -3,10 +3,7 @@
 .about {
     @include dFlex(center, center);
     flex-direction: column;
-    max-width: 1480px;
-    padding: 0 20px;
-    margin: 70px auto;
-
+    @include sectionPaddingMargin();
     .about-title {
         @include dFlex(center, center);
         width: 100%;

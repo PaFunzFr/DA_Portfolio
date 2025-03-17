@@ -3,6 +3,7 @@ import { Injectable, signal } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class LanguageService {
 
   currentLanguage = signal<string>('en'); // set signal
@@ -60,8 +61,8 @@ export class LanguageService {
       landingPage: {
         welcome: 'Hallo, Ich bin Patrick Frey,',
         title: `<span class="col-dev">Web-Developer</span> und<br>
-                <span class="col-des">Designer</span> mit einem <br>
-                Architektur Hintergrund`,
+                <span class="col-des">Designer</span> mit <br>
+                Hintergrund als Architekt`,
         scroll: 'scroll down'
     },
     hero: {
