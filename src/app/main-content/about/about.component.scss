@@ -4,14 +4,20 @@
     @include dFlex(center, center);
     flex-direction: column;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 
     .about-title {
         @include dFlex(center, center);
-
+        width: 100%;
+        >h2 {
+            color: white;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
         .contact-ref {
-            @include dFlex(center, center, 0, absolute);
+            @include dFlex(center, center, 8px, absolute);
             right: 0;
+            top: 0;
         }
     }
 
@@ -26,8 +32,12 @@
             @include dFlex(space-between, center);
 
             >figure {
+                >img {
+                    height: 80px;
+                }
                 @include dFlex(center, center);
                 flex-direction: column;
+                text-align: center;
             }
         }
 
