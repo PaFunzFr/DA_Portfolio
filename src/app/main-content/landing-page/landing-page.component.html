@@ -3,7 +3,7 @@
         <app-header></app-header>
     </header>
     <div class="intro-message">
-        <h1>{{ welcome }}</h1>
+        <h1>{{ welcomeLanding }}</h1>
         <h2 [innerHTML]="title"></h2>
     </div>
     <div class="welcome-overlay col-bg-main" [style]="{ height: onScroll() + 'px' }">
@@ -12,7 +12,7 @@
                 fontSize: setFontSize(),
                 opacity: setFontOpacity()
             }">
-            Welcome
+            {{ welcomeHero }}
         </p>
     </div>
 </section>

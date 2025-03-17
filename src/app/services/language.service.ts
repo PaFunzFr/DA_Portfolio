@@ -66,7 +66,7 @@ export class LanguageService {
         scroll: 'scroll down'
     },
     hero: {
-      welcome: 'Welcome',
+      welcome: 'Willkommen',
       designer: 'my background as an architect ensures great design for your product',
       developer: 'with passion for clean, elegant and efficient code'
     },

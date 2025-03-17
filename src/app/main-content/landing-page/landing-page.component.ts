@@ -15,12 +15,16 @@ export class LandingPageComponent {
   // set texts
   languages = inject(LanguageService);
 
-  get welcome(): string {
+  get welcomeLanding(): string {
     return this.languages.getTranslation('landingPage' , 'welcome');
   }
 
   get title(): string {
     return this.languages.getTranslation('landingPage', 'title');
+  }
+
+  get welcomeHero(): string {
+    return this.languages.getTranslation('hero', 'welcome');
   }
 
   @HostListener('window:scroll', ['$event'])

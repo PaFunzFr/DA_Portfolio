@@ -9,7 +9,8 @@
 .skill-container {
     @include dFlex(center, flex-start, 10%);
     width: 80%;
-    /* max width here */
+    max-width: 1200px;
+
     >img {
         position: absolute;
         opacity: 0.3;
@@ -17,6 +18,7 @@
         height: 100%;
         z-index: 1;
     }
+
     .skills-des,
     .skills-dev {
         flex-wrap: wrap;
@@ -24,11 +26,17 @@
         flex: 1;
         
         .skill {
-            @include dFlex(center, center, 10px);
+            @include dFlex(center, center, 12px);
             flex-direction: column;
             width: 25%;
             color: white;
             font-family: 'Roboto';
+
+            >img {
+                height: 6vw;
+                min-height: 50px;
+                max-height: 75px;
+            }
 
             >p {
                 height: 50px;
@@ -40,6 +48,7 @@
     .skills-des {
         @include dFlex(flex-end, flex-start, 40px);
     }
+
     .skills-dev {
         @include dFlex(flex-start, flex-start, 40px);
     }
