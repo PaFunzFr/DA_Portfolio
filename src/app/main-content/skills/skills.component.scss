@@ -2,7 +2,8 @@
 
 .skills {
     @include dFlex(center, center);
-    @include sectionPaddingMargin();
+    @include maxWidthPadding(80px);
+    margin: 0 auto;
     flex-direction: column;
 }
 

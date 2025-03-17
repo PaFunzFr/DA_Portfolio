@@ -17,8 +17,7 @@
     z-index: $zi;
 }
 
-@mixin sectionPaddingMargin() {
+@mixin maxWidthPadding($pv: 0, $ph: 0) {
     max-width: 1480px;
-    padding: 80px 20px;
-    margin: 0px auto;
+    padding: $pv $ph;
 }
