@@ -13,8 +13,8 @@ export class HeaderComponent {
   languages = inject(LanguageService);
   currentLanguage = this.languages.currentLanguage;
 
-    toggleLang(): void {
-      this.languages.toggleLanguage();
+    toggleLang(newLanguage: string): void {
+      this.languages.toggleLanguage(newLanguage);
     }
   
 }

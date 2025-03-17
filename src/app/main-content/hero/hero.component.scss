@@ -1,9 +1,35 @@
 @import './../../../assets/styles/colors.scss';
+@import './../../../assets/styles/mixins.scss';
+
 .hero {
-    display: flex;
-    position: relative;
+    @include dFlex(center, stretch);
     margin-top: 200vh;
     height: 100vh;
     z-index: 2;
     background: linear-gradient(to top, $col-bg-main 40%, transparent);
+}
+
+.hero-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    overflow: hidden;
+
+    .hero-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: bottom;
+    }
+
+    .hero-img-left {
+        clip-path: inset(0 50% 0 0);
+    }
+
+    .hero-img-right {
+        clip-path: inset(0 0 0 50%);
+    }
 }

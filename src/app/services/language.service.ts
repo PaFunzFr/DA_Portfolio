@@ -7,6 +7,7 @@ import { Injectable, signal } from '@angular/core';
 export class LanguageService {
 
   currentLanguage = signal<string>('en'); // set signal
+
   private translation: { [key:string]: any} = {
     en: {
       landingPage: {
@@ -62,8 +63,8 @@ export class LanguageService {
     return this.translation[language][section][content];
   }
 
-  toggleLanguage(): void {
-    const newLanguage = this.currentLanguage() === 'en' ? 'de' : 'en';
+  toggleLanguage(newLanguage: string): void {
+    //const newLanguage = this.currentLanguage() === 'en' ? 'de' : 'en';
     this.currentLanguage.set(newLanguage); // set new signal
   }
 

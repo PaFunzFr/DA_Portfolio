@@ -1,12 +1,11 @@
 import { Component, inject, HostListener } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../header/header.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [HeaderComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
