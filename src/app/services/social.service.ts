@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 
-interface socialImgInterface {
+interface socialRefInterface {
   title: string;
-  source: string;
+  imgSource: string;
+  url: string;
 }
 
 @Injectable({
@@ -11,10 +12,10 @@ interface socialImgInterface {
 
 export class SocialService {
 
-  images: socialImgInterface[] = [
-    { title: 'github', source: './assets/img/social/github.svg'},
-    { title: 'linkedin', source: './assets/img/social/linkedin.svg'},
-    { title: 'email', source: './assets/img/social/email.svg'}
+  socialRefs: socialRefInterface[] = [
+    { title: 'github', imgSource: './assets/img/social/github.svg', url: ''},
+    { title: 'linkedin', imgSource: './assets/img/social/linkedin.svg', url: ''},
+    { title: 'email', imgSource: './assets/img/social/email.svg', url: ''}
   ];
 
 }

@@ -2,8 +2,8 @@
     <div class="about-title">
         <h2>{{ aboutTitle }}</h2>
         <nav class="contact-ref">
-            @for (img of socialImgs.images; track img.title) {
-                <img [src]='img.source' [alt]='img.title'>
+            @for (ref of socialReference.socialRefs; track ref.title) {
+                <a [href]="ref.url"><img [src]='ref.imgSource' [alt]='ref.title'></a>
             }
         </nav>
     </div>
@@ -11,7 +11,7 @@
         <div class="about-left">
             @for (item of aboutItems; track item) {
                 <figure>
-                    <img [src]="item.img" alt="About Icon" />
+                    <img [src]="item.img">
                     <figcaption [innerHTML]="item.text"></figcaption>
                 </figure>
             }

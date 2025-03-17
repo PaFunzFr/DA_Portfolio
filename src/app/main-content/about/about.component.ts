@@ -18,7 +18,7 @@ interface AboutItems {
 export class AboutComponent {
 
   languages = inject(LanguageService);
-  socialImgs = inject(SocialService);
+  socialReference = inject(SocialService);
 
   get aboutTitle(): string {
     return this.languages.getTranslation('about' , 'title');
