@@ -1,4 +1,5 @@
 @import './../../../assets/styles/mixins.scss';
+@import './../../../assets/styles/colors.scss';
 
 .skills {
     @include dFlex(center, center);
@@ -32,6 +33,7 @@
             width: 25%;
             color: white;
             font-family: 'Roboto';
+            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.731));
 
             >img {
                 height: 6vw;

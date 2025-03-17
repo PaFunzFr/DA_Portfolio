@@ -3,8 +3,8 @@
 
 .header {
     @include header(fixed);
-    border-bottom: 3px solid $col-bg-main;
-    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.411));
+    border-bottom: 2px solid $col-bg-main;
+    filter: drop-shadow(0 3px 8px rgba(7, 22, 41, 0.793));
 }
 
 .landing-page {
@@ -29,6 +29,7 @@
         .welcome-title {
             color: white;
             font-family: 'Patrick Hand';
+            letter-spacing: 4px;
         }
     }
 }
