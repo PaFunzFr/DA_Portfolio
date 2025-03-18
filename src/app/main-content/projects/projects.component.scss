@@ -2,5 +2,59 @@
 
 .projects {
     @include dFlex(center, center);
-    background-color: blue;
+    flex-direction: column;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+.projects-container {
+    @include dFlex(center, center);
+    width: 100%;
+    >img {
+        max-height: 100%;
+        width: 100%;
+        max-width: 1240px;
+        z-index: 1;
+        filter: drop-shadow(0 0 50px $col-bg-main);
+    
+    }
+    .single-project {
+        @include dFlex(center, center, 0, absolute);
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.95;
+        height: 100%;
+        width: 100%;
+        max-width: 1240px;
+        top: 0;
+
+        .project-infos {
+            @include dFlex(center, center, 0, absolute);
+            padding: 10%;
+            z-index: 3;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.676) 80%, transparent);
+            bottom: 0;
+            height: 50%;
+            >p {
+                color: white;
+            }
+        }
+        
+        >img {
+            max-height: 98%;
+            width: 100%;
+            z-index: 0;
+        }
+    }
+}
+
+.project-counter {
+    @include dFlex(center, center, 10px);
+    margin-bottom: 80px;
+    z-index: 2;
+    .count-dot {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: white;
+    }
 }

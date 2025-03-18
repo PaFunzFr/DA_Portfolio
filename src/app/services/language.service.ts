@@ -8,7 +8,7 @@ export class LanguageService {
 
   currentLanguage = signal<string>('en'); // set signal
 
-  private translation: { [key:string]: any} = {
+  translation: { [key:string]: any} = {
     en: {
       landingPage: {
         welcome: 'Hello, I am Patrick Frey,',
@@ -80,7 +80,7 @@ export class LanguageService {
             um intuitive, saubere und leistungsstarke Anwendungen zu entwickeln.`
     },
     projects: {
-      title: 'My Projects',
+      title: 'Meine Projekte',
       descriptions: [
         {
           title: 'Join',
