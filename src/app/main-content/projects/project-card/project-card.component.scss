@@ -1,0 +1,65 @@
+@import './../../../../assets/styles/mixins.scss';
+
+.single-project {
+    @include dFlex(center, center, 0, absolute);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.95;
+    height: 100%;
+    width: 100%;
+    max-width: 1240px;
+    top: 0;
+
+    .project-infos {
+        @include dFlex(center, flex-end, 10%, absolute);
+        padding: 50px 10%;
+        z-index: 3;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.676) 80%, transparent);
+        bottom: 0;
+        height: 30vw;
+        max-height: 50%;
+
+        .info-left {
+            @include dFlex(flex-start, flex-end, 10px);
+            flex-direction: column;
+            width: 100%;
+            flex: 1;
+            .project-tools {
+                @include dFlex(flex-end, center, 5px);
+                >img {
+                    max-width: 40px;
+                }
+            }
+        }
+
+        .info-right {
+            flex: 1;
+            color: white;
+            @include dFlex(flex-end, flex-start, 10px);
+            flex-direction: column;
+            .project-title {
+                @include dFlex(space-between, flex-end);
+                width: 100%;
+                >p {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 24px;
+                }
+                .project-ref {
+                    @include dFlex(flex-end, center, 10px);
+                    >a {
+                        >img{
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .bg-project {
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+}

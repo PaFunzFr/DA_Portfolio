@@ -33,28 +33,13 @@ export class LanguageService {
       },
       projects: {
         title: 'My Projects',
-        descriptions: [
-          {
-            title: 'Join',
-            description: ''
-          },
-          {
-            title: 'Pokedex',
-            description: ''
-          },
-          {
-            title: 'Portfolio',
-            description: ''
-          },
-          {
-            title: 'DaBubble',
-            description: ''
-          },
-          {
-            title: 'BnB Saga',
-            description: ''
-          }
-        ]
+        descriptions: {
+          join: 'Great Project',
+          pokedex: 'Pokedex',
+          portfolio: 'Portfolio',
+          dabubble: 'Dabubble',
+          bnbsaga: 'BNBSaga'
+        }
       }
     },
     de: {
@@ -81,28 +66,13 @@ export class LanguageService {
     },
     projects: {
       title: 'Meine Projekte',
-      descriptions: [
-        {
-          title: 'Join',
-          description: ''
-        },
-        {
-          title: 'Pokedex',
-          description: ''
-        },
-        {
-          title: 'Portfolio',
-          description: ''
-        },
-        {
-          title: 'DaBubble',
-          description: ''
-        },
-        {
-          title: 'BnB Saga',
-          description: ''
-        }
-      ]
+      descriptions: {
+        join: 'Tolles Projekt',
+        pokedex: 'Pokedex',
+        portfolio: 'Portfolio',
+        dabubble: 'Dabubble',
+        bnbsaga: 'BNBSaga'
+      }
     } 
   }
 }
@@ -111,6 +81,11 @@ export class LanguageService {
   getTranslation(section: string, content: string): string {
     const language = this.currentLanguage(); // get signal
     return this.translation[language][section][content];
+  }
+
+  getProjectDescription(project:string): string {
+    const language = this.currentLanguage();
+    return this.translation[language].projects.descriptions[project];
   }
 
   toggleLanguage(newLanguage: string): void {
