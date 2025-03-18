@@ -10,13 +10,12 @@
 
 .skill-container {
     @include dFlex(center, flex-start, 10%);
-    width: 80%;
     max-width: 1200px;
+    overflow: hidden;
 
     >img {
         position: absolute;
         opacity: 0.3;
-        width: 100%;
         height: 100%;
         z-index: 1;
     }

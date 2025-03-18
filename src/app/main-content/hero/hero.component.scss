@@ -23,6 +23,7 @@
         width: 100%;
         object-fit: contain;
         object-position: bottom;
+
     }
 
     .hero-img-left {
@@ -31,5 +32,6 @@
 
     .hero-img-right {
         clip-path: inset(0 0 0 50%);
+        filter: drop-shadow(9px 5px 10px $col-dev-main) drop-shadow(-9px -5px 10px $col-des-main);
     }
 }
