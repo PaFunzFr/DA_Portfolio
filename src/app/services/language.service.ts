@@ -34,11 +34,19 @@ export class LanguageService {
       projects: {
         title: 'My Projects',
         descriptions: {
-          join: 'A project management tool developed with HTML, CSS, JavaScript, Git, and Firebase to visualize the status and responsibilities of tasks.',
-          pokedex: 'Pokedex',
-          portfolio: 'Portfolio',
-          dabubble: 'Dabubble',
-          bnbsaga: 'BNBSaga'
+          join:   `A project management tool developed with HTML, CSS, JavaScript, Git,
+                  and Firebase to visualize the status and responsibilities of tasks.`,
+          pokedex: `A Pokedex to retrieve and display Pokémon data such as types
+                    and abilities using the Poke API. The use of ChartJS enabled the 
+                    analysis of specific API endpoints in dashboards.`,
+          portfolio: `My portfolio page. A summary of who I am and my skills.
+                      The project was built using Angular.`,
+          dabubble: `This project involved developing a business chat client,
+                    providing a platform for professional communication. Users can exchange messages,
+                    create channels, and share files.`,
+          bnbsaga: `This project involved creating a Jump-and-Run game where object-oriented
+                    programming was applied to implement the game logic. Classes and objects
+                    were used to structure the gameplay and control interactive elements.`
         }
       }
     },
@@ -67,11 +75,19 @@ export class LanguageService {
     projects: {
       title: 'Meine Projekte',
       descriptions: {
-        join: 'Ein Projektmanagement-Tool, das mit HTML, CSS, JavaScript, Git und Firebase entwickelt wurde, um den Status und die Verantwortlichkeiten von Aufgaben zu visualisieren.',
-        pokedex: 'Pokedex',
-        portfolio: 'Portfolio',
-        dabubble: 'Dabubble',
-        bnbsaga: 'BNBSaga'
+        join:  `Ein Projektmanagement-Tool, das mit HTML, CSS, JavaScript, Git und Firebase entwickelt
+                wurde,um den Status und die Verantwortlichkeiten von Aufgaben zu visualisieren.`,
+        pokedex: `Ein Pokedex, um Pokémon-Daten wie Typen oder Fähigkeiten über die Poke-API abzurufen und anzuzeigen.
+                  Die Verwendung von ChartJS ermöglichte die Auswertung bestimmter API-Endpunkte in Dashboards.`,
+        portfolio: `Meine Portfolio Seite. Eine Zusammenfassung meiner Person und Fähigkeiten.
+                    Das Projekt wurde in Angular erstellt.`,
+        dabubble:  `In diesem Projekt wurde ein Business-Chat-Client entwickelt, der eine Plattform für geschäftliche
+                    Kommunikation bietet. Nutzer können Nachrichten austauschen,
+                    Kanäle erstellen und Dateien teilen.`,
+        bnbsaga: `In diesem Projekt wurde ein Jump-and-Run-Spiel entwickelt, bei dem die Spiellogik mit
+                  objektorientierter Programmierung umgesetzt wurde.
+                  Klassen und Objekte wurden genutzt, um die Spielmechanik zu
+                  strukturieren und interaktive Elemente zu steuern.`
       }
     } 
   }

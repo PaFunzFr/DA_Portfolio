@@ -16,13 +16,13 @@
         z-index: 3;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.676) 80%, transparent);
         bottom: 0;
+        width: 100%;
         height: 30vw;
         max-height: 50%;
 
         .info-left {
             @include dFlex(flex-start, flex-end, 10px);
             flex-direction: column;
-            width: 100%;
             flex: 1;
             .project-tools {
                 @include dFlex(flex-end, center, 5px);
