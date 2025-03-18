@@ -1,5 +1,6 @@
 import { Component, inject, computed} from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { SkillsService } from '../../services/skills.service';
 
 interface ProjectsDataInterface {
   id: string;
@@ -16,36 +17,87 @@ interface ProjectsDataInterface {
 })
 export class ProjectsComponent {
 
+  skills = inject(SkillsService);
+  skillsDes = this.skills.skillsDes
+  skillsDev = this.skills.skillsDev
+
+  getSkillImgSrc(skillId: string, target = this.skillsDes || this.skillsDev): string {
+    const skill = target.find(skill => skill.id === skillId);
+    return skill ? skill.imgSource : '';
+}
+
   projectsData: ProjectsDataInterface[] = [
     {
       id: 'join',
       projectImg: '',
-      devTools: [],
-      desTools: []
+      devTools: [
+        this.getSkillImgSrc('angular', this.skillsDev),
+        this.getSkillImgSrc('typescript', this.skillsDev),
+        this.getSkillImgSrc('html', this.skillsDev),
+        this.getSkillImgSrc('css', this.skillsDev),
+        this.getSkillImgSrc('firebase', this.skillsDev),
+      ],
+      desTools: [
+        this.getSkillImgSrc('photoshop', this.skillsDes),
+        this.getSkillImgSrc('adesigner', this.skillsDes),
+      ]
     },
     {
       id: 'pokedex',
       projectImg: './assets/img/projects/pokedex.png',
-      devTools: [],
-      desTools: []
+      devTools: [
+        this.getSkillImgSrc('javascript', this.skillsDev),
+        this.getSkillImgSrc('html', this.skillsDev),
+        this.getSkillImgSrc('css', this.skillsDev),
+        this.getSkillImgSrc('api', this.skillsDev),
+      ],
+      desTools: [
+        this.getSkillImgSrc('adesigner', this.skillsDes),
+      ]
     },
     {
       id: 'portfolio',
       projectImg: '',
-      devTools: [],
-      desTools: []
+      devTools: [
+        this.getSkillImgSrc('angular', this.skillsDev),
+        this.getSkillImgSrc('typescript', this.skillsDev),
+        this.getSkillImgSrc('html', this.skillsDev),
+        this.getSkillImgSrc('css', this.skillsDev),
+        this.getSkillImgSrc('firebase', this.skillsDev),
+      ],
+      desTools: [
+        this.getSkillImgSrc('photoshop', this.skillsDes),
+        this.getSkillImgSrc('illustrator', this.skillsDes),
+        this.getSkillImgSrc('apublisher', this.skillsDes),
+        this.getSkillImgSrc('davinci', this.skillsDes),
+      ]
     },
     {
       id: 'dabubble',
       projectImg: '',
-      devTools: [],
-      desTools: []
+      devTools: [
+        this.getSkillImgSrc('angular', this.skillsDev),
+        this.getSkillImgSrc('typescript', this.skillsDev),
+        this.getSkillImgSrc('html', this.skillsDev),
+        this.getSkillImgSrc('css', this.skillsDev),
+        this.getSkillImgSrc('firebase', this.skillsDev),
+      ],
+      desTools: [
+        this.getSkillImgSrc('photoshop', this.skillsDes),
+      ]
     },
     {
       id: 'bnb-saga',
       projectImg: '',
-      devTools: [],
-      desTools: []
+      devTools: [
+        this.getSkillImgSrc('javascript', this.skillsDev),
+        this.getSkillImgSrc('html', this.skillsDev),
+        this.getSkillImgSrc('css', this.skillsDev),
+      ],
+      desTools: [
+        this.getSkillImgSrc('photoshop', this.skillsDes),
+        this.getSkillImgSrc('davinci', this.skillsDes),
+      ]
     }
   ];
   

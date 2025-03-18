@@ -3,7 +3,7 @@
     <div class="skill-container">
         <img src="./assets/img/skills/bg_skills.png" alt="">
         <div class="skills-des">
-            @for (skill of skillsDes; track skill) {
+            @for (skill of skills.skillsDes; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">
                     <p [innerHTML]="skill.title"></p>
@@ -11,7 +11,7 @@
             } 
         </div>
         <div class="skills-dev">
-            @for (skill of skillsDev; track skill) {
+            @for (skill of skills.skillsDev; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">
                     <p [innerHTML]="skill.title"></p>
