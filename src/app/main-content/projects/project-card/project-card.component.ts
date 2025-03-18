@@ -1,6 +1,5 @@
-import { Component, EventEmitter, inject, Input, Output} from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-
 import { ProjectDataService } from '../../../services/project-data.service';
 
 @Component({
@@ -14,7 +13,6 @@ import { ProjectDataService } from '../../../services/project-data.service';
 export class ProjectCardComponent {
 
   languages = inject(LanguageService);
- 
   project = inject(ProjectDataService);
   projectData = this.project.projectData;
 
@@ -24,10 +22,8 @@ export class ProjectCardComponent {
     return this.languages.getTranslation('projects', 'title');
   }
 
-
   getProjectText(project: string): string {
     return this.languages.getProjectDescription(project);
   }
-
 
 }
