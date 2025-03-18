@@ -47,11 +47,11 @@
         }
     }
 
-    .skills-des {
+    .skills-dev {
         @include dFlex(flex-end, flex-start, 40px);
     }
 
-    .skills-dev {
+    .skills-des {
         @include dFlex(flex-start, flex-start, 40px);
     }
 }

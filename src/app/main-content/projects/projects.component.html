@@ -2,16 +2,12 @@
     <h3>{{ projectsTitle }}</h3>
     <div class="projects-container">
         <img src="./assets/img/projects/bg_projects.png" alt="">
-        <app-project-card></app-project-card>
+        <app-project-card [cardNumber]="2"></app-project-card>
     </div>
     <div class="project-counter">
-        <!-- @for  project count -->
-        <div class="count-dot"></div>
-        <div class="count-dot"></div>
-        <div class="count-dot"></div>
-        <div class="count-dot"></div>
-        <div class="count-dot"></div>
-        <div class="count-dot"></div>
+        @for (project of projectData; track project; let index = $index) {
+            <div [id]="index" class="count-dot"></div>
+        }
     </div>
 </section>
 

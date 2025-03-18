@@ -1,27 +1,28 @@
 <div class="single-project">
     <section class="project-infos">
-        <div class="info-left">
-            <div class="project-tools">
-                @for (devPics of this.projectsData[0].devTools; track devPics) {
-                    <img [src]="devPics" alt="">
-                } 
-            </div>
-            <div class="project-tools">
-                @for (desPics of this.projectsData[0].desTools; track desPics) {
-                    <img [src]="desPics" alt="">
-                } 
-            </div>
-        </div>
-        <div class="info-right">
-                <div class="project-title">
-                    <p>{{ this.projectsData[0].id }}</p>
-                    <div class="project-ref">
-                        <a href=""><img src="./assets/img/social/github.svg" alt=""></a>
-                        <a href=""><img src="./assets/img/social/github.svg" alt=""></a>
-                    </div>
+        <div class="info-container">
+            <div class="project-title">
+                <p>{{ this.projectData[cardNumber].id }}</p>
+                <div class="project-ref">
+                    <a href=""><img src="./assets/img/social/github.svg" alt=""></a>
+                    <a href=""><img src="./assets/img/social/web.svg" alt=""></a>
                 </div>
-                <p>{{ getProjectText(this.projectsData[2].projectTextId) }}</p>
+            </div>
+            <p>{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
+            <div class="tools-container">
+                <div class="project-tools">
+                    @for (devPics of this.projectData[cardNumber].devTools; track devPics) {
+                        <img [src]="devPics" alt="">
+                    } 
+                </div>
+                <div class="project-tools">
+                    @for (desPics of this.projectData[cardNumber].desTools; track desPics) {
+                        <img [src]="desPics" alt="">
+                    } 
+                </div>
+            </div>
         </div>
+
     </section>
     <img class="bg-project" src="./assets/img/projects/pokedex.png" alt="">
 </div>
