@@ -34,7 +34,7 @@ export class LanguageService {
       projects: {
         title: 'My Projects',
         descriptions: {
-          join: 'Great Project',
+          join: 'A project management tool developed with HTML, CSS, JavaScript, Git, and Firebase to visualize the status and responsibilities of tasks.',
           pokedex: 'Pokedex',
           portfolio: 'Portfolio',
           dabubble: 'Dabubble',
@@ -67,7 +67,7 @@ export class LanguageService {
     projects: {
       title: 'Meine Projekte',
       descriptions: {
-        join: 'Tolles Projekt',
+        join: 'Ein Projektmanagement-Tool, das mit HTML, CSS, JavaScript, Git und Firebase entwickelt wurde, um den Status und die Verantwortlichkeiten von Aufgaben zu visualisieren.',
         pokedex: 'Pokedex',
         portfolio: 'Portfolio',
         dabubble: 'Dabubble',

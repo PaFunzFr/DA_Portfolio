@@ -2,35 +2,25 @@
     <section class="project-infos">
         <div class="info-left">
             <div class="project-tools">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
+                @for (devPics of this.projectsData[0].devTools; track devPics) {
+                    <img [src]="devPics" alt="">
+                } 
             </div>
             <div class="project-tools">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
-                <img src="./assets/img/skills/des/photoshop.svg" alt="">
+                @for (desPics of this.projectsData[0].desTools; track desPics) {
+                    <img [src]="desPics" alt="">
+                } 
             </div>
         </div>
         <div class="info-right">
                 <div class="project-title">
-                    <p>Project Title</p>
+                    <p>{{ this.projectsData[0].id }}</p>
                     <div class="project-ref">
                         <a href=""><img src="./assets/img/social/github.svg" alt=""></a>
                         <a href=""><img src="./assets/img/social/github.svg" alt=""></a>
                     </div>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio veniam fuga inventore similique numquam facere cumque,
-                    autem sapiente libero eum.
-                </p>
+                <p>{{ getProjectText(this.projectsData[0].projectTextId) }}</p>
         </div>
     </section>
     <img class="bg-project" src="./assets/img/projects/pokedex.png" alt="">

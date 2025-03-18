@@ -9,7 +9,7 @@ interface ProjectsDataInterface {
   desTools: string[];
   projectUrl: string;
   projectGithub: string;
-  projectText: string;
+  projectTextId: string;
 }
 
 @Component({
@@ -35,8 +35,8 @@ export class ProjectCardComponent {
     return skill?.imgSource || '';
   }
 
-  projectsText(project: string): string {
-    return this.languages.getProjectDescription(project)
+  getProjectText(project: string): string {
+    return this.languages.getProjectDescription(project);
   }
 
   projectsData: ProjectsDataInterface[] = [
@@ -56,7 +56,7 @@ export class ProjectCardComponent {
       ],
       projectUrl: '',
       projectGithub: '',
-      projectText: this.projectsText('join')
+      projectTextId: 'join'
     },
     {
       id: 'Pokedex',
@@ -72,7 +72,7 @@ export class ProjectCardComponent {
       ],
       projectUrl: '',
       projectGithub: '',
-      projectText: this.projectsText('pokedex')
+      projectTextId: 'pokedex'
     },
     {
       id: 'Portfolio',
@@ -92,7 +92,7 @@ export class ProjectCardComponent {
       ],
       projectUrl: '',
       projectGithub: '',
-      projectText: this.projectsText('portfolio')
+      projectTextId: 'portfolio'
     },
     {
       id: 'DA-Bubble',
@@ -109,7 +109,7 @@ export class ProjectCardComponent {
       ],
       projectUrl: '',
       projectGithub: '',
-      projectText: this.projectsText('dabubble')
+      projectTextId: 'dabubble'
     },
     {
       id: 'BnB-Saga',
@@ -125,7 +125,7 @@ export class ProjectCardComponent {
       ],
       projectUrl: '',
       projectGithub: '',
-      projectText: this.projectsText('bnbsaga')
+      projectTextId: 'bnbsaga'
     }
   ];
 }
