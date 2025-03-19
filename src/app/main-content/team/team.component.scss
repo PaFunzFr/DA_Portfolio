@@ -1,6 +1,39 @@
 @import './../../../assets/styles/mixins.scss';
 
-.contact {
+.team {
     @include dFlex(center, center);
-    background-color: rgb(255, 255, 0);
+    flex-direction: column;
+    overflow-x: clip;
+    .team-container {
+        @include dFlex(center, center);
+        max-width: 1200px;
+        width: auto;
+        flex-wrap: wrap;
+    }
+}
+
+.testimonial {
+    @include dFlex(center, center);
+    width: 45%;
+    height: 600px;
+
+    .testimonial-content {
+        @include dFlex(center, center);
+        flex-direction: column;
+        text-align: center;
+        z-index: 2;
+        max-width: 300px;
+        p:nth-child(3) {
+            margin: 30px 0 15px 0;
+            font-size: 20px;
+            color: white;
+            text-align: justify;
+        }
+    }
+    >img {
+        position: absolute;
+        opacity: 0.6;
+        min-height: 150%;
+        z-index: 1;
+    }
 }
