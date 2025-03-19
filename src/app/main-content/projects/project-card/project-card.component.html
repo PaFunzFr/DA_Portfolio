@@ -1,5 +1,7 @@
 <div class="single-project">
-    <section class="project-infos">
+    <section class="project-infos"
+        [style.transform]="isHovered ? 'scaleY(1)' : 'scaleY(0)'"
+        >
         <div class="info-container">
             <div class="project-title">
                 <p>{{ this.projectData[cardNumber].id }}</p>

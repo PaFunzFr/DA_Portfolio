@@ -1,12 +1,14 @@
 <section class="projects">
     <h3>{{ projectsTitle }}</h3>
     <div class="projects-container">
-        <img src="./assets/img/projects/bg_projects.png" alt="">
-        <app-project-card [cardNumber]="2"></app-project-card>
+        <img 
+        (mouseover)="isHovered = true"  (mouseleave)="isHovered = false"
+        class="project-frame" src="./assets/img/projects/bg_projects.png" alt="">
+        <app-project-card [cardNumber]="currentNumber()" [isHovered]="isHovered"></app-project-card>
     </div>
     <div class="project-counter">
         @for (project of projectData; track project; let index = $index) {
-            <div [id]="index" class="count-dot"></div>
+            <div [id]="index" (click)="this.setCardNumber(index)" class="count-dot"></div>
         }
     </div>
 </section>

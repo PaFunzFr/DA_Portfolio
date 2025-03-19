@@ -26,4 +26,6 @@ export class ProjectCardComponent {
     return this.languages.getProjectDescription(project);
   }
 
+  @Input()isHovered: boolean = false;
+
 }
