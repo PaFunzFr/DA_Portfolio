@@ -6,6 +6,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HeaderComponent } from "../header/header.component";
 import { ContactComponent } from './contact/contact.component';
+import { TeamComponent } from './team/team.component';
 
 @Component({
   selector: 'app-main-content',
@@ -16,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
+    TeamComponent,
     HeaderComponent,
     ContactComponent
 ],
