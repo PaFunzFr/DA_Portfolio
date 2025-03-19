@@ -41,7 +41,19 @@ export class ProjectsComponent {
   startAutoSlide() {
     this.interval = window.setInterval(() => {
       this.currentNumber.update(n => (n + 1) % this.projectData.length);
-    }, 3000);
+    }, 4000);
+  }
+
+  hoverStopAutoSlide() {
+    this.isHovered = true;
+    clearInterval(this.interval);
+  }
+
+  noHoverStartAutoSlide() {
+    setTimeout(() => {
+      this.isHovered = false;
+      this.startAutoSlide();  
+    }, 200);
   }
 
 }

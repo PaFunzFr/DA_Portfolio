@@ -26,9 +26,13 @@
         height: 15px;
         width: 15px;
         border-radius: 50%;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.518);
+        &:hover {
+            background-color: $col-des-main;
+            cursor: pointer;
+        }
     }
     .count-dot.active {
-        background-color: red;
+        background-color: white;
     }
 }
