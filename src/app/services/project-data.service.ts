@@ -48,7 +48,7 @@ export class ProjectDataService {
     },
     {
       id: 'Pokedex',
-      demoVid: './assets/img/projects/pokedex.png',
+      demoVid: './assets/img/projects/pokedex.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
@@ -64,7 +64,7 @@ export class ProjectDataService {
     },
     {
       id: 'Portfolio',
-      demoVid: '',
+      demoVid: './assets/img/projects/portfolio.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -101,7 +101,7 @@ export class ProjectDataService {
     },
     {
       id: 'BnB-Saga',
-      demoVid: '',
+      demoVid: './assets/img/projects/bnbsaga.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
