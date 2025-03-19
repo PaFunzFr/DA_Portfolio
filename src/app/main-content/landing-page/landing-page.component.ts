@@ -1,4 +1,4 @@
-import { Component, inject, signal, HostListener } from '@angular/core';
+import { Component, inject, signal, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { HeaderComponent } from '../../header/header.component';
 
@@ -7,8 +7,10 @@ import { HeaderComponent } from '../../header/header.component';
   standalone: true,
   imports: [HeaderComponent],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  styleUrl: './landing-page.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush // change detection on explizit events or changes => avoids scroll event console error
 })
+
 export class LandingPageComponent {
 
   scrollY = signal<number>(window.scrollY);
@@ -37,7 +39,8 @@ export class LandingPageComponent {
   }
 
   setFontSize(): string {
-    return window.scrollY / 10 + 'px';
+    let size = Math.min(window.scrollY / 10, 500);
+    return `${size}px`;
   }
 
   setFontOpacity(): number {

@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit} from '@angular/core';
+import { Component, inject, signal, OnInit, OnDestroy} from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectDataService } from '../../services/project-data.service';
@@ -25,35 +25,38 @@ export class ProjectsComponent {
 
   setCardNumber(n: number) {
     this.currentNumber.set(n);
-    clearInterval(this.interval);
-    this.startAutoSlide();  
+    this.stopAutoSlide();
+    this.startAutoSlide();
   }
 
   ngOnInit() {
     this.startAutoSlide();
   }
 
-  // stops intervals if directive, pipe or service is destroyed
   ngOnDestroy() {
-    clearInterval(this.interval);
+    this.stopAutoSlide();
   }
 
   startAutoSlide() {
+    if (this.isHovered) return;
     this.interval = window.setInterval(() => {
       this.currentNumber.update(n => (n + 1) % this.projectData.length);
     }, 4000);
   }
 
-  hoverStopAutoSlide() {
-    this.isHovered = true;
-    clearInterval(this.interval);
+  stopAutoSlide() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = undefined;
+    }
   }
 
-  noHoverStartAutoSlide() {
-    setTimeout(() => {
-      this.isHovered = false;
-      this.startAutoSlide();  
-    }, 200);
+  handleHoverState(isHovered: boolean) {
+    this.isHovered = isHovered;
+    if (isHovered) {
+      this.stopAutoSlide();
+    } else {
+      this.startAutoSlide();
+    }
   }
-
 }

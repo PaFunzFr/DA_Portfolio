@@ -2,9 +2,9 @@
     <h3>{{ projectsTitle }}</h3>
     <div class="projects-container">
         <img 
-        (mouseover)="hoverStopAutoSlide()"  (mouseleave)="noHoverStartAutoSlide()"
+        
         class="project-frame" src="./assets/img/projects/bg_projects.png" alt="">
-        <app-project-card [cardNumber]="currentNumber()" [isHovered]="isHovered"></app-project-card>
+        <app-project-card [cardNumber]="currentNumber()" (hoverState)="handleHoverState($event)"></app-project-card>
     </div>
     <div class="project-counter">
         @for (project of projectData; track project; let index = $index) {

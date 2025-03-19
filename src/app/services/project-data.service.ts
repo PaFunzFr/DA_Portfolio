@@ -18,7 +18,7 @@ interface ProjectsDataInterface {
 
 export class ProjectDataService {
 
-   skills = inject(SkillsService);
+    skills = inject(SkillsService);
     skillsDes = this.skills.skillsDes;
     skillsDev = this.skills.skillsDev;
 

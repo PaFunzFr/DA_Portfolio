@@ -1,4 +1,4 @@
-import { Component, inject, Input} from '@angular/core';
+import { Component, inject, Input, Output, EventEmitter } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
 import { ProjectDataService } from '../../../services/project-data.service';
 
@@ -16,7 +16,12 @@ export class ProjectCardComponent {
   project = inject(ProjectDataService);
   projectData = this.project.projectData;
 
-  @Input()cardNumber = 0;
+  @Input() cardNumber = 0;
+  isHovered: boolean = false;
+  @Output() hoverState = new EventEmitter<boolean>();
+
+  interval: number | undefined;
+  currentNumber = 0;
 
   get projectsTitle(): string {
     return this.languages.getTranslation('projects', 'title');
@@ -26,6 +31,14 @@ export class ProjectCardComponent {
     return this.languages.getProjectDescription(project);
   }
 
-  @Input()isHovered: boolean = false;
+  hoverStopAutoSlide() {
+    this.isHovered = true;
+    this.hoverState.emit(true);
+  }
+
+  noHoverStartAutoSlide() {
+    this.isHovered = false;
+    this.hoverState.emit(false);
+  }
 
 }

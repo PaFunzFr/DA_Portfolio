@@ -19,14 +19,15 @@
         width: 100%;
         transition: all 0.6s ease;
         transform-origin: bottom;
+        z-index: 99;
 
         .tools-container {
             @include dFlex(space-between, flex-start, 10px);
             width: 100%;
             .project-tools {
-                
                 @include dFlex(flex-start, center, 5px);
                 flex-wrap: wrap;
+                cursor: pointer;
                 >img {
                     height: 30px;
                     filter: drop-shadow(0 0 2px black);
