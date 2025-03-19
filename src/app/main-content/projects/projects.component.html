@@ -8,7 +8,12 @@
     </div>
     <div class="project-counter">
         @for (project of projectData; track project; let index = $index) {
-            <div [id]="index" (click)="this.setCardNumber(index)" class="count-dot"></div>
+            <div
+            class="count-dot"
+            (click)="this.setCardNumber(index)"
+            [id]="index" 
+            [class.active]="index === currentNumber()"></div>
+            <!-- if Index === current Nummer => set class active -->
         }
     </div>
 </section>

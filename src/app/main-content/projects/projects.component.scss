@@ -21,11 +21,14 @@
 .project-counter {
     @include dFlex(center, center, 10px);
     margin-bottom: 80px;
-    z-index: 2;
+    z-index: 5;
     .count-dot {
         height: 15px;
         width: 15px;
         border-radius: 50%;
         background-color: white;
+    }
+    .count-dot.active {
+        background-color: red;
     }
 }
