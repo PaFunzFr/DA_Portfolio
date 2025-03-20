@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-team',
@@ -9,44 +10,42 @@ import { Component } from '@angular/core';
 })
 export class TeamComponent {
 
-
-  teamMembers = [
+  languages = inject(LanguageService);
+  getTestimonial(name: string) {
+    return computed(() => this.languages.getProjectTestimonial(name));
+  }
+  
+  teamMembers = signal([
     {
       name: 'Knecht Rubrecht',
       project: 'Join',
-      testimonial: `had to develop, format and deliver 
-                    content in collaboration with the team members. 
-                    She is a reliable and friendly person.`,
+      testimonial: this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment1.png',
       profile: ''
     },
     {
       name: 'Knecht Rubrecht',
       project: 'DABubble',
-      testimonial: `had to develop, format and deliver 
-                    content in collaboration with the team members. 
-                    She is a reliable and friendly person.`,
+      testimonial: this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment2.png',
       profile: ''
     },
     {
       name: 'Knecht Rubrecht',
       project: 'general',
-      testimonial: `had to develop, format and deliver 
-                    content in collaboration with the team members. 
-                    She is a reliable and friendly person.`,
+      testimonial: this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment2.png',
       profile: ''
     },
     {
       name: 'Knecht Rubrecht',
       project: 'Join',
-      testimonial: `had to develop, format and deliver 
-                    content in collaboration with the team members. 
-                    She is a reliable and friendly person.`,
+      testimonial:  this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment1.png',
-      profile: ''
+      profile: '',
     },
-  ]
+  ])
+
+
 
 }

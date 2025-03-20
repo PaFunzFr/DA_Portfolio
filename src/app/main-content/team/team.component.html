@@ -1,12 +1,12 @@
 <section class="team">
-    <h3>Need a teamplayer?</h3>
+    <h3>{{ languages.getTranslation('team', 'title') }}</h3>
     <div class="team-container">
-        @for (member of teamMembers; track member) {
+        @for (member of teamMembers(); track member) {
             <div class="testimonial">
                 <div class="testimonial-content">
                     <h4>{{ member.name }}</h4>
                     <p class="white-roboto">Project {{ member.project }}</p>
-                    <p>"{{ member.testimonial }}"</p>
+                    <p>"{{ member.testimonial() }}"</p>
                     <a href="{{ member.profile }}">
                         <img src="./assets/img/social/linkedin.svg" alt="">
                     </a>

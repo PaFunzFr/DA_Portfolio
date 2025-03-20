@@ -48,6 +48,23 @@ export class LanguageService {
                     programming was applied to implement the game logic. Classes and objects
                     were used to structure the gameplay and control interactive elements.`
         }
+      },
+      team: {
+        title: 'Need a teamplayer?',
+        testimonials: {
+          kRubrecht: `had to develop, format and deliver 
+                    content in collaboration with the team members. 
+                    She is a reliable and friendly person.`,
+          sHerzog: `had to develop, format and deliver 
+                    content in collaboration with the team members. 
+                    She is a reliable and friendly person.`,
+          pLustig: `had to develop, format and deliver 
+                    content in collaboration with the team members. 
+                    She is a reliable and friendly person.`,
+          hBlubblub: `had to develop, format and deliver 
+                    content in collaboration with the team members. 
+                    She is a reliable and friendly person.`,
+        }
       }
     },
     de: {
@@ -89,7 +106,20 @@ export class LanguageService {
                   Klassen und Objekte wurden genutzt, um die Spielmechanik zu
                   strukturieren und interaktive Elemente zu steuern.`
       }
-    } 
+    },
+    team: {
+      title: 'Teamplayer gesucht?',
+      testimonials: {
+        kRubrecht: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+                  Sie ist ein stabile und freundliche Mensch.`,
+        sHerzog: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+                  Sie ist ein stabile und freundliche Mensch.`,
+        pLustig: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+                  Sie ist ein stabile und freundliche Mensch.`,
+        hBlubblub: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+        Sie ist ein stabile und freundliche Mensch.`,
+      }
+    }
   }
 }
 
@@ -102,6 +132,11 @@ export class LanguageService {
   getProjectDescription(project:string): string {
     const language = this.currentLanguage();
     return this.translation[language].projects.descriptions[project];
+  }
+
+  getProjectTestimonial(name:string): string {
+    const language = this.currentLanguage();
+    return this.translation[language].team.testimonials[name];
   }
 
   toggleLanguage(newLanguage: string): void {
