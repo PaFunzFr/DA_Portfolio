@@ -7,14 +7,12 @@
         </div>
     </div>
     <nav class="white-roboto">
-        <a>Home</a>
-        <a>About</a>
-        <a>Skills</a>
-        <a>Contact</a>
+        @for (navItem of navBar; track navItem) {
+            <a [href]="navItem.link">{{ navItem.title }}</a>
+        }
         <section class="lang-toggle">
             <button (click)="toggleLang('en')">EN</button>
             <button (click)="toggleLang('de')">DE</button>
         </section>
     </nav>
-
 </header>

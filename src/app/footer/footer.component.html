@@ -1,1 +1,13 @@
-<p>footer works!</p>
+<footer>
+    <div class="footer-content">
+        <p>&copy; Patrick Frey 2025</p>
+        <div>
+            <a href="">Imprint</a>
+            @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
+                @if (i < 3) {
+                <a [href]="ref.url"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                }
+            }
+        </div>
+    </div>
+</footer>

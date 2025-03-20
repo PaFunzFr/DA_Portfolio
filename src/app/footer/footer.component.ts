@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SocialService } from '../services/social.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+    socialReference = inject(SocialService);
 }

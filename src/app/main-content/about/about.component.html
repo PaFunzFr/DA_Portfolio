@@ -1,14 +1,22 @@
 <section class="about">
     <div class="about-title">
-        <h3>{{ aboutTitle }}</h3>
+        <h3
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+        >
+            {{ aboutTitle }}
+        </h3>
         <nav class="contact-ref">
-            @for (ref of socialReference.socialRefs; track ref.title) {
+            @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
+                @if (i < 3) {
                 <a [href]="ref.url"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                }
             }
         </nav>
     </div>
     <div class="about-content white-roboto">
-        <div class="about-left">
+        <div data-aos="fade-right" class="about-left">
             @for (item of aboutItems; track item) {
                 <figure>
                     <img [src]="item.img">
@@ -16,7 +24,7 @@
                 </figure>
             }
         </div>
-        <div class="about-right">
+        <div data-aos="fade-left" class="about-right">
             <p> {{ aboutText }} </p>
         </div>
     </div>

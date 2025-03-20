@@ -67,7 +67,7 @@ export class LanguageService {
         }
       },
       contact: {
-        title: 'Contact',
+        title: 'Let´s get in touch',
         text: `Interested in working with me? If you think I could be a good fit for your company or project, 
         let me know! If I don't have all the tools you're looking for yet, don't hesitate to reach out. I'm eager to 
         learn new technologies and put them into action successfully!`,
@@ -127,7 +127,7 @@ export class LanguageService {
       }
     },
     contact: {
-      title: 'Kontakt',
+      title: 'Interessiert?',
       text: `Interessiert an einer Zusammenarbeit? Wenn du der Meinung bist, dass ich gut in dein Unternehmen oder Projekt passe, 
       freue ich mich, von dir zu hören! Sollten noch nicht alle gewünschten Kenntnisse vorhanden sein, ist das kein Problem – ich bin sehr motiviert, 
       neue Technologien zu erlernen und erfolgreich in die Praxis umzusetzen.`,

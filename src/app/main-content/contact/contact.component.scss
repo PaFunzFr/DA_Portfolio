@@ -54,9 +54,9 @@ form {
         }
         >input,
         textarea {
-            background-color: rgba(255, 255, 255, 0.206);
+            background-color: rgba(255, 255, 255, 0.097);
             border-radius: 2px;
-            border: none;
+            border: 1px solid white;
             color: white;
             font-size: 18px;
             padding: 10px 10px;
@@ -84,8 +84,9 @@ form {
         &:hover {
             cursor: pointer;
             >img {
-                filter: drop-shadow(0 0 1px $col-des-main);
-                height: 32px;
+                mix-blend-mode: lighten;
+                color: #EE8C1B;
+                transform: scale(1.04);
             }
         }
     }

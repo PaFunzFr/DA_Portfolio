@@ -1,8 +1,17 @@
 <section class="skills">
-    <h3>Skills</h3>
+    <h3
+        data-aos="fade-up"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="100"
+    >
+        Skills
+    </h3>
     <div class="skill-container">
-        <img src="./assets/img/skills/bg_skills.png" alt="">
-        <div class="skills-dev">
+        <div class="bg-skills" data-aos="zoom-in">
+            <img src="./assets/img/skills/bg_skills.png" alt="" >
+        </div>
+
+        <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
             @for (skill of skills.skillsDev; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">
@@ -10,7 +19,7 @@
                 </div>
             } 
         </div>
-        <div class="skills-des">
+        <div class="skills-des" data-aos="fade-up" data-aos-offset="200">
             @for (skill of skills.skillsDes; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">

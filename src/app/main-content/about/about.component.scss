@@ -19,6 +19,7 @@
 
     .about-content {
         @include dFlex(center, center, 10%);
+        overflow: hidden;
         .about-left,
         .about-right {
             flex: 1;

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,16 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
 
-
+  ngOnInit() {
+    AOS.init(
+      {
+        duration: 500,
+        easing: 'ease-in-out-sine',
+        once: false,
+        mirror: false,
+        offset: 0,
+        delay: 0
+      }
+    );
+  }
 }
