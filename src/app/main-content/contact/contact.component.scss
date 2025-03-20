@@ -76,7 +76,18 @@ form {
         border-radius: 2px;
         align-self: flex-end;
         border: none;
-        background-color: $col-dev-main;
+        background-color: transparent;
+        transition: all 0.5s ease;
+        >img {
+            height: 30px;
+        }
+        &:hover {
+            cursor: pointer;
+            >img {
+                filter: drop-shadow(0 0 1px $col-des-main);
+                height: 32px;
+            }
+        }
     }
 }
 
