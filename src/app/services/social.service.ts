@@ -15,7 +15,8 @@ export class SocialService {
   socialRefs: socialRefInterface[] = [
     { title: 'github', imgSource: './assets/img/social/github.svg', url: ''},
     { title: 'linkedin', imgSource: './assets/img/social/linkedin.svg', url: ''},
-    { title: 'email', imgSource: './assets/img/social/email.svg', url: ''}
+    { title: 'email', imgSource: './assets/img/social/email.svg', url: ''},
+    { title: 'phone', imgSource: './assets/img/social/phone.svg', url: ''}
   ];
 
 }

@@ -1,32 +1,45 @@
 <section class="contact">
     <h3>{{ contactTitle }}</h3>
-    <div class="contact-container">
-        <div class="contact-top">
-            <div class="c-split">
-                <div class="contact-me">
-                    <p>{{ contactText }}</p>
-                </div>
-                <div class="contact-input">
-                    <p>name</p>
-                    <input type="text">
-                </div>
-            </div>
-            <div class="c-split">
-                <div class="contact-me">
-                    <a href="">
-                        <img src="" alt="">
-                        0173-1500779
-                    </a>
-                    <a href="">
-                        <img src="" alt="">
-                        frey-email-mail.com
-                    </a>
-                </div>
-                <div class="contact-input">
-                    <p>email</p>
-                    <input type="text">
-                </div>
-            </div>
+    <section class="c-top">
+        <p>{{ contactText }}</p>
+        <div class="contact-info">
+            <a href="">
+                <img [src]="contact.socialRefs[3].imgSource" [alt]="contact.socialRefs[3].title">
+                0173-1500779
+            </a>
+            <a href="">
+                <img [src]="contact.socialRefs[2].imgSource" [alt]="contact.socialRefs[2].title">
+                frey-email-mail.com
+            </a>
         </div>
-    </div>
+    </section>
+    <section class="c-bottom">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm">
+
+            <section class="form-top">
+                <div class="form-object">
+                    <label for="fname">Name</label>
+                    <input [(ngModel)]="contactData.name"
+                            type="text" id="fname" name="fullname" placeholder="Your name.." required>
+                
+                </div>
+                <div class="form-object">
+                    <label for="mail">Mail</label>
+                    <input [(ngModel)]="contactData.email"
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                            type="text" id="mail" name="email" placeholder="Your email.." required>
+                </div>
+            </section>
+
+            <div class="form-object">
+                <label for="subject">Message</label>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message"  id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+                    @if (!message.valid && message.touched) {
+                        <span>Please enter a message</span>
+                    }
+            </div>
+            <input type="submit" value="Submit">
+        
+        </form>
+    </section>
 </section>
