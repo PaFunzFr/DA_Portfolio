@@ -54,13 +54,29 @@ form {
         }
         >input,
         textarea {
-            background-color: rgba(255, 255, 255, 0.316);
+            background-color: rgba(255, 255, 255, 0.206);
+            border-radius: 2px;
             border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 10px;
+        }
+        >textarea {
+            resize: none;
         }
     }
     .form-top {
         @include dFlex(center, center, 10%);
         width: 100%;
+    }
+    button {
+        @include dFlex(center, center);
+        padding: 4px;
+        width: 100px;
+        border-radius: 2px;
+        align-self: flex-end;
+        border: none;
+        background-color: $col-dev-main;
     }
 }
 

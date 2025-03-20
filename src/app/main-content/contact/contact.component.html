@@ -20,25 +20,36 @@
                 <div class="form-object">
                     <label for="fname">Name</label>
                     <input [(ngModel)]="contactData.name"
-                            type="text" id="fname" name="fullname" placeholder="Your name.." required>
+                            type="text" id="fname" name="fullname" required>
                 
                 </div>
                 <div class="form-object">
                     <label for="mail">Mail</label>
                     <input [(ngModel)]="contactData.email"
                             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                            type="text" id="mail" name="email" placeholder="Your email.." required>
+                            type="text" id="mail" name="email" required>
                 </div>
             </section>
 
             <div class="form-object">
                 <label for="subject">Message</label>
-                <textarea #message="ngModel" [(ngModel)]="contactData.message"  id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+                <textarea 
+                    #message="ngModel"
+                    [(ngModel)]="contactData.message"
+                    id="subject"
+                    name="subject"
+                    style="height:200px"
+                    minlength="10" 
+                    maxlength="800"
+                    required >
+                </textarea>
                     @if (!message.valid && message.touched) {
                         <span>Please enter a message</span>
                     }
             </div>
-            <input type="submit" value="Submit">
+            <button type="submit" class="submit-btn-img">
+                <img src="./assets/img/social/github.svg" alt="Submit">
+            </button>
         
         </form>
     </section>
