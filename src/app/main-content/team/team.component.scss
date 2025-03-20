@@ -32,6 +32,7 @@
     }
     >img {
         position: absolute;
+        pointer-events: none;
         opacity: 0.6;
         min-height: 150%;
         z-index: 1;

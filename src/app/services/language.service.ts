@@ -65,6 +65,12 @@ export class LanguageService {
                     content in collaboration with the team members. 
                     She is a reliable and friendly person.`,
         }
+      },
+      contact: {
+        title: 'Contact',
+        text: `Interested in working with me? If you think I could be a good fit for your company or project, 
+        let me know! If I don't have all the tools you're looking for yet, don't hesitate to reach out. I'm eager to 
+        learn new technologies and put them into action successfully!`,
       }
     },
     de: {
@@ -119,6 +125,12 @@ export class LanguageService {
         hBlubblub: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
         Sie ist ein stabile und freundliche Mensch.`,
       }
+    },
+    contact: {
+      title: 'Kontakt',
+      text: `Interessiert an einer Zusammenarbeit? Wenn du der Meinung bist, dass ich gut in dein Unternehmen oder Projekt passe, 
+      freue ich mich, von dir zu hören! Sollten noch nicht alle gewünschten Kenntnisse vorhanden sein, ist das kein Problem – ich bin sehr motiviert, 
+      neue Technologien zu erlernen und erfolgreich in die Praxis umzusetzen.`,
     }
   }
 }

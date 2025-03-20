@@ -1,6 +1,43 @@
 @import './../../../assets/styles/mixins.scss';
 
-.contact {
+.contact{
     @include dFlex(center, center);
-    background-color: rgb(34, 255, 0);
+    flex-direction: column;
+    @include maxWidthPadding(80px, 50px);
+    margin: 0 auto;
+    color: white;
+
+    .contact-container {
+        @include dFlex(center, center);
+        flex-direction: column;
+        width: 100%;
+        .contact-top {
+            @include dFlex(center, center, 10%);
+            width: 100%;
+            .c-split {
+                @include dFlex(space-between, center);
+                flex-direction: column;
+                flex: 1;
+                .contact-input {
+                    @include dFlex(center, center);
+                    flex-direction: column;
+                    color: $col-des-main;
+                    width: 100%;
+                    >input {
+                        width: 100%;
+                    }
+                }
+                .contact-me {
+                    @include dFlex(center, center, 50%);
+                    flex-direction: column;
+                    width: 100%;
+                    height: 200px;
+                    >p {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+
 }
