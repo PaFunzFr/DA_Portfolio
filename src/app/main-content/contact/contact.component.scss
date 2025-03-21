@@ -17,7 +17,7 @@
     }
     .contact-info {
         @include dFlex(center, flex-start, 10px);
-        flex-direction: column;
+        flex-wrap: wrap;
         >a {
             @include dFlex(flex-start, center, 15px);
             width: 200px;

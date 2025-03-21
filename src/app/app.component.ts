@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
-import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',

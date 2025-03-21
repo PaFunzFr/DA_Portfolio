@@ -44,20 +44,27 @@ header {
     }
 
     .lang-toggle {
-        @include dFlex(center, center, 5px);
+        @include dFlex(center, center, 2px);
+        background-color: rgba(0, 0, 0, 0.25);
+        padding: 2px;
+        border-radius: 4px;
         >button {
             border: none;
             color: white;
             font-size: 18px;
             transition: all 0.3s ease;
-            cursor: pointer;
+            border-radius: 4px;
         }
     }
     .button-disabled {
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.407);
+        cursor: pointer;
+        &:hover {
+            background-color: $col-des-main;
+        }
     }
 
     .button-active {
-        background-color: rgb(230, 0, 0);
+        background-color: $col-dev-main;
     }
 }

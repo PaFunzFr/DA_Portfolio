@@ -14,11 +14,16 @@ interface NavBarInterface {
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
+
 export class HeaderComponent {
+
+  ngOnInit() {
+    this.toggleLang('en');
+  }
+
   languages = inject(LanguageService);
   buttonState = inject(ButtonStateService);
   currentLanguage = this.languages.currentLanguage;
-  activeButton: HTMLButtonElement | null = null;
   isDisabledEn = this.buttonState.getButtonState('en');
   isDisabledDe = this.buttonState.getButtonState('de');
 
@@ -37,6 +42,4 @@ export class HeaderComponent {
       {title: 'Contact', link: '#aContact'}
     ]
 
-    //langButtonLanguages: string[] = ["en", "de"]
-  
 }

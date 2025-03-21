@@ -1,19 +1,25 @@
 <section class="contact" id="aContact">
-    <h3>{{ contactTitle }}</h3>
+    <h3
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+    >
+        {{ contactTitle }}
+    </h3>
     <section class="c-top">
-        <p>{{ contactText }}</p>
-        <div class="contact-info">
+        <p data-aos="fade-right">{{ contactText }}</p>
+        <div data-aos="fade-left" class="contact-info">
             <a href="">
                 <img [src]="contact.socialRefs[3].imgSource" [alt]="contact.socialRefs[3].title">
                 0173-1500779
             </a>
-            <a href="">
+            <a>
                 <img [src]="contact.socialRefs[2].imgSource" [alt]="contact.socialRefs[2].title">
                 frey-email-mail.com
             </a>
         </div>
     </section>
-    <section class="c-bottom">
+    <section class="c-bottom" data-aos="fade-up">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm">
 
             <section class="form-top">

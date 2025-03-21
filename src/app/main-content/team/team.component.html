@@ -1,8 +1,14 @@
 <section class="team">
-    <h3>{{ languages.getTranslation('team', 'title') }}</h3>
+    <h3
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+    >
+        {{ languages.getTranslation('team', 'title') }}
+    </h3>
     <div class="team-container">
         @for (member of teamMembers(); track member) {
-            <div class="testimonial">
+            <div class="testimonial" data-aos="fade-zoom-in">
                 <div class="testimonial-content">
                     <h4>{{ member.name }}</h4>
                     <p class="white-roboto">Project {{ member.project }}</p>
