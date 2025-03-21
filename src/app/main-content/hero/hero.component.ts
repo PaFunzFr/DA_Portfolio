@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+xDataLeft = 0;
+xDataRight = 0;
+
+  trackMouse(event: any) {
+    const positionX = (event.clientX / window.innerWidth) * 100;
+    this.xDataLeft = positionX;
+    this.xDataRight = 100 - positionX;
+  }
+
+  resetPosition() {
+    this.xDataLeft = 50;
+    this.xDataRight = 50;
+  }
+
 }

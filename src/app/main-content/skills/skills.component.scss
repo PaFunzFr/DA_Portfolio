@@ -11,6 +11,7 @@
 .skill-container {
     @include dFlex(center, flex-start, 10%);
     max-width: 1200px;
+    padding: 0 50px;
     overflow: hidden;
 
     .bg-skills {

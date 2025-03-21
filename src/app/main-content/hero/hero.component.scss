@@ -27,15 +27,23 @@
         min-width: 300px;
         object-fit: contain;
         object-position: bottom;
-
+        transition: clip-path 0.3s ease-out, transform 0.3s ease-out;
     }
 
     .hero-img-left {
         clip-path: inset(0 50% 0 0);
+        filter: drop-shadow(0 0 10px $col-dev-main);
     }
 
     .hero-img-right {
         clip-path: inset(0 0 0 50%);
-        filter: drop-shadow(9px 5px 10px $col-dev-main) drop-shadow(-9px -5px 10px $col-des-main);
+    }
+
+    img{
+        pointer-events: none;
+    }
+
+    .dev-text {
+        
     }
 }

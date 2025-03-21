@@ -3,16 +3,27 @@
         data-aos="fade-up"
         data-aos-offset="400"
         data-aos-duration="1500"
-        class="hero-img-container">
+        class="hero-img-container"
+        (mousemove)="trackMouse($event)"
+        (mouseleave)="resetPosition()"
+        >
         <img 
             class="hero-img hero-img-left" 
-            src="./assets/img/hero/main_hero_des.png"
+            src="./assets/img/hero/main_hero_dev.png"
+            [style.clip-path]="'inset(0 ' + xDataLeft + '% 0 0)'"
+            [style.transform]="'translateX(calc(-50% + '+xDataLeft+'px))'"
             alt=""
         >
         <img 
-            class="hero-img hero-img-right" 
-            src="./assets/img/hero/main_hero_dev.png" 
+            class="hero-img hero-img-right"
+            [style.clip-path]="'inset(0 0 0 ' + xDataRight + '%)'"
+            [style.transform]="'translateX(calc(-50% + '+xDataLeft+'px))'" 
+            src="./assets/img/hero/main_hero_des.png" 
             alt=""
         >
+        <div class="dev-text">
+            <h4>developer</h4>
+            <p>with passion for clean, elegant and efficient code.</p>
+        </div>
     </div>
 </section>
