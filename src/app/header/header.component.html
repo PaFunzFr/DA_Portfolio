@@ -1,11 +1,11 @@
 <header>
-    <div class="main-logo">
+    <a href="" class="main-logo">
         <img src="./assets/img/header/logo.png" alt="">
         <div class="header-name white-roboto">
             <p>Patrick Frey</p>
             <p>Web-Developer</p>
         </div>
-    </div>
+    </a>
     <nav class="white-roboto">
         @for (navItem of navBar; track navItem) {
             <a [href]="navItem.link">{{ navItem.title }}</a>

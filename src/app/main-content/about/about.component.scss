@@ -2,6 +2,7 @@
 
 .about {
     @include dFlex(center, center);
+    scroll-margin-top: 100vh;
     flex-direction: column;
     @include maxWidthPadding(80px, 50px);
     margin: 0 auto;

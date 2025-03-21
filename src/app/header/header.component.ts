@@ -1,6 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 
+interface NavBarInterface {
+  title: string;
+  link: string;
+}
 
 @Component({
   selector: 'app-header',
@@ -17,11 +21,12 @@ export class HeaderComponent {
       this.languages.toggleLanguage(newLanguage);
     }
 
-    navBar = [
-      {title: 'Home', link: ''},
-      {title: 'About', link: ''},
-      {title: 'Skills', link: ''},
-      {title: 'Contact', link: ''}
+    navBar: NavBarInterface[] = [
+      //{title: 'Home', link: ''},
+      {title: 'About', link: '#aAbout'},
+      {title: 'Skills', link: '#aSkills'},
+      {title: 'Projects', link: '#aProjects'},
+      {title: 'Contact', link: '#aContact'}
     ]
   
 }
