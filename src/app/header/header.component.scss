@@ -44,9 +44,20 @@ header {
     }
 
     .lang-toggle {
-        button {
-            background-color: green;
+        @include dFlex(center, center, 5px);
+        >button {
             border: none;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
+    }
+    .button-disabled {
+        background-color: black;
+    }
+
+    .button-active {
+        background-color: rgb(230, 0, 0);
     }
 }

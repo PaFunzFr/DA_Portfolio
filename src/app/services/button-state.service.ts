@@ -15,7 +15,7 @@ export class ButtonStateService {
     if (lang === "de") {
       return this.buttonStateDe;
     }
-    return signal(false);
+    return signal(false); // if lang != de || en set false
   }
 
   setButtonState(state: boolean, lang: string) {

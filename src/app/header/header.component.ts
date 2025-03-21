@@ -36,5 +36,7 @@ export class HeaderComponent {
       {title: 'Projects', link: '#aProjects'},
       {title: 'Contact', link: '#aContact'}
     ]
+
+    //langButtonLanguages: string[] = ["en", "de"]
   
 }

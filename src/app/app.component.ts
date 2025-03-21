@@ -24,4 +24,11 @@ export class AppComponent {
       }
     );
   }
+  
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  }
+
 }
