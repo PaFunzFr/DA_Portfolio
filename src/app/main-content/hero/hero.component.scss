@@ -14,6 +14,7 @@
 .hero-img-container {
     width: 100%;
     overflow: hidden;
+    cursor: ew-resize;
 
     .hero-img {
         position: absolute;
@@ -27,7 +28,7 @@
         min-width: 300px;
         object-fit: contain;
         object-position: bottom;
-        transition: clip-path 0.3s ease-out, transform 0.3s ease-out;
+        transition: clip-path 0.5s ease-out, transform 0.3s ease-out;
     }
 
     .hero-img-left {
@@ -43,7 +44,40 @@
         pointer-events: none;
     }
 
+    %text-box {
+        @include dFlex(center, center, 30px);
+        flex-direction: column;
+        color: white;
+        width: 20%;
+        max-width: 200px;
+        position: absolute;
+        bottom: 20px;
+        transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+        filter: drop-shadow(0 0 15px black);
+        transform: translateX(-50%);
+        h4 {
+            font-size: 80px;
+        }
+    }
+    
     .dev-text {
-        
+        @extend %text-box;
+        left: 50%;
+        text-align: right;
+    
+        .title-dev {
+            color: $col-dev-main;
+        }
+    }
+    
+    .des-text {
+        @extend %text-box;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+    
+        .title-des {
+            color: $col-des-main;
+        }
     }
 }

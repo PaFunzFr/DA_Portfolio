@@ -21,8 +21,15 @@
             src="./assets/img/hero/main_hero_des.png" 
             alt=""
         >
-        <div class="dev-text">
-            <h4>developer</h4>
+        <div class="dev-text" 
+            [style.opacity]="(xDataLeft < 45) ? (xDataRightTitle / 100) : 0">
+            <h4 class="title-dev">developer</h4>
+            <p>with passion for clean, elegant and efficient code.</p>
+        </div>
+        <div class="des-text"
+            [style.opacity]="(xDataLeft > 55) ? (xDataLeftTitle / 100) : 0"
+            >
+            <h4 class="title-des">designer</h4>
             <p>with passion for clean, elegant and efficient code.</p>
         </div>
     </div>
