@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../services/language.service';
+import { ButtonStateService } from '../services/button-state.service';
 
 interface NavBarInterface {
   title: string;
@@ -15,11 +16,18 @@ interface NavBarInterface {
 })
 export class HeaderComponent {
   languages = inject(LanguageService);
+  buttonState = inject(ButtonStateService);
   currentLanguage = this.languages.currentLanguage;
+  activeButton: HTMLButtonElement | null = null;
+  isDisabledEn = this.buttonState.getButtonState('en');
+  isDisabledDe = this.buttonState.getButtonState('de');
 
-    toggleLang(newLanguage: string): void {
-      this.languages.toggleLanguage(newLanguage);
-    }
+  toggleLang(newLanguage: string): void {
+    this.buttonState.setButtonState(true, newLanguage); 
+    this.languages.toggleLanguage(newLanguage);
+    const otherLanguage = newLanguage === 'en' ? 'de' : 'en';
+    this.buttonState.setButtonState(false, otherLanguage);
+  }
 
     navBar: NavBarInterface[] = [
       //{title: 'Home', link: ''},

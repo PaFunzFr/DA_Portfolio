@@ -36,5 +36,17 @@ header {
 
     nav {
         @include dFlex(center, center, 15px);
+        >a {
+            &:hover {
+                color: $col-des-main;
+            }
+        }
+    }
+
+    .lang-toggle {
+        button {
+            background-color: green;
+            border: none;
+        }
     }
 }

@@ -11,8 +11,8 @@
             <a [href]="navItem.link">{{ navItem.title }}</a>
         }
         <section class="lang-toggle">
-            <button (click)="toggleLang('en')">EN</button>
-            <button (click)="toggleLang('de')">DE</button>
+            <button (click)="toggleLang('en')" [disabled]="isDisabledEn()">EN</button>
+            <button (click)="toggleLang('de')" [disabled]="isDisabledDe()">DE</button>
         </section>
     </nav>
 </header>
