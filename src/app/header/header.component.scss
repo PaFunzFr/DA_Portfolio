@@ -3,7 +3,7 @@
 
 header {
     @include dFlex(space-between, center, 0);
-    @include maxWidthPadding(0, 50px);
+    @include maxWidthPadding(0);
     left: 50%;
     transform: translateX(-50%);
     width: 100%;

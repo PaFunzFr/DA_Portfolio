@@ -17,7 +17,11 @@
     z-index: $zi;
 }
 
-@mixin maxWidthPadding($pv: 0, $ph: 0) {
+@mixin maxWidthPadding($pv: 0, $ph: 50px, $phm: 15px) {
     max-width: 1480px;
     padding: $pv $ph;
+    @media screen and (max-width: 768px) {
+        padding: $pv $phm;
+    }
 }
+

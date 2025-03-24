@@ -8,7 +8,7 @@ import { SideBarComponent } from "../shared/side-bar/side-bar.component";
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SideBarComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
