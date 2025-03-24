@@ -4,7 +4,8 @@ import { SkillsService } from './skills.service';
 
 interface ProjectsDataInterface {
   id: string;
-  demoVid: string;
+  demoVidMobile: '',
+  demoVidDesk: string;
   devTools: string[];
   desTools: string[];
   projectUrl: string;
@@ -30,7 +31,8 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
-      demoVid: '',
+      demoVidMobile: '',
+      demoVidDesk: './assets/img/projects/bnbsaga.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -48,7 +50,8 @@ export class ProjectDataService {
     },
     {
       id: 'Pokedex',
-      demoVid: './assets/img/projects/pokedex.jpg',
+      demoVidMobile: '',
+      demoVidDesk: './assets/img/projects/pokedex.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
@@ -64,7 +67,8 @@ export class ProjectDataService {
     },
     {
       id: 'Portfolio',
-      demoVid: './assets/img/projects/portfolio.jpg',
+      demoVidMobile: '',
+      demoVidDesk: './assets/img/projects/portfolio.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -84,7 +88,8 @@ export class ProjectDataService {
     },
     {
       id: 'DA-Bubble',
-      demoVid: '',
+      demoVidMobile: '',
+      demoVidDesk: './assets/img/projects/pokedex.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -101,7 +106,8 @@ export class ProjectDataService {
     },
     {
       id: 'BnB-Saga',
-      demoVid: './assets/img/projects/bnbsaga.jpg',
+      demoVidMobile: '',
+      demoVidDesk: './assets/img/projects/bnbsaga.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),

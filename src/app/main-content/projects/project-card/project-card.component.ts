@@ -1,4 +1,4 @@
-import { Component, inject, Input, Output, EventEmitter } from '@angular/core';
+import { Component, inject, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
 import { ProjectDataService } from '../../../services/project-data.service';
 
@@ -15,13 +15,17 @@ export class ProjectCardComponent {
   languages = inject(LanguageService);
   project = inject(ProjectDataService);
   projectData = this.project.projectData;
-
-  @Input() cardNumber = 0;
+  screenSize: string = '';
   isHovered: boolean = false;
-  @Output() hoverState = new EventEmitter<boolean>();
-
   interval: number | undefined;
   currentNumber = 0;
+
+  @Input() cardNumber = 0;
+  @Output() hoverState = new EventEmitter<boolean>();
+
+  ngOnInit() {
+    this.onResize();
+  }
 
   get projectsTitle(): string {
     return this.languages.getTranslation('projects', 'title');
@@ -40,5 +44,12 @@ export class ProjectCardComponent {
     this.isHovered = false;
     this.hoverState.emit(false);
   }
+
+  @HostListener('window:resize')
+  onResize() {
+    const width = window.innerWidth;
+    this.screenSize = width < 650 ? 'mobile' : 'desktop';
+  }
+  
 
 }

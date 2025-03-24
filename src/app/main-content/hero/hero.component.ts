@@ -11,11 +11,12 @@ import { LanguageService } from '../../services/language.service';
 export class HeroComponent {
 
 languages = inject(LanguageService);
-xDataLeft = 0;
-xDataRight = 0;
+xDataLeft = 50;
+xDataRight = 50;
 xDataLeftTitle = 0;
 xDataRightTitle = 0;
 offset = 0;
+
 
   trackMouse(event: any) {
     const positionX = (event.clientX / window.innerWidth) * 100;

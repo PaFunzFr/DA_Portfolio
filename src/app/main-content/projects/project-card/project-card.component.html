@@ -23,5 +23,10 @@
             </div>
         </div>
     </section>
-    <img class="bg-project" [src]="this.projectData[cardNumber].demoVid" alt="">
+    @if ( screenSize === 'mobile') {
+        <img class="bg-project" [src]="this.projectData[cardNumber].demoVidMobile" alt="">
+    } @else {
+        <img class="bg-project" [src]="this.projectData[cardNumber].demoVidDesk" alt="">
+    }
+
 </div>
