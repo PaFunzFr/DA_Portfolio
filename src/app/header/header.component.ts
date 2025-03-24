@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { ButtonStateService } from '../services/button-state.service';
 import { NavBarService } from '../services/nav-bar.service';

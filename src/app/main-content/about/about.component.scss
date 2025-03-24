@@ -5,6 +5,7 @@
     flex-direction: column;
     @include maxWidthPadding(80px, 50px);
     margin: 0 auto;
+    scroll-margin-top: 100vh;
     
     .about-title {
         @include dFlex(center, center);

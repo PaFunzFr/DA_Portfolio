@@ -18,4 +18,6 @@ export class SideBarComponent {
     this.navBarService.showSideBar = true;    
   }
 
+  @Input() position = '';
+
 }

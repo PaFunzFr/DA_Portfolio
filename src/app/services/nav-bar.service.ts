@@ -18,6 +18,8 @@ export class NavBarService {
   ]
 
   showSideBar: boolean = true;
+  readonly positionFixed: string = "fixed";
+  readonly positionSticky: string = "sticky";
 
   toggleSideBar() {
     this.showSideBar =!this.showSideBar;

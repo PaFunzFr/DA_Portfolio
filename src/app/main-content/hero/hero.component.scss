@@ -3,7 +3,6 @@
 
 .hero {
     @include dFlex(center, stretch);
-    scroll-margin-top: -80px;
     margin-top: 200vh;
     height: 100vh;
     z-index: 4;
