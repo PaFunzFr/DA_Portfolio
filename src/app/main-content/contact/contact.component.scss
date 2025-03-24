@@ -96,3 +96,15 @@ form {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .c-top {
+        flex-direction: column;
+        .contact-info {
+            margin-top: 20px;
+        }
+    }
+    .form-top {
+        flex-direction: column;
+        gap: 20px !important;
+    }
+}
