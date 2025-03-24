@@ -10,11 +10,14 @@
     .about-title {
         @include dFlex(center, center);
         width: 100%;
-
         .contact-ref {
-            @include dFlex(center, center, 12px, absolute);
+            @include dFlex(center, flex-end, 12px, absolute);
             right: 0;
             top: 0;
+            height: 45px;
+            >a>img {
+                height: 20px;
+            }
         }
     }
 
@@ -25,10 +28,8 @@
         .about-right {
             flex: 1;
         }
-
         .about-left {
             @include dFlex(space-between, flex-end);
-
             >figure {
                 >img {
                     height: 80px;
@@ -36,6 +37,7 @@
                 @include dFlex(center, center, 5px);
                 flex-direction: column;
                 text-align: center;
+                white-space: nowrap;
             }
         }
 
@@ -43,12 +45,42 @@
             min-width: 120px;  
             max-width: 50%;
             text-align: justify;
-        
             > p {
                 overflow-wrap: break-word;
                 word-wrap: break-word;
             }
         }
     }
+}
 
+@media screen and (max-width: 768px) {
+    .contact-ref {
+        @include dFlex(center, center, 12px, absolute);
+        top: 70px !important;
+    }
+    .about-title {
+        flex-direction: column;
+    }
+
+    .about-content {
+        @include dFlex(center, center, 10%);
+        flex-direction: column-reverse;
+        .about-left,
+        .about-right {
+            width: 100%;
+        }
+        .about-left {
+            @include dFlex(space-between, flex-end, 30px !important);
+            margin-top: 30px;
+            >figure {
+                >img {
+                    height: 60px !important;
+                }
+            }
+        }
+        .about-right {
+            min-width: 100% !important;
+            padding: 0 2px;
+        }
+    }
 }
