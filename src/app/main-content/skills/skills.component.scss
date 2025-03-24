@@ -61,8 +61,8 @@
 
 @media screen and (max-width: 768px) {
     p {
-        font-size: 11px;
-        line-height: 14px;
+        font-size: 15px;
+        line-height: 18px;
     }
 
     .skills-dev,
@@ -73,5 +73,12 @@
 
     .skill-container {
         gap: 14% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 12px;
+        line-height: 14px;
     }
 }

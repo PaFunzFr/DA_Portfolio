@@ -38,3 +38,12 @@
         background-color: white;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+        >img {
+            aspect-ratio: 10/16;
+            max-height: 80vh;
+        }
+    }
+}

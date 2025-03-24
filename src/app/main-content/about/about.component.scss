@@ -55,8 +55,8 @@
 
 @media screen and (max-width: 768px) {
     .contact-ref {
-        @include dFlex(center, center, 12px, absolute);
-        top: 70px !important;
+        @include dFlex(center, center, 12px, relative !important);
+        transform: translateY(-10px);
     }
     .about-title {
         flex-direction: column;

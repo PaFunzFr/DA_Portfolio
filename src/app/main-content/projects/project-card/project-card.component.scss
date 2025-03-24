@@ -12,9 +12,9 @@
 
     .project-infos {
         @include dFlex(center, flex-end, 10%, absolute);
-        padding: 80px 10% 40px 10%;
+        padding: 50% 10% 40px 10%;
         z-index: 3;
-        background: linear-gradient(to top, #171e29ce 80%, transparent);
+        background: linear-gradient(to top, #171e29, transparent);
         bottom: 0;
         width: 100%;
         transition: all 0.6s ease;
@@ -67,6 +67,8 @@
     .bg-project {
         height: 100%;
         width: 100%;
+        object-fit: cover;
         z-index: 0;
     }
 }
+
