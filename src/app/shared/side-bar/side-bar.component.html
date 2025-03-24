@@ -1,0 +1,12 @@
+<div class="wad">
+    <section class="side-menu">
+        <div
+        [style.transform]="navBarService.showSideBar === true ? 'translateX(100%)' : 'translateX(0%)'"
+        >
+            @for (navItem of navBarService.navBar; track navItem) {
+                <a class="side-menu-ref" [href]="navItem.link">{{ navItem.title }}</a>
+            }
+        </div>
+    </section>
+</div>
+

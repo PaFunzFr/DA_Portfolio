@@ -1,16 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { ButtonStateService } from '../services/button-state.service';
+import { NavBarService } from '../services/nav-bar.service';
+import { SideBarComponent } from "../shared/side-bar/side-bar.component";
 
-interface NavBarInterface {
-  title: string;
-  link: string;
-}
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [SideBarComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -23,6 +21,7 @@ export class HeaderComponent {
 
   languages = inject(LanguageService);
   buttonState = inject(ButtonStateService);
+  navBarService = inject(NavBarService);
   currentLanguage = this.languages.currentLanguage;
   isDisabledEn = this.buttonState.getButtonState('en');
   isDisabledDe = this.buttonState.getButtonState('de');
@@ -35,14 +34,6 @@ export class HeaderComponent {
     const otherLanguage = newLanguage === 'en' ? 'de' : 'en';
     this.buttonState.setButtonState(false, otherLanguage);
   }
-
-    navBar: NavBarInterface[] = [
-      //{title: 'Home', link: ''},
-      {title: 'About', link: '#aAbout'},
-      {title: 'Skills', link: '#aSkills'},
-      {title: 'Projects', link: '#aProjects'},
-      {title: 'Contact', link: '#aContact'}
-    ]
 
     hoverBurger(status: boolean) {
       this.burgerHovered = status;

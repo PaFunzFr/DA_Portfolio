@@ -12,9 +12,9 @@ export class LanguageService {
     en: {
       landingPage: {
         welcome: 'Hello, I am Patrick Frey,',
-        title: `<span class="col-dev">Web-Developer</span> and<br>
-                <span class="col-des">Designer</span> with an <br>
-                architectural Background`,
+        title: `<span class="col-dev">Web-Developer</span> and
+                <span class="col-des">Designer</span><br> with an
+                architectural<br> Background (M.Sc)`,
         scroll: 'scroll down'
       },
       hero: {
@@ -76,9 +76,9 @@ export class LanguageService {
     de: {
       landingPage: {
         welcome: 'Hallo, Ich bin Patrick Frey,',
-        title: `<span class="col-dev">Web-Developer</span> und<br>
-                <span class="col-des">Designer</span> mit <br>
-                Hintergrund als Architekt`,
+        title: `<span class="col-dev">Web-Developer</span> und
+                <span class="col-des">Designer</span><br> mit
+                Hintergrund als <br> Architekt (M.Sc.)`,
         scroll: 'scroll down'
     },
     hero: {

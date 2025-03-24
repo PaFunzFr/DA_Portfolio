@@ -7,7 +7,7 @@
         </div>
     </a>
     <nav class="white-roboto">
-        @for (navItem of navBar; track navItem) {
+        @for (navItem of navBarService.navBar; track navItem) {
             <a class="page-ref" [href]="navItem.link">{{ navItem.title }}</a>
         }
         <section class="lang-toggle">
@@ -26,7 +26,11 @@
             DE
             </button>
         </section>
-        <div class="hamburger" (mouseenter)="hoverBurger(true)" (mouseleave)="hoverBurger(false)">
+        <div class="hamburger"
+            (mouseenter)="hoverBurger(true)"
+            (mouseleave)="hoverBurger(false)"
+            (click)="navBarService.toggleSideBar()"
+            >
             @for (bar of bars; track bar) {
                 <div class="bar"
                 [style.backgroundColor]="burgerHovered ? '#EE8C1B'  : '#4A81E0'"></div>

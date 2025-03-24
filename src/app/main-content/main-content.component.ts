@@ -7,6 +7,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HeaderComponent } from "../header/header.component";
 import { ContactComponent } from './contact/contact.component';
 import { TeamComponent } from './team/team.component';
+import { SideBarComponent } from '../shared/side-bar/side-bar.component';
 
 @Component({
   selector: 'app-main-content',
@@ -19,7 +20,8 @@ import { TeamComponent } from './team/team.component';
     ProjectsComponent,
     TeamComponent,
     HeaderComponent,
-    ContactComponent
+    ContactComponent,
+    SideBarComponent
 ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'

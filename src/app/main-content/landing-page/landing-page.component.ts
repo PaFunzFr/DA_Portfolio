@@ -1,11 +1,12 @@
 import { Component, inject, signal, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { HeaderComponent } from '../../header/header.component';
+import { SideBarComponent } from "../../shared/side-bar/side-bar.component";
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, SideBarComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush // change detection on explizit events or changes => avoids scroll event console error
