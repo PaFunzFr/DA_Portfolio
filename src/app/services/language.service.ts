@@ -19,7 +19,7 @@ export class LanguageService {
       },
       hero: {
         welcome: 'Welcome',
-        designer: 'my background as an architect ensures great design for your product',
+        designer: 'my background as architect ensures great design',
         developer: 'with passion for clean, elegant and efficient code'
       },
       about: {
@@ -83,8 +83,8 @@ export class LanguageService {
     },
     hero: {
       welcome: 'Willkommen',
-      designer: 'my background as an architect ensures great design for your product',
-      developer: 'with passion for clean, elegant and efficient code'
+      designer: 'Mein Architektur-Hintergrund sorgt für großartiges Design',  
+      developer: 'Mit Leidenschaft für sauberen, eleganten und effizienten Code' 
     },
     about: {
       title: 'Über mich',

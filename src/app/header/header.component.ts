@@ -26,6 +26,8 @@ export class HeaderComponent {
   currentLanguage = this.languages.currentLanguage;
   isDisabledEn = this.buttonState.getButtonState('en');
   isDisabledDe = this.buttonState.getButtonState('de');
+  bars: number[] = [0,1,2];
+  burgerHovered: boolean = false;
 
   toggleLang(newLanguage: string): void {
     this.buttonState.setButtonState(true, newLanguage); 
@@ -41,5 +43,9 @@ export class HeaderComponent {
       {title: 'Projects', link: '#aProjects'},
       {title: 'Contact', link: '#aContact'}
     ]
+
+    hoverBurger(status: boolean) {
+      this.burgerHovered = status;
+    }
 
 }

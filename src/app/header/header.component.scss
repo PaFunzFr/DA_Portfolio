@@ -68,3 +68,27 @@ header {
         background-color: $col-dev-main;
     }
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+    cursor: pointer;
+    .bar {
+        width: 30px;
+        height: 4px;
+        border-radius: 3px;
+        filter: drop-shadow(0 0 4px black);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav>a {
+        display: none;
+    }
+}

@@ -8,7 +8,7 @@
     height: 100vh;
     z-index: 2;
     background: linear-gradient(to top, $col-bg-main 55%, transparent);
-    overflow: clip;
+    overflow: hidden;
 }
 
 .hero-img-container {
@@ -21,14 +21,13 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        height: 100%;
         width: 100%;
         max-height: 800px;
         max-width: 1300px;
         min-width: 300px;
         object-fit: contain;
         object-position: bottom;
-        transition: clip-path 0.5s ease-out, transform 0.3s ease-out;
+        transition: transform 0.3s linear, clip-path 1s linear;
     }
 
     .hero-img-left {
@@ -49,12 +48,13 @@
         flex-direction: column;
         color: white;
         width: 20%;
-        max-width: 200px;
+        max-width: 240px;
         position: absolute;
         bottom: 20px;
         transition: opacity 0.5s ease-out, transform 0.3s ease-out;
         filter: drop-shadow(0 0 15px black);
         transform: translateX(-50%);
+        text-align: center;
         h4 {
             font-size: 80px;
         }
@@ -63,7 +63,6 @@
     .dev-text {
         @extend %text-box;
         left: 50%;
-        text-align: right;
     
         .title-dev {
             color: $col-dev-main;
@@ -74,7 +73,7 @@
         @extend %text-box;
         right: 50%;
         transform: translateX(50%);
-        text-align: center;
+
     
         .title-des {
             color: $col-des-main;

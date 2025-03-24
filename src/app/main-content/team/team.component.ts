@@ -17,28 +17,28 @@ export class TeamComponent {
   
   teamMembers = signal([
     {
-      name: 'Knecht Rubrecht',
+      name: 'Mustermann',
       project: 'Join',
       testimonial: this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment1.png',
       profile: ''
     },
     {
-      name: 'Knecht Rubrecht',
+      name: 'Musterfrau',
       project: 'DABubble',
       testimonial: this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment2.png',
       profile: ''
     },
     {
-      name: 'Knecht Rubrecht',
+      name: 'Musterfrau',
       project: 'general',
       testimonial: this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment2.png',
       profile: ''
     },
     {
-      name: 'Knecht Rubrecht',
+      name: 'Mustermann',
       project: 'Join',
       testimonial:  this.getTestimonial('kRubrecht'),
       background: './assets/img/team/comment1.png',

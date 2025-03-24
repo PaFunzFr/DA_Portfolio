@@ -11,26 +11,30 @@
             class="hero-img hero-img-left" 
             src="./assets/img/hero/main_hero_dev.png"
             [style.clip-path]="'inset(0 ' + xDataLeft + '% 0 0)'"
-            [style.transform]="'translateX(calc(-50% + '+xDataLeft+'px))'"
+            [style.transform]="'translateX(calc(-50% - '+offset+'px ))'" 
             alt=""
         >
         <img 
             class="hero-img hero-img-right"
             [style.clip-path]="'inset(0 0 0 ' + xDataRight + '%)'"
-            [style.transform]="'translateX(calc(-50% + '+xDataLeft+'px))'" 
+            [style.transform]="'translateX(calc(-50% - '+offset+'px ))'" 
             src="./assets/img/hero/main_hero_des.png" 
             alt=""
         >
         <div class="dev-text" 
             [style.opacity]="(xDataLeft < 45) ? (xDataRightTitle / 100) : 0">
             <h4 class="title-dev">developer</h4>
-            <p>with passion for clean, elegant and efficient code.</p>
+            <p>{{ getDescription('developer') }}</p>
         </div>
         <div class="des-text"
             [style.opacity]="(xDataLeft > 55) ? (xDataLeftTitle / 100) : 0"
             >
             <h4 class="title-des">designer</h4>
-            <p>with passion for clean, elegant and efficient code.</p>
+            <p>{{ getDescription('designer') }}</p>
         </div>
     </div>
 </section>
+
+<!--
+[style.transform]="(xDataLeft < 45) ? 'translateX(calc(-50% + '+xDataLeft+'px ))': 'translateX(calc(-50% + '+xDataLeft+'px ))'"
+-->

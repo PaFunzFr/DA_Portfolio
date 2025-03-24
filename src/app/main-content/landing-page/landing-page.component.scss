@@ -16,6 +16,7 @@
     width: 100%;
     background-color: white;
 
+
     .welcome-overlay {
         @include dFlex(center, center, 0, absolute);
         top: 50%;
@@ -24,13 +25,55 @@
         width: 100%;
         opacity: 1;
         z-index: 2;
+        text-align: center;
         overflow: hidden;
 
         .welcome-title {
             color: white;
             font-family: 'Patrick Hand';
             letter-spacing: 4px;
+            width: 100%;
+            overflow: hidden;
         }
     }
 }
 
+.scroll-down {
+    @include dFlex(center, flex-start, 0, absolute);
+    bottom: 20px;
+    border: 2px solid $col-bg-main;
+    height: 60px;
+    width: 40px;
+    border-radius: 20px;
+    .scroll-wheel {
+        width: 5px;
+        height: 22px;
+        border-radius: 5px;
+        background-color: $col-des-main;
+        animation: wheelAnimation 3s infinite ease;
+    }
+}
+
+@keyframes wheelAnimation {
+
+    0% {
+        margin-top: 2px;
+        opacity: 0;
+        height: 21px;
+    }
+    50% {
+        margin-top: 7px;
+        opacity: 1;
+        height: 22px;
+    }
+    80% {
+        margin-top: 2px;
+        opacity: 0;
+        height: 21px;
+    }
+    100% {
+        margin-top: 2px;
+        opacity: 0;
+        height: 21px;
+    }
+}
