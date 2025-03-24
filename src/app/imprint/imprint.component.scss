@@ -1,0 +1,12 @@
+@import './../../assets/styles/mixins.scss';
+
+section {
+    @include header(sticky, $zi: 9);
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.657));
+}
+
+.imprint-section {
+    min-height: 100vh;
+    z-index: 1;
+    background-color: $col-bg-main;
+}
