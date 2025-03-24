@@ -7,6 +7,7 @@
     z-index: 3;
     overflow: hidden;
     >div {
+        pointer-events: auto;
         @include dFlex(flex-start, center, 5%, absolute);
         flex-direction: column;
         right: 0;
@@ -20,7 +21,6 @@
         background-color: #171e29af;
         transition: all 0.5s ease;
         >a {
-            pointer-events: auto;
             &:hover {
                 color: $col-des-main;
             }

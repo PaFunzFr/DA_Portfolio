@@ -1,7 +1,8 @@
 <section class="side-menu"
 [style.position] = "position">
-    <div
+    <div 
     [style.transform]="navBarService.showSideBar === true ? 'translateX(100%)' : 'translateX(0%)'"
+    (mouseleave)="leavingSideBar()"
     >
         @for (navItem of navBarService.navBar; track navItem) {
             <a class="side-menu-ref" [href]="navItem.link">{{ navItem.title }}</a>
