@@ -2,11 +2,13 @@ import { Component, inject, signal, HostListener, ChangeDetectionStrategy } from
 import { LanguageService } from '../../services/language.service';
 import { HeaderComponent } from '../../header/header.component';
 import { SideBarComponent } from "../../shared/side-bar/side-bar.component";
+import { ThreeComponent } from "../../shared/three/three.component";
+
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, SideBarComponent],
+  imports: [HeaderComponent, SideBarComponent, ThreeComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush // change detection on explizit events or changes => avoids scroll event console error

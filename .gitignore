@@ -6,6 +6,7 @@ _ignore
 /src/assets/font
 /src/assets/img
 /src/assets/vid
+/src/assets/obj
 
 # Compiled output
 /dist
