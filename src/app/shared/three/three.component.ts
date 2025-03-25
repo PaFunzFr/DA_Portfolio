@@ -21,14 +21,14 @@ export class ThreeComponent implements AfterViewInit {
     
     // camera
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.01, 100);
-    camera.position.z = 15 ;
+    camera.position.z = 12 ;
     camera.position.x = 0 ;
 
     // scene
     const scene = new THREE.Scene();
 
     // white ambient
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1);  
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);  
     scene.add(ambientLight);
 
     // orange light
@@ -59,7 +59,7 @@ export class ThreeComponent implements AfterViewInit {
     // Animation
     function animate(time: number) {
       if (logo) {
-        logo.rotation.y = time / 1000;
+        logo.rotation.y = time / 3000;
       }
       renderer.render(scene, camera);
     }
