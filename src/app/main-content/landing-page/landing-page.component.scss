@@ -19,7 +19,7 @@
     height: 100vh;
     z-index: 0;
     width: 100%;
-    background: linear-gradient(to top, grey, white);
+    background: linear-gradient(to top, rgb(183, 183, 183), rgb(224, 224, 224));
 
 
     .welcome-overlay {
@@ -55,6 +55,7 @@
     height: 60px;
     width: 40px;
     border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.691);
     .scroll-wheel {
         width: 5px;
         height: 22px;
