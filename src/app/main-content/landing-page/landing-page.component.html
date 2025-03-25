@@ -3,9 +3,11 @@
 </header>
 <section class="landing-page">
     <div class="intro-message">
-        <h1>{{ welcomeLanding }}</h1>
-        <h2 [innerHTML]="title"></h2>
-        <app-three></app-three>
+        <div>
+            <h1>{{ welcomeLanding }}</h1>
+            <h2 [innerHTML]="title"></h2>
+        </div>
+        <app-three class="animated-logo"></app-three>
     </div>
     <div class="welcome-overlay col-bg-main" [style]="{ height: onScroll() + 'px' }">
         <div class="welcome-title"

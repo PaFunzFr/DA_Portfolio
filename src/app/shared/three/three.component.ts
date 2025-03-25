@@ -17,12 +17,12 @@ export class ThreeComponent implements AfterViewInit {
   constructor(private window: Window) {}
 
   ngAfterViewInit(): void {
-    const width = 200, height = 200;
+    const width = 240, height = 240;
     
     // camera
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.01, 100);
-    camera.position.z = 12 ;
-    camera.position.x = 0 ;
+    camera.position.set(5, -2, 10);  // Kamera 12 Einheiten nach hinten versetzen
+    camera.lookAt(new THREE.Vector3(0, 0, 0)); 
 
     // scene
     const scene = new THREE.Scene();
@@ -37,7 +37,7 @@ export class ThreeComponent implements AfterViewInit {
     scene.add(orangeLight);
 
     // blue light
-    const blueLight = new THREE.DirectionalLight(0x1b8cee, 1);  // Blau
+    const blueLight = new THREE.DirectionalLight(0x1b8cee, 1);
     blueLight.position.set(-5, 0, 0);  // from left
     scene.add(blueLight);
 
@@ -49,6 +49,16 @@ export class ThreeComponent implements AfterViewInit {
       logo = gltf.scene;
       logo.scale.set(0.2, 0.2, 0.2);
       scene.add(logo);
+      //outlines / stroke
+      logo.traverse((child: any) => {
+        if ((child as THREE.Mesh).isMesh) {
+          const mesh = child as THREE.Mesh;
+          const edges = new THREE.EdgesGeometry(mesh.geometry, 45); // 45° => only edges
+          const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 2 });
+          const edgeLines = new THREE.LineSegments(edges, edgeMaterial);
+          mesh.add(edgeLines); 
+        }
+      });
     });
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
