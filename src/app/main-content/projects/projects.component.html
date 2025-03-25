@@ -1,4 +1,4 @@
-<section class="projects" id="aProjects">
+<section class="projects">
     <h3
         data-aos="fade-up"
         data-aos-easing="ease-in-back"
@@ -6,7 +6,7 @@
         {{ projectsTitle }}
     </h3>
     <div class="projects-container">
-        <img 
+        <img  id="aProjects"
         
         class="project-frame" src="./assets/img/projects/bg_projects.png" alt="">
         <app-project-card [cardNumber]="currentNumber()" (hoverState)="handleHoverState($event)"></app-project-card>

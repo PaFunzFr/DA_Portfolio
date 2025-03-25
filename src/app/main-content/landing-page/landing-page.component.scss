@@ -43,8 +43,16 @@
     }
 }
 .intro-message {
-    @include dFlex(center, flex-start, 15px);
+    @include dFlex(center, flex-start, 25px);
+    flex-wrap: wrap-reverse;
+    padding: 0 20px;
     width: 100%;
+    >div {
+        z-index: 2;
+    }
+    .animated-logo {
+        transform: translateY(30px) scale(1);
+    }
 }
 
 
@@ -86,5 +94,31 @@
         margin-top: 2px;
         opacity: 0;
         height: 21px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .intro-message {
+        h1 {
+            font-size: 40px;
+        };
+        h2 {
+            font-size: 26px;
+        }
+    }
+    .animated-logo {
+        transform: translateY(20px) scale(0.8) !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .intro-message {
+        padding: 0 10px;
+        h1 {
+            font-size: 30px;
+        };
+        h2 {
+            font-size: 21px;
+        }
     }
 }

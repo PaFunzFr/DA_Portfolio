@@ -77,7 +77,9 @@ export class ThreeComponent implements AfterViewInit {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0); // background transparent
-    document.getElementById('three-container')?.appendChild(renderer.domElement);
+    const canvas = renderer.domElement;
+    document.getElementById('three-container')?.appendChild(canvas);
+    canvas.classList.add("model-canvas"); // add class
 
     // Animation
     function animate(time: number) {

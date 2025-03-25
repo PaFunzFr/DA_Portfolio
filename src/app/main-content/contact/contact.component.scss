@@ -4,6 +4,7 @@
     @include dFlex(center, center);
     flex-direction: column;
     @include maxWidthPadding(80px, 50px);
+    scroll-margin-top: 30px;
     margin: 0 auto;
     color: white;
     overflow: hidden;

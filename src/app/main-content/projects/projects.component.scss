@@ -9,6 +9,7 @@
 
 .projects-container {
     @include dFlex(center, center);
+
     width: 100%;
     >img {
         width: 100%;
@@ -17,6 +18,7 @@
         z-index: 1;
         filter: drop-shadow(0 0 50px $col-bg-main);
         pointer-events: none;
+        scroll-margin-top: 80px;
     }
 }
 
