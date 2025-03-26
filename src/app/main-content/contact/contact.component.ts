@@ -7,6 +7,7 @@ interface ContactDatInterface {
   name: string;
   email: string;
   message: string;
+  checkbox: boolean;
 }
 
 @Component({
@@ -32,7 +33,8 @@ export class ContactComponent {
   contactData: ContactDatInterface  = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    checkbox: false
   } 
 
   onSubmit(ngForm: NgForm) {

@@ -33,6 +33,25 @@
 .c-bottom {
     @include dFlex(center, center, 10%);
     width: 100%;
+    .check-submit {
+        @include dFlex(space-between, center, 20px);
+        width: 100%;
+        >div {
+            @include dFlex(center, center, 10px);
+            a {
+                color: $col-dev-main;
+                &:hover {
+                    color: $col-des-main;
+                }
+            }
+            >input {
+                border: none;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+        }
+    }
 }
 form {
     @include dFlex(center, center, 20px);
@@ -75,11 +94,9 @@ form {
         @include dFlex(center, center);
         width: 100px;
         height: 80px;
-        background-color: red;
         border-radius: 2px;
         margin: 0;
         padding: 0;
-        align-self: flex-end;
         border: none;
         background-color: transparent;
         transition: all 0.5s ease;
@@ -107,5 +124,8 @@ form {
     .form-top {
         flex-direction: column;
         gap: 20px !important;
+    }
+    label {
+        font-size: 12px;
     }
 }

@@ -53,9 +53,15 @@
                         <span>Please enter a message</span>
                     }
             </div>
-            <button type="submit" class="submit-btn-img">
-                <img src="./assets/img/social/submit.svg" alt="Submit">
-            </button>
+            <div class="check-submit">
+                <div class="check-box">
+                    <input type="checkbox" id="check" name="privacyCheck" [(ngModel)]="contactData.checkbox" required>
+                    <label for="privacyCheck"> checkbox I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                </div>
+                <button type="submit" class="submit-btn-img">
+                    <img src="./assets/img/social/submit.svg" alt="Submit">
+                </button>
+            </div>
         </form>
     </section>
 </section>
