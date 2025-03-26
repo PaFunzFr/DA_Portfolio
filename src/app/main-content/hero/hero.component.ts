@@ -8,6 +8,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
+
 export class HeroComponent {
 
 languages = inject(LanguageService);
@@ -16,7 +17,7 @@ xDataRight = 50;
 xDataLeftTitle = 0;
 xDataRightTitle = 0;
 offset = 0;
-
+entering: boolean = false;
 
   trackMouse(event: any) {
     const positionX = (event.clientX / window.innerWidth) * 100;
@@ -29,11 +30,20 @@ offset = 0;
   }
 
   resetPosition() {
+    this.transition();
     this.xDataLeft = 50;
-    this.xDataRight = 50;
+    this.xDataRight= 50;
     this.xDataLeftTitle = 0;
     this.xDataRightTitle = 0;
     this.offset = 0;
+
+  }
+
+  transition() {
+    this.entering = true;
+    setTimeout(() => {
+      this.entering = false;
+    }, 500);
   }
 
   getDescription(x:string) {
