@@ -19,28 +19,28 @@ export class TeamComponent {
     {
       name: 'Mustermann',
       project: 'Join',
-      testimonial: this.getTestimonial('kRubrecht'),
+      testimonial: this.getTestimonial('member1'),
       background: './assets/img/team/comment1.png',
       profile: ''
     },
     {
       name: 'Musterfrau',
       project: 'DABubble',
-      testimonial: this.getTestimonial('kRubrecht'),
+      testimonial: this.getTestimonial('member2'),
       background: './assets/img/team/comment2.png',
       profile: ''
     },
     {
       name: 'Musterfrau',
       project: 'general',
-      testimonial: this.getTestimonial('kRubrecht'),
+      testimonial: this.getTestimonial('member3'),
       background: './assets/img/team/comment2.png',
       profile: ''
     },
     {
       name: 'Mustermann',
       project: 'Join',
-      testimonial:  this.getTestimonial('kRubrecht'),
+      testimonial:  this.getTestimonial('member4'),
       background: './assets/img/team/comment1.png',
       profile: '',
     },

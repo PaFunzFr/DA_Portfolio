@@ -8,7 +8,7 @@ export class LanguageService {
 
   currentLanguage = signal<string>('en'); // set signal
 
-  translation: { [key:string]: any} = {
+  translation: { [key:string]: any } = {
     en: {
       landingPage: {
         welcome: 'Hello, I am Patrick Frey,',
@@ -31,6 +31,11 @@ export class LanguageService {
               My experience with complex structures, well-thought-out concepts, and clear design language allows me to create intuitive,
               clean, and high-performance applications.`
       },
+      skills: {
+        title: "Didn't find the right skill?",
+        mindset: `No problem! I enjoy learning new technologies, languages, and tools — and I can apply them quickly 
+                  in practice. Just reach out to me!`
+      },
       projects: {
         title: 'My Projects',
         descriptions: {
@@ -52,16 +57,16 @@ export class LanguageService {
       team: {
         title: 'Need a teamplayer?',
         testimonials: {
-          kRubrecht: `had to develop, format and deliver 
+          member1: `had to develop, format and deliver 
                     content in collaboration with the team members. 
                     She is a reliable and friendly person.`,
-          sHerzog: `had to develop, format and deliver 
+          member2: `had to develop, format and deliver 
                     content in collaboration with the team members. 
                     She is a reliable and friendly person.`,
-          pLustig: `had to develop, format and deliver 
+          member3: `had to develop, format and deliver 
                     content in collaboration with the team members. 
                     She is a reliable and friendly person.`,
-          hBlubblub: `had to develop, format and deliver 
+          member4: `had to develop, format and deliver 
                     content in collaboration with the team members. 
                     She is a reliable and friendly person.`,
         }
@@ -95,6 +100,11 @@ export class LanguageService {
             Meine Erfahrung mit komplexen Zusammenhängen, durchdachten Konzepten und klarer Designsprache setze ich gezielt ein,
             um intuitive, saubere und leistungsstarke Anwendungen zu entwickeln.`
     },
+    skills: {
+      title: "Passenden Skill nicht gefunden?",
+      mindset: `Kein Problem! Ich lerne gerne neue Technologien, Sprachen und Tools – 
+                und kann sie schnell in der Praxis anwenden. Sprich mich einfach darauf an!`
+    },
     projects: {
       title: 'Meine Projekte',
       descriptions: {
@@ -116,13 +126,13 @@ export class LanguageService {
     team: {
       title: 'Teamplayer gesucht?',
       testimonials: {
-        kRubrecht: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+        member1: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
                   Sie ist ein stabile und freundliche Mensch.`,
-        sHerzog: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+        member2: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
                   Sie ist ein stabile und freundliche Mensch.`,
-        pLustig: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+        member3: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
                   Sie ist ein stabile und freundliche Mensch.`,
-        hBlubblub: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
+        member4: `hatte zu entwickeln, formatieren und veröffentlichen von Inhalten mit Teammitgliedern verbunden.
         Sie ist ein stabile und freundliche Mensch.`,
       }
     },
