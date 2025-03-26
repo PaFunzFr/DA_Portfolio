@@ -69,18 +69,26 @@
     margin-top: 50px;
     overflow: hidden;
     >div {
-        @include dFlex(center, center, 20px);
+        @include dFlex(flex-start, center, 10%);
         width: 100%;
-        max-width: 600px;
-        padding: 0 15px;
+        padding: 0 50px;
+        div {
+            flex: 1;
+            text-align:justify;
+            font-size: 18px;
+            line-height: 24px;
+            color: white;
+        }
         .mindset-contact {
             @include dFlex(center, center, 10px);
-            flex-direction: column;
-            font-size: 14px !important;
-            text-align: center;
-            >img {
-                height: 60px;
-                width: 60px;
+            >a {
+                @include dFlex(center, center, 10px);
+                flex-direction: column;
+                font-size: 18px;
+                text-align: center;
+                >img {
+                    height: 90px;
+                }
             }
         }
     }
@@ -117,4 +125,20 @@
         max-width: 80px;
         margin: 2px;
     }
+    .mindset-contact {
+        >a {
+            font-size: 14px !important;
+            >img {
+                height: 50px !important;
+            }
+        }
+    }
+    .mindset {
+        >div {
+            @include dFlex(flex-start, center, 20px);
+            flex-direction: column;
+            padding: 0 15px;
+        }
+    }
+
 }
