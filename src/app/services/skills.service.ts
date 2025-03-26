@@ -32,6 +32,7 @@ export class SkillsService {
     { id: 'scrum', title: 'Scrum', imgSource: './assets/img/skills/dev/scrum.svg' },
     { id: 'firebase', title: 'Google<br>Firebase', imgSource: './assets/img/skills/dev/firebase.svg' },
     { id: 'git', title: 'Git &<br>Github', imgSource: './assets/img/skills/dev/git.svg' },
+    { id: 'threeJS', title: 'threeJS', imgSource: './assets/img/skills/dev/threejs.svg' },
     { id: 'api', title: 'Restful<br>APIs', imgSource: './assets/img/skills/dev/api.svg' },
     { id: 'materialdesign', title: 'Material<br>Design', imgSource: './assets/img/skills/dev/materialdesign.svg' }
   ];

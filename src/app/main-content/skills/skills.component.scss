@@ -35,7 +35,9 @@
         .skill {
             @include dFlex(center, center, 12px);
             flex-direction: column;
+            max-width: 100px;
             width: 25%;
+            min-width: 60px;
             color: white;
             font-family: 'Roboto';
             filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.731));
@@ -68,12 +70,17 @@
 
     .skills-dev,
     .skills-des {
-        gap: 20px !important;
-        min-width: 100%;
+        gap: 5px !important;
+    }
+
+    .skill {
+        max-width: 80px;
+        margin: 10px;
     }
 
     .skill-container {
-        gap: 14% !important;
+        gap: 10px !important;
+        padding: 0 10px;
     }
 }
 
@@ -81,5 +88,9 @@
     p {
         font-size: 12px;
         line-height: 14px;
+    }
+    .skill {
+        max-width: 80px;
+        margin: 2px;
     }
 }
