@@ -13,19 +13,21 @@
     @include dFlex(center, flex-start, 10%);
     max-width: 1200px;
     padding: 0 50px;
-    overflow: hidden;
+    overflow: clip;
 
     .bg-skills {
         position: absolute;
         opacity: 0.3;
         height: 100%;
         z-index: 1;
+
         >img {
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
     }
+
 
     .skills-des,
     .skills-dev {
@@ -86,8 +88,10 @@
                 flex-direction: column;
                 font-size: 18px;
                 text-align: center;
+
                 >img {
                     height: 90px;
+                    @include hoverEffect();
                 }
             }
         }
@@ -147,3 +151,4 @@
     }
 
 }
+

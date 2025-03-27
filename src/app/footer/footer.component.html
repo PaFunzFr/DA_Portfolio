@@ -5,7 +5,7 @@
             <a href="./../imprint/">Imprint</a>
             @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
                 @if (i < 3) {
-                <a [href]="ref.url"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
                 }
             }
         </div>

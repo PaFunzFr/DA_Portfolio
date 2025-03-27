@@ -1,0 +1,11 @@
+<div class="testimonial" data-aos="fade-zoom-in">
+    <div class="testimonial-content">
+        <h4>{{ testimonial.name }}</h4>
+        <p class="white-roboto">Project {{ testimonial.project }}</p>
+        <p>"{{ testimonial.testimonial() }}"</p>
+        <a href="{{ testimonial.profile }}">
+            <img src="./assets/img/social/linkedin.svg" alt="">
+        </a>
+    </div>
+    <img [src]="testimonial.background" alt="">
+</div>

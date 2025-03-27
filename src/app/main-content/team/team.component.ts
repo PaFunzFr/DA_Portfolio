@@ -1,10 +1,11 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [],
+  imports: [TestimonialComponent],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
 })

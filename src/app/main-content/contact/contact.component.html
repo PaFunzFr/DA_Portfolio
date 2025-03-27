@@ -9,11 +9,11 @@
     <section class="c-top">
         <p data-aos="fade-right">{{ contactText }}</p>
         <div data-aos="fade-left" class="contact-info">
-            <a href="">
+            <a [href]="'tel:' + contact.socialRefs[3].url">
                 <img [src]="contact.socialRefs[3].imgSource" [alt]="contact.socialRefs[3].title">
-                0173-1500779
+                +49173-1500779
             </a>
-            <a>
+            <a [href]="contact.socialRefs[2].url">
                 <img [src]="contact.socialRefs[2].imgSource" [alt]="contact.socialRefs[2].title">
                 frey-email-mail.com
             </a>
@@ -56,10 +56,10 @@
             <div class="check-submit">
                 <div class="check-box">
                     <input type="checkbox" id="check" name="privacyCheck" [(ngModel)]="contactData.checkbox" required>
-                    <label for="privacyCheck"> I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                    <label for="privacyCheck"> I've read the <a href="./../../imprint/">privacy policy</a> and agree to the processing of my data as outlined.</label>
                 </div>
                 <button type="submit" class="submit-btn-img">
-                    <img src="./assets/img/social/submit.svg" alt="Submit">
+                    <img src="./assets/img/social/submit.svg" alt="Submit" [style.opacity]="contactForm.valid ? 1 : 0.4" >
                 </button>
             </div>
         </form>

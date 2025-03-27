@@ -28,3 +28,7 @@ footer {
         }
     }
 }
+
+a {
+    @include hoverEffect();
+}

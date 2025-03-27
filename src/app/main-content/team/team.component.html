@@ -8,17 +8,7 @@
     </h3>
     <div class="team-container">
         @for (member of teamMembers(); track member) {
-            <div class="testimonial" data-aos="fade-zoom-in">
-                <div class="testimonial-content">
-                    <h4>{{ member.name }}</h4>
-                    <p class="white-roboto">Project {{ member.project }}</p>
-                    <p>"{{ member.testimonial() }}"</p>
-                    <a href="{{ member.profile }}">
-                        <img src="./assets/img/social/linkedin.svg" alt="">
-                    </a>
-                </div>
-                <img [src]="member.background" alt="">
-            </div>
+            <app-testimonial [testimonial]="member"></app-testimonial>
         }
     </div>
 </section>

@@ -31,7 +31,7 @@
         .about-left {
             @include dFlex(space-between, flex-end);
             >figure {
-                >img {
+                img {
                     height: 80px;
                 }
                 @include dFlex(center, center, 5px);
@@ -73,7 +73,7 @@
             @include dFlex(space-between, flex-end, 30px !important);
             margin-top: 30px;
             >figure {
-                >img {
+                img {
                     height: 60px !important;
                 }
             }
@@ -83,4 +83,8 @@
             padding: 0 2px;
         }
     }
+}
+
+a {
+    @include hoverEffect();
 }

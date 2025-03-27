@@ -10,18 +10,28 @@
         <nav class="contact-ref">
             @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
                 @if (i < 3) {
-                <a [href]="ref.url"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
                 }
             }
         </nav>
     </div>
     <div class="about-content">
         <div data-aos="fade-right" class="about-left">
-            @for (item of aboutItems; track item) {
-                <figure>
-                    <img [src]="item.img">
-                    <figcaption [innerHTML]="item.text"></figcaption>
-                </figure>
+            @for (item of aboutItems; track $index) {
+                @if ($index == 2) {
+                    <figure>
+                        <a href="#aContact"
+                        [style.]>
+                            <img [src]="item.img">
+                            <figcaption [innerHTML]="item.text"></figcaption>
+                        </a>
+                    </figure>
+                } @else {
+                    <figure>
+                        <img [src]="item.img">
+                        <figcaption [innerHTML]="item.text"></figcaption>
+                    </figure>
+                }
             }
         </div>
         <div data-aos="fade-left" class="about-right">
