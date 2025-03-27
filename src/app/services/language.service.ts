@@ -76,14 +76,14 @@ export class LanguageService {
         learn new technologies and put them into action successfully!`,
       },
       privacyPolicy: {
-      html: `<section class="section-policies">
-        <h1 class="policies-title">Privacy Policy</h1>
-        <h2>1. Data Protection at a Glance</h2>
-        <h3>General Information</h3>
+      html: `
+        <h3 class="policies-title">Privacy Policy</h3>
+        <h5>1. Data Protection at a Glance</h5>
+        <h5>General Information</h5>
         <p>The following information provides a simple overview of what happens to your personal data when you visit this website. 
             Personal data includes all data that can personally identify you. 
             Detailed information on data protection can be found in our privacy policy listed below this text.</p>
-        <h3>Data Collection on This Website</h3>
+        <h5>Data Collection on This Website</h5>
         <h4>Who is responsible for data collection on this website?</h4>
         <p>Data processing on this website is carried out by the website operator. 
             You can find the operator's contact details in the section "Information on the Responsible Party" in this privacy policy.</p>
@@ -105,7 +105,7 @@ export class LanguageService {
                 <p>You can contact us at any time regarding this or any other questions about data protection.</p>
         <h2>2. Hosting</h2>
         <p>We host the content of our website with the following provider:</p>
-        <h3>External Hosting</h3>
+        <h5>External Hosting</h5>
         <p>This website is hosted externally. The personal data collected on this website is stored on the servers of the hosting provider(s). 
           This may include, in particular, IP addresses, contact requests, metadata and communication data, contract data, contact details, 
           names, website accesses, and other data generated through a website.</p>
@@ -120,14 +120,14 @@ export class LanguageService {
         <p>We use the following hosting provider(s):</p>
         <p>FTP Server Developer Akademie</p>
         <h2>3. General Information and Mandatory Notices</h2>
-        <h3>Data Protection</h3>
+        <h5>Data Protection</h5>
         <p>The operators of this website take the protection of your personal data very seriously. We treat your personal data confidentially 
           and in accordance with legal data protection regulations and this privacy policy.</p>
           <p>When you use this website, various personal data is collected. Personal data refers to data that can personally identify you. 
           This privacy policy explains what data we collect and how we use it. It also explains how and for what purpose this happens.</p>
         <p>Please note that data transmission over the Internet (e.g., when communicating via email) may have security vulnerabilities. 
           Complete protection of data against access by third parties is not possible.</p>
-        <h3>Notice Regarding the Responsible Party</h3>
+        <h5>Notice Regarding the Responsible Party</h5>
         <p>The responsible party for data processing on this website is:</p>
         <p>Patrick Frey<br />
         Burgallee 9<br />
@@ -137,14 +137,14 @@ export class LanguageService {
                 <p>The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of 
         processing personal data (e.g., names, email addresses, etc.).</p>
 
-        <h3>Storage Duration</h3>
+        <h5>Storage Duration</h5>
         <p>Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us 
           until the purpose for the data processing no longer applies. If you make a legitimate request for deletion or revoke your 
           consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your 
           personal data (e.g., tax or commercial law retention periods). In the latter case, the deletion will take place once these 
           reasons no longer apply.</p>
 
-        <h3>General Information on the Legal Basis for Data Processing on This Website</h3>
+        <h5>General Information on the Legal Basis for Data Processing on This Website</h5>
         <p>If you have given your consent to data processing, we process your personal data on the basis of Article 6(1)(a) GDPR or, 
         if special categories of data pursuant to Article 9(1) GDPR are processed, on the basis of Article 9(2)(a) GDPR. In the case 
         of explicit consent to the transfer of personal data to third countries, data processing is also carried out on the basis 
@@ -156,7 +156,7 @@ export class LanguageService {
         pursuant to Article 6(1)(f) GDPR. The specific legal basis applicable in each individual case is provided in the 
         following sections of this privacy policy.</p>
 
-        <h3>Recipients of Personal Data</h3>
+        <h5>Recipients of Personal Data</h5>
         <p>As part of our business activities, we collaborate with various external parties. This sometimes requires the transfer of 
         personal data to these external parties. We only share personal data with external parties if it is necessary for the 
         fulfillment of a contract, if we are legally required to do so (e.g., disclosure of data to tax authorities), if we have a 
@@ -164,11 +164,11 @@ export class LanguageService {
         data. When using data processors, we only transfer personal data of our customers based on a valid data processing agreement. 
         In the case of joint processing, a joint processing agreement is concluded.</p>
 
-        <h3>Revocation of Your Consent to Data Processing</h3>
+        <h5>Revocation of Your Consent to Data Processing</h5>
         <p>Many data processing operations are only possible with your explicit consent. You may revoke any consent you have already 
         given at any time. The legality of the data processing carried out before the revocation remains unaffected by the revocation.</p>
 
-        <h3>Right to Object to Data Processing in Specific Cases and to Direct Advertising (Article 21 GDPR)</h3>
+        <h5>Right to Object to Data Processing in Specific Cases and to Direct Advertising (Article 21 GDPR)</h5>
         <p>
         IF DATA PROCESSING IS BASED ON ARTICLE 6(1)(E) OR (F) GDPR, YOU HAVE THE RIGHT TO OBJECT AT ANY TIME, 
         ON GROUNDS RELATING TO YOUR PARTICULAR SITUATION, TO THE PROCESSING OF YOUR PERSONAL DATA; THIS ALSO 
@@ -185,21 +185,21 @@ export class LanguageService {
         DATA WILL NO LONGER BE USED FOR DIRECT ADVERTISING PURPOSES (OBJECTION PURSUANT TO ARTICLE 21(2) GDPR).
         </p>
 
-        <h3>Right to Lodge a Complaint with the Competent Supervisory Authority</h3>
+        <h5>Right to Lodge a Complaint with the Competent Supervisory Authority</h5>
         <p>
         In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory authority, 
         in particular in the Member State of their habitual residence, place of work, or the place of the alleged violation. 
         The right to lodge a complaint exists without prejudice to other administrative or judicial remedies.
         </p>
 
-        <h3>Right to Data Portability</h3>
+        <h5>Right to Data Portability</h5>
         <p>
         You have the right to have data that we process automatically based on your consent or in fulfillment of a contract 
         handed over to you or to a third party in a commonly used, machine-readable format. If you request the direct transfer 
         of the data to another controller, this will only be done to the extent that it is technically feasible.
         </p>
 
-        <h3>Right to Access, Rectification, and Erasure</h3>
+        <h5>Right to Access, Rectification, and Erasure</h5>
         <p>
         Within the framework of the applicable legal provisions, you have the right at any time to obtain free information about 
         your stored personal data, its origin and recipients, and the purpose of data processing, as well as, if applicable, a 
@@ -207,7 +207,7 @@ export class LanguageService {
         contact us at any time.
         </p>
 
-        <h3>Right to Restriction of Processing</h3>
+        <h5>Right to Restriction of Processing</h5>
         <p>
         You have the right to request the restriction of the processing of your personal data. To do so, you can contact us at any time. 
         The right to restriction of processing applies in the following cases:
@@ -229,7 +229,7 @@ export class LanguageService {
 
         <h2>4. Data Collection on This Website</h2>
 
-        <h3>Cookies</h3>
+        <h5>Cookies</h5>
         <p>Our websites use so-called cookies. Cookies are small data packages 
         and do not cause any harm to your device. They are either temporarily 
         stored for the duration of a session (session cookies) or permanently 
@@ -267,7 +267,7 @@ export class LanguageService {
         <p>Which cookies and services are used on this website can be found in 
         this privacy policy.</p>
 
-        <h3>Contact Form</h3>
+        <h5>Contact Form</h5>
         <p>If you send us inquiries via the contact form, the information you 
         provide in the inquiry form, including the contact details you provide 
         there, will be stored by us for the purpose of processing the inquiry 
@@ -288,9 +288,12 @@ export class LanguageService {
         retention periods – remain unaffected.</p>
 
         <p>Source: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
-
-      </section>`,
+      `,
       },
+      imprint: {
+        title: 'Imprint',
+        contact: 'Contact'
+      }
     },
     de: {
       landingPage: {
@@ -358,15 +361,15 @@ export class LanguageService {
       neue Technologien zu erlernen und erfolgreich in die Praxis umzusetzen.`,
       },
       privacyPolicy: {
-        html: `<section class="section-policies">
-              <h1 class="policies-title">Datenschutzerklärung</h1>
-              <h2>1. Datenschutz auf einen Blick</h2>
-              <h3>Allgemeine Hinweise</h3>
+        html: `
+              <h3 class="policies-title">Datenschutzerklärung</h3>
+              <h5>1. Datenschutz auf einen Blick</h5>
+              <h5>Allgemeine Hinweise</h5>
               <p>Die folgenden Hinweise geben einen einfachen überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn
                   Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden
                   können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
                   Datenschutzerklärung.</p>
-              <h3>Datenerfassung auf dieser Website</h3>
+              <h5>Datenerfassung auf dieser Website</h5>
               <h4>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
               <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem
                   Abschnitt Hinweis zur Verantwortlichen Stelle in dieser Datenschutzerklärung entnehmen.</p>
@@ -391,7 +394,7 @@ export class LanguageService {
               <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
               <h2>2. Hosting</h2>
               <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-              <h3>Externes Hosting</h3>
+              <h5>Externes Hosting</h5>
               <p>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf
                   den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta-
                   und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine
@@ -408,7 +411,7 @@ export class LanguageService {
               <p>Wir setzen folgende(n) Hoster ein:</p>
               <p>FTP Server Developer Akademie</p>
               <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
-              <h3>Datenschutz</h3>
+              <h5>Datenschutz</h5>
               <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
                   personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser
                   Datenschutzerklärung.</p>
@@ -418,7 +421,7 @@ export class LanguageService {
               <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail)
                   Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
               </p>
-              <h3>Hinweis zur verantwortlichen Stelle</h3>
+              <h5>Hinweis zur verantwortlichen Stelle</h5>
               <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
               <p>Patrick Frey<br />
                   Burgallee 9<br />
@@ -429,14 +432,14 @@ export class LanguageService {
               <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die
                   Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. ä.) entscheidet.</p>
               
-              <h3>Speicherdauer</h3>
+              <h5>Speicherdauer</h5>
               <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre
                   personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes
                   Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht,
                   sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z.B.
                   steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall
                   dieser Gründe.</p>
-              <h3>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h3>
+              <h5>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h5>
               <p>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage
                   von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1
                   DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die übertragung personenbezogener Daten in
@@ -449,7 +452,7 @@ export class LanguageService {
                   Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6
                   Abs. 1 lit. f DSGVO erfolgen. über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden
                   Absätzen dieser Datenschutzerklärung informiert.</p>
-              <h3>Empfänger von personenbezogenen Daten</h3>
+              <h5>Empfänger von personenbezogenen Daten</h5>
               <p>Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen. Dabei ist teilweise
                   auch eine übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich. Wir geben
                   personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich
@@ -458,11 +461,11 @@ export class LanguageService {
                   Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von Auftragsverarbeitern geben wir personenbezogene Daten
                   unserer Kunden nur auf Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer
                   gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.</p>
-              <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+              <h5>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h5>
               <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits
                   erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung
                   bleibt vom Widerruf unberührt.</p>
-              <h3>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h3>
+              <h5>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h5>
               <p>WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS
                   RECHT, AUS GRüNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN
                   DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FüR EIN AUF DIESE BESTIMMUNGEN GESTüTZTES PROFILING. DIE JEWEILIGE
@@ -476,22 +479,22 @@ export class LanguageService {
                   EINZULEGEN; DIES GILT AUCH FüR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE
                   WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET
                   (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).</p>
-              <h3>Beschwerde&shy;recht bei der zuständigen Aufsichts&shy;behörde</h3>
+              <h5>Beschwerde&shy;recht bei der zuständigen Aufsichts&shy;behörde</h5>
               <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde,
                   insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des
                   mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder
                   gerichtlicher Rechtsbehelfe.</p>
-              <h3>Recht auf Daten&shy;übertrag&shy;barkeit</h3>
+              <h5>Recht auf Daten&shy;übertrag&shy;barkeit</h5>
               <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert
                   verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern
                   Sie die direkte übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es
                   technisch machbar ist.</p>
-              <h3>Auskunft, Berichtigung und Löschung</h3>
+              <h5>Auskunft, Berichtigung und Löschung</h5>
               <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre
                   gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein
                   Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten
                   können Sie sich jederzeit an uns wenden.</p>
-              <h3>Recht auf Einschränkung der Verarbeitung</h3>
+              <h5>Recht auf Einschränkung der Verarbeitung</h5>
               <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie
                   sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:</p>
               <ul>
@@ -512,7 +515,7 @@ export class LanguageService {
                   Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen
                   eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.</p>
               <h2>4. Datenerfassung auf dieser Website</h2>
-              <h3>Cookies</h3>
+              <h5>Cookies</h5>
               <p>Unsere Internetseiten verwenden so genannte Cookies. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät
                   keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft
                   (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch
@@ -538,7 +541,7 @@ export class LanguageService {
                   Funktionalität dieser Website eingeschränkt sein.</p>
               <p>Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen.
               </p>
-              <h3>Kontaktformular</h3>
+              <h5>Kontaktformular</h5>
               <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der
                   von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns
                   gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
@@ -552,8 +555,12 @@ export class LanguageService {
                   Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen - insbesondere Aufbewahrungsfristen - bleiben
                   unberührt.</p>
               <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
-      </section>`,
+      `,
       },
+      imprint: {
+        title: 'Impressum',
+        contact: 'Kontakt'
+      }
     },
   };
 

@@ -1,12 +1,25 @@
 @import './../../assets/styles/mixins.scss';
 
-section {
+header {
     @include header(sticky, $zi: 9);
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.657));
+    overflow: hidden;
 }
 
 .imprint-section {
-    min-height: 100vh;
+    min-height: calc( 100vh - 160px );
+    margin: 0 auto;
     z-index: 1;
     background-color: $col-bg-main;
+    max-width: 1480px;
+    padding: 30px 50px;
+    >div {
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imprint-section {
+        padding: 30px 15px;
+    }
 }
