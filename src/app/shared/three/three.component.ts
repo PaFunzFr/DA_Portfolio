@@ -1,8 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as THREE from 'three';
-import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper";
-import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib";
+import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
+import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib.js";
 RectAreaLightUniformsLib.init();
 @Component({
   selector: 'app-three',
@@ -18,7 +18,9 @@ export class ThreeComponent implements AfterViewInit {
   title = "threeJs";
   constructor(private window: Window) {}
   
-
+  ngOnInit() {
+    RectAreaLightUniformsLib.init();
+  }
   ngAfterViewInit(): void {
     const width = 240, height = 240;
     
@@ -58,7 +60,7 @@ export class ThreeComponent implements AfterViewInit {
     const loader = new GLTFLoader();
     let logo: THREE.Object3D; // reference for animation
 
-    loader.load('/assets/obj/logo.glb', (gltf) => {
+    loader.load('./assets/obj/logo.glb', (gltf) => {
       logo = gltf.scene;
       logo.scale.set(0.2, 0.2, 0.2);
       scene.add(logo);
