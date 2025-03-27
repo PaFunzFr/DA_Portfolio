@@ -13,9 +13,10 @@
     @include dFlex(center, flex-start, 10%);
     max-width: 1200px;
     padding: 0 50px;
-    overflow: clip;
+
 
     .bg-skills {
+        overflow: clip;
         position: absolute;
         opacity: 0.3;
         height: 100%;
@@ -43,6 +44,10 @@
             color: white;
             font-family: 'Roboto';
             filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.731));
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: translateY(-6px) scale(0.96);
+            }
             >img {
                 height: 6vw;
                 min-height: 40px;
