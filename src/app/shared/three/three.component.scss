@@ -1,4 +1,4 @@
-@import "./../../../assets/styles/colors.scss";
+@import "./../../../assets/styles/mixins.scss";
 
 .canvas-wrapper {
     >img {
@@ -16,21 +16,10 @@
         &:nth-child(3) {
             animation: pulse 5s infinite ease;
         }
+        @include animationPulseImg();
     }
 } 
 
 #three-container {
     filter: drop-shadow(0 0 15px $col-bg-main);
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.9);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.9);
-    }
 }
