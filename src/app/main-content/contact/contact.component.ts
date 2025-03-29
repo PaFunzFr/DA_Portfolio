@@ -22,6 +22,7 @@ export class ContactComponent {
 
   languages = inject(LanguageService);
   contact = inject(SocialService);
+  messageSent: boolean = false;
 
   get contactTitle(): string {
     return this.languages.getTranslation('contact' , 'title');
@@ -35,6 +36,10 @@ export class ContactComponent {
     return this.languages.getTranslation('privacyPolicy' , 'read');
   }
 
+  get messageSentInfo(): string {
+    return this.languages.getTranslation('contact' , 'sent');
+  }
+
   contactData: ContactDatInterface  = {
     name: '',
     email: '',
@@ -45,6 +50,11 @@ export class ContactComponent {
   onSubmit(ngForm: NgForm) {
     if(ngForm.valid) {
       console.log(this.contactData);
+      this.messageSent = true;
+      ngForm.reset();
+      setTimeout(() => {
+        this.messageSent = false;
+      }, 4000);
     }
   }
   

@@ -102,7 +102,6 @@ form {
         transition: all 0.5s ease;
         >img {
             height: 26px;
-            width: 100%;
         }
         &:hover {
             cursor: pointer;
@@ -112,6 +111,14 @@ form {
             }
         }
     }
+}
+
+span {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: $col-des-main;
+    border-radius: 5px;
 }
 
 .valid {
