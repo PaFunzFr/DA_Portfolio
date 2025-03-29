@@ -45,8 +45,8 @@ export class ProjectCardComponent {
     this.hoverState.emit(false);
   }
 
-  closeModal() {
-    this.isHovered = false;
+  toggleSlide() {
+    this.isHovered = !this.isHovered;
   }
 
   @HostListener('window:resize')

@@ -73,23 +73,3 @@
     }
 }
 
-.close-btn {
-    display: none;
-    border-radius: 50%;
-    border: 3px solid white;
-    color: white;
-    height: 30px;
-    width: 30px;
-    background-color: $col-bg-main;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    &:hover {
-        background-color: $col-des-main;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .close-btn {
-        @include dFlex(center, center);
-    }
-}

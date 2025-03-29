@@ -1,4 +1,4 @@
-<div class="single-project" (mouseenter)="hoverStopAutoSlide()" (mouseleave)="noHoverStartAutoSlide()">
+<div class="single-project" (click)="toggleSlide()" (mouseenter)="hoverStopAutoSlide()" (mouseleave)="noHoverStartAutoSlide()">
     <section class="project-infos" [style.transform]="isHovered ? 'scaleY(1)' : 'scaleY(0)'">
         <div class="info-container">
             <div class="project-title">
@@ -6,7 +6,6 @@
                 <div class="project-ref">
                     <a href=""><img src="./assets/img/social/github.svg" alt=""></a>
                     <a href=""><img src="./assets/img/social/web.svg" alt=""></a>
-                    <button class="close-btn" (click)="closeModal()">X</button>
                 </div>
             </div>
             <p>{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
