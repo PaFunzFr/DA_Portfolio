@@ -43,7 +43,7 @@ export class LandingPageComponent {
   }
 
   setFontSize(): string {
-    let size = Math.min(window.scrollY / 10, 100);
+    let size = Math.min(window.scrollY / 10, 75);
     return `${size}px`;
   }
 

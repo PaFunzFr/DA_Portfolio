@@ -45,6 +45,10 @@ export class ProjectCardComponent {
     this.hoverState.emit(false);
   }
 
+  closeModal() {
+    this.isHovered = false;
+  }
+
   @HostListener('window:resize')
   onResize() {
     const width = window.innerWidth;

@@ -27,7 +27,6 @@
             .project-tools {
                 @include dFlex(flex-start, center, 5px);
                 flex-wrap: wrap;
-                cursor: pointer;
                 >img {
                     height: 30px;
                     filter: drop-shadow(0 0 2px black);
@@ -50,10 +49,12 @@
                     line-height: 24px;
                 }
                 .project-ref {
-                    @include dFlex(flex-end, center, 10px);
+                    @include dFlex(center, center, 10px);
                     >a {
+                        height: 28px;
+                        @include hoverEffect();
                         >img{
-                            width: 30px;
+                            height: 100%;
                         }
                     }
                 }
@@ -72,3 +73,23 @@
     }
 }
 
+.close-btn {
+    display: none;
+    border-radius: 50%;
+    border: 3px solid white;
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: $col-bg-main;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $col-des-main;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .close-btn {
+        @include dFlex(center, center);
+    }
+}

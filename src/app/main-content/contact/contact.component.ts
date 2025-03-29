@@ -30,6 +30,10 @@ export class ContactComponent {
     return this.languages.getTranslation('contact' , 'text');
   }
 
+  get privacyRead(): string {
+    return this.languages.getTranslation('privacyPolicy' , 'read');
+  }
+
   contactData: ContactDatInterface  = {
     name: '',
     email: '',
