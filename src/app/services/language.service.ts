@@ -4,7 +4,7 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
-  currentLanguage = signal<string>('en'); // set signal
+  currentLanguage = signal<string>(''); // set signal
 
   translation: { [key: string]: any } = {
     en: {

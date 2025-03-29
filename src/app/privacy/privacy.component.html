@@ -1,5 +1,5 @@
-<header>
-    <app-header></app-header>
+<header id="aHeaderPrivacy">
+    <app-header [hideOnScroll]="false" id="aHeaderI" [targetHref]="'#aHeaderPrivacy'"></app-header>
     <app-side-bar class="no-interact" [position] = "'sticky'"></app-side-bar>
 </header>
 <section class="privacy-policy-section" [innerHTML]="privacyContent">

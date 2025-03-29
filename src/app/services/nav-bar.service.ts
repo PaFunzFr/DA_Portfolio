@@ -17,7 +17,7 @@ export class NavBarService {
     {title: 'Contact', link: '#aContact'}
   ]
 
-  showSideBar: boolean = true;
+  showSideBar: boolean = false;
   hideOnScroll: boolean = false;
   readonly positionFixed: string = "fixed";
   readonly positionSticky: string = "sticky";

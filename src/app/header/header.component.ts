@@ -16,7 +16,8 @@ import { NavBarService } from '../services/nav-bar.service';
 export class HeaderComponent {
 
   ngOnInit() {
-    this.toggleLang('en');
+    this.savedLanguage = localStorage.getItem('language') || 'en';
+    this.toggleLang(this.savedLanguage);
   }
 
   @Input() targetHref: string = '';
@@ -25,21 +26,31 @@ export class HeaderComponent {
   languages = inject(LanguageService);
   buttonState = inject(ButtonStateService);
   navBarService = inject(NavBarService);
-  currentLanguage = this.languages.currentLanguage;
   isDisabledEn = this.buttonState.getButtonState('en');
   isDisabledDe = this.buttonState.getButtonState('de');
   bars: number[] = [0,1,2];
   burgerHovered: boolean = false;
+  savedLanguage: string = '';
 
   toggleLang(newLanguage: string): void {
-    this.buttonState.setButtonState(true, newLanguage); 
-    this.languages.toggleLanguage(newLanguage);
-    const otherLanguage = newLanguage === 'en' ? 'de' : 'en';
+    this.savedLanguage = newLanguage;
+    localStorage.setItem('language', this.savedLanguage);
+    this.buttonState.setButtonState(true, this.savedLanguage); 
+    this.languages.toggleLanguage(this.savedLanguage);
+    const otherLanguage = this.savedLanguage === 'en' ? 'de' : 'en';
     this.buttonState.setButtonState(false, otherLanguage);
   }
 
     hoverBurger(status: boolean) {
       this.burgerHovered = status;
+    }
+
+    scrollToSection(sectionId: string) {
+      if (!sectionId) return;
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
 }
