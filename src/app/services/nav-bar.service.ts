@@ -18,10 +18,12 @@ export class NavBarService {
   ]
 
   showSideBar: boolean = true;
+  hideOnScroll: boolean = false;
   readonly positionFixed: string = "fixed";
   readonly positionSticky: string = "sticky";
 
-  toggleSideBar() {
+  toggleSideBar(boolean: boolean) {
+    this.hideOnScroll = boolean;
     this.showSideBar =!this.showSideBar;
   }
 }

@@ -26,15 +26,15 @@
             DE
             </button>
         </section>
-        <div class="hamburger"
+        <a class="hamburger" [href]="targetHref || '#'"
             (mouseenter)="hoverBurger(true)"
             (mouseleave)="hoverBurger(false)"
-            (click)="navBarService.toggleSideBar()"
+            (click)="navBarService.toggleSideBar(hideOnScroll)"
             >
             @for (bar of bars; track bar) {
                 <div class="bar"
                 [style.backgroundColor]="burgerHovered ? '#EE8C1B'  : '#4A81E0'"></div>
             }
-        </div>
+        </a>
     </nav>
 </header>

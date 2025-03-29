@@ -11,17 +11,20 @@ import { NavBarService } from '../../services/nav-bar.service';
 export class SideBarComponent {
 
   navBarService = inject(NavBarService);
-
+  
+  @Input() position = '';
+  @Input() noScroll: boolean = true;
   @HostListener('window:scroll', ['$event'])
 
   onScroll(event: Event) {
-    this.navBarService.showSideBar = true;    
+    if (this.navBarService.hideOnScroll) {
+      this.navBarService.showSideBar = false;
+    }
   }
 
   leavingSideBar() {
-    this.navBarService.showSideBar = true;    
+    this.navBarService.showSideBar = false;
   }
-  
-  @Input() position = '';
+
 
 }

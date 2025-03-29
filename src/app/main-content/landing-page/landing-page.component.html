@@ -1,5 +1,5 @@
 <header class="header">
-    <app-header></app-header>
+    <app-header [hideOnScroll]="true"></app-header>
 </header>
 <section class="landing-page">
     <div class="intro-message">
@@ -13,7 +13,7 @@
         <div class="welcome-title"
             [style]="{
                 fontSize: setFontSize(),
-                opacity: setFontOpacity()
+                opacity: hideAtViewportHeight()
             }">
             {{ welcomeHero }}
         </div>
@@ -22,4 +22,6 @@
         <div class="scroll-wheel"></div>
     </div>
 </section>
-<app-side-bar class="no-interact" [position] = "'fixed'"></app-side-bar>
+<app-side-bar [style]="{
+    opacity: hideAtViewportHeight()
+}" class="no-interact" [position]="'fixed'"></app-side-bar>

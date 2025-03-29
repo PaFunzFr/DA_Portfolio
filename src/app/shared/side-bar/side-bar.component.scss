@@ -18,7 +18,7 @@
         width: 40vw;
         min-width: 150px;
         max-width: 200px;
-        background-color: #171e29af;
+        background-color: $col-bg-main;
         transition: all 0.5s ease;
         >a {
             &:hover {

@@ -47,7 +47,7 @@ export class LandingPageComponent {
     return `${size}px`;
   }
 
-  setFontOpacity(): number {
+  hideAtViewportHeight(): number {
     const viewportHeight = window.innerHeight; // => 100vh
     if (window.scrollY >= 2.3 * viewportHeight) {
       return 0;

@@ -2,7 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { ButtonStateService } from '../services/button-state.service';
 import { NavBarService } from '../services/nav-bar.service';
-import { SideBarComponent } from "../shared/side-bar/side-bar.component";
+
 
 
 @Component({
@@ -18,6 +18,9 @@ export class HeaderComponent {
   ngOnInit() {
     this.toggleLang('en');
   }
+
+  @Input() targetHref: string = '';
+  @Input() hideOnScroll: boolean = false;
 
   languages = inject(LanguageService);
   buttonState = inject(ButtonStateService);
