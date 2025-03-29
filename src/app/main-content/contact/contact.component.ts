@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { SocialService } from '../../services/social.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { NgClass } from '@angular/common';
 
 interface ContactDatInterface {
   name: string;
@@ -13,7 +14,7 @@ interface ContactDatInterface {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgClass],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

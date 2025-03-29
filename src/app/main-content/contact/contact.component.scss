@@ -114,6 +114,14 @@ form {
     }
 }
 
+.valid {
+    background-color: rgba(255, 255, 255, 0.296) !important;
+}
+
+.invalid {
+    background-color: rgba(225, 13, 13, 0.097) !important;
+}
+
 @media screen and (max-width: 768px) {
     .c-top {
         flex-direction: column;

@@ -26,14 +26,24 @@
                 <div class="form-object">
                     <label for="fname">Name</label>
                     <input [(ngModel)]="contactData.name"
-                            type="text" id="fname" name="fullname" required>
+                            autocomplete="off"
+                            #name="ngModel"
+                            minlength="3"
+                            maxlength="25" 
+                            type="text" id="fname" name="fullname" required
+                            [ngClass]="{ 'valid': name.valid, 'invalid': name.touched && !name.valid }"
+                            >
                 
                 </div>
                 <div class="form-object">
                     <label for="mail">Mail</label>
                     <input [(ngModel)]="contactData.email"
+                            autocomplete="off"
+                            #email="ngModel"
                             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                            type="text" id="mail" name="email" required>
+                            type="email" id="mail" name="email" required
+                            [ngClass]="{ 'valid': email.valid, 'invalid': email.touched && !email.valid }"
+                    >
                 </div>
             </section>
 
@@ -47,11 +57,9 @@
                     style="height:200px"
                     minlength="10" 
                     maxlength="800"
+                    [ngClass]="{ 'valid': message.valid, 'invalid': message.touched && !message.valid }"
                     required >
                 </textarea>
-                    @if (!message.valid && message.touched) {
-                        <span>Please enter a message</span>
-                    }
             </div>
             <div class="check-submit">
                 <div class="check-box">
