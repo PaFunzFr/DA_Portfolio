@@ -3,6 +3,7 @@ import { LanguageService } from '../../services/language.service';
 import { SocialService } from '../../services/social.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgClass } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 interface ContactDatInterface {
   name: string;
@@ -20,6 +21,7 @@ interface ContactDatInterface {
 })
 export class ContactComponent {
 
+  http = inject(HttpClient);
   languages = inject(LanguageService);
   contact = inject(SocialService);
   messageSent: boolean = false;
@@ -47,6 +49,7 @@ export class ContactComponent {
     checkbox: false
   } 
 
+  /*
   onSubmit(ngForm: NgForm) {
     if(ngForm.valid) {
       console.log(this.contactData);
@@ -57,5 +60,46 @@ export class ContactComponent {
       }, 4000);
     }
   }
+    */
   
+  mailTest = false;
+
+  post = {
+    endPoint: 'http://localhost:4200/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  }
+  
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => {
+            this.messageSent = true;
+            ngForm.resetForm();
+            setTimeout(() => {
+              this.messageSent = false;
+            }, 4000);
+          },
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      this.messageSent = true;
+      ngForm.resetForm();
+      setTimeout(() => {
+        this.messageSent = false;
+      }, 4000);
+    }
+  }
+
 }

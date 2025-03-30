@@ -10,15 +10,13 @@
         pointer-events: auto;
         @include dFlex(flex-start, center, 5%, absolute);
         flex-direction: column;
-        right: 0;
+        top: 0;
         transform: translateX(100%);
         padding-top: 100px;
-        border-left: 1px solid white;
-        height: 100%;
-        width: 40vw;
-        min-width: 150px;
-        max-width: 200px;
-        background-color: $col-bg-main;
+        border-bottom: 1px solid white;
+        height: 250px;
+        width: 100vw;
+        background: #171e29e4;
         transition: all 0.5s ease;
         >a {
             &:hover {

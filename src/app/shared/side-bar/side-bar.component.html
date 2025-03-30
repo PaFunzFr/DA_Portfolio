@@ -1,7 +1,7 @@
 <section class="side-menu"
 [style.position] = "position">
     <div 
-    [style.transform]="navBarService.showSideBar === false ? 'translateX(100%)' : 'translateX(0%)'"
+    [style.transform]="navBarService.showSideBar === false ? 'translateY(-100%)' : 'translateY('+ positionY +')'"
     (mouseleave)="leavingSideBar()"
     >
         @for (navItem of navBarService.navBar; track navItem) {
