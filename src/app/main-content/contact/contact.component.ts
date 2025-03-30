@@ -49,20 +49,7 @@ export class ContactComponent {
     checkbox: false
   } 
 
-  /*
-  onSubmit(ngForm: NgForm) {
-    if(ngForm.valid) {
-      console.log(this.contactData);
-      this.messageSent = true;
-      ngForm.reset();
-      setTimeout(() => {
-        this.messageSent = false;
-      }, 4000);
-    }
-  }
-    */
-  
-  mailTest = false;
+  mailTest: boolean = true;
 
   post = {
     endPoint: 'http://localhost:4200/sendMail.php',
