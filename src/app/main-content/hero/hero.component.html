@@ -13,14 +13,14 @@
             src="./assets/img/hero/main_hero_dev.png"
             [style.clip-path]="'inset(0 ' + xDataLeft + '% 0 0)'"
             [style.transform]="'translateX(calc(-50% - '+offset+'px ))'"
-            [style.transition]="entering ? 'transform 0.3s linear, clip-path 0.5s linear' : 'transform 0.3s linear'" 
+            [style.transition]="entering ? 'transform 0.3s linear, clip-path 0.5s linear' : 'none'" 
             alt=""
         >
         <img 
             class="hero-img hero-img-right"
             [style.clip-path]="'inset(0 0 0 ' + xDataRight + '%)'"
             [style.transform]="'translateX(calc(-50% - '+offset+'px ))'" 
-            [style.transition]="entering ? 'transform 0.3s linear, clip-path 0.5s linear' : 'transform 0.3s linear'" 
+            [style.transition]="entering ? 'transform 0.3s linear, clip-path 0.5s linear' : 'none'" 
             src="./assets/img/hero/main_hero_des.png" 
             alt=""
         >

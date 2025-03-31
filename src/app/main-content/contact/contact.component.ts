@@ -35,8 +35,8 @@ export class ContactComponent {
     return this.languages.getTranslation('contact' , 'text');
   }
 
-  get privacyRead(): string {
-    return this.languages.getTranslationArray('privacyPolicy' , 'read', 0);
+  privacyRead(index: number): string {
+    return this.languages.getTranslationArray('privacyPolicy' , 'read', index);
   }
 
   get messageSentInfo(): string {
