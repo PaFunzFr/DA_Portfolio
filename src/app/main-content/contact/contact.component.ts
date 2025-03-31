@@ -4,6 +4,7 @@ import { SocialService } from '../../services/social.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 interface ContactDatInterface {
   name: string;
@@ -15,7 +16,7 @@ interface ContactDatInterface {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, NgClass],
+  imports: [FormsModule, NgClass, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -35,7 +36,7 @@ export class ContactComponent {
   }
 
   get privacyRead(): string {
-    return this.languages.getTranslation('privacyPolicy' , 'read');
+    return this.languages.getTranslationArray('privacyPolicy' , 'read', 0);
   }
 
   get messageSentInfo(): string {

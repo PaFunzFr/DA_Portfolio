@@ -77,8 +77,7 @@ export class LanguageService {
         sent: `Message was sent.`,
       },
       privacyPolicy: {
-        read: `I've read the <a href="./privacy"><u>privacy policy</u></a> 
-              and agree to the processing of my data as outlined.`,
+        read: ["I've read the ", 'privacy policy', ' and agree to the processing of my data as outlined.' ],
         html: `
           <h3 class="policies-title">Privacy Policy</h3>
           <h5>1. Data Protection at a Glance</h5>
@@ -365,7 +364,7 @@ export class LanguageService {
         sent: `Nachricht wurde versendet.`,
       },
       privacyPolicy: {
-        read: `Ich habe die <a href="./privacy"><u>Datenschutzerklärung</u></a> gelesen und stimme der Verarbeitung meiner Daten gemäß den dort aufgeführten Bestimmungen zu.`,
+        read: ['Ich habe die ', 'Datenschutzerklärung', ' gelesen und stimme der Verarbeitung meiner Daten gemäß den dort aufgeführten Bestimmungen zu.' ],
         html: `
               <h3 class="policies-title">Datenschutzerklärung</h3>
               <h5>1. Datenschutz auf einen Blick</h5>
@@ -573,6 +572,11 @@ export class LanguageService {
   getTranslation(section: string, content: string): string {
     const language = this.currentLanguage(); // get signal
     return this.translation[language][section][content];
+  }
+
+  getTranslationArray(section: string, content: string, index:number): string {
+    const language = this.currentLanguage(); // get signal
+    return this.translation[language][section][content][index];
   }
 
   getProjectDescription(project: string): string {

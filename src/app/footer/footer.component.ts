@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { SocialService } from '../services/social.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

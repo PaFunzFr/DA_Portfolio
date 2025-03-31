@@ -63,7 +63,9 @@
             <div class="check-submit">
                 <div class="check-box">
                     <input type="checkbox" id="check" name="privacyCheck" [(ngModel)]="contactData.checkbox" required>
-                    <label for="privacyCheck" [innerHTML]="privacyRead"></label>
+                    <label for="privacyCheck">
+                        {{privacyRead}} <a routerLink="privacy">Datenschutzbestimmungen</a> gelesen und akzeptiere diese.
+                    </label>
                 </div>
                 <button type="submit" class="submit-btn-img">
                     <img src="./assets/img/social/submit.svg" alt="Submit" [style.opacity]="contactForm.valid ? 1 : 0.4" >
