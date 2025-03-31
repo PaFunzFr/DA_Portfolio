@@ -5,11 +5,10 @@ section {
     border-top: 1px solid white;
     top: -1px;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.657));
-    z-index: 9;
 }
 
 .no-interact{
-    transform: translateY(-80px);
+    pointer-events: none;
 }
 
 

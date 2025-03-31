@@ -1,7 +1,8 @@
 <header>
-    <app-header></app-header>
+    <app-header id="imprintHeader"></app-header>
+    <app-side-bar class="no-interact" [position]="'sticky'" [positionY]="'-60px'"></app-side-bar>
 </header>
-<app-side-bar class="no-interact" [position]="'absolute'" [positionY]="'0%'"></app-side-bar>
+
 <section class="imprint-section">
     <div>
         <h4>{{ imprintTitle }}</h4>

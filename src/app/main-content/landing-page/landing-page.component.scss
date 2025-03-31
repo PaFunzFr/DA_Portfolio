@@ -8,10 +8,6 @@
     z-index: 9;
 }
 
-.no-interact {
-    pointer-events: none;
-}
-
 .landing-page {
     @include dFlex(center, center, 0, fixed);
     top: 0;
