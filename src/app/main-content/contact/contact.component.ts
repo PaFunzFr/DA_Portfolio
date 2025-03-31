@@ -50,10 +50,10 @@ export class ContactComponent {
     checkbox: false
   } 
 
-  mailTest: boolean = true;
+  mailTest: boolean = false;
 
   post = {
-    endPoint: 'http://localhost:4200/sendMail.php',
+    endPoint: '/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
