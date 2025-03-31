@@ -23,12 +23,12 @@
 }
 
 .project-counter {
-    @include dFlex(center, center, 10px);
-    margin: 20px 0 80px 0;
+    @include dFlex(center, center, 14px);
+    margin: 25px 0 80px 0;
     z-index: 5;
     .count-dot {
-        height: 15px;
-        width: 15px;
+        height: 18px;
+        width: 18px;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.518);
         &:hover {
@@ -40,6 +40,7 @@
         background-color: white;
     }
 }
+
 
 @media screen and (max-width: 768px) {
     .projects-container {

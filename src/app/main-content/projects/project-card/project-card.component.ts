@@ -19,6 +19,7 @@ export class ProjectCardComponent {
   isHovered: boolean = false;
   interval: number | undefined;
   currentNumber = 0;
+  buttonClicked: boolean = false;
 
   @Input() cardNumber = 0;
   @Output() hoverState = new EventEmitter<boolean>();
@@ -36,17 +37,29 @@ export class ProjectCardComponent {
   }
 
   hoverStopAutoSlide() {
+    if (!this.buttonClicked) {
+      this.buttonClicked = true;
+    }
     this.isHovered = true;
     this.hoverState.emit(true);
   }
 
   noHoverStartAutoSlide() {
+    if (this.buttonClicked) {
+      this.buttonClicked = false;
+    }
     this.isHovered = false;
     this.hoverState.emit(false);
   }
 
-  toggleSlide() {
+  toggleInfo() {
     this.isHovered = !this.isHovered;
+    this.buttonClicked = !this.buttonClicked;
+    if(this.isHovered) {
+      this.hoverState.emit(true);
+    } else if (!this.isHovered) {
+      this.hoverState.emit(false);
+    }
   }
 
   @HostListener('window:resize')
@@ -55,5 +68,4 @@ export class ProjectCardComponent {
     this.screenSize = width < 650 ? 'mobile' : 'desktop';
   }
   
-
 }

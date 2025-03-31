@@ -61,8 +61,8 @@ export class ProjectDataService {
       desTools: [
         this.getSkillImgSrc('adesigner', this.skillsDes),
       ],
-      projectUrl: '',
-      projectGithub: '',
+      projectUrl: 'http://pokedex.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_Pokedex',
       projectTextId: 'pokedex'
     },
     {
@@ -117,8 +117,8 @@ export class ProjectDataService {
         this.getSkillImgSrc('photoshop', this.skillsDes),
         this.getSkillImgSrc('davinci', this.skillsDes),
       ],
-      projectUrl: '',
-      projectGithub: '',
+      projectUrl: 'http://bnb.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_2D_Plattformer',
       projectTextId: 'bnbsaga'
     }
   ];
