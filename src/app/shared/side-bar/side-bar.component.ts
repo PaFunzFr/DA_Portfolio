@@ -17,11 +17,10 @@ export class SideBarComponent {
   @Input() positionY: string = '';
   @HostListener('window:scroll', ['$event'])
 
+  /*
   onScroll(event: Event) {
-
-      this.navBarService.showSideBar = !this.navBarService.showSideBar;
-    
-  }
+    this.navBarService.showSideBar = !this.navBarService.showSideBar;
+  }*/
 
   leavingSideBar() {
     this.navBarService.showSideBar = false;
