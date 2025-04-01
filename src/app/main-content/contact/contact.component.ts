@@ -51,8 +51,6 @@ export class ContactComponent {
     checkbox: false
   } 
 
-  mailTest: boolean = true;
-
   post = {
     endPoint: '/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -65,7 +63,7 @@ export class ContactComponent {
   }
   
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -83,13 +81,6 @@ export class ContactComponent {
             }, 4000);
           },
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.messageSent = true;
-      this.buttonClicked = false;
-      ngForm.resetForm();
-      setTimeout(() => {
-        this.messageSent = false;
-      }, 4000);
     }
   }
 
