@@ -2,7 +2,9 @@
     <div class="footer-content">
         <p>&copy; Patrick Frey 2025</p>
         <div>
-            <a routerLink="imprint">Imprint</a>
+            <a routerLink="imprint">
+                {{ currentLang === 'en' ? 'Imprint' : 'Impressum' }}
+            </a>
             @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
                 @if (i < 3) {
                 <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>

@@ -53,4 +53,8 @@ export class HeaderComponent {
       }
     }
 
+    get currentLang():any {
+      return this.languages.currentLanguage()
+    }
+
 }

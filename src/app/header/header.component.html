@@ -8,7 +8,7 @@
     </a>
     <nav class="white-roboto">
         @for (navItem of navBarService.navBar; track navItem) {
-            <a class="page-ref" [href]="navItem.link">{{ navItem.title }}</a>
+            <a class="page-ref" [href]="navItem.link">{{ currentLang == 'en' ? navItem.titleEn : navItem.titleDe }}</a>
         }
         <section class="lang-toggle">
             <button 

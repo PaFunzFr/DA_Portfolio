@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
 interface NavBarInterface {
-  title: string;
+  titleEn: string;
+  titleDe: string;
   link: string;
 }
 
@@ -11,10 +12,10 @@ interface NavBarInterface {
 export class NavBarService {
   navBar: NavBarInterface[] = [
     //{title: 'Home', link: ''},
-    {title: 'About', link: '#aAbout'},
-    {title: 'Skills', link: '#aSkills'},
-    {title: 'Projects', link: '#aProjects'},
-    {title: 'Contact', link: '#aContact'}
+    {titleEn: 'About', titleDe: 'Über', link: '#aAbout'},
+    {titleEn: 'Skills', titleDe: 'Skills',  link: '#aSkills'},
+    {titleEn: 'Projects', titleDe: 'Projekte', link: '#aProjects'},
+    {titleEn: 'Contact', titleDe: 'Kontakt', link: '#aContact'}
   ]
 
   showSideBar: boolean = false;

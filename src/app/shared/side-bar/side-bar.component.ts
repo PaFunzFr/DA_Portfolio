@@ -1,5 +1,6 @@
 import { Component, inject, HostListener, Input } from '@angular/core';
 import { NavBarService } from '../../services/nav-bar.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -11,6 +12,7 @@ import { NavBarService } from '../../services/nav-bar.service';
 export class SideBarComponent {
 
   navBarService = inject(NavBarService);
+  languages = inject(LanguageService);
   
   @Input() position = '';
   @Input() noScroll: boolean = true;
@@ -24,6 +26,10 @@ export class SideBarComponent {
 
   leavingSideBar() {
     this.navBarService.showSideBar = false;
+  }
+
+  get currentLang():any {
+    return this.languages.currentLanguage()
   }
 
 }

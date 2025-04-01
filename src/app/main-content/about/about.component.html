@@ -23,13 +23,13 @@
                         <a href="#aContact"
                         [style.]>
                             <img [src]="item.img">
-                            <figcaption [innerHTML]="item.text"></figcaption>
+                            <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
                         </a>
                     </figure>
                 } @else {
                     <figure>
                         <img [src]="item.img">
-                        <figcaption [innerHTML]="item.text"></figcaption>
+                        <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
                     </figure>
                 }
             }

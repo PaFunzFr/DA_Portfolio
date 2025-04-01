@@ -21,4 +21,8 @@ export class SkillsComponent {
     return this.languages.getTranslation('skills', 'mindset');
   }
 
+  get currentLang() {
+    return this.languages.currentLanguage();
+  }
+
 }
