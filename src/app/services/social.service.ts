@@ -15,8 +15,8 @@ export class SocialService {
   socialRefs: socialRefInterface[] = [
     { title: 'github', imgSource: './assets/img/social/github.svg', url: 'https://github.com/PaFunzFr'},
     { title: 'linkedin', imgSource: './assets/img/social/linkedin.svg', url: 'https://www.linkedin.com/in/patrick-frey-690000164'},
-    { title: 'email', imgSource: './assets/img/social/email.svg', url: ''},
-    { title: 'phone', imgSource: './assets/img/social/phone.svg', url: '01731500779'}
+    { title: 'email', imgSource: './assets/img/social/email.svg', url: 'contact@p-frey.com'},
+    { title: 'phone', imgSource: './assets/img/social/phone.svg', url: '+491731500779'}
   ];
 
 }

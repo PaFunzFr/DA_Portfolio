@@ -11,11 +11,11 @@
         <div data-aos="fade-left" class="contact-info">
             <a [href]="'tel:' + contact.socialRefs[3].url">
                 <img [src]="contact.socialRefs[3].imgSource" [alt]="contact.socialRefs[3].title">
-                +49173-1500779
+                {{ contact.socialRefs[3].url }}
             </a>
-            <a [href]="contact.socialRefs[2].url">
+            <a [href]="'mailto:' + contact.socialRefs[2].url">
                 <img [src]="contact.socialRefs[2].imgSource" [alt]="contact.socialRefs[2].title">
-                frey-email-mail.com
+                {{ contact.socialRefs[2].url }}
             </a>
         </div>
     </section>

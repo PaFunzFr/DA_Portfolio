@@ -37,7 +37,7 @@
         @include dFlex(space-between, center, 20px);
         width: 100%;
         >div {
-            @include dFlex(center, center, 10px);
+            @include dFlex(center, flex-start, 10px);
             a {
                 color: $col-dev-main;
                 &:hover {

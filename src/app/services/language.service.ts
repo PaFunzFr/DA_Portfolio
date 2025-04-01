@@ -135,7 +135,7 @@ export class LanguageService {
           Burgallee 9<br />
           61231 Bad Nauheim</p>
           <p>Phone: 01731500778<br />
-          Email: pafr.formspree@gmail.com</p>
+          Email: contact@p-frey.com</p>
                   <p>The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of 
           processing personal data (e.g., names, email addresses, etc.).</p>
 
@@ -432,7 +432,7 @@ export class LanguageService {
                   61231 Bad Nauheim</p>
               
               <p>Telefon: 01731500778<br />
-                  E-Mail: pafr.formspree@gmail.com</p>
+                  E-Mail: contact@p-frey.com</p>
               <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die
                   Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. ä.) entscheidet.</p>
               
