@@ -6,9 +6,11 @@
                 {{ currentLang === 'en' ? 'Imprint' : 'Impressum' }}
             </a>
             @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
-                @if (i < 3) {
-                <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
-                }
+                @if (i < 2) {
+                    <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                } @else if (i == 2) {
+                    <a [href]="'mailto:' + ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                } 
             }
         </div>
     </div>

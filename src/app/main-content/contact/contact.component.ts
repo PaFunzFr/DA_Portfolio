@@ -103,4 +103,8 @@ export class ContactComponent {
     window.scrollTo(0, 0);
   }
 
+  get currentLang() {
+    return this.languages.currentLanguage();
+  }
+
 }

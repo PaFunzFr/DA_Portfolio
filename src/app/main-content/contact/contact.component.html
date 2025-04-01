@@ -31,12 +31,14 @@
                         <input [(ngModel)]="contactData.name"
                                 autocomplete="off"
                                 #name="ngModel"
-                                minlength="5"
+                                minlength="3"
                                 maxlength="25" 
                                 type="text" id="fname" name="fullname" required
                                 >
                         @if (!name.valid && name.touched) {
-                            <p class="invalid-info">Name at least 5 characters</p>
+                            <p class="invalid-info">
+                                {{ currentLang == 'en' ? 'Name must be at least 3 characters':'Name muss min. 3 Zeichen lang sein'}}
+                            </p>
                         }
                     </div>
                 </div>
@@ -54,7 +56,9 @@
                                 [ngClass]="{ 'valid': email.valid, 'invalid': email.touched && !email.valid }"
                         >
                         @if (!email.valid && email.touched) {
-                            <p class="invalid-info">please enter a valid Email adress</p>
+                            <p class="invalid-info">
+                                {{ currentLang == 'en' ? 'please enter a valid Email adress':'bitte eine gültige Email eingeben'}}
+                            </p>
                         }
                     </div>
                 </div>
@@ -78,7 +82,9 @@
                         required >
                     </textarea>
                     @if (!message.valid && message.touched) {
-                        <p class="invalid-info">Message at least 15 characters</p>
+                        <p class="invalid-info">
+                            {{ currentLang == 'en' ? 'Message must be at least 15 characters':'Nachricht muss min. 15 Zeichen lang sein'}}
+                        </p>
                     }
                 </div>
             </div>
@@ -88,7 +94,9 @@
                     <label id="privacyCheckLabel" for="privacyCheck">
                         {{ privacyRead(0) }} <a (click)="scrollToTop()" routerLink="privacy">{{ privacyRead(1) }}</a> {{ privacyRead(2) }}
                         @if (!checkBox.valid && buttonClicked) {
-                            <br><span>You must agree to the terms and conditions</span>
+                            <br><span>
+                                {{ currentLang == 'en' ? 'You must agree to the terms and conditions':'Du musst der Datenschutzerklärung zugestimmt haben.'}}
+                            </span>
                         } @else { 
                             
                         }
