@@ -64,27 +64,6 @@ form {
         flex-direction: column;
         width: 100%;
         flex: 1;
-        >input,
-        >textarea,
-        >label {
-            width: 100%;
-        }
-        >label {
-            margin-bottom: 5px;
-            color: $col-des-main;
-        }
-        >input,
-        textarea {
-            background-color: rgba(255, 255, 255, 0.097);
-            border-radius: 2px;
-            border: 1px solid white;
-            color: white;
-            font-size: 18px;
-            padding: 10px 10px;
-        }
-        >textarea {
-            resize: none;
-        }
     }
     .form-top {
         @include dFlex(center, center, 10%);
@@ -113,21 +92,112 @@ form {
     }
 }
 
-span {
-    margin-top: 20px;
-    padding: 10px 20px;
+input,
+textarea,
+label {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    color: $col-des-main;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    border: none;
     color: white;
-    background-color: $col-des-main;
-    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+#privacyCheckLabel {
+    color: white;
 }
 
 .valid {
-    background-color: rgba(255, 255, 255, 0.296) !important;
+    border: none;
 }
 
-.invalid {
-    background-color: rgba(225, 13, 13, 0.097) !important;
+.neutral-wrapper {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.097);
 }
+
+.valid-wrapper,
+.invalid-wrapper {
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+
+.valid-wrapper {
+    border: 3px solid $col-dev-main;
+}
+
+.valid-wrapper::before{
+    content: "✔";
+    position: absolute;
+    text-align: center;
+    top: 4px;
+    right: 4px;
+    color: $col-dev-main;
+}
+
+.invalid-wrapper {
+    border: 2px solid rgb(255, 65, 12);
+}
+
+.invalid-wrapper::before{
+    content: "✖";
+    @include dFlex(center, center, 0 , absolute);
+    top: 4px;
+    padding: 0;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    color: rgb(255, 65, 12);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.invalid-info {
+    font-size: 14px;
+    color: rgb(255, 65, 12);
+    padding: 0 0 10px 10px;
+}
+
+#privacyCheckLabel {
+    >span {
+        color: rgb(255, 65, 12);
+    }
+}
+
+.message-sent {
+    @include dFlex(center, center, 0, absolute);
+    left: 50%;
+    text-wrap: nowrap;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 20px 30px;
+    color: white;
+    background-color: $col-des-main;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 5px $col-bg-main);
+}
+
 
 @media screen and (max-width: 768px) {
     .c-top {

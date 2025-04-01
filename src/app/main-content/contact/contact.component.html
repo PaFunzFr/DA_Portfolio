@@ -24,55 +24,82 @@
             <section class="form-top">
                 <div class="form-object">
                     <label for="fname">Name</label>
-                    <input [(ngModel)]="contactData.name"
-                            autocomplete="off"
-                            #name="ngModel"
-                            minlength="3"
-                            maxlength="25" 
-                            type="text" id="fname" name="fullname" required
-                            [ngClass]="{ 'valid': name.valid, 'invalid': name.touched && !name.valid }"
-                            >
-                
+                    <div
+                        class="neutral-wrapper"
+                        [ngClass]="{ 'valid-wrapper': name.valid, 'invalid-wrapper': name.touched && !name.valid }"
+                    >
+                        <input [(ngModel)]="contactData.name"
+                                autocomplete="off"
+                                #name="ngModel"
+                                minlength="5"
+                                maxlength="25" 
+                                type="text" id="fname" name="fullname" required
+                                >
+                        @if (!name.valid && name.touched) {
+                            <p class="invalid-info">Name at least 5 characters</p>
+                        }
+                    </div>
                 </div>
                 <div class="form-object">
                     <label for="mail">Mail</label>
-                    <input [(ngModel)]="contactData.email"
-                            autocomplete="off"
-                            #email="ngModel"
-                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                            type="email" id="mail" name="email" required
-                            [ngClass]="{ 'valid': email.valid, 'invalid': email.touched && !email.valid }"
+                    <div
+                        class="neutral-wrapper"
+                        [ngClass]="{ 'valid-wrapper': email.valid, 'invalid-wrapper': email.touched && !email.valid }"
                     >
+                        <input [(ngModel)]="contactData.email"
+                                autocomplete="off"
+                                #email="ngModel"
+                                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                type="email" id="mail" name="email" required
+                                [ngClass]="{ 'valid': email.valid, 'invalid': email.touched && !email.valid }"
+                        >
+                        @if (!email.valid && email.touched) {
+                            <p class="invalid-info">please enter a valid Email adress</p>
+                        }
+                    </div>
                 </div>
             </section>
 
             <div class="form-object">
                 <label for="subject">Message</label>
-                <textarea 
-                    #message="ngModel"
-                    [(ngModel)]="contactData.message"
-                    id="subject"
-                    name="subject"
-                    style="height:200px"
-                    minlength="10" 
-                    maxlength="800"
-                    [ngClass]="{ 'valid': message.valid, 'invalid': message.touched && !message.valid }"
-                    required >
-                </textarea>
+                <div
+                class="neutral-wrapper"
+                [ngClass]="{ 'valid-wrapper': message.valid, 'invalid-wrapper': message.touched && !message.valid }"
+                >
+                    <textarea 
+                        #message="ngModel"
+                        [(ngModel)]="contactData.message"
+                        id="subject"
+                        name="subject"
+                        style="height:200px"
+                        minlength="15" 
+                        maxlength="800"
+                        [ngClass]="{ 'valid': message.valid, 'invalid': message.touched && !message.valid }"
+                        required >
+                    </textarea>
+                    @if (!message.valid && message.touched) {
+                        <p class="invalid-info">Message at least 15 characters</p>
+                    }
+                </div>
             </div>
             <div class="check-submit">
                 <div class="check-box">
-                    <input type="checkbox" id="check" name="privacyCheck" [(ngModel)]="contactData.checkbox" required>
-                    <label for="privacyCheck">
-                        {{ privacyRead(0) }} <a routerLink="privacy">{{ privacyRead(1) }}</a> {{ privacyRead(2) }}
+                    <input #checkBox="ngModel" type="checkbox" id="check" name="privacyCheck" [(ngModel)]="contactData.checkbox" required>
+                    <label id="privacyCheckLabel" for="privacyCheck">
+                        {{ privacyRead(0) }} <a (click)="scrollToTop()" routerLink="privacy">{{ privacyRead(1) }}</a> {{ privacyRead(2) }}
+                        @if (!checkBox.valid && buttonClicked) {
+                            <br><span>You must agree to the terms and conditions</span>
+                        } @else { 
+                            
+                        }
                     </label>
                 </div>
-                <button type="submit" class="submit-btn-img">
+                <button type="submit" class="submit-btn-img" (click)="buttonClicked = true">
                     <img src="./assets/img/social/submit.svg" alt="Submit" [style.opacity]="contactForm.valid ? 1 : 0.4" >
                 </button>
             </div>
             @if (messageSent) {
-                <span>{{messageSentInfo}}</span>
+                <span class="message-sent">{{messageSentInfo}}</span>
             }
         </form>
     </section>

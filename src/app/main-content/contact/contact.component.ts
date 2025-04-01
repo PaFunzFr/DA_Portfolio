@@ -26,6 +26,7 @@ export class ContactComponent {
   languages = inject(LanguageService);
   contact = inject(SocialService);
   messageSent: boolean = false;
+  buttonClicked: boolean = false;
 
   get contactTitle(): string {
     return this.languages.getTranslation('contact' , 'title');
@@ -50,7 +51,7 @@ export class ContactComponent {
     checkbox: false
   } 
 
-  mailTest: boolean = false;
+  mailTest: boolean = true;
 
   post = {
     endPoint: '/sendMail.php',
@@ -75,6 +76,7 @@ export class ContactComponent {
           },
           complete: () => {
             this.messageSent = true;
+            this.buttonClicked = false;
             ngForm.resetForm();
             setTimeout(() => {
               this.messageSent = false;
@@ -83,11 +85,22 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.messageSent = true;
+      this.buttonClicked = false;
       ngForm.resetForm();
       setTimeout(() => {
         this.messageSent = false;
       }, 4000);
     }
+  }
+
+  clickedButton() {
+    this.buttonClicked = true;
+    console.log(this.buttonClicked);
+    
+  }
+
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
   }
 
 }
