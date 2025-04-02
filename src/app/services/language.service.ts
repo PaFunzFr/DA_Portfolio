@@ -106,7 +106,7 @@ export class LanguageService {
           <p>You can contact us at any time regarding this or any other questions about data protection.</p>
                   <p>You can contact us at any time regarding this or any other questions about data protection.</p>
           <h2>2. Hosting</h2>
-          <p>We host the content of our website with the following provider:</p>
+          <p>We host the content of our website with the following provider: https://www.strato.de</p>
           <h5>External Hosting</h5>
           <p>This website is hosted externally. The personal data collected on this website is stored on the servers of the hosting provider(s). 
             This may include, in particular, IP addresses, contact requests, metadata and communication data, contract data, contact details, 
@@ -397,7 +397,7 @@ export class LanguageService {
                   zuständigen Aufsichtsbehörde zu.</p>
               <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
               <h2>2. Hosting</h2>
-              <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+              <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter: https://www.strato.de</p>
               <h5>Externes Hosting</h5>
               <p>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf
                   den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta-
