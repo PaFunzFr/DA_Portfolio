@@ -120,7 +120,7 @@ export class LanguageService {
           <p>Our hosting provider(s) will only process your data to the extent necessary to fulfill its service obligations and will follow our 
           instructions regarding this data.</p>
           <p>We use the following hosting provider(s):</p>
-          <p>FTP Server Developer Akademie</p>
+          <p>https://www.strato.de</p>
           <h2>3. General Information and Mandatory Notices</h2>
           <h5>Data Protection</h5>
           <p>The operators of this website take the protection of your personal data very seriously. We treat your personal data confidentially 
@@ -413,7 +413,7 @@ export class LanguageService {
               <p>Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner
                   Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
               <p>Wir setzen folgende(n) Hoster ein:</p>
-              <p>FTP Server Developer Akademie</p>
+              <p>https://www.strato.de</p>
               <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
               <h5>Datenschutz</h5>
               <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
