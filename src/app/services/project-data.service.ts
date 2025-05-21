@@ -31,8 +31,8 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
-      demoVidMobile: './assets/img/projects/bnbsaga.jpg',
-      demoVidDesk: './assets/img/projects/bnbsaga.jpg',
+      demoVidMobile: './assets/img/projects/join.png',
+      demoVidDesk: './assets/img/projects/join.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -44,8 +44,8 @@ export class ProjectDataService {
         this.getSkillImgSrc('photoshop', this.skillsDes),
         this.getSkillImgSrc('adesigner', this.skillsDes),
       ],
-      projectUrl: '',
-      projectGithub: '',
+      projectUrl: 'http://join.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_Join',
       projectTextId: 'join'
     },
     {
@@ -83,13 +83,13 @@ export class ProjectDataService {
         this.getSkillImgSrc('davinci', this.skillsDes),
       ],
       projectUrl: '',
-      projectGithub: '',
+      projectGithub: 'https://github.com/PaFunzFr/DA_Portfolio',
       projectTextId: 'portfolio'
     },
     {
       id: 'DA-Bubble',
-      demoVidMobile: './assets/img/projects/pokedex.jpg',
-      demoVidDesk: './assets/img/projects/pokedex.jpg',
+      demoVidMobile: './assets/img/projects/dabubble.png',
+      demoVidDesk: './assets/img/projects/dabubble.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -100,8 +100,8 @@ export class ProjectDataService {
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
       ],
-      projectUrl: '',
-      projectGithub: '',
+      projectUrl: 'http://dabubble.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_Bubble',
       projectTextId: 'dabubble'
     },
     {

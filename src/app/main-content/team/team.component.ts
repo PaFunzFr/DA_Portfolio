@@ -18,32 +18,32 @@ export class TeamComponent {
   
   teamMembers = signal([
     {
-      name: 'Mustermann',
+      name: 'Stephanie Englberger',
       project: 'Join',
       testimonial: this.getTestimonial('member1'),
       background: './assets/img/team/comment1.png',
-      profile: ''
+      profile: 'https://www.linkedin.com/in/stephanie-englberger/'
     },
     {
-      name: 'Musterfrau',
-      project: 'DABubble',
+      name: 'Jonathan Michutta',
+      project: 'Join',
       testimonial: this.getTestimonial('member2'),
       background: './assets/img/team/comment2.png',
-      profile: ''
+      profile: 'https://www.linkedin.com/in/jonathan-michutta-527722210/'
     },
     {
-      name: 'Musterfrau',
-      project: 'general',
+      name: 'Jennifer Thomas',
+      project: 'Join',
       testimonial: this.getTestimonial('member3'),
       background: './assets/img/team/comment2.png',
-      profile: ''
+      profile: 'https://www.linkedin.com/in/jennifer-thomas-595735360/'
     },
     {
-      name: 'Mustermann',
-      project: 'Join',
+      name: 'Christian Duus',
+      project: 'General',
       testimonial:  this.getTestimonial('member4'),
       background: './assets/img/team/comment1.png',
-      profile: '',
+      profile: 'https://www.linkedin.com/in/christian-duus-47a102357/',
     },
   ])
 
