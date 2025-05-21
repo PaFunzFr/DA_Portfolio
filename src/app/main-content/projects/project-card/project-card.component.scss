@@ -97,3 +97,10 @@
         @include dFlex(center, center, 0, absolute);
     }
 }
+
+@media screen and (max-width: 720px) {
+    .bg-project {
+        object-fit: cover !important;
+        object-position: center;
+    }
+}
