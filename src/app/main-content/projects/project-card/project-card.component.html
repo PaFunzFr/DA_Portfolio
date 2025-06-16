@@ -24,9 +24,9 @@
         </div>
     </section>
     @if ( screenSize === 'mobile') {
-        <img class="bg-project" [src]="this.projectData[cardNumber].demoVidMobile" alt="">
+        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgMobile" alt="">
     } @else {
-        <img class="bg-project" [src]="this.projectData[cardNumber].demoVidDesk" alt="">
+        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgDesk" alt="">
     }
 </div>
 <div (click)="toggleInfo()" class="show-info"

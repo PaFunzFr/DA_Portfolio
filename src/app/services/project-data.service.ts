@@ -4,8 +4,8 @@ import { SkillsService } from './skills.service';
 
 interface ProjectsDataInterface {
   id: string;
-  demoVidMobile: string,
-  demoVidDesk: string;
+  prevImgMobile: string,
+  prevImgDesk: string;
   devTools: string[];
   desTools: string[];
   projectUrl: string;
@@ -31,8 +31,8 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
-      demoVidMobile: './assets/img/projects/join_mobile.png',
-      demoVidDesk: './assets/img/projects/join.png',
+      prevImgMobile: './assets/img/projects/join_mobile.png',
+      prevImgDesk: './assets/img/projects/join.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -50,8 +50,8 @@ export class ProjectDataService {
     },
     {
       id: 'Pokedex',
-      demoVidMobile: './assets/img/projects/pokedex_mobile.png',
-      demoVidDesk: './assets/img/projects/pokedex.png',
+      prevImgMobile: './assets/img/projects/pokedex_mobile.png',
+      prevImgDesk: './assets/img/projects/pokedex.png',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
@@ -67,8 +67,8 @@ export class ProjectDataService {
     },
     {
       id: 'Portfolio',
-      demoVidMobile: './assets/img/projects/portfolio_mobile.png',
-      demoVidDesk: './assets/img/projects/portfolio.png',
+      prevImgMobile: './assets/img/projects/portfolio_mobile.png',
+      prevImgDesk: './assets/img/projects/portfolio.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -88,8 +88,8 @@ export class ProjectDataService {
     },
     {
       id: 'DA-Bubble',
-      demoVidMobile: './assets/img/projects/dabubble_mobile_dm.png',
-      demoVidDesk: './assets/img/projects/dabubble_dm.png',
+      prevImgMobile: './assets/img/projects/dabubble_mobile_dm.png',
+      prevImgDesk: './assets/img/projects/dabubble_dm.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -106,8 +106,8 @@ export class ProjectDataService {
     },
     {
       id: 'BnB-Saga',
-      demoVidMobile: './assets/img/projects/bnbsaga_mobile.png',
-      demoVidDesk: './assets/img/projects/bnbsaga.png',
+      prevImgMobile: './assets/img/projects/bnbsaga_mobile.png',
+      prevImgDesk: './assets/img/projects/bnbsaga.png',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
