@@ -31,7 +31,7 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
-      demoVidMobile: './assets/img/projects/join.png',
+      demoVidMobile: './assets/img/projects/join_mobile.png',
       demoVidDesk: './assets/img/projects/join.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
@@ -50,8 +50,8 @@ export class ProjectDataService {
     },
     {
       id: 'Pokedex',
-      demoVidMobile: './assets/img/projects/pokedex.jpg',
-      demoVidDesk: './assets/img/projects/pokedex.jpg',
+      demoVidMobile: './assets/img/projects/pokedex_mobile.png',
+      demoVidDesk: './assets/img/projects/pokedex.png',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
@@ -67,8 +67,8 @@ export class ProjectDataService {
     },
     {
       id: 'Portfolio',
-      demoVidMobile: './assets/img/projects/portfolio.jpg',
-      demoVidDesk: './assets/img/projects/portfolio.jpg',
+      demoVidMobile: './assets/img/projects/portfolio_mobile.png',
+      demoVidDesk: './assets/img/projects/portfolio.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -88,8 +88,8 @@ export class ProjectDataService {
     },
     {
       id: 'DA-Bubble',
-      demoVidMobile: './assets/img/projects/dabubble.png',
-      demoVidDesk: './assets/img/projects/dabubble.png',
+      demoVidMobile: './assets/img/projects/dabubble_mobile_dm.png',
+      demoVidDesk: './assets/img/projects/dabubble_dm.png',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -106,8 +106,8 @@ export class ProjectDataService {
     },
     {
       id: 'BnB-Saga',
-      demoVidMobile: './assets/img/projects/bnbsaga.jpg',
-      demoVidDesk: './assets/img/projects/bnbsaga.jpg',
+      demoVidMobile: './assets/img/projects/bnbsaga_mobile.png',
+      demoVidDesk: './assets/img/projects/bnbsaga.png',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),

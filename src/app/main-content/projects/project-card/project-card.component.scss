@@ -98,9 +98,13 @@
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 770px) {
     .bg-project {
         object-fit: cover !important;
+        overflow: hidden !important;
+        height: 100% !important;
+        background-repeat: no-repeat !important;
+        object-position: center 0% !important;
         object-position: center;
     }
 }

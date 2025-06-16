@@ -65,7 +65,7 @@ export class ProjectCardComponent {
   @HostListener('window:resize')
   onResize() {
     const width = window.innerWidth;
-    this.screenSize = width < 650 ? 'mobile' : 'desktop';
+    this.screenSize = width < 770 ? 'mobile' : 'desktop';
   }
   
 }

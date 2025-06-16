@@ -19,7 +19,7 @@ export class TeamComponent {
   teamMembers = signal([
     {
       name: 'Stephanie Englberger',
-      project: 'Join',
+      project: 'DABubble',
       testimonial: this.getTestimonial('member1'),
       background: './assets/img/team/comment1.png',
       profile: 'https://www.linkedin.com/in/stephanie-englberger/'
