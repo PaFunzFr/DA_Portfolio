@@ -2,19 +2,23 @@
 
 h1 {
     font-size: 60px;
-    font-family: 'Patrick Hand';
-    font-weight: 400;
-    color: $col-bg-main;
+    font-family: 'Barlow Semi Condensed';
+    // font-family: 'Patrick Hand';
+    font-weight: 600;
+    color: $col-font-sec;
 }
 
 h2 {
     font-size: 40px;
-    color: $col-bg-main;
+    font-weight: 300;
+    color: rgb(80, 87, 95);
+    // color: $col-bg-main;
 }
 
 h3 {
-    font-family: 'Patrick Hand';
-    color: white;
+    // font-family: 'Patrick Hand';
+    font-family: 'Barlow Semi Condensed';
+    color: $col-font-main;
     font-size: 60px;
     line-height: 50px;
     margin: -8px 0 80px 0;
@@ -24,14 +28,15 @@ h3 {
 }
 
 h4 {
-    font-family: 'Patrick Hand';
-    color: white;
+    font-family: 'Barlow Semi Condensed';
+    // font-family: 'Patrick Hand';
+    color: $col-font-main;
     font-size: 38px;
     line-height: 50px;
 }
 
 h5 {
-    color: white;
+    color: $col-font-main;
     font-size: 40px;
     margin: 50px 0 10px 0;
     padding: 0;
@@ -40,18 +45,19 @@ h5 {
 }
 
 figcaption {
-    color: white;
+    color: $col-font-main;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: $col-font-main;
 }
 
 p {
     font-size: 18px;
     line-height: 24px;
-    color: white;
+    color: $col-font-main;
+    font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {

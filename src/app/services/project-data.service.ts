@@ -87,7 +87,7 @@ export class ProjectDataService {
       projectTextId: 'portfolio'
     },
     {
-      id: 'DA-Bubble',
+      id: 'Collabeya',
       prevImgMobile: './assets/img/projects/dabubble_mobile_dm.png',
       prevImgDesk: './assets/img/projects/dabubble_dm.png',
       devTools: [

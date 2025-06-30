@@ -30,14 +30,16 @@
         overflow: hidden;
 
         .welcome-title {
-            color: white;
-            font-family: 'Patrick Hand';
+            color: $col-font-main;
+            // font-family: 'Patrick Hand';
+            font-family: 'Barlow Semi Condensed';
             letter-spacing: 4px;
             width: 100%;
             overflow: hidden;
         }
     }
 }
+
 .intro-message {
     @include dFlex(center, flex-start, 25px);
     flex-wrap: wrap-reverse;
@@ -55,11 +57,11 @@
 .scroll-down {
     @include dFlex(center, flex-start, 0, absolute);
     bottom: 20px;
-    border: 2px solid $col-bg-main;
     height: 60px;
     width: 40px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.691);
+    background-color: $col-font-main;
+    filter: drop-shadow(1px 3px 5px $col-bg-main);
     .scroll-wheel {
         width: 5px;
         height: 22px;

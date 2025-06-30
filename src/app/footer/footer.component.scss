@@ -15,9 +15,10 @@ footer {
 
         >p {
             flex: 1;
-            font-family: 'Patrick Hand';
+            // font-family: 'Patrick Hand';
+            font-family: 'Barlow Semi Condensed';
             font-size: 20px;
-            color: white;
+            color: $col-font-main;
         }
 
         >div {

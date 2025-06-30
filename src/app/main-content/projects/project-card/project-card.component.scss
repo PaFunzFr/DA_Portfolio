@@ -38,7 +38,7 @@
             @include dFlex(flex-end, flex-start, 10px);
             flex-direction: column;
             max-width: 500px;
-            color: white;
+            color: $col-font-main;
 
             .project-title {
                 @include dFlex(space-between, flex-end);
@@ -83,7 +83,7 @@
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
-    color: white;
+    color: $col-font-main;
     z-index: 4;
     border-radius: 5px;
     filter: drop-shadow(0 0 7px $col-bg-main);
@@ -106,5 +106,9 @@
         background-repeat: no-repeat !important;
         object-position: center 0% !important;
         object-position: center;
+    }
+
+    .project-infos {
+        background: linear-gradient(to top, #171e29f0 45%, #171e299f 65%, transparent) !important;
     }
 }

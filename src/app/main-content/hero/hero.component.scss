@@ -45,7 +45,7 @@
     %text-box {
         @include dFlex(center, center, 30px);
         flex-direction: column;
-        color: white;
+        color: $col-font-main;
         width: 20%;
         max-width: 240px;
         position: absolute;

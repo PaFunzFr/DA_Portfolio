@@ -6,7 +6,7 @@
     @include maxWidthPadding(80px, 50px);
     scroll-margin-top: 30px;
     margin: 0 auto;
-    color: white;
+    color: $col-font-main;
     overflow: hidden;
 }
 
@@ -109,7 +109,7 @@ input,
 textarea {
     background-color: transparent;
     border: none;
-    color: white;
+    color: $col-font-main;
     font-size: 18px;
     padding: 10px 10px;
 }
@@ -119,7 +119,7 @@ textarea {
 }
 
 #privacyCheckLabel {
-    color: white;
+    color: $col-font-main;
 }
 
 .valid {
@@ -192,7 +192,7 @@ input:focus, textarea:focus {
     transform: translateX(-50%);
     margin-top: 20px;
     padding: 20px 30px;
-    color: white;
+    color: $col-font-main;
     background-color: $col-des-main;
     border-radius: 5px;
     filter: drop-shadow(0 0 5px $col-bg-main);

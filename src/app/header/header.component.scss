@@ -24,8 +24,10 @@ header {
                 filter: drop-shadow(0 0 3px $col-bg-main);
             }
             &>p:first-child {
-                font-family: 'Patrick Hand';
+                // font-family: 'Patrick Hand';
+                font-family: 'Barlow Semi Condensed';
                 font-size: 21px;
+                font-weight: 500;
             }
             &>p:nth-child(2) {
                 margin-top: -4px;
@@ -51,7 +53,7 @@ header {
         border-radius: 4px;
         >button {
             border: none;
-            color: white;
+            color: $col-font-main;
             font-size: 18px;
             transition: all 0.3s ease;
             border-radius: 4px;
