@@ -40,6 +40,7 @@ header {
     nav {
         @include dFlex(center, center, 15px);
         >a {
+            font-weight: 300;
             &:hover {
                 color: $col-des-main;
             }
