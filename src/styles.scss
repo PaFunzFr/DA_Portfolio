@@ -1,9 +1,5 @@
 @import "./assets/styles/colors.scss";
 
-body {
-    background-color: $col-bg-main;
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -42,6 +38,10 @@ body {
 
 .col-bg-main {
     background-color: $col-bg-main;
+    background-image: url('./assets/img/portfolio_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
 .col-bg-header {    

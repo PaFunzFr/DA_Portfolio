@@ -15,8 +15,7 @@
     height: 100vh;
     z-index: 0;
     width: 100%;
-    background: linear-gradient(to top, rgb(183, 183, 183), rgb(224, 224, 224));
-
+    background: linear-gradient(to top, rgb(182, 182, 182), rgb(118, 118, 118));
 
     .welcome-overlay {
         @include dFlex(center, center, 0, absolute);
@@ -31,11 +30,11 @@
 
         .welcome-title {
             color: $col-font-main;
-            // font-family: 'Patrick Hand';
             font-family: 'Barlow Semi Condensed';
             letter-spacing: 4px;
             width: 100%;
             overflow: hidden;
+            transition: all 1s ease;
         }
     }
 }
@@ -52,7 +51,6 @@
         transform: translateY(30px) scale(1);
     }
 }
-
 
 .scroll-down {
     @include dFlex(center, flex-start, 0, absolute);

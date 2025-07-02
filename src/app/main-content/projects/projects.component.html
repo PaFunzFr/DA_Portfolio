@@ -6,8 +6,6 @@
         {{ projectsTitle }}
     </h3>
     <div class="projects-container">
-        <img
-        class="project-frame" src="./assets/img/projects/bg_projects.png" alt="">
         <app-project-card [cardNumber]="currentNumber()" [isHovered]="isHovered" (hoverState)="handleHoverState($event)"></app-project-card>
     </div>
     <div class="project-counter">

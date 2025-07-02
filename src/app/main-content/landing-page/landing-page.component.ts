@@ -49,7 +49,7 @@ export class LandingPageComponent {
 
   hideAtViewportHeight(): number {
     const viewportHeight = window.innerHeight; // => 100vh
-    if (window.scrollY >= 2.3 * viewportHeight) {
+    if (window.scrollY >= 1.5 * viewportHeight) {
       return 0;
     } else {
       return 1
