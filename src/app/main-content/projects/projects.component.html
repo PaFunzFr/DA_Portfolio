@@ -1,4 +1,4 @@
-<section class="projects"  id="aProjects">
+<section class="projects"  id="aProjects" (mouseleave)="isHovered = false">
     <h3
         data-aos="fade-up"
         data-aos-easing="ease-in-back"
@@ -8,7 +8,7 @@
     <div class="projects-container">
         <img
         class="project-frame" src="./assets/img/projects/bg_projects.png" alt="">
-        <app-project-card [cardNumber]="currentNumber()" (hoverState)="handleHoverState($event)"></app-project-card>
+        <app-project-card [cardNumber]="currentNumber()" [isHovered]="isHovered" (hoverState)="handleHoverState($event)"></app-project-card>
     </div>
     <div class="project-counter">
         @for (project of projectData; track project; let index = $index) {

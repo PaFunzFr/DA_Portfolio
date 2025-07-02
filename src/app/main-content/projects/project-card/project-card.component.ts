@@ -16,7 +16,7 @@ export class ProjectCardComponent {
   project = inject(ProjectDataService);
   projectData = this.project.projectData;
   screenSize: string = '';
-  isHovered: boolean = false;
+  @Input() isHovered: boolean = false;
   interval: number | undefined;
   currentNumber = 0;
   buttonClicked: boolean = false;
