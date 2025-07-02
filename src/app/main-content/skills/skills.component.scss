@@ -36,7 +36,11 @@
             min-width: 60px;
             color: $col-font-main;
             font-family: 'Roboto';
+            transition: all 0.4s ease;
             filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.829));
+            &:hover {
+                transform: scale(0.97);
+            }
             >img {
                 height: 6vw;
                 min-height: 40px;
