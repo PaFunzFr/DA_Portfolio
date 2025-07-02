@@ -100,8 +100,8 @@ export class ProjectDataService {
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
       ],
-      projectUrl: 'http://dabubble.p-frey.com',
-      projectGithub: 'https://github.com/PaFunzFr/DA_Bubble',
+      projectUrl: 'http://collabeya.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/Collabeya',
       projectTextId: 'dabubble'
     },
     {
