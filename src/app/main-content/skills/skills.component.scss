@@ -14,21 +14,14 @@
     max-width: 1200px;
     padding: 0 50px;
 
-
-    .bg-skills {
-        overflow: clip;
+    >img {
         position: absolute;
-        opacity: 0.3;
         height: 100%;
-        z-index: 1;
-
-        >img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+        width: 100%;
+        object-fit: cover;
+        overflow: visible;
+        opacity: 0.6;
     }
-
 
     .skills-des,
     .skills-dev {
@@ -43,15 +36,15 @@
             min-width: 60px;
             color: $col-font-main;
             font-family: 'Roboto';
-            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.731));
-            transition: transform 0.3s ease;
-            &:hover {
-                transform: translateY(-6px) scale(0.96);
-            }
+            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.829));
             >img {
                 height: 6vw;
                 min-height: 40px;
                 max-height: 75px;
+                transition: all 0.3s ease;
+                &:hover {
+                    @include pulseAnimation();
+                }
             }
             >p {
                 height: 50px;
@@ -91,6 +84,11 @@
         }
         .mindset-contact {
             @include dFlex(center, center, 10px);
+            opacity: 0.5;
+            transition: all 0.4s ease;
+            &:hover {
+                opacity: 1;
+            }
             >a {
                 @include dFlex(center, center, 10px);
                 flex-direction: column;
@@ -99,12 +97,16 @@
 
                 >img {
                     height: 90px;
-                    @include hoverEffect();
+                    &:hover {
+                        @include pulseBigAnimation($duration: 5s);
+                    }
                 }
             }
         }
     }
 }
+
+
 
 @media screen and (max-width: 768px) {
     p {

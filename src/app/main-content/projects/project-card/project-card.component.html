@@ -1,5 +1,5 @@
-<div class="single-project" (mouseenter)="hoverStopAutoSlide()" >
-    <section class="project-infos" [style.transform]="isHovered ? 'scaleY(1)' : 'scaleY(0)'" (mouseleave)="noHoverStartAutoSlide()">
+<div class="single-project" (mouseenter)="hoverStopAutoSlide()" (click)="toggleInfo()">
+    <section class="project-infos" [style.transform]="isHovered ? 'scaleY(1)' : 'scaleY(0)'">
         <div class="info-container">
             <div class="project-title">
                 <p>{{ this.projectData[cardNumber].id }}</p>
@@ -24,9 +24,9 @@
         </div>
     </section>
     @if ( screenSize === 'mobile') {
-        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgMobile" alt="">
+        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgMobile" alt="" [class]="isHovered ? 'project-in-background':''">
     } @else {
-        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgDesk" alt="">
+        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgDesk" alt="" [class]="isHovered ? 'project-in-background':''">
     }
 </div>
 <div (click)="toggleInfo()" class="show-info"

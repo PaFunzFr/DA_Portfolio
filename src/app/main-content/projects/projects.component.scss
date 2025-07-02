@@ -10,7 +10,6 @@
 
 .projects-container {
     @include dFlex(center, center);
-
     width: 100%;
     >img {
         width: 100%;
@@ -32,12 +31,12 @@
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.518);
         &:hover {
-            background-color: $col-des-main;
+            background-color: $col-font-main;
             cursor: pointer;
         }
     }
     .count-dot.active {
-        background-color: $col-font-main;
+        background-color: $col-des-main;
     }
 }
 
@@ -48,5 +47,8 @@
             aspect-ratio: 10/16;
             max-height: 80vh;
         }
+    }
+    .project-counter {
+        margin: 45px 0 80px 0;
     }
 }

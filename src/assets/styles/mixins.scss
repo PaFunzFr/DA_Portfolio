@@ -46,3 +46,96 @@
         }
     }
 }
+
+@mixin pulseAnimation($duration: 3s) {
+    animation: pulse $duration infinite linear;
+}
+
+@mixin pulseBigAnimation($duration: 2s) {
+    animation: pulseBig $duration infinite linear;
+}
+
+@keyframes pulse {
+    0% {
+        filter:
+        drop-shadow(0 -1px 1px var(--animation-col-1))
+        drop-shadow(1px 0 1px var(--animation-col-2))
+        drop-shadow(0 1px 1px var(--animation-col-3))
+        drop-shadow(-1px 0 1px var(--animation-col-4));
+    }
+
+    25% {
+        filter:
+        drop-shadow(0 -2px 2px var(--animation-col-4))
+        drop-shadow(2px 0 2px  var(--animation-col-1))
+        drop-shadow(0 2px 2px var(--animation-col-2))
+        drop-shadow(-2px 0 2px var(--animation-col-3));
+    }
+
+    50% {
+        filter:
+        drop-shadow(0 -1px 1px var(--animation-col-3))
+        drop-shadow(1px 0 1px var(--animation-col-4))
+        drop-shadow(0 1px 1px  var(--animation-col-1))
+        drop-shadow(-1px 0 1px var(--animation-col-2));
+    }
+
+    75% {
+        filter:
+        drop-shadow(0 -2px 2px var(--animation-col-2))
+        drop-shadow(2px 0 2px var(--animation-col-3))
+        drop-shadow(0 2px 2px var(--animation-col-4))
+        drop-shadow(-2px 0 2px  var(--animation-col-1));
+    }
+
+    100% {
+        filter:
+        drop-shadow(0 -1px 1px  var(--animation-col-1))
+        drop-shadow(1px 0 1px var(--animation-col-2))
+        drop-shadow(0 1px 1px var(--animation-col-3))
+        drop-shadow(-1px 0 1px var(--animation-col-4));
+    }
+}
+
+@keyframes pulseBig {
+    0% {
+        filter:
+        drop-shadow(0 -3px 3px var(--animation-col-5))
+        drop-shadow(3px 0 3px var(--animation-col-6))
+        drop-shadow(0 3px 3px var(--animation-col-7))
+        drop-shadow(-3px 0 3px var(--animation-col-8));
+    }
+
+    25% {
+        filter:
+        drop-shadow(0 -5px 5px var(--animation-col-8))
+        drop-shadow(5px 0 5px var(--animation-col-5))
+        drop-shadow(0 5px 5px var(--animation-col-6))
+        drop-shadow(-5px 0 5px var(--animation-col-7));
+    }
+
+    50% {
+        filter:
+        drop-shadow(0 -3px 3px var(--animation-col-7))
+        drop-shadow(3px 0 3px var(--animation-col-8))
+        drop-shadow(0 3px 3px var(--animation-col-5))
+        drop-shadow(-3px 0 3px var(--animation-col-6));
+    }
+
+    75% {
+        filter:
+        drop-shadow(0 -5px 5px var(--animation-col-6))
+        drop-shadow(5px 0 5px var(--animation-col-7))
+        drop-shadow(0 5px 5px var(--animation-col-8))
+        drop-shadow(-5px 0 5px var(--animation-col-5));
+    }
+
+    100% {
+        filter:
+        drop-shadow(0 -3px 3px var(--animation-col-5))
+        drop-shadow(3px 0 3px var(--animation-col-6))
+        drop-shadow(0 3px 3px var(--animation-col-7))
+        drop-shadow(-3px 0 3px var(--animation-col-8));
+    }
+}
+

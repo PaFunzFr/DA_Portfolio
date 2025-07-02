@@ -7,15 +7,13 @@
         Skills
     </h3>
     <div class="skill-container">
-        <div class="bg-skills" data-aos="fade-up">
-            <img src="./assets/img/skills/bg_skills.png" alt="" >
-        </div>
+        <img src="./assets/img/skills/bg_skills.png" alt="" >
 
         <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
             @for (skill of skills.skillsDev; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">
-                    <p [innerHTML]="skill.title"></p>
+                    <!-- <p [innerHTML]="skill.title"></p> optional -->
                 </div>
             } 
         </div>
@@ -23,7 +21,7 @@
             @for (skill of skills.skillsDes; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">
-                    <p [innerHTML]="skill.title"></p>
+                    <!-- <p [innerHTML]="skill.title"></p> optional -->
                 </div>
             } 
         </div>

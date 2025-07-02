@@ -4,5 +4,17 @@ $col-bg-header: #3B3E42;
 $col-des-main: #EE8C1B;
 $col-dev-main: #4A81E0;
 $col-bg-scrollbar: #0c1016;
-$col-font-main: rgb(237, 239, 240);
-$col-font-sec: #374253;
+$col-font-main: rgb(235, 235, 235);
+$col-font-sec: #28313e;
+
+:root {
+    --animation-col-1: #422300;
+    --animation-col-2: #c96c01;
+    --animation-col-3: #001230;
+    --animation-col-4: #054ecc;
+
+    --animation-col-5: #ff8800;
+    --animation-col-6: #317dff;
+    --animation-col-7: #ff8800;
+    --animation-col-8: #317dff;
+}
