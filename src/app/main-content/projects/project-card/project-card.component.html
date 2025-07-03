@@ -1,4 +1,4 @@
-<div class="single-project" (click)="toggleInfo()">
+<div class="single-project" (click)="toggleInfo()" (mousemove)="trackMouse($event)">
     <section class="project-infos" [style.transform]="isHovered ? 'scaleY(1)' : 'scaleY(0)'">
         <div class="info-container">
             <div class="project-title">
@@ -24,9 +24,19 @@
         </div>
     </section>
     @if ( screenSize === 'mobile') {
-        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgMobile" alt="" [class]="isHovered ? 'project-in-background':''">
+        <img
+        [style.transform]="'translate(' + -x + 'px, ' + -y + 'px)'"
+        class="bg-project" 
+        [src]="this.projectData[cardNumber].prevImgMobile" 
+        alt="" 
+        [class]="isHovered ? 'project-in-background':''">
     } @else {
-        <img class="bg-project" [src]="this.projectData[cardNumber].prevImgDesk" alt="" [class]="isHovered ? 'project-in-background':''">
+        <img 
+        [style.transform]="'translate(' + -x + 'px, ' + -y + 'px)'"
+        class="bg-project" 
+        [src]="this.projectData[cardNumber].prevImgDesk" 
+        alt=""
+        [class]="isHovered ? 'project-in-background':''">
     }
 </div>
 <div (click)="toggleInfo()" class="show-info"

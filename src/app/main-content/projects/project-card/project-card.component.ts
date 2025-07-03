@@ -62,6 +62,14 @@ export class ProjectCardComponent {
     }
   }
 
+  x:number = 0;
+  y:number = 0;
+
+  trackMouse(event: any) {
+    this.x = (event.clientX / window.innerWidth - 0.5) * 15;
+    this.y = (event.clientY / window.innerHeight - 0.5) * 15;
+  }
+
   @HostListener('window:resize')
   onResize() {
     const width = window.innerWidth;
