@@ -2,11 +2,13 @@
 
 footer {
     @include dFlex(center,center);
-    height: 100px;
+    height: 70px;
     width: 100%;
-    border-top: 1px solid white;
-    background-color: $col-bg-header;
-    filter: drop-shadow(0 -4px 8px rgba(0, 0, 0, 0.487));
+    // border-top: 1px solid white;
+    background-color: rgba(22, 28, 36, 0.436);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    // filter: drop-shadow(0 -4px 8px rgba(0, 0, 0, 0.487));
     z-index: 10;
     .footer-content {
         @include dFlex(center,center);

@@ -3,7 +3,6 @@
 
 .header {
     @include header(absolute);
-    border-bottom: 2px solid $col-bg-main;
     filter: drop-shadow(0 3px 8px rgba(7, 22, 41, 0.793));
     z-index: 9;
 }

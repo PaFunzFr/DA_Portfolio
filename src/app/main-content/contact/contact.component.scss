@@ -128,9 +128,11 @@ textarea {
 
 .neutral-wrapper {
     width: 100%;
-    border: 1px solid white;
+    // border: 1px solid white;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.097);
+    background-color: rgba(255, 255, 255, 0.063);
 }
 
 .valid-wrapper,
