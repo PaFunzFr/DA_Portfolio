@@ -79,10 +79,11 @@
     .bg-project {
         height: 100%;
         width: 100%;
-        object-fit: fill;
+        object-fit: cover;
         filter: saturate(0.9);
         z-index: 0;
         transition: all 0.1s linear;
+        opacity: 0.8;
     }
 }
 
@@ -120,9 +121,7 @@
 
 @media screen and (max-width: 770px) {
     .bg-project {
-        object-fit: cover !important;
         overflow: hidden !important;
-        height: 100% !important;
         background-repeat: no-repeat !important;
         object-position: center 0% !important;
         object-position: center;

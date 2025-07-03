@@ -29,7 +29,7 @@
         <a class="hamburger" (click)="scrollToSection(targetHref)"
             (mouseenter)="hoverBurger(true)"
             (mouseleave)="hoverBurger(false)"
-            (click)="navBarService.toggleSideBar(hideOnScroll)"
+            (click)="navBarService.toggleSideBar()"
             >
             @for (bar of bars; track bar) {
                 <div class="bar"

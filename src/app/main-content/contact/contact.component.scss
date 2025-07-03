@@ -3,7 +3,7 @@
 .contact{
     @include dFlex(center, center);
     flex-direction: column;
-    @include maxWidthPadding(80px, 50px);
+    @include maxWidthPadding(60px, 50px);
     scroll-margin-top: 30px;
     margin: 0 auto;
     color: $col-font-main;
@@ -53,6 +53,7 @@
         }
     }
 }
+
 form {
     @include dFlex(center, center, 20px);
     margin-top: 30px;
@@ -128,7 +129,6 @@ textarea {
 
 .neutral-wrapper {
     width: 100%;
-    // border: 1px solid white;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-radius: 2px;

@@ -4,7 +4,6 @@
     @include dFlex(center, center);
     flex-direction: column;
     background-color: rgba(0, 0, 255, 0);
-    padding: 80px 0;
     scroll-margin-top: 30px;
 }
 
@@ -38,6 +37,7 @@
     .projects-container {
         aspect-ratio: 10/16;
         max-height: 80vh;
+        max-width: 400px;
     }
     .project-counter {
         margin: 45px 0 80px 0;

@@ -3,7 +3,7 @@
 .about {
     @include dFlex(center, center);
     flex-direction: column;
-    @include maxWidthPadding(80px, 50px);
+    @include maxWidthPadding(60px, 50px);
     margin: 0 auto;
     scroll-margin-top: 100vh;
     
@@ -29,7 +29,7 @@
             flex: 1;
         }
         .about-left {
-            @include dFlex(space-between, flex-end);
+            @include dFlex(flex-end, flex-end, 40px);
             >figure {
                 img {
                     height: 80px;
@@ -60,6 +60,7 @@
     }
     .about-title {
         flex-direction: column;
+        padding-bottom: 20px;
     }
 
     .about-content {
@@ -70,7 +71,7 @@
             width: 100%;
         }
         .about-left {
-            @include dFlex(space-between, flex-end, 30px !important);
+            @include dFlex(center !important, flex-end, 30px !important);
             margin-top: 30px;
             >figure {
                 img {

@@ -35,6 +35,47 @@
     }
 }
 
+@mixin sideBar() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+        background-color: rgba(22, 28, 36, 0.75);
+        backdrop-filter: blur(16px);
+    }
+}
+
+@mixin bgImg() {
+    overflow: hidden;
+    @include dFlex(center, center, 10px, absolute);
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    >img {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.6;
+        &:nth-child(1) {
+            animation: pulse 15s infinite ease;
+            animation-delay: 2.5s;
+        }
+        &:nth-child(2) {
+            animation: pulse 15s infinite ease;
+        }
+        @include animationPulseImg();
+    }
+}
+
 @mixin animationPulseImg() {
     @keyframes pulse {
         0% {

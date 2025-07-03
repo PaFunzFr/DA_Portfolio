@@ -19,12 +19,12 @@ header {
             border: 1px solid $col-bg-main;
             border-radius: 50%;
         }
+        
         .header-name {
             >p {
                 filter: drop-shadow(0 0 3px $col-bg-main);
             }
             &>p:first-child {
-                // font-family: 'Patrick Hand';
                 font-family: 'Barlow Semi Condensed';
                 font-size: 21px;
                 font-weight: 500;
@@ -60,6 +60,7 @@ header {
             border-radius: 4px;
         }
     }
+
     .button-disabled {
         background-color: rgba(0, 0, 0, 0.407);
         cursor: pointer;

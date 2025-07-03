@@ -4,11 +4,15 @@ section {
     @include header(sticky, $zi: 20);
     border-top: 1px solid white;
     top: -1px;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.657));
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.657));
 }
 
 .no-interact{
     pointer-events: none;
+}
+
+app-side-bar {
+    @include sideBar();
 }
 
 

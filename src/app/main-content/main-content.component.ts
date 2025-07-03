@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
@@ -8,6 +8,8 @@ import { HeaderComponent } from "../header/header.component";
 import { ContactComponent } from './contact/contact.component';
 import { TeamComponent } from './team/team.component';
 import { SideBarComponent } from '../shared/side-bar/side-bar.component';
+import { NavBarService } from '../services/nav-bar.service';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-main-content',
@@ -21,7 +23,8 @@ import { SideBarComponent } from '../shared/side-bar/side-bar.component';
     TeamComponent,
     HeaderComponent,
     ContactComponent,
-    SideBarComponent
+    SideBarComponent,
+    FooterComponent
 ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
@@ -29,4 +32,6 @@ import { SideBarComponent } from '../shared/side-bar/side-bar.component';
 
 export class MainContentComponent {
 
+  navBarService = inject(NavBarService);
+  
 }

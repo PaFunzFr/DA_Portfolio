@@ -1,6 +1,5 @@
 <header>
     <app-header id="imprintHeader"></app-header>
-    <app-side-bar class="no-interact" [position]="'sticky'" [positionY]="'-60px'"></app-side-bar>
 </header>
 
 <section class="imprint-section">
@@ -20,3 +19,5 @@
         <img src="./assets/img/team/comment2.png" alt="">
     </section>
 </section>
+<app-footer></app-footer>
+<app-side-bar [class.visible]="navBarService.showSideBar"></app-side-bar>

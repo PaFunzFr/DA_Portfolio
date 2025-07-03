@@ -1,15 +1,12 @@
 import { Component, inject, signal, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { HeaderComponent } from '../../header/header.component';
-import { SideBarComponent } from "../../shared/side-bar/side-bar.component";
 import { ThreeComponent } from "../../shared/three/three.component";
-
-
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, SideBarComponent, ThreeComponent],
+  imports: [HeaderComponent, ThreeComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush // change detection on explizit events or changes => avoids scroll event console error
@@ -39,7 +36,7 @@ export class LandingPageComponent {
     if (window.scrollY <= 1.0 * viewportHeight) {
       return window.scrollY
     }
-    return viewportHeight + 1; // 1 => little offset
+    return viewportHeight + 1; // 1 => small offset
   }
 
   setFontSize(): string {

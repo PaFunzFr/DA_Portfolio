@@ -5,8 +5,16 @@
     >
         {{ projectsTitle }}
     </h3>
-    <div class="projects-container">
-        <app-project-card [cardNumber]="currentNumber()" [isHovered]="isHovered" (hoverState)="handleHoverState($event)"></app-project-card>
+    <div
+        class="projects-container"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="100">
+        <app-project-card 
+            [cardNumber]="currentNumber()"
+            [isHovered]="isHovered"
+            (hoverState)="handleHoverState($event)">
+        </app-project-card>
     </div>
     <div class="project-counter">
         @for (project of projectData; track project; let index = $index) {

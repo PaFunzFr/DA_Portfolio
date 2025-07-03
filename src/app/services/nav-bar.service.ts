@@ -11,7 +11,6 @@ interface NavBarInterface {
 })
 export class NavBarService {
   navBar: NavBarInterface[] = [
-    //{title: 'Home', link: ''},
     {titleEn: 'About', titleDe: 'Über', link: '#aAbout'},
     {titleEn: 'Skills', titleDe: 'Skills',  link: '#aSkills'},
     {titleEn: 'Projects', titleDe: 'Projekte', link: '#aProjects'},
@@ -19,12 +18,8 @@ export class NavBarService {
   ]
 
   showSideBar: boolean = false;
-  hideOnScroll: boolean = false;
-  readonly positionFixed: string = "fixed";
-  readonly positionSticky: string = "sticky";
 
-  toggleSideBar(boolean: boolean) {
-    this.hideOnScroll = boolean;
+  toggleSideBar():void {
     this.showSideBar =!this.showSideBar;
   }
 }
