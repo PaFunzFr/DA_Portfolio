@@ -108,7 +108,7 @@
     position: relative;
     transition: all 0.5s ease;
     opacity: 0.3;
-    filter: saturate(0.1) !important;
+    filter: saturate(0.1) blur(5px) !important;
 }
 
 @media (pointer: coarse) {
