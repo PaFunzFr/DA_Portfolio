@@ -76,6 +76,12 @@
     }
 }
 
+@mixin skillBg() {
+    @include bgImg();
+    z-index: 1 !important;
+    overflow: visible !important;
+}
+
 @mixin animationPulseImg() {
     @keyframes pulse {
         0% {

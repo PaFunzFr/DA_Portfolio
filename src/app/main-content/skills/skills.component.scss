@@ -14,15 +14,6 @@
     max-width: 1200px;
     padding: 0 50px;
 
-    >img {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        overflow: visible;
-        opacity: 0.4;
-    }
-
     .skills-des,
     .skills-dev {
         flex-wrap: wrap;
@@ -110,6 +101,10 @@
             }
         }
     }
+}
+
+.bg-img {
+    @include skillBg();
 }
 
 @media screen and (max-width: 768px) {
