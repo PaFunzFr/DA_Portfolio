@@ -10,11 +10,27 @@
         data-aos="fade-up"
         data-aos-easing="ease-in-back"
         data-aos-offset="100">
-        <app-project-card 
-            [cardNumber]="currentNumber()"
-            [isHovered]="isHovered"
-            (hoverState)="handleHoverState($event)">
-        </app-project-card>
+        @if (isSliding) {
+            <app-project-card
+                class="slide-out"
+                [cardNumber]="previousNumber"
+                [isHovered]="isHovered"
+                (hoverState)="handleHoverState($event)">
+            </app-project-card>
+
+            <app-project-card 
+                class="slide-in"
+                [cardNumber]="currentNumber()"
+                [isHovered]="isHovered"
+                (hoverState)="handleHoverState($event)">
+            </app-project-card>
+        } @else {
+            <app-project-card 
+                [cardNumber]="currentNumber()"
+                [isHovered]="isHovered"
+                (hoverState)="handleHoverState($event)">
+            </app-project-card>
+        }
     </div>
     <div class="project-counter">
         @for (project of projectData; track project; let index = $index) {

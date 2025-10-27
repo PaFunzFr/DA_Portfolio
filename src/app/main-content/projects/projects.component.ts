@@ -15,18 +15,37 @@ export class ProjectsComponent {
   languages = inject(LanguageService);
   project = inject(ProjectDataService);
   projectData = this.project.projectData;
-  currentNumber = signal<number>(0)
   isHovered: boolean = false;
   interval: number | undefined;
+
+  currentNumber = signal<number>(0)
+  previousNumber: number = 0;
+  isSliding: boolean = false;
 
   get projectsTitle(): string {
     return this.languages.getTranslation('projects', 'title');
   }
 
   setCardNumber(n: number) {
+    if (n === this.currentNumber()) return;
+
+    this.previousNumber = this.currentNumber();
+    this.isSliding = true;
+    
     this.currentNumber.set(n);
     this.stopAutoSlide();
     this.startAutoSlide();
+    this.resetAnimation();
+    console.log(this.currentNumber());
+    console.log(this.previousNumber);
+    
+  }
+
+  resetAnimation() {
+    setTimeout(() => {
+      this.isSliding = false;
+      this.previousNumber = this.currentNumber();
+    }, 700);
   }
 
   ngOnInit() {
@@ -40,7 +59,13 @@ export class ProjectsComponent {
   startAutoSlide() {
     if (this.isHovered) return;
     this.interval = window.setInterval(() => {
-      this.currentNumber.update(n => (n + 1) % this.projectData.length);
+      const next = (this.currentNumber() + 1) % this.projectData.length;
+
+      this.previousNumber = this.currentNumber();
+      this.isSliding = true;
+      this.currentNumber.set(next);
+
+      this.resetAnimation()
     }, 4000);
   }
 
