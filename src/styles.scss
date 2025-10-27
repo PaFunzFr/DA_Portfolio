@@ -38,11 +38,12 @@
 
 .col-bg-main {
     position: relative;
-    background-color: $col-bg-main;
-    background-image: url('./assets/img/portfolio_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-color: rgb(30, 30, 30);
+    // background-color: $col-bg-main;
+    // background-image: url('./assets/img/portfolio_bg.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center center;
 
     &::before {
         content: '';
