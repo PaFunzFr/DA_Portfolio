@@ -2,8 +2,7 @@
 
 h1 {
     font-size: 60px;
-    font-family: 'Barlow Semi Condensed';
-    // font-family: 'Patrick Hand';
+    font-family: 'Source Sans 3';
     font-weight: 600;
     color: $col-font-sec;
 }
@@ -12,12 +11,10 @@ h2 {
     font-size: 40px;
     font-weight: 300;
     color: rgb(80, 87, 95);
-    // color: $col-bg-main;
 }
 
 h3 {
-    // font-family: 'Patrick Hand';
-    font-family: 'Barlow Semi Condensed';
+    font-family: 'Source Sans 3';
     color: $col-font-main;
     font-size: 60px;
     line-height: 50px;
@@ -28,8 +25,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'Barlow Semi Condensed';
-    // font-family: 'Patrick Hand';
+    font-family: 'Source Sans 3';
     color: $col-font-main;
     font-size: 38px;
     line-height: 50px;

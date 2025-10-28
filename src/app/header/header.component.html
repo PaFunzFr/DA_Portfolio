@@ -1,12 +1,12 @@
 <header>
     <a href="#aAbout" class="main-logo">
         <img src="./assets/img/header/logo.png" alt="">
-        <div class="header-name white-roboto">
+        <div class="header-name">
             <p>Patrick Frey</p>
             <p>Web-Developer</p>
         </div>
     </a>
-    <nav class="white-roboto">
+    <nav>
         @for (navItem of navBarService.navBar; track navItem) {
             <a class="page-ref" [href]="navItem.link">{{ currentLang == 'en' ? navItem.titleEn : navItem.titleDe }}</a>
         }
