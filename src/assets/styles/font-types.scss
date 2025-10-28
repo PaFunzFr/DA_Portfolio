@@ -1,14 +1,14 @@
 @import './colors.scss';
 
 h1 {
-    font-size: 60px;
+    font-size: clamp(24px, 50vw, 50px);
     font-family: 'Source Sans 3';
     font-weight: 600;
     color: $col-font-sec;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: clamp(18px, 40vw, 30px);
     font-weight: 300;
     color: rgb(80, 87, 95);
 }
@@ -16,9 +16,9 @@ h2 {
 h3 {
     font-family: 'Source Sans 3';
     color: $col-font-main;
-    font-size: 60px;
+    font-size: clamp(24px, 50vw, 40px);
     line-height: 50px;
-    margin: -8px 0 50px 0;
+    margin: -8px 0 0px 0;
     padding: 0;
     letter-spacing: 4px;
     text-align: center;

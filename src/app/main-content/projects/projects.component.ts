@@ -86,4 +86,11 @@ export class ProjectsComponent {
       this.startAutoSlide();
     }
   }
+
+  timeLineWidth(): number {
+    const allprojects = this.projectData.length
+    let lineWidth = this.currentNumber() / allprojects * 100
+    return lineWidth
+  }
+
 }

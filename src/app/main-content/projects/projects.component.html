@@ -58,19 +58,13 @@
         }
     </div>
     <div class="project-counter">
-        <div class="next-previuous">
+        <div class="next-previous">
             <a href="">prev</a>
+            <div class="timeline-container">
+                <div class="timeline" [style.width]="timeLineWidth() + '%'"></div>
+            </div>
             <a href="">next</a>
         </div>
-        @for (project of projectData; track project; let index = $index) {
-            <div
-                class="count-dot"
-                (click)="this.setCardNumber(index)"
-                [id]="index" 
-                [class.active]="index === currentNumber()">
-            </div>
-            <!-- if Index === current Nummer => set class active -->
-        }
     </div>
 
 </section>

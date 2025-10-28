@@ -1,17 +1,19 @@
 @import './../../../assets/styles/mixins.scss';
 
 .about {
-    @include dFlex(center, center);
+    @include dFlex(center, space-between);
     flex-direction: column;
     @include maxWidthPadding(60px, 50px);
     margin: 0 auto;
     scroll-margin-top: 100vh;
+    height: 100vh;
+
     
     .about-title {
-        @include dFlex(center, center);
+        @include dFlex(flex-start, center);
         width: 100%;
         .contact-ref {
-            @include dFlex(center, flex-end, 12px, absolute);
+            @include dFlex(center, flex-start, 12px, absolute);
             right: 0;
             top: 0;
             height: 45px;
@@ -22,13 +24,17 @@
     }
 
     .about-content {
-        @include dFlex(center, center, 10%);
+        @include dFlex(center, center, 30px);
         overflow: hidden;
-        .about-left,
-        .about-right {
-            flex: 1;
-        }
+        height: 100%;
         .about-left {
+            flex: 3;
+            background-image: url('../../../assets/img/about/hero_about.jpg');
+            background-size: cover;
+            background-position: bottom;
+            height: 100%;
+        }
+        .about-info {
             @include dFlex(flex-end, flex-end, 40px);
             >figure {
                 img {
@@ -42,8 +48,11 @@
         }
 
         .about-right {
+            @include dFlex(space-between, center, 5px);
+            flex: 2;
+            height: 100%;
+            flex-direction: column;
             min-width: 120px;  
-            max-width: 50%;
             text-align: justify;
             > p {
                 overflow-wrap: break-word;
