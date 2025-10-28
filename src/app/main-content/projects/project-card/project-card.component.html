@@ -1,44 +1,8 @@
 <div class="single-project" (click)="toggleInfo()">
-    <section class="project-infos" [style.transform]="isHovered ? 'scaleY(1)' : 'scaleY(0)'">
-        <div class="info-container">
-            <div class="project-title">
-                <p>{{ this.projectData[cardNumber].id }}</p>
-                <div class="project-ref">
-                    <a [href]="projectData[cardNumber].projectGithub" target="_blank"><img src="./assets/img/social/github.svg" alt=""></a>
-                    <a [href]="projectData[cardNumber].projectUrl" target="_blank"><img src="./assets/img/social/web.svg" alt=""></a>
-                </div>
-            </div>
-            <p>{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
-            <div class="tools-container">
-                <div class="project-tools">
-                    @for (devPics of this.projectData[cardNumber].devTools; track devPics) {
-                        <img [src]="devPics" alt="">
-                    } 
-                </div>
-                <div class="project-tools">
-                    @for (desPics of this.projectData[cardNumber].desTools; track desPics) {
-                        <img [src]="desPics" alt="">
-                    } 
-                </div>
-            </div>
-        </div>
-    </section>
-    @if ( screenSize === 'mobile') {
-        <img
-        [style.transform]="'translate(' + -x + 'px, ' + -y + 'px)'"
-        class="bg-project" 
-        [src]="this.projectData[cardNumber].prevImgMobile" 
-        alt="" 
-        [class]="isHovered ? 'project-in-background':''">
-    } @else {
-        <img 
-        [style.transform]="'translate(' + -x + 'px, ' + -y + 'px)'"
-        class="bg-project" 
-        [src]="this.projectData[cardNumber].prevImgDesk" 
-        alt=""
-        [class]="isHovered ? 'project-in-background':''">
-    }
+    <img
+    class="bg-project" 
+    [src]="this.projectData[cardNumber].background" 
+    alt=""
+    >
 </div>
-<div (click)="toggleInfo()" class="show-info"
-[style.background] = "buttonClicked ? '#EE8C1B' : '#4A81E0'"
->i</div>
+

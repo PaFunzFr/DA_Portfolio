@@ -21,7 +21,7 @@ export class LanguageService {
         developer: 'with passion for clean, elegant and efficient code',
       },
       about: {
-        title: 'Why me',
+        title: 'About me',
         text: `My passion for IT has been with me since my youth. After several years of digitizing complex construction projects,
               I realized that my true passion lies not in architecture but in software development.
               Now, I am consciously and enthusiastically taking a new path as a web developer.

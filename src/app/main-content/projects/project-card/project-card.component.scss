@@ -7,71 +7,8 @@
     opacity: 0.95;
     height: 100%;
     width: 100%;
-    max-width: 1240px;
     top: 0;
     cursor: pointer;
-
-    .project-infos {
-        @include dFlex(center, flex-end, 10%, absolute);
-        padding: 50% 10% 40px 10%;
-        z-index: 3;
-        bottom: 1px;
-        width: 100%;
-        height: calc(100% - 1px);
-        transition: all 0.4s ease;
-        transform-origin: bottom;
-        background: linear-gradient(to top, #96590fd3 35%, #96590f6f 55%, transparent);
-        z-index: 9;
-
-        .tools-container {
-            @include dFlex(space-between, flex-start, 10px);
-            width: 100%;
-            .project-tools {
-                @include dFlex(flex-start, center, 5px);
-                flex-wrap: wrap;
-                >img {
-                    height: 30px;
-                    filter: drop-shadow(0 0 2px black);
-                }
-            }
-        }
-
-        .info-container {
-            @include dFlex(flex-end, flex-start, 12px);
-            flex-direction: column;
-            max-width: 500px;
-            color: $col-font-main;
-            padding-bottom: 10%;
-
-            .project-title {
-                @include dFlex(space-between, flex-end);
-                width: 100%;
-                border-bottom: 1px solid white;
-                padding-bottom: 10px;
-                >p {
-                    font-family: "Barlow Semi Condensed";
-                    font-size: 34px;
-                    font-weight: 700;
-                    line-height: 24px;
-                }
-                .project-ref {
-                    @include dFlex(center, center, 10px);
-                    >a {
-                        height: 28px;
-                        &:hover {
-                            @include pulseAnimation();
-                        }
-                        >img{
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-            >p {
-                text-align: justify;
-            }
-        }
-    }
     
     .bg-project {
         height: 100%;

@@ -10,6 +10,30 @@
         data-aos="fade-up"
         data-aos-easing="ease-in-back"
         data-aos-offset="100">
+        <section class="project-infos">
+            <div class="info-container" [class]="isSliding? 'slide-out':'slide-in'">
+                <div class="project-title">
+                    <p>{{ this.projectData[currentNumber()].id }}</p>
+                    <div class="project-ref">
+                        <a [href]="projectData[currentNumber()].projectGithub" target="_blank"><img src="./assets/img/social/github.svg" alt=""></a>
+                        <a [href]="projectData[currentNumber()].projectUrl" target="_blank"><img src="./assets/img/social/web.svg" alt=""></a>
+                    </div>
+                </div>
+                <p>{{ getProjectText(this.projectData[currentNumber()].projectTextId) }}</p>
+                <div class="tools-container">
+                    <div class="project-tools">
+                        @for (devPics of this.projectData[currentNumber()].devTools; track devPics) {
+                            <img [src]="devPics" alt="">
+                        } 
+                    </div>
+                    <div class="project-tools">
+                        @for (desPics of this.projectData[currentNumber()].desTools; track desPics) {
+                            <img [src]="desPics" alt="">
+                        } 
+                    </div>
+                </div>
+            </div>
+        </section>
         @if (isSliding) {
             <app-project-card
                 class="slide-out"
@@ -25,6 +49,7 @@
                 (hoverState)="handleHoverState($event)">
             </app-project-card>
         } @else {
+            <img class="slide-in-reverse device" [src]="projectData[currentNumber()].appImg" alt="">
             <app-project-card 
                 [cardNumber]="currentNumber()"
                 [isHovered]="isHovered"
@@ -33,15 +58,21 @@
         }
     </div>
     <div class="project-counter">
+        <div class="next-previuous">
+            <a href="">prev</a>
+            <a href="">next</a>
+        </div>
         @for (project of projectData; track project; let index = $index) {
             <div
-            class="count-dot"
-            (click)="this.setCardNumber(index)"
-            [id]="index" 
-            [class.active]="index === currentNumber()"></div>
+                class="count-dot"
+                (click)="this.setCardNumber(index)"
+                [id]="index" 
+                [class.active]="index === currentNumber()">
+            </div>
             <!-- if Index === current Nummer => set class active -->
         }
     </div>
+
 </section>
 
 

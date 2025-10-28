@@ -38,20 +38,16 @@
 
 .col-bg-main {
     position: relative;
-    background-color: rgb(30, 30, 30);
-    // background-color: $col-bg-main;
-    // background-image: url('./assets/img/portfolio_bg.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center center;
+    background-color: rgb(14, 14, 14);
 
     &::before {
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(25deg, $col-des-main, $col-dev-main, $col-des-main,);
+        background: linear-gradient(25deg, $col-des-bg, $col-dev-bg, $col-000-bg, $col-000-bg);
+        //background: linear-gradient(25deg, $col-des-main, $col-dev-main, $col-des-main,);
         background-size: 2000% 2000%;
-        animation: moveAni 6s infinite linear;
+        animation: moveAni 20s infinite ease;
         opacity: 0.1;
         z-index: 1;
         pointer-events: none;
@@ -66,7 +62,10 @@
   0% {
     background-position: 0% 50%;
   }
-  100% {
+  50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

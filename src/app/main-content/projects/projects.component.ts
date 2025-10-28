@@ -36,8 +36,6 @@ export class ProjectsComponent {
     this.stopAutoSlide();
     this.startAutoSlide();
     this.resetAnimation();
-    console.log(this.currentNumber());
-    console.log(this.previousNumber);
     
   }
 
@@ -56,6 +54,10 @@ export class ProjectsComponent {
     this.stopAutoSlide();
   }
 
+  getProjectText(project: string): string {
+    return this.languages.getProjectDescription(project);
+  }
+
   startAutoSlide() {
     if (this.isHovered) return;
     this.interval = window.setInterval(() => {
@@ -66,7 +68,7 @@ export class ProjectsComponent {
       this.currentNumber.set(next);
 
       this.resetAnimation()
-    }, 4000);
+    }, 7000);
   }
 
   stopAutoSlide() {

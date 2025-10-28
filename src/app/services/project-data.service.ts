@@ -4,8 +4,8 @@ import { SkillsService } from './skills.service';
 
 interface ProjectsDataInterface {
   id: string;
-  prevImgMobile: string,
-  prevImgDesk: string;
+  appImg: string,
+  background: string;
   devTools: string[];
   desTools: string[];
   projectUrl: string;
@@ -31,8 +31,8 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
-      prevImgMobile: './assets/img/projects/join_mobile.png',
-      prevImgDesk: './assets/img/projects/join.png',
+      appImg: './assets/img/projects/project_join.png',
+      background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -50,8 +50,8 @@ export class ProjectDataService {
     },
     {
       id: 'Pokedex',
-      prevImgMobile: './assets/img/projects/pokedex_mobile.png',
-      prevImgDesk: './assets/img/projects/pokedex.png',
+      appImg: './assets/img/projects/project_pokedex.png',
+      background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
@@ -66,9 +66,27 @@ export class ProjectDataService {
       projectTextId: 'pokedex'
     },
     {
+      id: 'Collabeya',
+      appImg: './assets/img/projects/project_collabeya.png',
+      background: './assets/img/projects/bg_notebook.jpg',
+      devTools: [
+        this.getSkillImgSrc('angular', this.skillsDev),
+        this.getSkillImgSrc('typescript', this.skillsDev),
+        this.getSkillImgSrc('html', this.skillsDev),
+        this.getSkillImgSrc('css', this.skillsDev),
+        this.getSkillImgSrc('firebase', this.skillsDev),
+      ],
+      desTools: [
+        this.getSkillImgSrc('photoshop', this.skillsDes),
+      ],
+      projectUrl: 'http://collabeya.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/Collabeya',
+      projectTextId: 'dabubble'
+    },
+    {
       id: 'Portfolio',
-      prevImgMobile: './assets/img/projects/portfolio_mobile.png',
-      prevImgDesk: './assets/img/projects/portfolio.png',
+      appImg: './assets/img/projects/project_portfolio.png',
+      background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDev),
         this.getSkillImgSrc('typescript', this.skillsDev),
@@ -87,27 +105,9 @@ export class ProjectDataService {
       projectTextId: 'portfolio'
     },
     {
-      id: 'Collabeya',
-      prevImgMobile: './assets/img/projects/dabubble_mobile_dm.png',
-      prevImgDesk: './assets/img/projects/dabubble_dm.png',
-      devTools: [
-        this.getSkillImgSrc('angular', this.skillsDev),
-        this.getSkillImgSrc('typescript', this.skillsDev),
-        this.getSkillImgSrc('html', this.skillsDev),
-        this.getSkillImgSrc('css', this.skillsDev),
-        this.getSkillImgSrc('firebase', this.skillsDev),
-      ],
-      desTools: [
-        this.getSkillImgSrc('photoshop', this.skillsDes),
-      ],
-      projectUrl: 'http://collabeya.p-frey.com',
-      projectGithub: 'https://github.com/PaFunzFr/Collabeya',
-      projectTextId: 'dabubble'
-    },
-    {
       id: 'BnB-Saga',
-      prevImgMobile: './assets/img/projects/bnbsaga_mobile.png',
-      prevImgDesk: './assets/img/projects/bnbsaga.png',
+      appImg: './assets/img/projects/project_bnbsaga.png',
+      background: './assets/img/projects/bg_gaming.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDev),
         this.getSkillImgSrc('html', this.skillsDev),
