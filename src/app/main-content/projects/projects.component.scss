@@ -5,7 +5,7 @@
     flex-direction: column;
     background-color: rgba(0, 0, 255, 0);
     scroll-margin-top: 90px;
-        margin: 0 50px;
+    margin: 0 50px;
 }
 
 .projects-container {
@@ -14,7 +14,7 @@
     overflow: hidden;
     width: 100%;
     max-width: 1380px;
-
+    border-radius: 16px;
     aspect-ratio: 16/9;
 
     app-project-card, .device {
@@ -37,6 +37,13 @@
         animation: slideOut 0.7s forwards ease-in-out;
         z-index: 1;
     }
+
+    .fade-in {
+        animation: fadeIn 0.7s forwards ease-in-out;
+    }
+    .fade-out {
+        animation: fadeOut 0.7s forwards ease-in-out;
+    }
 }
 
 .slide-in-reverse {
@@ -49,64 +56,16 @@
 .project-infos {
     @include dFlex(center, flex-start, 10%, absolute);
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 20px;
     z-index: 3;
-    left: 0px;
+    left: 20px;
+    height: calc(100% - 40px);
     width: clamp(200px, 40%, 400px);
-    height: 100%;
-    transition: all 0.4s ease;
-    transform-origin: bottom;
+    border-radius: 16px;
     background: $col-project-bg;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    z-index: 9;
-
-    .tools-container {
-        @include dFlex(space-between, flex-start, 10px);
-        width: 100%;
-        .project-tools {
-            @include dFlex(flex-start, center, 5px);
-            flex-wrap: wrap;
-            >img {
-                height: 30px;
-                filter: drop-shadow(0 0 2px black);
-            }
-        }
-    }
-
-    .info-container {
-        @include dFlex(flex-end, flex-start, 12px);
-        flex-direction: column;
-        color: $col-font-main;
-
-        .project-title {
-            @include dFlex(space-between, flex-end);
-            width: 100%;
-            border-bottom: 1px solid white;
-            padding-bottom: 10px;
-            >p {
-                font-family: 'Source Sans 3';
-                font-size: 34px;
-                font-weight: 700;
-                line-height: 24px;
-            }
-            .project-ref {
-                @include dFlex(center, center, 10px);
-                >a {
-                    height: 28px;
-                    &:hover {
-                        @include pulseAnimation();
-                    }
-                    >img{
-                        height: 100%;
-                    }
-                }
-            }
-        }
-        >p {
-            text-align: justify;
-        }
-    }
 }
 
 .project-counter {
@@ -147,6 +106,16 @@
 @keyframes slideOut {
   from { transform: translateX(0); opacity: 1; }
   to { transform: translateX(-100%); opacity: 0.3; }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; filter: blur(15px)}
+    to {opacity: 1; filter: blur(0px)}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1; filter: blur(0px)}
+    to {opacity: 0; filter: blur(15px)}
 }
 
 @media screen and (max-width: 768px) {

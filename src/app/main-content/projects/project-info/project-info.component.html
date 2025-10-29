@@ -1,0 +1,22 @@
+<div class="info-container">
+    <div class="project-title">
+        <p>{{ this.projectData[cardNumber].id }}</p>
+        <div class="project-ref">
+            <a [href]="projectData[cardNumber].projectGithub" target="_blank"><img src="./assets/img/social/github.svg" alt=""></a>
+            <a [href]="projectData[cardNumber].projectUrl" target="_blank"><img src="./assets/img/social/web.svg" alt=""></a>
+        </div>
+    </div>
+    <p>{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
+    <div class="tools-container">
+        <div class="project-tools">
+            @for (devPics of this.projectData[cardNumber].devTools; track devPics) {
+                <img [src]="devPics" alt="">
+            } 
+        </div>
+        <div class="project-tools">
+            @for (desPics of this.projectData[cardNumber].desTools; track desPics) {
+                <img [src]="desPics" alt="">
+            } 
+        </div>
+    </div>
+</div>

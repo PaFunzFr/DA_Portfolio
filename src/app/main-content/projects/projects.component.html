@@ -9,61 +9,42 @@
         class="projects-container"
         data-aos="fade-up"
         data-aos-easing="ease-in-back"
-        data-aos-offset="100">
+        data-aos-offset="100"
+        (mouseenter)="handleHoverState(true)"
+        (mouseleave)="handleHoverState(false)"
+        >
         <section class="project-infos">
-            <div class="info-container" [class]="isSliding? 'slide-out':'slide-in'">
-                <div class="project-title">
-                    <p>{{ this.projectData[currentNumber()].id }}</p>
-                    <div class="project-ref">
-                        <a [href]="projectData[currentNumber()].projectGithub" target="_blank"><img src="./assets/img/social/github.svg" alt=""></a>
-                        <a [href]="projectData[currentNumber()].projectUrl" target="_blank"><img src="./assets/img/social/web.svg" alt=""></a>
-                    </div>
-                </div>
-                <p>{{ getProjectText(this.projectData[currentNumber()].projectTextId) }}</p>
-                <div class="tools-container">
-                    <div class="project-tools">
-                        @for (devPics of this.projectData[currentNumber()].devTools; track devPics) {
-                            <img [src]="devPics" alt="">
-                        } 
-                    </div>
-                    <div class="project-tools">
-                        @for (desPics of this.projectData[currentNumber()].desTools; track desPics) {
-                            <img [src]="desPics" alt="">
-                        } 
-                    </div>
-                </div>
-            </div>
+            <app-project-info
+                [cardNumber]="previousNumber"
+                [class]="isSliding? 'fade-out':'fade-in'">
+            </app-project-info>
         </section>
+
         @if (isSliding) {
             <app-project-card
                 class="slide-out"
-                [cardNumber]="previousNumber"
-                [isHovered]="isHovered"
-                (hoverState)="handleHoverState($event)">
+                [cardNumber]="previousNumber">
             </app-project-card>
 
             <app-project-card 
                 class="slide-in"
-                [cardNumber]="currentNumber()"
-                [isHovered]="isHovered"
-                (hoverState)="handleHoverState($event)">
+                [cardNumber]="currentNumber()">
             </app-project-card>
         } @else {
             <img class="slide-in-reverse device" [src]="projectData[currentNumber()].appImg" alt="">
             <app-project-card 
                 [cardNumber]="currentNumber()"
-                [isHovered]="isHovered"
-                (hoverState)="handleHoverState($event)">
+                >
             </app-project-card>
         }
     </div>
     <div class="project-counter">
         <div class="next-previous">
-            <a href="">prev</a>
+            <button (click)="prevProject()" >prev</button>
             <div class="timeline-container">
                 <div class="timeline" [style.width]="timeLineWidth() + '%'"></div>
             </div>
-            <a href="">next</a>
+            <button (click)="nextProject()">next</button>
         </div>
     </div>
 

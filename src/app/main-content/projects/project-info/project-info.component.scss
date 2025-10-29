@@ -1,0 +1,49 @@
+@import './../../../../assets/styles/mixins.scss';
+
+
+.tools-container {
+    @include dFlex(space-between, flex-start, 10px);
+    width: 100%;
+    .project-tools {
+        @include dFlex(flex-start, center, 5px);
+        flex-wrap: wrap;
+        >img {
+            height: 30px;
+            filter: drop-shadow(0 0 2px black);
+        }
+    }
+}
+
+.info-container {
+    @include dFlex(flex-end, flex-start, 12px);
+    flex-direction: column;
+    color: $col-font-main;
+
+    .project-title {
+        @include dFlex(space-between, flex-end);
+        width: 100%;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        >p {
+            font-family: 'Source Sans 3';
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+        .project-ref {
+            @include dFlex(center, center, 10px);
+            >a {
+                height: 28px;
+                &:hover {
+                    @include pulseAnimation();
+                }
+                >img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    >p {
+        text-align: justify;
+    }
+}

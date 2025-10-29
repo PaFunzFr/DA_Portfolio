@@ -2,11 +2,12 @@ import { Component, inject, signal, OnInit, OnDestroy} from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectDataService } from '../../services/project-data.service';
+import { ProjectInfoComponent } from './project-info/project-info.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent, ProjectCardComponent],
+  imports: [ProjectCardComponent, ProjectCardComponent, ProjectInfoComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -54,10 +55,6 @@ export class ProjectsComponent {
     this.stopAutoSlide();
   }
 
-  getProjectText(project: string): string {
-    return this.languages.getProjectDescription(project);
-  }
-
   startAutoSlide() {
     if (this.isHovered) return;
     this.interval = window.setInterval(() => {
@@ -91,6 +88,22 @@ export class ProjectsComponent {
     const allprojects = this.projectData.length
     let lineWidth = this.currentNumber() / allprojects * 100
     return lineWidth
+  }
+
+  nextProject():void {
+    if (this.currentNumber() < this.projectData.length - 1) {
+      this.setCardNumber(this.currentNumber() + 1)
+    } else {
+      this.setCardNumber(0)
+    }
+  }
+
+  prevProject():void {
+    if (this.currentNumber() > 0) {
+      this.setCardNumber(this.currentNumber() - 1)
+    } else {
+      this.setCardNumber(this.projectData.length - 1)
+    }
   }
 
 }
