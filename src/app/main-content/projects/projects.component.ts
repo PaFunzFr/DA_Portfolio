@@ -85,7 +85,7 @@ export class ProjectsComponent {
   }
 
   timeLineWidth(): number {
-    const allprojects = this.projectData.length
+    const allprojects = this.projectData.length -1
     let lineWidth = this.currentNumber() / allprojects * 100
     return lineWidth
   }

@@ -12,53 +12,78 @@
     .about-title {
         @include dFlex(flex-start, center);
         width: 100%;
-        .contact-ref {
-            @include dFlex(center, flex-start, 12px, absolute);
-            right: 0;
-            top: 0;
-            height: 45px;
-            >a>img {
-                height: 20px;
-            }
+    }
+
+    .contact-ref {
+        @include dFlex(center, flex-end, 12px, relative);
+        border-top: 1px solid white;
+        margin-top: 24px;
+        height: 45px;
+        >a>img {
+            height: 20px;
         }
     }
 
     .about-content {
         @include dFlex(center, center, 30px);
-        overflow: hidden;
         height: 100%;
         .about-left {
+            @include dFlex(center, flex-end, 0);
             flex: 3;
-            background-image: url('../../../assets/img/about/hero_about.jpg');
+            background-image:
+                linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0) 30%),
+                url('../../../assets/img/about/hero_about.jpg');
             background-size: cover;
             background-position: bottom;
             height: 100%;
+            border-radius: 16px;
+            opacity: 0.9;
         }
         .about-info {
-            @include dFlex(flex-end, flex-end, 40px);
+            @include dFlex(center, flex-end, 25px);
+            margin: 20px;
+            width: 100%;
+            flex-wrap: wrap;
             >figure {
-                img {
-                    height: 80px;
-                }
+                @include glass-dark-blue();
+                width: clamp(95px, 20%, 110px);
+                aspect-ratio: 1/1;
                 @include dFlex(center, center, 5px);
                 flex-direction: column;
                 text-align: center;
                 white-space: nowrap;
+                img {
+                    width: 33%;
+                    aspect-ratio: 1/1;
+                }
+                a, figcaption {
+                    font-size: 14px;
+                }
             }
         }
 
         .about-right {
-            @include dFlex(space-between, center, 5px);
+            @include dFlex(center, center, 5px);
             flex: 2;
             height: 100%;
             flex-direction: column;
-            min-width: 120px;  
-            text-align: justify;
-            > p {
+            margin-left: -15%;
+            section {
+                @include glass-dark();
+                padding: 24px;
+                min-height: 300px;
                 overflow-wrap: break-word;
                 word-wrap: break-word;
             }
         }
+    }
+}
+
+@media screen and (max-width: 976px) {
+    .about-info {
+        @include dFlex(center, flex-start !important, 25px, absolute);
+        flex-direction: column;
+        height: 100%;
     }
 }
 

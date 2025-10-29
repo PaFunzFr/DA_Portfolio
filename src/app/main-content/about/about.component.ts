@@ -35,8 +35,9 @@ export class AboutComponent {
 
 
   aboutItems: AboutItems[] = [
-    { img: 'assets/img/about/location.svg', textEn: 'located at <br> Frankfurt', textDe: 'wohne in<br> Frankfurt' },
+    { img: 'assets/img/about/intouch.svg', textEn: 'lets get <br> in touch', textDe: 'sprich<br>mich an' },
     { img: 'assets/img/about/remote.svg', textEn: 'open to <br> work remote', textDe: 'mobiles<br>Arbeit möglich' },
+    { img: 'assets/img/about/location.svg', textEn: 'located at <br> Frankfurt', textDe: 'wohne in<br> Frankfurt' },
     { img: 'assets/img/about/intouch.svg', textEn: 'lets get <br> in touch', textDe: 'sprich<br>mich an' }
   ];
 

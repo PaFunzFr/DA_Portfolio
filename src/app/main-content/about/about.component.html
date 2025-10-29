@@ -7,20 +7,9 @@
         >
             {{ aboutTitle }}
         </h3>
-        <nav class="contact-ref">
-            @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
-                @if (i < 2) {
-                    <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
-                } @else if (i == 2) {
-                    <a [href]="'mailto:' + ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
-                } 
-            }
-        </nav>
     </div>
     <div class="about-content">
-        <div data-aos="fade-right" class="about-left"></div>
-        <div data-aos="fade-left" class="about-right">
-            <p> {{ aboutText }} </p>
+        <div data-aos="fade-right" class="about-left">
             <div data-aos="fade-right" class="about-info">
                 @for (item of aboutItems; track $index) {
                     @if ($index == 2) {
@@ -39,6 +28,20 @@
                     }
                 }
             </div>
+        </div>
+        <div data-aos="fade-left" class="about-right">
+            <section>
+                <p [innerHTML]="aboutText"></p>
+                <nav class="contact-ref">
+                        @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
+                            @if (i < 2) {
+                                <a [href]="ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                            } @else if (i == 2) {
+                                <a [href]="'mailto:' + ref.url" target="_blank"><img [src]='ref.imgSource' [alt]='ref.title'></a>
+                            } 
+                        }
+                    </nav>
+            </section>
         </div>
     </div>
 </section>

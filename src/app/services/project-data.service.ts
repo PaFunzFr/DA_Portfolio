@@ -4,6 +4,7 @@ import { SkillsService } from './skills.service';
 
 interface ProjectsDataInterface {
   id: string;
+  type: string;
   appImg: string,
   background: string;
   devTools: string[];
@@ -31,6 +32,7 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
+      type: 'Frontend',
       appImg: './assets/img/projects/project_join.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
@@ -50,6 +52,7 @@ export class ProjectDataService {
     },
     {
       id: 'Pokedex',
+      type: 'Frontend',
       appImg: './assets/img/projects/project_pokedex.png',
       background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
@@ -67,6 +70,7 @@ export class ProjectDataService {
     },
     {
       id: 'Collabeya',
+      type: 'Frontend',
       appImg: './assets/img/projects/project_collabeya.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
@@ -85,6 +89,7 @@ export class ProjectDataService {
     },
     {
       id: 'Portfolio',
+      type: 'Frontend',
       appImg: './assets/img/projects/project_portfolio.png',
       background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
@@ -106,6 +111,7 @@ export class ProjectDataService {
     },
     {
       id: 'BnB-Saga',
+      type: 'Frontend',
       appImg: './assets/img/projects/project_bnbsaga.png',
       background: './assets/img/projects/bg_gaming.jpg',
       devTools: [

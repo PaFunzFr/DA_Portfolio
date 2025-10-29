@@ -22,10 +22,10 @@ export class LanguageService {
       },
       about: {
         title: 'About me',
-        text: `My passion for IT has been with me since my youth. After several years of digitizing complex construction projects,
-              I realized that my true passion lies not in architecture but in software development.
+        text: `My passion for IT has been with me since my youth.<br>After several years of digitizing complex construction projects,<br>
+              I realized that my true passion lies not in architecture but in software development.<br><br>
               Now, I am consciously and enthusiastically taking a new path as a web developer.
-              I am excited about combining modern frontend technologies like Angular with user-centered design.
+              I am excited about combining modern frontend technologies like Angular with user-centered design.<br>
               My experience with complex structures, well-thought-out concepts, and clear design language allows me to create intuitive,
               clean, and high-performance applications.`,
       },

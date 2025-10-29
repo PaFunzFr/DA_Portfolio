@@ -55,17 +55,13 @@
 
 .project-infos {
     @include dFlex(center, flex-start, 10%, absolute);
+    @include glass-dark-blue();
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 20px;
     z-index: 3;
     left: 20px;
     height: calc(100% - 40px);
     width: clamp(200px, 40%, 400px);
-    border-radius: 16px;
-    background: $col-project-bg;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
 }
 
 .project-counter {
