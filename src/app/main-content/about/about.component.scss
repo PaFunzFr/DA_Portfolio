@@ -37,7 +37,6 @@
             background-position: bottom;
             height: 100%;
             border-radius: 16px;
-            opacity: 0.9;
         }
         .about-info {
             @include dFlex(center, flex-end, 25px);
@@ -53,11 +52,11 @@
                 text-align: center;
                 white-space: nowrap;
                 img {
-                    width: 33%;
+                    width: 50%;
                     aspect-ratio: 1/1;
                 }
                 a, figcaption {
-                    font-size: 14px;
+                    font-size: 10px;
                 }
             }
         }
@@ -84,6 +83,13 @@
         @include dFlex(center, flex-start !important, 25px, absolute);
         flex-direction: column;
         height: 100%;
+    }
+    .about-left {
+        @include dFlex(center, flex-end, 0);
+        flex: 3;
+        background-image:
+            linear-gradient(to top right, rgba(0,0,0,.8), rgba(0,0,0,0) 30%),
+            url('../../../assets/img/about/hero_about.jpg') !important;
     }
 }
 

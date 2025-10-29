@@ -22,9 +22,9 @@ export class ProjectDataService {
 
     skills = inject(SkillsService);
     skillsDes = this.skills.skillsDes;
-    skillsDev = this.skills.skillsDev;
+    skillsDevFE = this.skills.skillsDevFE;
 
-    getSkillImgSrc(skillId: string, target = this.skillsDes || this.skillsDev): string {
+    getSkillImgSrc(skillId: string, target = this.skillsDes || this.skillsDevFE): string {
       const skill = target.find(skill => skill.id === skillId);
       return skill?.imgSource || '';
     }
@@ -36,11 +36,11 @@ export class ProjectDataService {
       appImg: './assets/img/projects/project_join.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
-        this.getSkillImgSrc('angular', this.skillsDev),
-        this.getSkillImgSrc('typescript', this.skillsDev),
-        this.getSkillImgSrc('html', this.skillsDev),
-        this.getSkillImgSrc('css', this.skillsDev),
-        this.getSkillImgSrc('firebase', this.skillsDev),
+        this.getSkillImgSrc('angular', this.skillsDevFE),
+        this.getSkillImgSrc('typescript', this.skillsDevFE),
+        this.getSkillImgSrc('html', this.skillsDevFE),
+        this.getSkillImgSrc('css', this.skillsDevFE),
+        this.getSkillImgSrc('firebase', this.skillsDevFE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
@@ -56,10 +56,10 @@ export class ProjectDataService {
       appImg: './assets/img/projects/project_pokedex.png',
       background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
-        this.getSkillImgSrc('javascript', this.skillsDev),
-        this.getSkillImgSrc('html', this.skillsDev),
-        this.getSkillImgSrc('css', this.skillsDev),
-        this.getSkillImgSrc('api', this.skillsDev),
+        this.getSkillImgSrc('javascript', this.skillsDevFE),
+        this.getSkillImgSrc('html', this.skillsDevFE),
+        this.getSkillImgSrc('css', this.skillsDevFE),
+        this.getSkillImgSrc('api', this.skillsDevFE),
       ],
       desTools: [
         this.getSkillImgSrc('adesigner', this.skillsDes),
@@ -74,11 +74,11 @@ export class ProjectDataService {
       appImg: './assets/img/projects/project_collabeya.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
-        this.getSkillImgSrc('angular', this.skillsDev),
-        this.getSkillImgSrc('typescript', this.skillsDev),
-        this.getSkillImgSrc('html', this.skillsDev),
-        this.getSkillImgSrc('css', this.skillsDev),
-        this.getSkillImgSrc('firebase', this.skillsDev),
+        this.getSkillImgSrc('angular', this.skillsDevFE),
+        this.getSkillImgSrc('typescript', this.skillsDevFE),
+        this.getSkillImgSrc('html', this.skillsDevFE),
+        this.getSkillImgSrc('css', this.skillsDevFE),
+        this.getSkillImgSrc('firebase', this.skillsDevFE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
@@ -93,11 +93,11 @@ export class ProjectDataService {
       appImg: './assets/img/projects/project_portfolio.png',
       background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
-        this.getSkillImgSrc('angular', this.skillsDev),
-        this.getSkillImgSrc('typescript', this.skillsDev),
-        this.getSkillImgSrc('html', this.skillsDev),
-        this.getSkillImgSrc('css', this.skillsDev),
-        this.getSkillImgSrc('firebase', this.skillsDev),
+        this.getSkillImgSrc('angular', this.skillsDevFE),
+        this.getSkillImgSrc('typescript', this.skillsDevFE),
+        this.getSkillImgSrc('html', this.skillsDevFE),
+        this.getSkillImgSrc('css', this.skillsDevFE),
+        this.getSkillImgSrc('firebase', this.skillsDevFE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
@@ -115,9 +115,9 @@ export class ProjectDataService {
       appImg: './assets/img/projects/project_bnbsaga.png',
       background: './assets/img/projects/bg_gaming.jpg',
       devTools: [
-        this.getSkillImgSrc('javascript', this.skillsDev),
-        this.getSkillImgSrc('html', this.skillsDev),
-        this.getSkillImgSrc('css', this.skillsDev),
+        this.getSkillImgSrc('javascript', this.skillsDevFE),
+        this.getSkillImgSrc('html', this.skillsDevFE),
+        this.getSkillImgSrc('css', this.skillsDevFE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),

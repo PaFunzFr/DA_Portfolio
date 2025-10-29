@@ -38,13 +38,10 @@
 @mixin glass-dark($tint: rgba(10, 20, 35, 0.55)) {
     border-radius: 16px;
     border: 1px solid rgba(120, 160, 220, 0.18);
-
     background-image:
         linear-gradient(to top, #ee8b1b6e, #ee8b1b39);
-
-    backdrop-filter: blur(8px) brightness(70%) contrast(105%);
-    -webkit-backdrop-filter: blur(8px) brightness(70%) contrast(105%);
-
+    backdrop-filter: blur(18px) brightness(70%) contrast(105%);
+    -webkit-backdrop-filter: blur(18px) brightness(70%) contrast(105%);
     box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.45),
         inset 0 1px 0 #f5c99654,
@@ -55,18 +52,12 @@
 @mixin glass-dark-blue($tint: rgba(10, 20, 35, 0.55)) {
     border-radius: 16px;
     border: 1px solid rgba(120, 160, 220, 0.18);
-
-
     background-image:
         linear-gradient(to top, rgba(5, 10, 20, 0.75), rgba(5, 10, 20, 0.25) 35%),
         linear-gradient(to top, $col-project-bg, rgba(76, 104, 157, 0.25) 30%);
     background-blend-mode: multiply, normal;
-
-
-    backdrop-filter: blur(8px) brightness(70%) contrast(105%);
-    -webkit-backdrop-filter: blur(8px) brightness(70%) contrast(105%);
-
-
+    backdrop-filter: blur(18px) brightness(70%) contrast(105%);
+    -webkit-backdrop-filter: blur(18px) brightness(70%) contrast(105%);
     box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.45),
         inset 0 1px 0 rgba(255, 255, 255, 0.06),

@@ -10,7 +10,23 @@
     <div class="skill-container">
 
         <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
-            @for (skill of skills.skillsDev; track skill) {
+            @for (skill of skills.skillsDevFE; track skill) {
+                <div class="skill">
+                    <img [src]="skill.imgSource" alt="">
+                    <!-- <p [innerHTML]="skill.title"></p> optional -->
+                </div>
+            } 
+        </div>
+        <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
+            @for (skill of skills.skillsDevBE; track skill) {
+                <div class="skill">
+                    <img [src]="skill.imgSource" alt="">
+                    <!-- <p [innerHTML]="skill.title"></p> optional -->
+                </div>
+            } 
+        </div>
+        <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
+            @for (skill of skills.skillsMisc; track skill) {
                 <div class="skill">
                     <img [src]="skill.imgSource" alt="">
                     <!-- <p [innerHTML]="skill.title"></p> optional -->
