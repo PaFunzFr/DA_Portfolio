@@ -1,36 +1,11 @@
 <section class="about" id="aAbout">
-    <div class="about-title">
-        <h3
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-offset="0"
-        >
-            {{ aboutTitle }}
-        </h3>
-    </div>
     <div class="about-content">
         <div data-aos="fade-right" class="about-left">
-            <div data-aos="fade-right" class="about-info">
-                @for (item of aboutItems; track $index) {
-                    @if ($index == 2) {
-                        <figure>
-                            <a href="#aContact"
-                            [style.]>
-                                <img [src]="item.img">
-                                <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
-                            </a>
-                        </figure>
-                    } @else {
-                        <figure>
-                            <img [src]="item.img">
-                            <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
-                        </figure>
-                    }
-                }
-            </div>
+
         </div>
         <div data-aos="fade-left" class="about-right">
             <section>
+                <h3>{{ aboutTitle }}</h3>
                 <p [innerHTML]="aboutText"></p>
                 <nav class="contact-ref">
                         @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
@@ -46,3 +21,20 @@
     </div>
 </section>
 
+<!-- <div data-aos="fade-right" class="about-info">
+    @for (item of aboutItems; track $index) {
+        @if ($index == 2) {
+            <figure>
+                <a href="#aContact">
+                    <img [src]="item.img">
+                    <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
+                </a>
+            </figure>
+        } @else {
+            <figure>
+                <img [src]="item.img">
+                <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
+            </figure>
+        }
+    }
+</div> -->
