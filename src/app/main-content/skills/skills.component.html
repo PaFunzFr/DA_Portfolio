@@ -4,42 +4,32 @@
         data-aos-easing="ease-in-back"
         data-aos-offset="100"
     >
-        Skills
+        Tech-Stack
     </h3>
     
     <div class="skill-container">
-
-        <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
-            @for (skill of skills.skillsDevFE; track skill) {
-                <div class="skill">
+        <section>
+            <p (click)="highlight('des')" class="des" [class.highlight]="activeHighlight === 'des'">Designer</p>
+            <p (click)="highlight('frontend')" class="dev-fe" [class.highlight]="activeHighlight === 'frontend'">Frontend</p>
+            <p (click)="highlight('backend')" class="dev-be" [class.highlight]="activeHighlight === 'backend'">Backend</p>
+            <p (click)="highlight('misc')" class="misc" [class.highlight]="(activeHighlight === 'misc')">Dev-Tools</p>
+        </section>
+        <div class="skills-collection" data-aos="fade-up" data-aos-offset="200">
+            @for (skill of allSkills; track skill) {
+                <div
+                    class="skill"
+                    [class]="{
+                        'des': skill.imgSource.includes('/skills/des/'),
+                        'dev-fe': skill.imgSource.includes('/skills/frontend/'),
+                        'dev-be': skill.imgSource.includes('/skills/backend/'),
+                        'misc': skill.imgSource.includes('/skills/misc/'),
+                        'highlight': activeHighlight && skill.imgSource.includes('/' + activeHighlight + '/'),
+                        'inactive': activeHighlight && !skill.imgSource.includes('/' + activeHighlight + '/')
+                    }"
+                >
                     <img [src]="skill.imgSource" alt="">
-                    <!-- <p [innerHTML]="skill.title"></p> optional -->
                 </div>
-            } 
-        </div>
-        <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
-            @for (skill of skills.skillsDevBE; track skill) {
-                <div class="skill">
-                    <img [src]="skill.imgSource" alt="">
-                    <!-- <p [innerHTML]="skill.title"></p> optional -->
-                </div>
-            } 
-        </div>
-        <div class="skills-dev" data-aos="fade-up" data-aos-offset="200">
-            @for (skill of skills.skillsMisc; track skill) {
-                <div class="skill">
-                    <img [src]="skill.imgSource" alt="">
-                    <!-- <p [innerHTML]="skill.title"></p> optional -->
-                </div>
-            } 
-        </div>
-        <div class="skills-des" data-aos="fade-up" data-aos-offset="200">
-            @for (skill of skills.skillsDes; track skill) {
-                <div class="skill">
-                    <img [src]="skill.imgSource" alt="">
-                    <!-- <p [innerHTML]="skill.title"></p> optional -->
-                </div>
-            } 
+            }
         </div>
     </div>
     <div class="mindset">

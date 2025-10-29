@@ -24,28 +24,28 @@ export class SkillsService {
   ];
 
   skillsDevFE: SkillPool[] = [
-    { id: 'angular', title: 'Angular', imgSource: './assets/img/skills/dev/frontend/angular.svg'},
-    { id: 'typescript', title: 'TypeScript', imgSource: './assets/img/skills/dev/frontend/typescript.svg'},
-    { id: 'javascript', title: 'JavaScript', imgSource: './assets/img/skills/dev/frontend/javascript.svg'},
-    { id: 'html', title: 'HTML5', imgSource: './assets/img/skills/dev/frontend/html.svg'},
-    { id: 'css', title: 'CSS3 &<br>SCSS', imgSource: './assets/img/skills/dev/frontend/css.svg'},
-    { id: 'rxjs', title: 'RxJs', imgSource: './assets/img/skills/dev/frontend/rxjs.svg'},
-    { id: 'threeJS', title: 'threeJS', imgSource: './assets/img/skills/dev/frontend/threejs.svg'},
-    { id: 'materialdesign', title: 'Material<br>Design', imgSource: './assets/img/skills/dev/frontend/materialdesign.svg'}
+    { id: 'angular', title: 'Angular', imgSource: './assets/img/skills/frontend/angular.svg'},
+    { id: 'typescript', title: 'TypeScript', imgSource: './assets/img/skills/frontend/typescript.svg'},
+    { id: 'javascript', title: 'JavaScript', imgSource: './assets/img/skills/frontend/javascript.svg'},
+    { id: 'html', title: 'HTML5', imgSource: './assets/img/skills/frontend/html.svg'},
+    { id: 'css', title: 'CSS3 &<br>SCSS', imgSource: './assets/img/skills/frontend/css.svg'},
+    { id: 'rxjs', title: 'RxJs', imgSource: './assets/img/skills/frontend/rxjs.svg'},
+    { id: 'threeJS', title: 'threeJS', imgSource: './assets/img/skills/frontend/threejs.svg'},
+    { id: 'materialdesign', title: 'Material<br>Design', imgSource: './assets/img/skills/frontend/material.svg'}
   ];
 
   skillsDevBE: SkillPool[] = [
-    { id: 'python', title: 'Python', imgSource: './assets/img/skills/dev/backend/python.svg'},
-    { id: 'django', title: 'Django', imgSource: './assets/img/skills/dev/backend/django.svg'},
-    { id: 'pytest', title: 'Pytest', imgSource: './assets/img/skills/dev/backend/pytest.svg'},
-    { id: 'docker', title: 'Docker', imgSource: './assets/img/skills/dev/backend/docker.svg'},
-    { id: 'postman', title: 'Postman', imgSource: './assets/img/skills/dev/backend/postman.svg'},
-    { id: 'redis', title: 'Redis', imgSource: './assets/img/skills/dev/backend/redis.svg'},
-    { id: 'postgresql', title: 'PostgreSQL', imgSource: './assets/img/skills/dev/backend/postgresql.svg'},
-    { id: 'sql', title: 'SQL /<br>SQlite ', imgSource: './assets/img/skills/dev/backend/sql.svg'},
-    { id: 'coolify', title: 'Coolify', imgSource: './assets/img/skills/dev/backend/coolify.svg'},
-    { id: 'api', title: 'Restful<br>APIs', imgSource: './assets/img/skills/dev/backend/api.svg'},
-    { id: 'firebase', title: 'Google<br>Firebase', imgSource: './assets/img/skills/dev/backend/firebase.svg'},
+    { id: 'python', title: 'Python', imgSource: './assets/img/skills/backend/python.svg'},
+    { id: 'django', title: 'Django', imgSource: './assets/img/skills/backend/django.svg'},
+    { id: 'pytest', title: 'Pytest', imgSource: './assets/img/skills/backend/pytest.svg'},
+    { id: 'docker', title: 'Docker', imgSource: './assets/img/skills/backend/docker.svg'},
+    { id: 'postman', title: 'Postman', imgSource: './assets/img/skills/backend/postman.svg'},
+    { id: 'redis', title: 'Redis', imgSource: './assets/img/skills/backend/redis.svg'},
+    { id: 'postgresql', title: 'PostgreSQL', imgSource: './assets/img/skills/backend/postgresql.svg'},
+    { id: 'sql', title: 'SQL /<br>SQlite ', imgSource: './assets/img/skills/backend/sql.svg'},
+    { id: 'coolify', title: 'Coolify', imgSource: './assets/img/skills/backend/coolify.svg'},
+    { id: 'api', title: 'Restful<br>APIs', imgSource: './assets/img/skills/backend/api.svg'},
+    { id: 'firebase', title: 'Google<br>Firebase', imgSource: './assets/img/skills/backend/firebase.svg'},
   ];
 
   skillsMisc: SkillPool[] = [

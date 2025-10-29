@@ -9,53 +9,84 @@
     flex-direction: column;
 }
 
+.des, .dev-fe, .dev-be, .misc {
+    @include dFlex(center, center);
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.des {
+    @include glass-dark();
+}
+
+.dev-fe {
+    @include glass-dark-blue();
+    filter: brightness(120%) !important
+}
+
+.dev-be {
+    @include glass-dark-blue();
+    filter: brightness(180%) !important
+}
+
+.misc {
+    @include glass-dark();
+    filter: saturate(0.1) !important
+}
+
+.highlight {
+    box-shadow: inset 0 0 0 2px white !important;
+}
+
+.inactive {
+    filter: blur(3px) brightness(0.8) saturate(0.5) !important;
+    &:hover {
+        transform: scale(1) !important;
+    }
+}
+
 .skill-container {
     @include dFlex(center, flex-start, 10%);
-    max-width: 1200px;
-    padding: 0 50px;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid white;
 
-    .skills-des,
-    .skills-dev {
-        flex-wrap: wrap;
-        z-index: 2;
-        flex: 1;
-        
-        .skill {
-            @include dFlex(center, center, 12px);
-            flex-direction: column;
-            max-width: 100px;
-            width: 25%;
-            min-width: 60px;
-            color: $col-font-main;
-            font-family: 'Source Sans 3';
-            transition: all 0.4s ease;
-            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.829));
+    section {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+        >p {
+            height: 0px;
+            width: auto;
+            margin-bottom: 30px;
             &:hover {
-                transform: scale(0.97);
-            }
-            >img {
-                height: 6vw;
-                min-height: 40px;
-                max-height: 75px;
-                transition: all 0.3s ease;
-                &:hover {
-                    @include pulseAnimation();
-                }
-            }
-            >p {
-                height: 50px;
-                font-size: 16px;
-                text-align: center;
+                cursor: pointer;
+                transform: scale(0.95);
+                filter: brightness(1.1)
             }
         }
     }
 
-    .skills-dev {
-        @include dFlex(flex-end, flex-start, 40px);
-    }
+    .skills-collection {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        justify-content: center;
+        justify-items: center;
+        gap: 24px;
+        width: 100%;
 
-    .skills-des {
-        @include dFlex(flex-start, flex-start, 40px);
+        .skill {
+            width: 80px;
+            height: 80px;
+            >img {
+                width: 100%;
+            }
+            &:hover {
+                transform: scale(0.95);
+            }
+        }
     }
 }
 
@@ -113,21 +144,6 @@
         line-height: 18px;
     }
 
-    .skills-dev,
-    .skills-des {
-        gap: 5px !important;
-    }
-
-    .skill {
-        max-width: 80px;
-        margin: 10px;
-    }
-
-    .skill-container {
-        gap: 10px !important;
-        padding: 0 10px;
-    }
-
     .mindset {
         >div {
             padding: 0 15px;
@@ -140,10 +156,7 @@
         font-size: 12px !important;
         line-height: 14px;
     }
-    .skill {
-        max-width: 80px;
-        margin: 2px;
-    }
+
     .mindset-contact {
         >a {
             font-size: 14px !important;
