@@ -40,4 +40,11 @@ export class AboutComponent {
     { img: 'assets/img/about/intouch.svg', textEn: 'lets get in touch', textDe: 'sprich mich an' },
   ];
 
+  scrollTo(targetId: string) {
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 }

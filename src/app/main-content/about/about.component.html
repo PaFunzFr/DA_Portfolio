@@ -7,6 +7,21 @@
             <section>
                 <h3>{{ aboutTitle }}</h3>
                 <p [innerHTML]="aboutText"></p>
+                <div data-aos="fade-right" class="about-info">
+                    @for (item of aboutItems; track $index) {
+                        @if ($index == 2) {
+                            <figure (click)="scrollTo('aContact')" class="hover">
+                                    <img [src]="item.img">
+                                    <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
+                            </figure>
+                        } @else {
+                            <figure>
+                                <img [src]="item.img">
+                                <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
+                            </figure>
+                        }
+                    }
+                </div>
                 <nav class="contact-ref">
                         @for (ref of socialReference.socialRefs; let i = $index; track ref.title) {
                             @if (i < 2) {
@@ -20,21 +35,3 @@
         </div>
     </div>
 </section>
-
-<!-- <div data-aos="fade-right" class="about-info">
-    @for (item of aboutItems; track $index) {
-        @if ($index == 2) {
-            <figure>
-                <a href="#aContact">
-                    <img [src]="item.img">
-                    <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
-                </a>
-            </figure>
-        } @else {
-            <figure>
-                <img [src]="item.img">
-                <figcaption [innerHTML]="currentLang == 'en' ? item.textEn : item.textDe"></figcaption>
-            </figure>
-        }
-    }
-</div> -->

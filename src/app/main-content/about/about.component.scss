@@ -17,7 +17,7 @@
     .contact-ref {
         @include dFlex(center, flex-end, 12px, relative);
         border-top: 1px solid white;
-        margin-top: 24px;
+        margin-top: 14px;
         height: 45px;
         >a>img {
             height: 20px;
@@ -28,79 +28,82 @@
         @include dFlex(center, center, 30px);
         height: 100%;
         .about-left {
-            @include dFlex(center, flex-end, 0);
-            flex: 3;
-            background-image:
-                linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0) 30%),
-                url('../../../assets/img/about/hero_about.jpg');
-            background-size: auto;
-            background-position: center;
+            @include dFlex(center, center, 0);
+            position: absolute;
+            left: 0;
+            width: clamp(300px, 45vw, 700px);
+            background-size: cover;
+            background-position: center bottom;
             height: 100%;
             border-radius: 16px;
             mask-image: url('../../../assets/img/about/mask_hero.png');
             mask-repeat: no-repeat;
-            mask-position: center;          
+            mask-position: left;          
             mask-size: contain;
+            mask-origin: content-box;
+            mask-clip: content-box;
             animation: imageSwap 15s infinite ease-in-out;
-}
-
-@keyframes imageSwap {
-    0% {
-        background-image: url('../../../assets/img/about/hero_about.jpg');
-    }
-    50% {
-        background-image: url('../../../assets/img/about/hero_about-comic.jpg');
-    }
-    100% {
-        background-image: url('../../../assets/img/about/hero_about.jpg');
-    }
-}
-
+        }
 
         .about-right {
             @include dFlex(center, center, 5px);
-            flex: 2;
+            position: absolute;
+            right: 0;
+            width: 50%;
             height: 100%;
             flex-direction: column;
-            // margin-left: -15%;
             section {
-                // @include glass-dark();
-                padding: 24px;
                 min-height: 300px;
                 overflow-wrap: break-word;
                 word-wrap: break-word;
+                text-align: center;
+                p {
+                    margin-top: 10px;
+                }
             }
         }
     }
 }
 
-.about-left {
-    display: flex;
-    position: absolute;
-    left: 0;
-    z-index: 9;
-    .about-info {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 20px;
-            figure,
-    figure>a {
-        display: flex;
-        gap: 6px;
-        img {
-            height: 25px;
+.about-info {
+    @include dFlex(space-evenly, center, 0);
+    flex-wrap: wrap;
+    margin-top: 30px;
+    .hover {
+        cursor: pointer;
+        &:hover {
+            transform: scale(0.95);
         }
     }
-    }
+    figure {
+        @include dFlex(center, center, 3px);
+        white-space: nowrap;
 
+        img {
+            height: 30px;
+        }
+        figcaption,a {
+            font-size: 12px !important;
+        }
+    }
+}
+
+@keyframes imageSwap {
+    0% {
+        background-image: 
+            url('../../../assets/img/about/hero_about.jpg');
+    }
+    50% {
+        background-image:
+            url('../../../assets/img/about/hero_about-comic.jpg');
+    }
+    100% {
+        background-image:  
+            url('../../../assets/img/about/hero_about.jpg');
+    }
 }
 
 @media screen and (max-width: 976px) {
-    .about-info {
-        @include dFlex(center, flex-start !important, 25px, absolute);
-        flex-direction: column;
-        height: 100%;
-    }
     .about-left {
         @include dFlex(center, flex-end, 0);
         flex: 3;

@@ -16,7 +16,6 @@ header {
         >img {
             width: 45px;
             background: $col-bg-main;
-            //border: 1px solid $col-bg-main;
             border-radius: 50%;
         }
         
@@ -30,7 +29,7 @@ header {
                 font-family: 'Chillax';
             }
             &>p:nth-child(2) {
-                margin-top: -8px;
+                margin-top: -5px;
                 font-size: 11px;
                 color: lightgrey;
             }

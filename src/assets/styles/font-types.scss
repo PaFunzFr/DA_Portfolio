@@ -5,7 +5,7 @@ h1 {
     font-family: 'Chillax', sans-serif;
     font-weight: 600;
     line-height: 0.8;
-    color: white; // $col-font-sec;
+    color: white;
     white-space: nowrap;
 }
 
@@ -19,12 +19,12 @@ h2 {
 h3 {
     font-family: 'Chillax', sans-serif;
     color: $col-font-main;
-    font-size: clamp(24px, 50vw, 40px);
-    line-height: 50px;
-    margin: -8px 0 0px 0;
+    font-size: clamp(18px, 8vw, 70px);
+    line-height: 1.2;
     padding: 0;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     text-align: center;
+    white-space: nowrap;
 }
 
 h4 {
@@ -49,36 +49,12 @@ figcaption {
     font-family: 'Satoshi', sans-serif;
     text-decoration: none;
     color: $col-font-main;
-    font-size: 18px;
+    font-size: clamp(18px, 3vw, 20px);
 }
 
 p {
     font-family: 'Satoshi', sans-serif;
     font-size: 18px;
-    line-height: 1.55;
+    line-height: 1.3;
     color: $col-font-main;
-    font-weight: 300;
 }
-
-// @media screen and (max-width: 768px) {
-//     h1 {
-//         font-size: 50px;
-//     }
-    
-//     h2 {
-//         font-size: 30px;
-//     }
-    
-//     h3 {
-//         font-size: 50px;
-//         margin: -8px 0 40px 0;
-//     }
-    
-//     h4 {
-//         font-size: 30px;
-//     }
-
-//     h5 {
-//         font-size: 30px;
-//     }
-// }
