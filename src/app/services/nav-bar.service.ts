@@ -11,10 +11,10 @@ interface NavBarInterface {
 })
 export class NavBarService {
   navBar: NavBarInterface[] = [
-    {titleEn: 'About', titleDe: 'Über', link: '#aAbout'},
-    {titleEn: 'Skills', titleDe: 'Skills',  link: '#aSkills'},
-    {titleEn: 'Projects', titleDe: 'Projekte', link: '#aProjects'},
-    {titleEn: 'Contact', titleDe: 'Kontakt', link: '#aContact'}
+    {titleEn: 'ABOUT', titleDe: 'Über', link: '#aAbout'},
+    {titleEn: 'SKILLS', titleDe: 'Skills',  link: '#aSkills'},
+    {titleEn: 'PROJECTS', titleDe: 'Projekte', link: '#aProjects'},
+    {titleEn: 'CONTACT', titleDe: 'Kontakt', link: '#aContact'}
   ]
 
   showSideBar: boolean = false;

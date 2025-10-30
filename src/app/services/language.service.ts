@@ -9,14 +9,12 @@ export class LanguageService {
   translation: { [key: string]: any } = {
     en: {
       landingPage: {
-        welcome: 'I am Patrick Frey,',
-        title: `<span class="col-dev">Web-Developer</span> &
-                <span class="col-des">Designer</span><br> with an
-                architectural<br> Background (M.Sc)`,
+        welcome: 'PATRICK FREY',
+        title: `with an architectural Background (M.Sc)`,
         scroll: 'scroll down',
       },
       hero: {
-        welcome: 'Welcome',
+        welcome: 'WELCOME',
         designer: 'my background as architect ensures great design',
         developer: 'with passion for clean, elegant and efficient code',
       },
@@ -296,10 +294,8 @@ export class LanguageService {
     },
     de: {
       landingPage: {
-        welcome: 'Ich bin Patrick Frey,',
-        title: `<span class="col-dev">Web-Developer</span> &
-                <span class="col-des">Designer</span><br> mit
-                Hintergrund als <br> Architekt (M.Sc.)`,
+        welcome: 'PATRICK FREY',
+        title: `mit Hintergrund als Architekt (M.Sc.)`,
         scroll: 'scroll down',
       },
       hero: {

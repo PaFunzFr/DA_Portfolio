@@ -1,20 +1,23 @@
 @import './colors.scss';
 
 h1 {
-    font-size: clamp(24px, 50vw, 50px);
-    font-family: 'Source Sans 3';
+    font-size: clamp(24px, 12vw, 100px);
+    font-family: 'Chillax', sans-serif;
     font-weight: 600;
-    color: $col-font-sec;
+    line-height: 0.8;
+    color: white; // $col-font-sec;
+    white-space: nowrap;
 }
 
 h2 {
-    font-size: clamp(18px, 40vw, 30px);
+    font-size: clamp(6px, 5vw, 24px);
     font-weight: 300;
-    color: rgb(80, 87, 95);
+    color: rgb(152, 152, 152);
+    white-space: nowrap;
 }
 
 h3 {
-    font-family: 'Source Sans 3';
+    font-family: 'Chillax', sans-serif;
     color: $col-font-main;
     font-size: clamp(24px, 50vw, 40px);
     line-height: 50px;
@@ -25,13 +28,14 @@ h3 {
 }
 
 h4 {
-    font-family: 'Source Sans 3';
+    font-family: 'Chillax', sans-serif;
     color: $col-font-main;
     font-size: 38px;
     line-height: 50px;
 }
 
 h5 {
+    font-family: 'Chillax', sans-serif;
     color: $col-font-main;
     font-size: 40px;
     margin: 50px 0 10px 0;
@@ -40,43 +44,41 @@ h5 {
     text-align: center;
 }
 
-figcaption {
-    color: $col-font-main;
-}
-
 a,
 figcaption {
+    font-family: 'Satoshi', sans-serif;
     text-decoration: none;
     color: $col-font-main;
     font-size: 18px;
 }
 
 p {
+    font-family: 'Satoshi', sans-serif;
     font-size: 18px;
     line-height: 1.55;
     color: $col-font-main;
     font-weight: 300;
 }
 
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 50px;
-    }
+// @media screen and (max-width: 768px) {
+//     h1 {
+//         font-size: 50px;
+//     }
     
-    h2 {
-        font-size: 30px;
-    }
+//     h2 {
+//         font-size: 30px;
+//     }
     
-    h3 {
-        font-size: 50px;
-        margin: -8px 0 40px 0;
-    }
+//     h3 {
+//         font-size: 50px;
+//         margin: -8px 0 40px 0;
+//     }
     
-    h4 {
-        font-size: 30px;
-    }
+//     h4 {
+//         font-size: 30px;
+//     }
 
-    h5 {
-        font-size: 30px;
-    }
-}
+//     h5 {
+//         font-size: 30px;
+//     }
+// }
