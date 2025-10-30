@@ -27,7 +27,6 @@
     border: 1px solid $col-bg-main;
 }
 
-// color classes
 .col-des {
     color: $col-des-main;
 }
@@ -38,34 +37,37 @@
 
 .col-bg-main {
     position: relative;
-    background-color: rgb(14, 14, 14);
-
+    background-color: #131313;
+    overflow: hidden;
     &::before {
         content: '';
         position: absolute;
-        inset: 0;
-        background: linear-gradient(25deg, $col-des-bg, $col-dev-bg, $col-000-bg, $col-000-bg);
-        //background: linear-gradient(25deg, $col-des-main, $col-dev-main, $col-des-main,);
-        background-size: 2000% 2000%;
-        animation: moveAni 20s infinite ease;
-        opacity: 0.1;
+        inset: -10%;
+        background: 
+            radial-gradient(circle at 25% 30%, rgba($col-dev-bg, 0.5) 0%, rgba($col-dev-bg, 0) 60%),
+            radial-gradient(circle at 75% 70%, rgba($col-des-bg, 0.5) 0%, rgba($col-des-bg, 0) 70%);
+        animation: drift 15s ease-in-out infinite alternate;
+        mix-blend-mode: screen;
         z-index: 1;
+        pointer-events: none;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/img/noise.jpg');
+        opacity: 0.3;
+        mix-blend-mode: overlay;
         pointer-events: none;
     }
 }
 
-.col-bg-header {    
-    background-color: $col-bg-header;
+@keyframes drift {
+    0%   { transform: translate(0%, 0%) scale(1); }
+    50%  { transform: translate(-5%, 5%) scale(1.1); }
+    100% { transform: translate(5%, -5%) scale(1); }
 }
 
-@keyframes moveAni {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.col-bg-header {    
+    background-color: $col-bg-header;
 }

@@ -1,60 +1,23 @@
 <section class="skills" id="aSkills">
-    <h3
-        data-aos="fade-up"
-        data-aos-easing="ease-in-back"
-        data-aos-offset="100"
-    >
-        Tech-Stack
-    </h3>
-    
-    <div class="skill-container">
-        <!-- <section>
-            <p (click)="highlight('des')" class="des" [class.highlight]="activeHighlight === 'des'">Designer</p>
-            <p (click)="highlight('frontend')" class="dev-fe" [class.highlight]="activeHighlight === 'frontend'">Frontend</p>
-            <p (click)="highlight('backend')" class="dev-be" [class.highlight]="activeHighlight === 'backend'">Backend</p>
-            <p (click)="highlight('misc')" class="misc" [class.highlight]="(activeHighlight === 'misc')">Dev-Tools</p>
-        </section> -->
-            <div class="skills-collection" data-aos="fade-up" data-aos-offset="200">
-                <section class="des">
-                    @for (skill of skills.skillsDes; track skill) {
-                        <div class="skill">
-                            <img [src]="skill.imgSource" alt="">
-                        </div>
-                    }
-                </section>
-                <section class="dev-fe">
-                    @for (skill of skills.skillsDevFE; track skill) {
-                        <div class="skill">
-                            <img [src]="skill.imgSource" alt="">
-                        </div>
-                    }
-                </section>
-                <section class="dev-be">
-                    @for (skill of skills.skillsDevBE; track skill) {
-                        <div class="skill ">
-                            <img [src]="skill.imgSource" alt="">
-                        </div>
-                    }
-                </section>
-                <section class="misc">
-                @for (skill of skills.skillsMisc; track skill) {
-                    <div class="skill">
-                        <img [src]="skill.imgSource" alt="">
-                    </div>
-                }
-                </section>
-            </div>
-        </div>
-        <div class="skills-right">
+    <figure class="skills-bg"></figure>
 
-        </div>
+    <section class="skill-title">
+        <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
+        <p>{{skillText}}</p>
+        <div>Dashboard Teamwork 90 % – Autonomy 95 % – Creativity 88 %</div>
+    </section>
+
+    <div class="skills-collection" data-aos="fade-up" data-aos-offset="200">
+        <app-skill-bar [skillCategory]="1"></app-skill-bar>
+    </div>
+
     <div class="mindset">
         <h4 data-aos="fade-down">
             {{ mindsetTitle }}
         </h4>
-    <div>
+        <div>
             <div data-aos="fade-right">{{ mindsetText }}</div>
-            <div data-aos="fade-left" class="mindset-contact" >
+            <div data-aos="fade-left" class="mindset-contact">
                 <a href=#aContact>
                     <img src="./assets/img/skills/mindset.svg" alt="">
                     {{ currentLang == 'en' ? 'contact me':'kontaktiere mich' }}
@@ -64,3 +27,9 @@
     </div>
 </section>
 
+<!-- <section>
+    <p (click)="highlight('des')" class="des" [class.highlight]="activeHighlight === 'des'">Designer</p>
+    <p (click)="highlight('frontend')" class="dev-fe" [class.highlight]="activeHighlight === 'frontend'">Frontend</p>
+    <p (click)="highlight('backend')" class="dev-be" [class.highlight]="activeHighlight === 'backend'">Backend</p>
+    <p (click)="highlight('misc')" class="misc" [class.highlight]="(activeHighlight === 'misc')">Dev-Tools</p>
+</section> -->

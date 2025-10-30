@@ -9,50 +9,12 @@
     flex-direction: column;
 }
 
-.des, .dev-fe, .dev-be, .misc {
-    @include dFlex(center, center);
-    padding: 20px;
-    height: 100px;
-    width: 100px;
-}
-
-.des {
-    @include glass-dark();
-}
-
-.dev-fe {
-    @include glass-dark-blue();
-    filter: brightness(120%) !important
-}
-
-.dev-be {
-    @include glass-dark-blue();
-    filter: brightness(180%) !important
-}
-
-.misc {
-    @include glass-dark();
-    filter: saturate(0.1) !important
-}
-
-.highlight {
-    box-shadow: inset 0 0 0 2px white !important;
-}
-
-.inactive {
-    filter: blur(3px) brightness(0.8) saturate(0.5) !important;
-    &:hover {
-        transform: scale(1) !important;
-    }
-}
-
-.skills-right {
+.skills-bg {
     position: absolute;
     right: 0;
     top: 0;
     width: clamp(300px, 90vw, 800px);
     height: 700px;
-    // background-image: url('../../../assets/img/skills/skills-bg-comic.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,51 +36,6 @@
     }
     100% {
         background-image: url('../../../assets/img/skills/skills-bg.jpg');
-    }
-}
-
-.skill-container {
-    @include dFlex(center, center, 10%);
-    // flex-direction: column;
-    width: 100%;
-
-    section {
-        display: flex;
-        gap: 16px;
-        width: auto;
-        margin-top: 10px;
-        >p {
-            height: 0px;
-            width: auto;
-            margin-bottom: 30px;
-            &:hover {
-                cursor: pointer;
-                transform: scale(0.95);
-                filter: brightness(1.1)
-            }
-        }
-    }
-
-    .skills-collection {
-        @include dFlex(center, flex-start, 20px);
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
-        gap: 24px;
-        width: 100%;
-        margin: 0 auto;
-        z-index: 9;
-
-        .skill {
-            width: 50px;
-            height: 50px;
-            >img {
-                width: 100%;
-            }
-            &:hover {
-                transform: scale(0.95);
-            }
-        }
     }
 }
 

@@ -21,6 +21,16 @@
     background-size: cover;
     background-blend-mode:overlay;
 
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/img/noise.jpg');
+        opacity: 0.3;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+    }
+
     .welcome-overlay {
         @include dFlex(center, center, 0, absolute);
         top: 50%;
