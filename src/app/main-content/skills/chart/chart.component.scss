@@ -1,0 +1,45 @@
+@import './../../../../assets/styles/mixins.scss';
+
+* {
+    @include dFlex(center, center, 0);
+}
+
+@property --percent {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+figure {
+    position: relative;
+    --size: 70px;
+    --hole: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(green 0 var(--percent), lightgray var(--percent) 100%);
+
+    -webkit-mask: radial-gradient(circle,
+            transparent calc(var(--hole)/2 - 0.5px),
+            #fff calc(var(--hole)/2 + 0.5px));
+    mask: radial-gradient(circle,
+            transparent calc(var(--hole)/2 - 0.5px),
+            #fff calc(var(--hole)/2 + 0.5px));
+
+    transition: --percent 2000ms ease-out;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrapper>p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 700;
+}

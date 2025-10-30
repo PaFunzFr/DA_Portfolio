@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { SkillsService } from '../../services/skills.service';
 import { LanguageService } from '../../services/language.service';
 import { SkillBarComponent } from './skill-bar/skill-bar.component';
+import { ChartComponent } from './chart/chart.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [SkillBarComponent],
+  imports: [SkillBarComponent, ChartComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

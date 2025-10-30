@@ -1,19 +1,30 @@
 @import './../../../assets/styles/mixins.scss';
 @import './../../../assets/styles/colors.scss';
+@import './../../../assets/styles/colors.scss';
 
 .skills {
     @include dFlex(center, flex-start);
-    @include maxWidthPadding(60px, 50px, 0);
+    @include maxWidthPadding(60px, 50px);
     margin: 0 auto;
-    scroll-margin-top: 30px;
+    scroll-margin-top: 60px;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.skill-title {
+    @include dFlex(center, center, 0);
+    position: relative;
+    flex-direction: column;
+    width: clamp(200px, 40vw, 650px);
+    text-align: center;
+    left: 0;
 }
 
 .skills-bg {
     position: absolute;
-    right: 0;
+    right: 50px;
     top: 0;
-    width: clamp(300px, 90vw, 800px);
+    width: clamp(300px, 50vw, 800px);
     height: 700px;
     background-size: contain;
     background-position: center;
@@ -21,10 +32,17 @@
     overflow: hidden;
     mask-image: url('../../../assets/img/skills/skills-mask.png');
     mask-repeat: no-repeat;
-    mask-position: center;          
-    mask-size: 100%;
+    mask-position: right;          
+    mask-size: contain;
+    mask-origin: content-box;
+    mask-clip: content-box;
     animation: imageSwap 15s infinite ease-in-out;
     filter: brightness(1.4) contrast(1.1);
+}
+
+.dashboard {
+    display: flex;
+    gap: 30px;
 }
 
 @keyframes imageSwap {

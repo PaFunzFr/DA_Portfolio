@@ -4,6 +4,11 @@
     <section class="skill-title">
         <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
         <p>{{skillText}}</p>
+        <section class="dashboard">
+            <app-chart [category]="'Teamwork'" [percentage]="90"></app-chart>
+            <app-chart [category]="'Autonomy'" [percentage]="95"></app-chart>
+            <app-chart [category]="'Creativy'" [percentage]="85"></app-chart>
+        </section>
         <div>Dashboard Teamwork 90 % – Autonomy 95 % – Creativity 88 %</div>
     </section>
 
