@@ -44,6 +44,17 @@ h5 {
     text-align: center;
 }
 
+h6 {
+    font-family: 'Chillax', sans-serif;
+    color: $col-font-main;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.2;
+    padding: 0;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+}
+
 a,
 figcaption {
     font-family: 'Satoshi', sans-serif;

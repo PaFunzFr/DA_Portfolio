@@ -28,7 +28,7 @@ export class SkillsService {
     { id: 'typescript', title: 'TypeScript', imgSource: './assets/img/skills/frontend/typescript.svg'},
     { id: 'javascript', title: 'JavaScript', imgSource: './assets/img/skills/frontend/javascript.svg'},
     { id: 'html', title: 'HTML5', imgSource: './assets/img/skills/frontend/html.svg'},
-    { id: 'css', title: 'CSS3 &<br>SCSS', imgSource: './assets/img/skills/frontend/css.svg'},
+    { id: 'css', title: 'CSS3<br>SCSS', imgSource: './assets/img/skills/frontend/css.svg'},
     { id: 'rxjs', title: 'RxJs', imgSource: './assets/img/skills/frontend/rxjs.svg'},
     { id: 'threeJS', title: 'threeJS', imgSource: './assets/img/skills/frontend/threejs.svg'},
     { id: 'materialdesign', title: 'Material<br>Design', imgSource: './assets/img/skills/frontend/material.svg'}
@@ -49,7 +49,7 @@ export class SkillsService {
   ];
 
   skillsMisc: SkillPool[] = [
-    { id: 'vscode', title: 'VS Code', imgSource: './assets/img/skills/misc/vscode.svg' },
+    { id: 'vscode', title: 'VSCode', imgSource: './assets/img/skills/misc/vscode.svg' },
     { id: 'github', title: 'Github', imgSource: './assets/img/skills/misc/github.svg' },
     { id: 'git', title: 'Git', imgSource: './assets/img/skills/misc/git.svg' },
     { id: 'scrum', title: 'Scrum', imgSource: './assets/img/skills/misc/scrum.svg' },

@@ -52,7 +52,8 @@
     flex-direction: column;
     width: 100%;
 
-    app-skill-bar {
+    app-skill-bar,
+    .mindset {
         position: absolute;
         bottom: 100%;
     }
@@ -63,18 +64,8 @@
         border-top: 1px solid white;
         margin-top: 5px;
         padding-top: 4px;
-        >a {
-            cursor: pointer;
 
-            &:visited {
-                color: green !important;
-            }
-        }
-
-        input {
-            display: none;
-        }
-
+        input { display: none }
         label {
             font-family: 'Chillax', sans-serif;
             cursor: pointer;
@@ -82,12 +73,25 @@
             color: white;
             transition: all 0.2s;
             border-bottom: 1px solid transparent;
+            &:hover {
+                color: $col-des-main;
+            }
         }
-
+        .mindset-label {
+            font-family: 'Satoshi', sans-serif;
+            color: #829ac4;
+            &:hover {
+                color: $col-dev-main;
+            }
+        }
         input:checked + label {
             border-bottom: 1px solid $col-des-main;
         }
+        input:checked + .mindset-label {
+            border-bottom: 1px solid $col-dev-main;
+        }
     }
+
 }
 
 .slide-in {
@@ -143,43 +147,14 @@
     @include dFlex(center, center, 20px);
     flex-direction: column;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 20px;
     overflow: hidden;
-    >div {
-        @include dFlex(flex-start, center, 30px);
-        flex-direction: column;
+
+    .mindset-text {
+        @include dFlex(center, center, 30px);
         width: 100%;
         max-width: 600px;
         padding: 0 50px;
-
-        div {
-            flex: 1;
-            text-align:justify;
-            font-size: 18px;
-            line-height: 24px;
-            color: $col-font-main;
-        }
-
-        .mindset-contact {
-            @include dFlex(center, center, 10px);
-            opacity: 0.5;
-            transition: all 0.4s ease;
-            &:hover {
-                opacity: 1;
-            }
-            >a {
-                @include dFlex(center, center, 10px);
-                flex-direction: column;
-                font-size: 18px;
-                text-align: center;
-                >img {
-                    height: 90px;
-                    &:hover {
-                        @include pulseBigAnimation($duration: 5s);
-                    }
-                }
-            }
-        }
     }
 }
 

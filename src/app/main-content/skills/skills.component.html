@@ -4,11 +4,11 @@
         <div class="skill-title">
             <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
             <p>{{skillText}}</p>
-            <section class="dashboard">
+            <div class="dashboard">
                 @for (chart of softSkills; track chart) {
                     <app-chart [chart]="chart"></app-chart>
                 }
-            </section>
+            </div>
 
         </div>
         <figure class="skills-bg"></figure>
@@ -20,42 +20,40 @@
         data-aos="fade-up"
         data-aos-offset="200"
         (mouseenter)="stopAnimation()"
-        (mouseleave)="startAnimation()"
+        (mouseleave)="this.showMindset ? stopAnimation() : startAnimation()"
     >
-        @if (isSliding) {
-            <app-skill-bar
-                class="slide-out"
-                [skills]="allSkills[previousNumber]">
-            </app-skill-bar>
-            <app-skill-bar
-                class="slide-in"
-                [skills]="allSkills[currentSkillCategory()]">
-            </app-skill-bar>
+        @if (!showMindset) {
+            @if (isSliding) {
+                <app-skill-bar class="slide-out" [skills]="allSkills[previousNumber]"></app-skill-bar>
+                <app-skill-bar class="slide-in" [skills]="allSkills[currentSkillCategory()]"></app-skill-bar>
+            } @else {
+                <app-skill-bar [skills]="allSkills[currentSkillCategory()]"></app-skill-bar>
+            }
         } @else {
-            <app-skill-bar
-                [skills]="allSkills[currentSkillCategory()]">
-            </app-skill-bar>
+            <div class="mindset" [class]="leaveMindset ? 'slide-out':'slide-in'">
+                <h6 class="mindset-title">
+                    {{ mindsetTitle }}
+                </h6>
+                <span class="mindset-text">
+                    <img src="./assets/img/skills/mindset.svg" alt="">
+                    <p>{{ mindsetText }}</p>
+                </span>
+            </div>
         }
+
         <div class="select-category">
             @for (skill of skillCategories; track skill; let index=$index) {
-                <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
-                <label (click)="setSkillCategory(index); stopAnimation()" [for]="'skill'+index">{{skill}}</label>
+                @if (skill.toLowerCase() != "mindset") {
+                    <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
+                    <label (click)="setSkillCategory(index)" [for]="'skill'+index">{{skill}}</label>
+                } @else {
+                    <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
+                    <p>|</p> 
+                    <label class="mindset-label" (click)="selectMindset()" [for]="'skill'+index">{{skill}}</label>
+                }
             }
         </div>
     </section>
 
-    <div class="mindset">
-        <h4 data-aos="fade-down">
-            {{ mindsetTitle }}
-        </h4>
-        <div>
-            <div data-aos="fade-right">{{ mindsetText }}</div>
-            <div data-aos="fade-left" class="mindset-contact">
-                <a href=#aContact>
-                    <img src="./assets/img/skills/mindset.svg" alt="">
-                    {{ currentLang == 'en' ? 'contact me':'kontaktiere mich' }}
-                </a>
-            </div>
-        </div>
-    </div>
 </section>
+

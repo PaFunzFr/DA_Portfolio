@@ -15,11 +15,11 @@ export class SkillsComponent implements OnInit {
 
   skills = inject(SkillsService);
   languages = inject(LanguageService);
-  activeHighlight: string | null = null;
   currentSkillCategory = signal<number>(0)
   previousNumber: number = 0;
   isSliding: boolean = false;
   interval: number | undefined;
+  showMindset: boolean = false;
 
 
   allSkills = [
@@ -33,7 +33,8 @@ export class SkillsComponent implements OnInit {
     "Designer",
     "Frontend",
     "Backend",
-    "Dev-Tools"
+    "Dev-Tools",
+    "MINDSET"
   ]
 
   softSkills: any[] = [
@@ -43,7 +44,7 @@ export class SkillsComponent implements OnInit {
   ]
 
   ngOnInit() {
-    // this.allSkills = this.shuffleElements(this.allSkills);
+    this.startAnimation();
   }
 
   get skillText () {
@@ -67,7 +68,7 @@ export class SkillsComponent implements OnInit {
 
     this.previousNumber = this.currentSkillCategory();
     this.isSliding = true;
-    
+
     this.currentSkillCategory.set(n);
     this.stopAnimation();
     this.startAnimation();
@@ -76,6 +77,7 @@ export class SkillsComponent implements OnInit {
   }
 
   startAnimation() {
+    if (this.showMindset) return
     this.interval = window.setInterval(() => {
       const next = (this.currentSkillCategory() + 1) % this.allSkills.length;
 
@@ -84,7 +86,7 @@ export class SkillsComponent implements OnInit {
       this.currentSkillCategory.set(next);
 
       this.resetAnimation()
-    }, 7000);
+    }, 2000);
   }
 
   stopAnimation() {
@@ -102,8 +104,20 @@ export class SkillsComponent implements OnInit {
   }
 
   setSkillCategory(index:number):void {
-    this.setProjectNumber(index);
+    this.leaveMindset = true;
+    setTimeout(() => {
+          this.showMindset = false;
+    }, 700);
+      this.setProjectNumber(index);
+
   }
 
+  leaveMindset: boolean = false;
+
+  selectMindset():void {
+    this.stopAnimation();
+    this.leaveMindset = false;
+    this.showMindset = true;
+  }
 
 }
