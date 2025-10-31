@@ -11,19 +11,25 @@
     overflow: hidden;
 }
 
+.skill-top {
+    @include dFlex(center, center, 20px);
+}
+
 .skill-title {
-    @include dFlex(center, center, 0);
+    @include dFlex(center, center, 20px);
     position: relative;
     flex-direction: column;
     width: clamp(200px, 40vw, 650px);
     text-align: center;
     left: 0;
+
+    .dashboard {
+        display: flex;
+        gap: 30px;
+    }
 }
 
 .skills-bg {
-    position: absolute;
-    right: 50px;
-    top: 0;
     width: clamp(300px, 50vw, 800px);
     height: 700px;
     background-size: contain;
@@ -40,10 +46,86 @@
     filter: brightness(1.4) contrast(1.1);
 }
 
-.dashboard {
-    display: flex;
-    gap: 30px;
+.skills-collection {
+    @include dFlex(center, center, 0);
+    margin-top: -100px;
+    flex-direction: column;
+    width: 100%;
+
+    app-skill-bar {
+        position: absolute;
+        bottom: 100%;
+    }
+
+    .select-category{
+        @include dFlex(center, center, 25px);
+        width: 100%;
+        border-top: 1px solid white;
+        margin-top: 5px;
+        padding-top: 4px;
+        >a {
+            cursor: pointer;
+
+            &:visited {
+                color: green !important;
+            }
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            font-family: 'Chillax', sans-serif;
+            cursor: pointer;
+            padding: 5px 0;
+            color: white;
+            transition: all 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+
+        input:checked + label {
+            border-bottom: 1px solid $col-des-main;
+        }
+    }
 }
+
+.slide-in {
+    transform-origin: bottom;
+    animation: slideIn 0.7s forwards ease-in-out;
+    z-index: 2;
+}
+
+.slide-out {
+    transform-origin: bottom;
+    animation: slideOut 0.7s forwards ease-in-out;
+    z-index: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
 
 @keyframes imageSwap {
     0% {

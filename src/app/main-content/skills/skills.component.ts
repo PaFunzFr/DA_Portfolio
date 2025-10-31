@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { SkillsService } from '../../services/skills.service';
 import { LanguageService } from '../../services/language.service';
 import { SkillBarComponent } from './skill-bar/skill-bar.component';
@@ -16,12 +16,24 @@ export class SkillsComponent implements OnInit {
   skills = inject(SkillsService);
   languages = inject(LanguageService);
   activeHighlight: string | null = null;
+  currentSkillCategory = signal<number>(0)
+  previousNumber: number = 0;
+  isSliding: boolean = false;
+  interval: number | undefined;
+
 
   allSkills = [
     this.skills.skillsDes,
-    this.skills.skillsDevBE,
     this.skills.skillsDevFE,
+    this.skills.skillsDevBE,
     this.skills.skillsMisc
+  ]
+
+  skillCategories = [
+    "Designer",
+    "Frontend",
+    "Backend",
+    "Dev-Tools"
   ]
 
   softSkills: any[] = [
@@ -50,17 +62,48 @@ export class SkillsComponent implements OnInit {
     return this.languages.currentLanguage();
   }
 
-  // shuffleElements<T>(arr: T[]): T[] {
-  //   const array = arr.slice();
-  //   for (let i = array.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [array[i], array[j]] = [array[j], array[i]];
-  //   }
-  //   return array;
-  // }
-  
-  highlight(type: string): void {
-    this.activeHighlight = this.activeHighlight === type ? null : type;
+  setProjectNumber(n: number) {
+    if (n === this.currentSkillCategory()) return;
+
+    this.previousNumber = this.currentSkillCategory();
+    this.isSliding = true;
+    
+    this.currentSkillCategory.set(n);
+    this.stopAnimation();
+    this.startAnimation();
+    this.resetAnimation();
+    
   }
+
+  startAnimation() {
+    this.interval = window.setInterval(() => {
+      const next = (this.currentSkillCategory() + 1) % this.allSkills.length;
+
+      this.previousNumber = this.currentSkillCategory();
+      this.isSliding = true;
+      this.currentSkillCategory.set(next);
+
+      this.resetAnimation()
+    }, 7000);
+  }
+
+  stopAnimation() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = undefined;
+    }
+  }
+
+  resetAnimation() {
+    setTimeout(() => {
+      this.isSliding = false;
+      this.previousNumber = this.currentSkillCategory();
+    }, 700);
+  }
+
+  setSkillCategory(index:number):void {
+    this.setProjectNumber(index);
+  }
+
 
 }

@@ -37,9 +37,18 @@ figure {
 
 .wrapper>p {
     position: absolute;
-    top: 50%;
+    font-family: 'Chillax', sans-serif;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
     font-weight: 700;
+    line-height: 1;
+}
+
+h6 {
+    padding-top: 7px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Chillax', sans-serif;
 }

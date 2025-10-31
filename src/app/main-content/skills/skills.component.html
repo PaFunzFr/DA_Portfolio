@@ -1,21 +1,48 @@
 <section class="skills" id="aSkills">
-    <figure class="skills-bg"></figure>
+    
+    <section class="skill-top">
+        <div class="skill-title">
+            <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
+            <p>{{skillText}}</p>
+            <section class="dashboard">
+                @for (chart of softSkills; track chart) {
+                    <app-chart [chart]="chart"></app-chart>
+                }
+            </section>
 
-    <section class="skill-title">
-        <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
-        <p>{{skillText}}</p>
-        <section class="dashboard">
-            @for (chart of softSkills; track chart) {
-                <app-chart [chart]="chart"></app-chart>
-            }
-        </section>
+        </div>
+        <figure class="skills-bg"></figure>
     </section>
 
-    <div class="skills-collection" data-aos="fade-up" data-aos-offset="200">
-        @for (skill of allSkills; track skill; let i = $index) {
-            <app-skill-bar [skills]="allSkills[i]"></app-skill-bar>
+
+    <section
+        class="skills-collection"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        (mouseenter)="stopAnimation()"
+        (mouseleave)="startAnimation()"
+    >
+        @if (isSliding) {
+            <app-skill-bar
+                class="slide-out"
+                [skills]="allSkills[previousNumber]">
+            </app-skill-bar>
+            <app-skill-bar
+                class="slide-in"
+                [skills]="allSkills[currentSkillCategory()]">
+            </app-skill-bar>
+        } @else {
+            <app-skill-bar
+                [skills]="allSkills[currentSkillCategory()]">
+            </app-skill-bar>
         }
-    </div>
+        <div class="select-category">
+            @for (skill of skillCategories; track skill; let index=$index) {
+                <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
+                <label (click)="setSkillCategory(index); stopAnimation()" [for]="'skill'+index">{{skill}}</label>
+            }
+        </div>
+    </section>
 
     <div class="mindset">
         <h4 data-aos="fade-down">
@@ -32,10 +59,3 @@
         </div>
     </div>
 </section>
-
-<!-- <section>
-    <p (click)="highlight('des')" class="des" [class.highlight]="activeHighlight === 'des'">Designer</p>
-    <p (click)="highlight('frontend')" class="dev-fe" [class.highlight]="activeHighlight === 'frontend'">Frontend</p>
-    <p (click)="highlight('backend')" class="dev-be" [class.highlight]="activeHighlight === 'backend'">Backend</p>
-    <p (click)="highlight('misc')" class="misc" [class.highlight]="(activeHighlight === 'misc')">Dev-Tools</p>
-</section> -->

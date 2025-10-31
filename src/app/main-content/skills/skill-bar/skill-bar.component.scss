@@ -1,10 +1,33 @@
+@import './../../../../assets/styles/mixins.scss';
+
+
+.skill-row {
+    @include dFlex(center, center, 0px);
+    .skill {
+        transition: all 0.2s linear;
+        cursor: pointer;
+        padding: 5px 10px;
+        >img {
+            height: 30px;
+            width: 30px;
+        }
+        >p {
+            position: absolute;
+            transition: all 1s ease;
+            bottom: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}
+
 .show-title {
-    transform: scale(1);
     opacity: 1;
 }
 
 .hide-title {
-    transform: scale(0);
     opacity: 0;
 }
 
