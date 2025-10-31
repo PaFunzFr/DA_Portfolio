@@ -32,15 +32,13 @@ export class SkillBarComponent {
 
   getScale(index: number): string {
     if (this.hoveredIndex === null) return 'scale(1)';
-
     const distance = Math.abs(this.hoveredIndex - index);
-    return distance === 0 ? 'scale(1.4)' : distance === 1 ? 'scale(1.2)': 'scale(1)';
+    return distance === 0 ? 'scale(1.3)' : distance === 1 ? 'scale(1.1)': 'scale(1)';
   }
 
   getOpacity(index: number): string {
     if (this.hoveredIndex === null) return '0.3';
-
     const distance = Math.abs(this.hoveredIndex - index);
-    return distance === 0 ? '1' : distance === 1 ? '0.8' : '0.3';
+    return distance === 0 ? '1' : distance === 1 ? '0.4' : '0.3';
   }
 }

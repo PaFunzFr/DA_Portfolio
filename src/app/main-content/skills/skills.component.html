@@ -1,8 +1,8 @@
 <section class="skills" id="aSkills">
     
     <section class="skill-top">
-        <div class="skill-title">
-            <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
+        <div data-aos="fade-right" data-aos-easing="ease-in-back" class="skill-title">
+            <h3 >Skills</h3>
             <p>{{skillText}}</p>
             <div class="dashboard">
                 @for (chart of softSkills; track chart) {
@@ -10,13 +10,16 @@
                 }
             </div>
         </div>
-        <figure class="skills-bg"></figure>
+        <figure
+            data-aos="fade-left"
+            class="skills-bg">
+        </figure>
     </section>
 
     <section
         class="skills-collection"
-        data-aos="fade-up"
-        data-aos-offset="200"
+        data-aos="fade-down"
+        data-aos-offset="50"
         (mouseenter)="stopAnimation()"
         (mouseleave)="this.showMindset ? stopAnimation() : startAnimation()">
 

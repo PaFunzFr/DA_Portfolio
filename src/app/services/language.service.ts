@@ -320,7 +320,7 @@ export class LanguageService {
         text: `Als Fullstack Developer mit Design-Background kombiniere ich analytisches Denken mit visueller Intuition.
               Ich entwickle Systeme, die nicht nur funktionieren, sondern sich richtig anfühlen. 
               Mein Ziel ist es, Technologie und Design zu verbinden, um digitale Erlebnisse mit Charakter zu schaffen.`,
-        mindset: `Kein Problem - Ich lerne gerne Neues. Sprich mich einfach darauf an!`,
+        mindset: `Kein Problem - Ich lerne gerne Neues.<br> <a class="contact-ref" href="#aContact">Sprich</a> mich einfach darauf an!`,
       },
       projects: {
         title: 'Meine Projekte',

@@ -65,6 +65,9 @@
     .bfont {
         white-space: nowrap;
         font-size: clamp(16px, 5vw, 38px);
+        >span:nth-child(2) {
+            color: white;
+        }
     }
     .animated-logo {
         transform: translateX(10px) scale(1);

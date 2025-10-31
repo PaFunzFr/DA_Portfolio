@@ -1,6 +1,6 @@
 <section class="skill-row">
     @for (skill of skills; track skill; let i = $index) {
-    <div class="skill" (mouseenter)="setHoveredIndex(i)" (mouseleave)="clearHover()" [style.transform]="getScale(i)" [style.opacity]="getOpacity(i)">
+    <div class="skill" (mouseenter)="setHoveredIndex(i)" (mouseleave)="clearHover()" [style.transform]="getScale(i)" >
         <img [src]="skill.imgSource" alt="">
         <p [class]="isHovered(i) ? 'show-title':'hide-title'" [innerHTML]="skill.title"></p>
     </div>
