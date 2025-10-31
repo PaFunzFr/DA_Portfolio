@@ -9,19 +9,17 @@
                     <app-chart [chart]="chart"></app-chart>
                 }
             </div>
-
         </div>
         <figure class="skills-bg"></figure>
     </section>
-
 
     <section
         class="skills-collection"
         data-aos="fade-up"
         data-aos-offset="200"
         (mouseenter)="stopAnimation()"
-        (mouseleave)="this.showMindset ? stopAnimation() : startAnimation()"
-    >
+        (mouseleave)="this.showMindset ? stopAnimation() : startAnimation()">
+
         @if (!showMindset) {
             @if (isSliding) {
                 <app-skill-bar class="slide-out" [skills]="allSkills[previousNumber]"></app-skill-bar>
@@ -31,25 +29,22 @@
             }
         } @else {
             <div class="mindset" [class]="leaveMindset ? 'slide-out':'slide-in'">
-                <h6 class="mindset-title">
-                    {{ mindsetTitle }}
-                </h6>
+                <img src="./assets/img/skills/mindset.svg" alt="">
                 <span class="mindset-text">
-                    <img src="./assets/img/skills/mindset.svg" alt="">
-                    <p>{{ mindsetText }}</p>
+                    <h6 class="mindset-title">{{ mindsetTitle }}</h6>
+                    <p [innerHTML]="mindsetText"></p>
                 </span>
             </div>
         }
-
         <div class="select-category">
             @for (skill of skillCategories; track skill; let index=$index) {
                 @if (skill.toLowerCase() != "mindset") {
                     <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
-                    <label (click)="setSkillCategory(index)" [for]="'skill'+index">{{skill}}</label>
+                    <label (click)="setSkillCategory(index); stopAnimation()" [for]="'skill'+index">{{skill}}</label>
                 } @else {
+                    <p>|</p>
                     <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
-                    <p>|</p> 
-                    <label class="mindset-label" (click)="selectMindset()" [for]="'skill'+index">{{skill}}</label>
+                    <label class="mindset-label" (click)="selectMindset()" [for]="'skill'+index" >{{skill}}</label>
                 }
             }
         </div>

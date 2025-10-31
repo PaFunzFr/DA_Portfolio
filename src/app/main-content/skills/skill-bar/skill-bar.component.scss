@@ -8,17 +8,23 @@
         cursor: pointer;
         padding: 5px 10px;
         >img {
-            height: 30px;
-            width: 30px;
+            aspect-ratio: 1/1;
+            width: clamp(20px, 5vw, 50px);
+        }
+        &:hover {
+            img {
+                filter: invert(52%) sepia(84%) saturate(500%) hue-rotate(359deg) brightness(96%) contrast(101%);
+            }
         }
         >p {
             position: absolute;
             transition: all 1s ease;
-            bottom: calc(100% + 5px);
+            bottom: calc(95% + 5px);
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            font-size: 12px;
+            font-size: 10px;
+            line-height: 1;
         }
     }
 }

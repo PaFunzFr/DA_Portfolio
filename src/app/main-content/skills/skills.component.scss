@@ -3,52 +3,53 @@
 @import './../../../assets/styles/colors.scss';
 
 .skills {
-    @include dFlex(center, flex-start);
+    @include dFlex(flex-start, flex-start);
     @include maxWidthPadding(60px, 50px);
     margin: 0 auto;
-    scroll-margin-top: 60px;
+    scroll-margin-top: 120px;
     flex-direction: column;
-    overflow: hidden;
+    height: 100%;
 }
 
 .skill-top {
-    @include dFlex(center, center, 20px);
+    @include dFlex(flex-start, center, 20px);
+    height: clamp(300px, 25vw, 400px);
+    .skills-bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        mask-image: url('../../../assets/img/skills/skills-mask.png');
+        mask-repeat: no-repeat;
+        mask-position: right;          
+        mask-size: contain;
+        mask-origin: content-box;
+        mask-clip: content-box;
+        animation: imageSwap 15s infinite ease-in-out;
+        filter: brightness(1.4) contrast(1.1);
+    }
 }
 
 .skill-title {
     @include dFlex(center, center, 20px);
-    position: relative;
     flex-direction: column;
-    width: clamp(200px, 40vw, 650px);
+    width: 40%;
     text-align: center;
-    left: 0;
-
     .dashboard {
         display: flex;
         gap: 30px;
     }
+    
 }
 
-.skills-bg {
-    width: clamp(300px, 50vw, 800px);
-    height: 700px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    mask-image: url('../../../assets/img/skills/skills-mask.png');
-    mask-repeat: no-repeat;
-    mask-position: right;          
-    mask-size: contain;
-    mask-origin: content-box;
-    mask-clip: content-box;
-    animation: imageSwap 15s infinite ease-in-out;
-    filter: brightness(1.4) contrast(1.1);
-}
 
 .skills-collection {
     @include dFlex(center, center, 0);
-    margin-top: -100px;
+    margin: clamp(120px, 15vw, 180px) 0;
     flex-direction: column;
     width: 100%;
 
@@ -77,9 +78,10 @@
                 color: $col-des-main;
             }
         }
+        
         .mindset-label {
             font-family: 'Satoshi', sans-serif;
-            color: #829ac4;
+            color: #7fa6e8;
             &:hover {
                 color: $col-dev-main;
             }
@@ -88,10 +90,10 @@
             border-bottom: 1px solid $col-des-main;
         }
         input:checked + .mindset-label {
+            color: white;
             border-bottom: 1px solid $col-dev-main;
         }
     }
-
 }
 
 .slide-in {
@@ -144,17 +146,26 @@
 }
 
 .mindset {
-    @include dFlex(center, center, 20px);
-    flex-direction: column;
+    @include dFlex(center, center, 18px);
     width: 100%;
     margin-top: 20px;
     overflow: hidden;
-
+    padding-bottom: 10px;
+    text-align: center;
+    >img {
+        width: 60px;
+        height: 60px;
+    }
+    h6 {
+        color: $col-dev-main;
+    }
     .mindset-text {
-        @include dFlex(center, center, 30px);
-        width: 100%;
-        max-width: 600px;
-        padding: 0 50px;
+        @include dFlex(center, center, 0);
+        flex-direction: column;
+        >p {
+            font-size: 16px;
+            line-height: 1.1;
+        }
     }
 }
 
@@ -180,7 +191,6 @@
         font-size: 12px !important;
         line-height: 14px;
     }
-
     .mindset-contact {
         >a {
             font-size: 14px !important;

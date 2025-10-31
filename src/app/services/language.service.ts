@@ -32,8 +32,7 @@ export class LanguageService {
         text: `As a fullstack developer with a design background, I combine analytical thinking with visual intuition.
               I build systems that not only work — but feel right.
               My goal is to connect technology and design to create digital experiences with character.`,
-        mindset: `No problem! I enjoy learning new technologies, languages, and tools — and I can apply them quickly 
-                  in practice. Just reach out to me!`,
+        mindset: `No problem - I enjoy learning new things.<br>Just <a class="contact-ref" href="#aContact">reach out</a> to me!`,
       },
       projects: {
         title: 'My Projects',
@@ -321,8 +320,7 @@ export class LanguageService {
         text: `Als Fullstack Developer mit Design-Background kombiniere ich analytisches Denken mit visueller Intuition.
               Ich entwickle Systeme, die nicht nur funktionieren, sondern sich richtig anfühlen. 
               Mein Ziel ist es, Technologie und Design zu verbinden, um digitale Erlebnisse mit Charakter zu schaffen.`,
-        mindset: `Kein Problem! Ich lerne gerne neue Technologien, Sprachen und Tools – 
-                und kann sie schnell in der Praxis anwenden. Sprich mich einfach darauf an!`,
+        mindset: `Kein Problem - Ich lerne gerne Neues. Sprich mich einfach darauf an!`,
       },
       projects: {
         title: 'Meine Projekte',

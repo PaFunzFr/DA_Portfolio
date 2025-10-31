@@ -20,7 +20,7 @@ export class SkillsComponent implements OnInit {
   isSliding: boolean = false;
   interval: number | undefined;
   showMindset: boolean = false;
-
+  leaveMindset: boolean = false;
 
   allSkills = [
     this.skills.skillsDes,
@@ -65,15 +65,12 @@ export class SkillsComponent implements OnInit {
 
   setProjectNumber(n: number) {
     if (n === this.currentSkillCategory()) return;
-
     this.previousNumber = this.currentSkillCategory();
     this.isSliding = true;
-
     this.currentSkillCategory.set(n);
     this.stopAnimation();
     this.startAnimation();
     this.resetAnimation();
-    
   }
 
   startAnimation() {
@@ -106,18 +103,14 @@ export class SkillsComponent implements OnInit {
   setSkillCategory(index:number):void {
     this.leaveMindset = true;
     setTimeout(() => {
-          this.showMindset = false;
+      this.showMindset = false;
     }, 700);
       this.setProjectNumber(index);
-
   }
-
-  leaveMindset: boolean = false;
 
   selectMindset():void {
     this.stopAnimation();
     this.leaveMindset = false;
     this.showMindset = true;
   }
-
 }
