@@ -1,7 +1,8 @@
-<section class="des">
-    @for (skill of skills.skillsDes; track skill) {
-        <div class="skill">
-            <img [src]="skill.imgSource" alt="">
-        </div>
+<section class="skill-row">
+    @for (skill of skills; track skill; let i = $index) {
+    <div class="skill" (mouseenter)="setHoveredIndex(i)" (mouseleave)="clearHover()" [style.transform]="getScale(i)">
+        <img [src]="skill.imgSource" alt="">
+        <p [class]="isHovered(i) ? 'show-title':'hide-title'">{{ skill.title }}</p>
+    </div>
     }
 </section>

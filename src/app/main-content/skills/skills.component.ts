@@ -16,10 +16,10 @@ export class SkillsComponent implements OnInit {
   skills = inject(SkillsService);
   languages = inject(LanguageService);
   allSkills = [
-    ...this.skills.skillsDes,
-    ...this.skills.skillsDevBE,
-    ...this.skills.skillsDevFE,
-    ...this.skills.skillsMisc
+    this.skills.skillsDes,
+    this.skills.skillsDevBE,
+    this.skills.skillsDevFE,
+    this.skills.skillsMisc
   ]
   activeHighlight: string | null = null;
 

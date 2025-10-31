@@ -9,11 +9,12 @@
             <app-chart [category]="'Autonomy'" [percentage]="95"></app-chart>
             <app-chart [category]="'Creativy'" [percentage]="85"></app-chart>
         </section>
-        <div>Dashboard Teamwork 90 % – Autonomy 95 % – Creativity 88 %</div>
     </section>
 
     <div class="skills-collection" data-aos="fade-up" data-aos-offset="200">
-        <app-skill-bar [skillCategory]="1"></app-skill-bar>
+        @for (skill of allSkills; track skill; let i = $index) {
+            <app-skill-bar [skills]="allSkills[i]"></app-skill-bar>
+        }
     </div>
 
     <div class="mindset">
