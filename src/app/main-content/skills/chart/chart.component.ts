@@ -1,5 +1,12 @@
 import { Component, ElementRef, Input, OnDestroy, AfterViewInit, ViewChild } from '@angular/core';
 
+
+export interface ChartInfo {
+  category: string;
+  percentage: number;
+  bg: string;
+}
+
 @Component({
   selector: 'app-chart',
   standalone: true,
@@ -7,8 +14,7 @@ import { Component, ElementRef, Input, OnDestroy, AfterViewInit, ViewChild } fro
   styleUrl: './chart.component.scss'
 })
 export class ChartComponent implements AfterViewInit, OnDestroy {
-  @Input() percentage = 0;
-  @Input() category = '';
+  @Input() chart: ChartInfo = { category: '', percentage: 0, bg:''};
 
   @ViewChild('donut', { static: true }) donut!: ElementRef<HTMLElement>;
   @ViewChild('host',  { static: true }) host!: ElementRef<HTMLElement>;
@@ -38,11 +44,12 @@ export class ChartComponent implements AfterViewInit, OnDestroy {
 
   playAnimation() {
     const element = this.donut.nativeElement;
+    element.style.setProperty('--bgColor', this.chart.bg);
     element.style.setProperty('--percent', '0%');
     element.offsetWidth;
-    element.style.setProperty('--percent', `${this.percentage}%`);
+    element.style.setProperty('--percent', `${this.chart.percentage}%`);
 
-    const targetPercent = Math.max(0, Math.min(100, Math.round(this.percentage)));
+    const targetPercent = Math.max(0, Math.min(100, Math.round(this.chart.percentage)));
     const duration = 2000;
     const startTime = performance.now();
     const tick = (time: number) => {

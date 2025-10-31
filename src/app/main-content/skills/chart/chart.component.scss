@@ -17,7 +17,7 @@ figure {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background: conic-gradient(green 0 var(--percent), lightgray var(--percent) 100%);
+    background: conic-gradient(var(--bgColor) 0 var(--percent), rgba(255, 255, 255, 0.24) var(--percent) 100%);
 
     -webkit-mask: radial-gradient(circle,
             transparent calc(var(--hole)/2 - 0.5px),

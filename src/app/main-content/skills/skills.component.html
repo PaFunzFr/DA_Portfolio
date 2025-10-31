@@ -5,9 +5,9 @@
         <h3 data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-offset="100">Skills</h3>
         <p>{{skillText}}</p>
         <section class="dashboard">
-            <app-chart [category]="'Teamwork'" [percentage]="90"></app-chart>
-            <app-chart [category]="'Autonomy'" [percentage]="95"></app-chart>
-            <app-chart [category]="'Creativy'" [percentage]="85"></app-chart>
+            @for (chart of softSkills; track chart) {
+                <app-chart [chart]="chart"></app-chart>
+            }
         </section>
     </section>
 

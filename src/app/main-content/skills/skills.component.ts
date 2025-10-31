@@ -15,24 +15,33 @@ export class SkillsComponent implements OnInit {
 
   skills = inject(SkillsService);
   languages = inject(LanguageService);
+  activeHighlight: string | null = null;
+
   allSkills = [
     this.skills.skillsDes,
     this.skills.skillsDevBE,
     this.skills.skillsDevFE,
     this.skills.skillsMisc
   ]
-  activeHighlight: string | null = null;
+
+  softSkills: any[] = [
+    {category: "Teamwork", percentage: 90, bg:"#d34ae0ff"},
+    {category: "Autonomy", percentage: 95, bg:"#4A81E0"},
+    {category: "Creativity", percentage: 85, bg:"#EE8C1B"}
+  ]
 
   ngOnInit() {
-    this.allSkills = this.shuffleElements(this.allSkills);
+    // this.allSkills = this.shuffleElements(this.allSkills);
   }
 
   get skillText () {
     return this.languages.getTranslation('skills', 'text');
   }
+
   get mindsetTitle () {
     return this.languages.getTranslation('skills', 'title');
   }
+
   get mindsetText () {
     return this.languages.getTranslation('skills', 'mindset');
   }
@@ -41,14 +50,14 @@ export class SkillsComponent implements OnInit {
     return this.languages.currentLanguage();
   }
 
-  shuffleElements<T>(arr: T[]): T[] {
-    const array = arr.slice();
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
+  // shuffleElements<T>(arr: T[]): T[] {
+  //   const array = arr.slice();
+  //   for (let i = array.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [array[i], array[j]] = [array[j], array[i]];
+  //   }
+  //   return array;
+  // }
   
   highlight(type: string): void {
     this.activeHighlight = this.activeHighlight === type ? null : type;
