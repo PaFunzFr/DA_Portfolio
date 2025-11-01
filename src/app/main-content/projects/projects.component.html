@@ -1,8 +1,5 @@
-<section class="projects"  id="aProjects" (mouseleave)="isHovered = false">
-    <h3
-        data-aos="fade-up"
-        data-aos-easing="ease-in-back"
-    >
+<section class="projects" id="aProjects" (mouseleave)="isHovered = false">
+    <h3 data-aos="fade-up" data-aos-easing="ease-in-back">
         {{ projectsTitle }}
     </h3>
     <div
@@ -13,13 +10,6 @@
         (mouseenter)="handleHoverState(true)"
         (mouseleave)="handleHoverState(false)"
         >
-        <section class="project-infos">
-            <app-project-info
-                [cardNumber]="previousNumber"
-                [class]="isSliding? 'fade-out':'fade-in'">
-            </app-project-info>
-        </section>
-
         @if (isSliding) {
             <app-project-card
                 class="slide-out"
@@ -37,17 +27,34 @@
                 >
             </app-project-card>
         }
-    </div>
-    <div class="project-counter">
-        <div class="next-previous">
-            <button (click)="prevProject()" >prev</button>
-            <div class="timeline-container">
-                <div class="timeline" [style.width]="timeLineWidth() + '%'"></div>
+        <div class="timeline-container">
+            <div class="timeline" [style.width]="timeLineWidth() + '%'"></div>
+        </div>
+        <div class="project-counter">
+            <div class="next-previous">
+                <button (click)="prevProject()" >prev</button>
+
+                <button (click)="nextProject()">next</button>
             </div>
-            <button (click)="nextProject()">next</button>
         </div>
     </div>
 
+    <app-project-info
+        [cardNumber]="previousNumber"
+        [class]="isSliding? 'fade-out':'fade-in'">
+    </app-project-info>
+
+
+    <div class="project-ref">
+        <a [href]="projectData[currentNumber()].projectGithub" target="_blank">
+            Code
+            <img src="./assets/img/social/github.svg" alt="">
+        </a>
+        <a [href]="projectData[currentNumber()].projectUrl" target="_blank">
+            Demo
+            <img src="./assets/img/social/web.svg" alt="">
+        </a>
+    </div>
 </section>
 
 

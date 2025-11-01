@@ -1,21 +1,24 @@
 @import './../../../assets/styles/mixins.scss';
 
 .projects {
-    @include dFlex(center, center);
+    @include dFlex(flex-start, center);
+    @include maxWidthPadding(60px, 50px);
+    margin: 0 auto;
+    scroll-margin-top: 30px;
     flex-direction: column;
-    background-color: rgba(0, 0, 255, 0);
-    scroll-margin-top: 90px;
-    margin: 0 50px;
+    height: 100%;
+    overflow: hidden;
 }
 
 .projects-container {
     @include dFlex(center, center);
     position: relative;
-    overflow: hidden;
     width: 100%;
-    max-width: 1380px;
-    border-radius: 16px;
-    aspect-ratio: 16/9;
+    height: clamp(300px, 40vw, 600px);
+    // aspect-ratio: 16/9;
+    >img {
+        object-fit: contain;
+    }
 
     app-project-card, .device {
         position: absolute;
@@ -52,45 +55,43 @@
     z-index: 3;
 }
 
-
-.project-infos {
-    @include dFlex(center, flex-start, 10%, absolute);
-    @include glass-dark-blue();
-    overflow: hidden;
-    padding: 20px;
-    z-index: 3;
-    left: 20px;
-    height: calc(100% - 40px);
-    width: clamp(200px, 40%, 400px);
-    // mask-image: url('../../../assets/img/about/mask_project.png');
-    // mask-repeat: no-repeat;
-    // mask-position: center;          
-    // mask-size: contain; 
+app-project-info {
+    @include dFlex(center, center, 14px);
+    flex-direction: column;
+    width: 100%;
 }
 
 .project-counter {
     @include dFlex(center, center, 14px);
-    margin: 10px 0 80px 0;
+    position: absolute;
+    bottom: 0;
     width: clamp(200px, 100%, 1380px);
     max-width: 1380px;
     z-index: 5;
 
     .next-previous {
-        @include dFlex(space-between, center);
+        @include dFlex(center, center);
         width: 100%;
         gap: 30px;
-        .timeline-container {
-            position: relative;
-            width: 400px;
-            height: 3px;
-            background-color: rgba(255, 255, 255, 0.265);
-            .timeline {
-                position: absolute;
-                height: 100%;
-                background-color: $col-des-main;
-            }
-        }
     }
+}
+
+.timeline-container {
+    position: absolute;
+    bottom: clamp(-52px, 2vw, -42px);
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.818);
+    .timeline {
+        position: absolute;
+        height: 100%;
+        background-color: $col-dev-main;
+    }
+}
+
+.project-ref {
+    @include dFlex(center, center, 12px);
+    position: absolute;
 }
 
 @keyframes slideIn {
@@ -119,11 +120,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .projects-container {
-        aspect-ratio: 10/16;
-        max-height: 80vh;
-        max-width: 400px;
-    }
+
     .project-counter {
         margin: 45px 0 80px 0;
     }

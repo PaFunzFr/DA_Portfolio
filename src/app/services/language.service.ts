@@ -316,7 +316,7 @@ export class LanguageService {
             um intuitive, saubere und leistungsstarke Anwendungen zu entwickeln.`,
       },
       skills: {
-        title: 'Passenden Skill nicht gefunden?',
+        title: 'Passender Skill nicht dabei?',
         text: `Als Fullstack Developer mit Design-Background kombiniere ich analytisches Denken mit visueller Intuition.
               Ich entwickle Systeme, die nicht nur funktionieren, sondern sich richtig anfühlen. 
               Mein Ziel ist es, Technologie und Design zu verbinden, um digitale Erlebnisse mit Charakter zu schaffen.`,

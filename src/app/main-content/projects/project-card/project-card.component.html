@@ -1,8 +1,12 @@
-<div class="single-project" (click)="toggleInfo()">
-    <img
-    class="bg-project" 
-    [src]="this.projectData[cardNumber].background" 
-    alt=""
-    >
+<div 
+    class="single-project"
+    (click)="toggleInfo()"
+    [style.backgroundImage]="'url('+this.projectData[cardNumber].background+')'">
 </div>
 
+
+<!-- <img
+class="bg-project" 
+[src]="this.projectData[cardNumber].background" 
+alt=""
+> -->

@@ -30,8 +30,8 @@ h3 {
 h4 {
     font-family: 'Chillax', sans-serif;
     color: $col-font-main;
-    font-size: 38px;
-    line-height: 50px;
+    font-size: clamp(24px, 8vw, 38px);
+    line-height: 1;
 }
 
 h5 {
