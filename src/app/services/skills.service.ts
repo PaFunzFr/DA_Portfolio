@@ -30,7 +30,7 @@ export class SkillsService {
     { id: 'html', title: 'HTML5', imgSource: './assets/img/skills/frontend/html.svg'},
     { id: 'css', title: 'CSS3<br>SCSS', imgSource: './assets/img/skills/frontend/css.svg'},
     { id: 'rxjs', title: 'RxJs', imgSource: './assets/img/skills/frontend/rxjs.svg'},
-    { id: 'threeJS', title: 'threeJS', imgSource: './assets/img/skills/frontend/threejs.svg'},
+    { id: 'threejs', title: 'threeJS', imgSource: './assets/img/skills/frontend/threejs.svg'},
     { id: 'materialdesign', title: 'Material<br>Design', imgSource: './assets/img/skills/frontend/material.svg'}
   ];
 

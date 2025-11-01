@@ -23,6 +23,7 @@ export class ProjectDataService {
     skills = inject(SkillsService);
     skillsDes = this.skills.skillsDes;
     skillsDevFE = this.skills.skillsDevFE;
+    skillsDevBE = this.skills.skillsDevBE;
 
     getSkillImgSrc(skillId: string, target = this.skillsDes || this.skillsDevFE): string {
       const skill = target.find(skill => skill.id === skillId);
@@ -32,7 +33,7 @@ export class ProjectDataService {
   projectData: ProjectsDataInterface[] = [
     {
       id: 'Join',
-      type: 'Frontend',
+      type: 'Fullstack',
       appImg: './assets/img/projects/project_join.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
@@ -40,7 +41,7 @@ export class ProjectDataService {
         this.getSkillImgSrc('typescript', this.skillsDevFE),
         this.getSkillImgSrc('html', this.skillsDevFE),
         this.getSkillImgSrc('css', this.skillsDevFE),
-        this.getSkillImgSrc('firebase', this.skillsDevFE),
+        this.getSkillImgSrc('firebase', this.skillsDevBE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
@@ -59,7 +60,7 @@ export class ProjectDataService {
         this.getSkillImgSrc('javascript', this.skillsDevFE),
         this.getSkillImgSrc('html', this.skillsDevFE),
         this.getSkillImgSrc('css', this.skillsDevFE),
-        this.getSkillImgSrc('api', this.skillsDevFE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
       ],
       desTools: [
         this.getSkillImgSrc('adesigner', this.skillsDes),
@@ -70,7 +71,7 @@ export class ProjectDataService {
     },
     {
       id: 'Collabeya',
-      type: 'Frontend',
+      type: 'Fullstack',
       appImg: './assets/img/projects/project_collabeya.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
@@ -78,7 +79,7 @@ export class ProjectDataService {
         this.getSkillImgSrc('typescript', this.skillsDevFE),
         this.getSkillImgSrc('html', this.skillsDevFE),
         this.getSkillImgSrc('css', this.skillsDevFE),
-        this.getSkillImgSrc('firebase', this.skillsDevFE),
+        this.getSkillImgSrc('firebase', this.skillsDevBE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
@@ -97,13 +98,12 @@ export class ProjectDataService {
         this.getSkillImgSrc('typescript', this.skillsDevFE),
         this.getSkillImgSrc('html', this.skillsDevFE),
         this.getSkillImgSrc('css', this.skillsDevFE),
-        this.getSkillImgSrc('firebase', this.skillsDevFE),
+        this.getSkillImgSrc('threejs', this.skillsDevFE),
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
         this.getSkillImgSrc('illustrator', this.skillsDes),
         this.getSkillImgSrc('apublisher', this.skillsDes),
-        this.getSkillImgSrc('davinci', this.skillsDes),
       ],
       projectUrl: '',
       projectGithub: 'https://github.com/PaFunzFr/DA_Portfolio',

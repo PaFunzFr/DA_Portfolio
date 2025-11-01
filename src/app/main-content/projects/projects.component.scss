@@ -15,7 +15,6 @@
     position: relative;
     width: 100%;
     height: clamp(300px, 40vw, 600px);
-    // aspect-ratio: 16/9;
     >img {
         object-fit: contain;
     }
@@ -40,13 +39,6 @@
         animation: slideOut 0.7s forwards ease-in-out;
         z-index: 1;
     }
-
-    .fade-in {
-        animation: fadeIn 0.7s forwards ease-in-out;
-    }
-    .fade-out {
-        animation: fadeOut 0.7s forwards ease-in-out;
-    }
 }
 
 .slide-in-reverse {
@@ -59,6 +51,15 @@ app-project-info {
     @include dFlex(center, center, 14px);
     flex-direction: column;
     width: 100%;
+    transition: all 0.7s ease;
+    margin-top: 50px;
+}
+
+.fade-in {
+    animation: fadeIn 0.7s forwards ease-in-out;
+}
+.fade-out {
+    animation: fadeOut 0.7s forwards ease-in-out;
 }
 
 .project-counter {
@@ -84,14 +85,18 @@ app-project-info {
     background-color: rgba(255, 255, 255, 0.818);
     .timeline {
         position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
         background-color: $col-dev-main;
     }
-}
+    .project-header {
+        @include dFlex(space-between, flex-end);
+        position: absolute;
+        width: 100%;
+        bottom: 4px;
+    }
 
-.project-ref {
-    @include dFlex(center, center, 12px);
-    position: absolute;
 }
 
 @keyframes slideIn {
@@ -110,13 +115,13 @@ app-project-info {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0; filter: blur(15px)}
+    from {opacity: 0; filter: blur(5px)}
     to {opacity: 1; filter: blur(0px)}
 }
 
 @keyframes fadeOut {
     from {opacity: 1; filter: blur(0px)}
-    to {opacity: 0; filter: blur(15px)}
+    to {opacity: 0; filter: blur(5px)}
 }
 
 @media screen and (max-width: 768px) {

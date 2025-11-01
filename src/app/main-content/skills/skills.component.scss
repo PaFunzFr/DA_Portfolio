@@ -47,7 +47,7 @@
 
 .skills-collection {
     @include dFlex(center, center, 0);
-    margin: clamp(120px, 15vw, 180px) 0;
+    margin: clamp(120px, 15vw, 180px) 0 40px 0;
     flex-direction: column;
     width: 100%;
 

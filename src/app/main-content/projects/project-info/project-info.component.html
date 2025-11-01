@@ -1,21 +1,19 @@
-<div class="project-title">
-    <p>{{ cardNumber +1 }} / {{this.projectData.length}}</p>
-    <h4>{{ this.projectData[cardNumber].id }}</h4>
-    <p>{{ this.projectData[cardNumber].type }}</p>
-</div>
-<!-- <p>Duration: xxx</p> -->
-<p>{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
+<p class="description">{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
 
-<div class="tools-container">
-    <p>Tech-Stack</p>
-    <div class="project-tools">
-        @for (devPics of this.projectData[cardNumber].devTools; track devPics) {
-            <img [src]="devPics" alt="">
+<div class="project-footer">
+    <div class="tech-stack">
+        @for (devPics of techStack(cardNumber); track devPics) {
+            <img [src]="devPics" [alt]="devPics">
         } 
     </div>
-    <div class="project-tools">
-        @for (desPics of this.projectData[cardNumber].desTools; track desPics) {
-            <img [src]="desPics" alt="">
-        } 
+    <div class="project-ref">
+        <a [href]="projectData[cardNumber].projectGithub" target="_blank">
+            <img src="./assets/img/social/github.svg" alt="">
+            <p>Code</p>
+        </a>
+        <a [href]="projectData[cardNumber].projectUrl" target="_blank">
+            <img src="./assets/img/social/web.svg" alt="">
+            <p>Demo</p>
+        </a>
     </div>
 </div>

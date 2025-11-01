@@ -15,6 +15,12 @@ export class ProjectInfoComponent {
   languages = inject(LanguageService);
   @Input() cardNumber = 0;
 
+  techStack(index:number):any[] {
+    return [
+      ...this.projectData[index].desTools,
+      ...this.projectData[index].devTools,
+    ]
+  }
 
   getProjectText(project: string): string {
     return this.languages.getProjectDescription(project);

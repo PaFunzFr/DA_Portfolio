@@ -27,9 +27,14 @@
                 >
             </app-project-card>
         }
-        <div class="timeline-container">
+        <section class="timeline-container">
+            <span class="project-header">
+                <p class="current">{{currentNumber() + 1}} | {{projectData.length}}</p>
+                <h4>{{ this.projectData[currentNumber()].id }}</h4>
+                <p class="type">{{projectData[currentNumber()].type}}</p>
+            </span>
             <div class="timeline" [style.width]="timeLineWidth() + '%'"></div>
-        </div>
+        </section>
         <div class="project-counter">
             <div class="next-previous">
                 <button (click)="prevProject()" >prev</button>
@@ -44,17 +49,6 @@
         [class]="isSliding? 'fade-out':'fade-in'">
     </app-project-info>
 
-
-    <div class="project-ref">
-        <a [href]="projectData[currentNumber()].projectGithub" target="_blank">
-            Code
-            <img src="./assets/img/social/github.svg" alt="">
-        </a>
-        <a [href]="projectData[currentNumber()].projectUrl" target="_blank">
-            Demo
-            <img src="./assets/img/social/web.svg" alt="">
-        </a>
-    </div>
 </section>
 
 

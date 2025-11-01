@@ -5,33 +5,36 @@
     width: 100%;
 }
 
-.info-container {
-    @include dFlex(center, flex-start, 12px);
-    flex-direction: column;
+.description {
+    width: clamp(300px, 100%, 800px);
+    text-align: center;
+    min-height: 70px;
+}
 
-    .project-title {
-        @include dFlex(space-between, flex-end);
-        width: 100%;
-        border-bottom: 1px solid white;
-        padding-bottom: 10px;
-        >p {
-            font-size: 20px;
-            font-weight: 700;
+.project-footer {
+    @include dFlex(space-between, flex-end, 12px);
+    width: 100%;
+
+    .tech-stack {
+        @include dFlex(flex-start, center, 12px);
+        p {
+            position: absolute;
+            top: -20px;
         }
-        .project-ref {
-            @include dFlex(center, center, 10px);
-            >a {
-                height: 28px;
-                &:hover {
-                    @include pulseAnimation();
-                }
-                >img{
-                    height: 100%;
-                }
-            }
+        img {
+            width: 30px;
+            height: 30px;
         }
     }
-    >p {
-        text-align: justify;
+
+    .project-ref {
+        @include dFlex(space-between, center, 12px);
+        a {
+            @include dFlex(center, center, 4px);
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 }
