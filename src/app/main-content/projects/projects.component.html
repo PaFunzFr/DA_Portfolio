@@ -10,38 +10,46 @@
         (mouseenter)="handleHoverState(true)"
         (mouseleave)="handleHoverState(false)"
         >
-        @if (isSliding) {
-            <app-project-card
-                class="slide-out"
-                [cardNumber]="previousNumber">
-            </app-project-card>
+        <span class="mask-wrapper">
+            @if (isSliding) {
+                <app-project-card
+                    class="slide-out"
+                    [cardNumber]="previousNumber">
+                </app-project-card>
 
-            <app-project-card 
-                class="slide-in"
-                [cardNumber]="currentNumber()">
-            </app-project-card>
-        } @else {
-            <img class="slide-in-reverse device" [src]="projectData[currentNumber()].appImg" alt="">
-            <app-project-card 
-                [cardNumber]="currentNumber()"
-                >
-            </app-project-card>
-        }
-        <section class="timeline-container">
-            <span class="project-header">
-                <p class="current">{{currentNumber() + 1}} | {{projectData.length}}</p>
-                <h4>{{ this.projectData[currentNumber()].id }}</h4>
-                <p class="type">{{projectData[currentNumber()].type}}</p>
-            </span>
-            <div class="timeline" [style.width]="timeLineWidth() + '%'"></div>
-        </section>
+                <app-project-card 
+                    class="slide-in"
+                    [cardNumber]="currentNumber()">
+                </app-project-card>
+            } @else {
+                <app-project-card 
+                    [cardNumber]="currentNumber()"
+                    >
+                </app-project-card>
+            }
+        </span>
+        <img [class]="isSliding ? 'slide-in-project':''"  class="device" [src]="projectData[currentNumber()].appImg" alt="">
+        <img [class]="isSliding ? 'slide-out-project':''"  class="device" [src]="projectData[previousNumber].appImg" alt="">
+
         <div class="project-counter">
-            <div class="next-previous">
-                <button (click)="prevProject()" >prev</button>
-                <button (click)="nextProject()">next</button>
-            </div>
+            <button (click)="prevProject()" ></button>
+            <button (click)="nextProject()" class="prev"></button>
         </div>
     </div>
+
+    <section class="timeline-container">
+        <span>
+            <p class="current">
+                <span> Project</span>
+                {{currentNumber() + 1}} | {{projectData.length}}
+            </p>
+            <h4>{{ this.projectData[currentNumber()].id }}</h4>
+            <p class="type">{{projectData[currentNumber()].type}}</p>
+        </span>
+        <div class="timeline">
+            <div class="timeline-progress" [style.width]="timeLineWidth() + '%'"></div>
+        </div>
+    </section>
 
     <app-project-info
         [cardNumber]="previousNumber"

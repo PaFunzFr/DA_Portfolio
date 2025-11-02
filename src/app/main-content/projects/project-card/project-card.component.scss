@@ -10,10 +10,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    mask-image: url('../../../../assets/img/skills/skills-mask.png');
-    mask-repeat: no-repeat;
-    mask-position: center;          
-    mask-size: contain;
+
     filter: brightness(1.4) contrast(1.1);
     cursor: pointer;
 }
