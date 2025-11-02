@@ -56,12 +56,11 @@ export class LanguageService {
         title: 'Need a teamplayer?',
         testimonials: {
           member1: `Patrick impressed me with his diplomatic skills. With kindness and humor, he brought the team together and fostered a positive atmosphere. 
-                    His quick grasp and solid knowledge of Angular and Firebase were extremely valuable. Thanks to his planning talent and big-picture thinking, we always stayed on track. 
-                    Working with Patrick was a real pleasure – thank you!`,
-          member2: `Patrick stood out for his proactive mindset and sense of responsibility. He contributed across development, planning, and testing, always open to feedback and growth. 
+                    Thanks to his planning talent and big-picture thinking, we always stayed on track.`,
+          member2: `Patrick stood out for his proactive mindset and sense of responsibility.  
                     Working with him was defined by honesty, focus, and mutual respect. He’s not just a skilled developer, but a co-creator who embodies responsibility and quality.`,
-          member3: `Patrick was a key team member who led planning and Firebase integration with structure and clarity. His supportive nature, team awareness, and patient explanations made collaboration smooth and inclusive. 
-                    Technically strong and personally engaging – working with him was a real pleasure.`,
+          member3: `Patrick was a key team member who led planning with structure and clarity. His supportive nature, team awareness, and patient explanations made collaboration smooth and inclusive. 
+                    Working with him was a real pleasure.`,
           member4: `Patrick consistently enriched the team by asking the right questions and exploring solutions independently, which greatly deepened his and our understanding. 
                     He always had a strong overview of the bigger picture and was a valuable asset in group discussions. His own design ideas were not only creative but also executed with impressive precision and quality.`,
         },

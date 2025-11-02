@@ -13,12 +13,12 @@
         <span class="mask-wrapper">
             @if (isSliding) {
                 <app-project-card
-                    class="slide-out"
+                    class="fade-out"
                     [cardNumber]="previousNumber">
                 </app-project-card>
 
                 <app-project-card 
-                    class="slide-in"
+                    class="fade-in"
                     [cardNumber]="currentNumber()">
                 </app-project-card>
             } @else {

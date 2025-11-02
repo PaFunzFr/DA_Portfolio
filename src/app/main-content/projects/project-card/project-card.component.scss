@@ -1,15 +1,17 @@
 @import './../../../../assets/styles/mixins.scss';
 
 .single-project {
-    @include dFlex(center, center, 0, absolute);
-    left: 0;
     opacity: 0.95;
     height: 100%;
     width: 100%;
-    top: 0;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: center bottom;
+    mask-image: url('../../../../assets/img/projects/projects_mask.png');
+    mask-repeat: no-repeat;
+    mask-position: center;          
+    mask-size: contain;
+    mask-origin: content-box;
+    mask-clip: content-box;
 
     filter: brightness(1.4) contrast(1.1);
     cursor: pointer;

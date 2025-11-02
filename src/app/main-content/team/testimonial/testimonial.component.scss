@@ -10,10 +10,9 @@
         flex-direction: column;
         text-align: center;
         z-index: 2;
-        max-width: 400px;
-        p:nth-child(3) {
-            padding: 30px 15px 15px 15px;
-            text-align: justify;
+        .testimonial-text {
+            text-align: center;
+            border-bottom: 1px solid white;
         }
     }
     >img {

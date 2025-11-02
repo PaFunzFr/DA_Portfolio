@@ -63,26 +63,20 @@ app-project-card, .device {
     .mask-wrapper {
         width: 100%;
         height: 100%;
-        mask-image: url('../../../assets/img/skills/skills-mask.png');
-        mask-repeat: no-repeat;
-        mask-position: center;          
-        mask-size: contain;
+
     }
 }
 
 app-project-info {
     @include dFlex(center, center, 14px);
-    position: relative;
     flex-direction: column;
     width: 100%;
-    margin: 0 60px;
-    transition: all 0.7s ease;
     margin-top: 20px;
+    transition: all 0.7s ease;
 }
 
 .timeline-container {
     width: 100%;
-    margin: 0 60px;
     bottom: clamp(-52px, 2vw, -42px);
 
     span {
@@ -121,17 +115,17 @@ app-project-info {
     z-index: 1;
 }
 
-.slide-in {
-    transform: translateX(100%);
-    animation: slideIn 0.7s forwards ease-in-out;
-    z-index: 2;
-}
+// .slide-in {
+//     transform: translateX(100%);
+//     animation: slideIn 0.7s forwards ease-in-out;
+//     z-index: 2;
+// }
 
-.slide-out {
-    transform: translateX(0);
-    animation: slideOut 0.7s forwards ease-in-out;
-    z-index: 1;
-}
+// .slide-out {
+//     transform: translateX(0);
+//     animation: slideOut 0.7s forwards ease-in-out;
+//     z-index: 1;
+// }
 
 .fade-in {
     animation: fadeIn 0.7s forwards ease-in-out;

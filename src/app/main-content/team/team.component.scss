@@ -2,13 +2,35 @@
 
 .team {
     @include dFlex(center, center);
+    @include maxWidthPadding(60px, 50px);
+    margin: 0 auto;
+    scroll-margin-top: 30px;
     flex-direction: column;
-    overflow-x: clip;
-    .team-container {
-        @include dFlex(center, center, 10%);
-        max-width: 1200px;
+    height: 100vh;
+    max-height: 1200px;
+    overflow: hidden;
+    h3 {
         width: 100%;
-        flex-wrap: wrap;
+            text-align: left;
+    }
+
+}
+
+
+.team-container {
+    @include dFlex(center, center);
+    width: 100%;
+
+    figure {
+        aspect-ratio: 1/1;
+        height: clamp(300px, 50vw, 600px);
+        background-image: url('../../../assets/img/team/teamwork.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        mask-image: url('../../../assets/img/team/teamwork_mask.png');
+        mask-size: contain;
+        mask-position: right;
     }
 }
 

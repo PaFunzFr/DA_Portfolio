@@ -6,10 +6,10 @@
     >
         {{ languages.getTranslation('team', 'title') }}
     </h3>
-    <div class="team-container">
-        @for (member of teamMembers(); track member) {
-            <app-testimonial [testimonial]="member"></app-testimonial>
-        }
-    </div>
+    <section class="team-container">
+        <app-testimonial [testimonial]="teamMembers()[2]"></app-testimonial>
+        <figure></figure>
+    </section>
 </section>
+
 
