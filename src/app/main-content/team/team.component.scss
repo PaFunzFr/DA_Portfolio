@@ -5,38 +5,42 @@
     @include maxWidthPadding(60px, 50px);
     margin: 0 auto;
     scroll-margin-top: 30px;
-    flex-direction: column;
-    height: 100vh;
     max-height: 1200px;
     overflow: hidden;
     h3 {
-        width: 100%;
-            text-align: left;
+        white-space: wrap;
+        margin-bottom: 20px;
     }
-
 }
-
 
 .team-container {
     @include dFlex(center, center);
     width: 100%;
+    flex-direction: column;
+}
 
-    figure {
-        aspect-ratio: 1/1;
-        height: clamp(300px, 50vw, 600px);
-        background-image: url('../../../assets/img/team/teamwork.jpg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right;
-        mask-image: url('../../../assets/img/team/teamwork_mask.png');
-        mask-size: contain;
-        mask-position: right;
-    }
+figure {
+    aspect-ratio: 1/1;
+    height: clamp(200px, 50vw, 600px);
+    background-image: url('../../../assets/img/team/teamwork.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    mask-image: url('../../../assets/img/team/teamwork_mask.png');
+    mask-size: contain;
+    mask-position: right;
 }
 
 @media screen and (max-width: 768px) {
-    .team-container {
-        flex-direction: column;
+    .team {
+        flex-direction: column-reverse;
+    }
+    figure {
+        aspect-ratio: 1/1;
+        height: clamp(200px, 90vw, 600px);
+        background-position: center;
+        mask-position: center;
+        margin-bottom: 30px;
     }
 }
 
