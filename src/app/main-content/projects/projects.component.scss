@@ -115,18 +115,6 @@ app-project-info {
     z-index: 1;
 }
 
-// .slide-in {
-//     transform: translateX(100%);
-//     animation: slideIn 0.7s forwards ease-in-out;
-//     z-index: 2;
-// }
-
-// .slide-out {
-//     transform: translateX(0);
-//     animation: slideOut 0.7s forwards ease-in-out;
-//     z-index: 1;
-// }
-
 .fade-in {
     animation: fadeIn 0.7s forwards ease-in-out;
 }
@@ -167,8 +155,14 @@ app-project-info {
 }
 
 @media screen and (max-width: 768px) {
-
     .project-counter {
         margin: 45px 0 80px 0;
+        width: 100%;
+        >button {
+            width: 45px;
+        }
+    }
+    .current span {
+        display: none;
     }
 }

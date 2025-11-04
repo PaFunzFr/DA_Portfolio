@@ -38,3 +38,21 @@
         }
     }
 }
+
+@media screen and (max-width: 700px ) {
+    .project-footer {
+        @include dFlex(center, center, 12px);
+        flex-direction: column;
+    }
+    .tech-stack img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+@media screen and (max-height: 800px ) {
+    .description {
+        max-height: 60px;
+        overflow-y: scroll;
+    }
+}
