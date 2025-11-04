@@ -1,5 +1,9 @@
-<header id="aHeaderPrivacy">
-    <app-header [hideOnScroll]="true" id="aHeaderI" [targetHref]="'#aHeaderPrivacy'"></app-header>
-    <app-side-bar class="no-interact" [position]="'sticky'" [positionY]="'-60px'"></app-side-bar>
-</header>
-<section class="privacy-policy-section" [innerHTML]="privacyContent"></section>
+<span class="privacy">
+    <header id="aHeaderPrivacy">
+        <app-header [hideOnScroll]="true" id="aHeaderI" [targetHref]="'#aHeaderPrivacy'"></app-header>
+        <app-side-bar class="no-interact" [position]="'sticky'" [positionY]="'-60px'"></app-side-bar>
+    </header>
+    <div class="wrapper">
+        <section class="privacy-policy-section" [innerHTML]="privacyContent"></section>
+    </div>
+</span>

@@ -1,17 +1,46 @@
 @import './../../assets/styles/mixins.scss';
 
 header {
-    @include header(sticky, $zi: 9);
+    @include header(fixed, $zi: 9);
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.657));
 }
 
 .privacy-policy-section {
-    margin: 80px auto;
-    max-width: 1480px;
-    padding: 0 50px;
-    color: $col-font-main;
+    @include dFlex(center, center, 20px);
+    @include maxWidthPadding();
+    flex-direction: column;
+    padding-bottom: 30px;
+    padding-top: 80px;
 }
 
+.wrapper {
+    @include dFlex(center, center,0);
+    height: 100%;
+    width: 100%;
+    background-color: #131313;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -10%;
+        background: 
+            radial-gradient(circle at 25% 30%, rgba($col-dev-bg, 0.5) 0%, rgba($col-dev-bg, 0) 60%),
+            radial-gradient(circle at 75% 70%, rgba($col-des-bg, 0.5) 0%, rgba($col-des-bg, 0) 70%);
+        animation: drift 15s ease-in-out infinite alternate;
+        mix-blend-mode: screen;
+        z-index: 1;
+        pointer-events: none;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/img/noise.jpg');
+        opacity: 0.3;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .privacy-policy-section {   
