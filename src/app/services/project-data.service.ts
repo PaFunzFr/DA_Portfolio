@@ -32,9 +32,9 @@ export class ProjectDataService {
   
   projectData: ProjectsDataInterface[] = [
     {
-      id: 'Join',
+      id: 'Collabeya',
       type: 'Fullstack',
-      appImg: './assets/img/projects/project_join.png',
+      appImg: './assets/img/projects/project_collabeya.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDevFE),
@@ -45,11 +45,28 @@ export class ProjectDataService {
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
-        this.getSkillImgSrc('adesigner', this.skillsDes),
       ],
-      projectUrl: 'http://join.p-frey.com',
-      projectGithub: 'https://github.com/PaFunzFr/DA_Join',
-      projectTextId: 'join'
+      projectUrl: 'http://collabeya.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/Collabeya',
+      projectTextId: 'dabubble'
+    },
+    {
+      id: 'Quizly',
+      type: 'Backend',
+      appImg: './assets/img/projects/project_join.png', // has to be fixed / changed
+      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      devTools: [
+        this.getSkillImgSrc('python', this.skillsDevBE),
+        this.getSkillImgSrc('django', this.skillsDevBE),
+        this.getSkillImgSrc('pytest', this.skillsDevBE),
+        this.getSkillImgSrc('sql', this.skillsDevBE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
+        this.getSkillImgSrc('docker', this.skillsDevBE),
+      ],
+      desTools: [],
+      projectUrl: 'http://join.p-frey.com', // has to be fixed / changed
+      projectGithub: 'https://github.com/PaFunzFr/Quizly-backend',
+      projectTextId: 'quizly'
     },
     {
       id: 'Pokedex',
@@ -70,9 +87,9 @@ export class ProjectDataService {
       projectTextId: 'pokedex'
     },
     {
-      id: 'Collabeya',
+      id: 'Join',
       type: 'Fullstack',
-      appImg: './assets/img/projects/project_collabeya.png',
+      appImg: './assets/img/projects/project_join.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDevFE),
@@ -83,10 +100,30 @@ export class ProjectDataService {
       ],
       desTools: [
         this.getSkillImgSrc('photoshop', this.skillsDes),
+        this.getSkillImgSrc('adesigner', this.skillsDes),
       ],
-      projectUrl: 'http://collabeya.p-frey.com',
-      projectGithub: 'https://github.com/PaFunzFr/Collabeya',
-      projectTextId: 'dabubble'
+      projectUrl: 'http://join.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_Join',
+      projectTextId: 'join'
+    },
+    {
+      id: 'Videoflix',
+      type: 'Backend',
+      appImg: './assets/img/projects/project_join.png', // has to be fixed / changed
+      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      devTools: [
+        this.getSkillImgSrc('python', this.skillsDevBE),
+        this.getSkillImgSrc('django', this.skillsDevBE),
+        this.getSkillImgSrc('pytest', this.skillsDevBE),
+        this.getSkillImgSrc('postgresql', this.skillsDevBE),
+        this.getSkillImgSrc('redis', this.skillsDevBE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
+        this.getSkillImgSrc('docker', this.skillsDevBE),
+      ],
+      desTools: [],
+      projectUrl: 'http://join.p-frey.com', // has to be fixed / changed
+      projectGithub: 'https://github.com/PaFunzFr/Videoflix-backend',
+      projectTextId: 'videoflix'
     },
     {
       id: 'Portfolio',
@@ -110,6 +147,25 @@ export class ProjectDataService {
       projectTextId: 'portfolio'
     },
     {
+      id: 'Coderr',
+      type: 'Backend',
+      appImg: './assets/img/projects/project_join.png', // has to be fixed / changed
+      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      devTools: [
+        this.getSkillImgSrc('python', this.skillsDevBE),
+        this.getSkillImgSrc('django', this.skillsDevBE),
+        this.getSkillImgSrc('pytest', this.skillsDevBE),
+        this.getSkillImgSrc('sql', this.skillsDevBE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
+        this.getSkillImgSrc('docker', this.skillsDevBE),
+        this.getSkillImgSrc('postman', this.skillsDevBE),
+      ],
+      desTools: [],
+      projectUrl: 'http://coderr.p-frey.com/', // has to be fixed / changed
+      projectGithub: 'https://github.com/PaFunzFr/Coderr-backend',
+      projectTextId: 'coderr'
+    },
+    {
       id: 'BnB-Saga',
       type: 'Frontend',
       appImg: './assets/img/projects/project_bnbsaga.png',
@@ -126,7 +182,24 @@ export class ProjectDataService {
       projectUrl: 'http://bnb.p-frey.com',
       projectGithub: 'https://github.com/PaFunzFr/DA_2D_Plattformer',
       projectTextId: 'bnbsaga'
-    }
+    },
+    {
+      id: 'Kanmind',
+      type: 'Backend',
+      appImg: './assets/img/projects/project_join.png', // has to be fixed / changed
+      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      devTools: [
+        this.getSkillImgSrc('python', this.skillsDevBE),
+        this.getSkillImgSrc('django', this.skillsDevBE),
+        this.getSkillImgSrc('sql', this.skillsDevBE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
+        this.getSkillImgSrc('postman', this.skillsDevBE),
+      ],
+      desTools: [],
+      projectUrl: 'http://coderr.p-frey.com/', // has to be fixed / changed
+      projectGithub: 'https://github.com/PaFunzFr/KanMind-backend',
+      projectTextId: 'kanmind'
+    },
   ];
 
 }

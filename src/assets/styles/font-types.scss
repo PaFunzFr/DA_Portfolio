@@ -19,12 +19,11 @@ h2 {
 h3 {
     font-family: 'Chillax', sans-serif;
     color: $col-font-main;
-    font-size: clamp(18px, 8vw, 70px);
+    font-size: clamp(20px, 14vw, 70px);
     line-height: 1.2;
     padding: 0;
     letter-spacing: 1px;
     text-align: center;
-    white-space: nowrap;
 }
 
 h4 {

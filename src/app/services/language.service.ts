@@ -49,6 +49,16 @@ export class LanguageService {
           bnbsaga: `This project involved creating a Jump-and-Run game where object-oriented
                     programming was applied to implement the game logic. Classes and objects
                     were used to structure the gameplay and control interactive elements.`,
+          kanmind: `This is the backend for a kanban board.The project is based on Django and Django REST Framework.
+                    With this API you can manage user authentication, boards, and tasks.`,
+          coderr: `The backend for a freelance developer platform.
+                    The project is based on Django and Django REST Framework.
+                    With this API you can manage user authentication, create offers, orders and user reviews.`,
+          quizly: `With Quizly, you can generate a quiz from any YouTube video. The backend uses AI (Gemini & Whisper) 
+                    to analyze the video and create 10 multiple-choice questions automatically.`,
+          videoflix: `Videoflix is a streaming platform for videos, taking inspiration from Netflix. Users can create accounts, 
+                    verify their email to activate their profiles, reset passwords if forgotten, and enjoy videos at multiple resolutions 
+                    with adjustable playback speeds in the built-in player.`,
         },
       },
       team: {
@@ -335,6 +345,16 @@ export class LanguageService {
                   objektorientierter Programmierung umgesetzt wurde.
                   Klassen und Objekte wurden genutzt, um die Spielmechanik zu
                   strukturieren und interaktive Elemente zu steuern.`,
+          kanmind: `Dies ist das Backend für ein Kanban-Board. Das Projekt basiert auf Django und dem Django REST Framework.
+                  Über die API lassen sich Benutzer, Boards und Aufgaben verwalten.`,
+          coderr: `Das Backend einer Plattform für freiberufliche Entwickler.
+                  Das Projekt basiert auf Django und dem Django REST Framework.
+                  Die API ermöglicht Benutzerverwaltung, Angebotserstellung, Bestellungen und Bewertungen.`,
+          quizly: `Mit Quizly lässt sich aus jedem YouTube-Video automatisch ein Quiz generieren.
+                  Das Backend nutzt KI (Gemini & Whisper), um das Video zu analysieren und 10 Multiple-Choice-Fragen zu erstellen.`,
+          videoflix: `Videoflix ist eine Streaming-Plattform nach dem Vorbild von Netflix.
+                  Nutzer können Konten erstellen, ihre E-Mail verifizieren, Passwörter zurücksetzen und Videos
+                  in verschiedenen Auflösungen und Geschwindigkeiten abspielen.`,
         },
       },
       team: {
@@ -342,13 +362,12 @@ export class LanguageService {
         testimonials: {
           member1: `Patrick beeindruckte mit diplomatischem Geschick, brachte das Team mit Freundlichkeit und Humor zusammen und schuf ein positives Miteinander. 
                     Sein schnelles Auffassungsvermögen waren ebenso wertvoll wie sein Planungstalent und der Blick fürs große Ganze.`,
-          member2: `Patrick überzeugte mit seiner proaktiven Art, seinem Verantwortungsbewusstsein und seinem Blick fürs Ganze.  
+          member2: `Er überzeugte mit seiner proaktiven Art, seinem Verantwortungsbewusstsein und seinem Blick fürs Ganze.  
                     Die Zusammenarbeit mit ihm war geprägt von Vertrauen, Fokus und gegenseitigem Respekt.`,
-          member3: `Patrick war eine zentrale Stütze im Team, er übernahm Planung mit Überblick und Struktur. 
-                    Besonders schätzte ich seine hilfsbereite Art und sein Gespür fürs Team. 
-                    Fachlich stark, menschlich verbindend - mit ihm zu arbeiten war einfach rundum angenehm.`,
-          member4: `Patrick behielt stets das große Ganze im Blick und war eine wertvolle Stimme in Gruppendiskussionen. 
-                    Seine eigenen Ideen waren nicht nur kreativ, sondern auch mit beeindruckender Präzision und Qualität umgesetzt.`,
+          member3: `Patrick war die zentrale Stütze im Team. Er übernahm Planung mit Überblick und Struktur. 
+                    Fachlich stark,hiflsbereit und menschlich verbindend - die Zusammenarbeit mit ihm war rundum angenehm.`,
+          member4: `Er behielt stets das große Ganze im Blick und war eine wertvolle Stimme in der Gruppe. 
+                    Seine eigenen Ideen werden nicht nur kreativ, sondern auch mit beeindruckender Präzision und Qualität umgesetzt.`,
         },
       },
       contact: {

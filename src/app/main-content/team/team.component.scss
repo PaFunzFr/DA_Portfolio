@@ -22,12 +22,13 @@
 a {
     @include dFlex(center, center, 8px);
     font-family: "Chillax";
+    font-size: 14px;
     padding-top: 6px;
     border-top: 1px solid white;
     width: 100%;
     >img {
-        width: 20px;
-        height:20px;
+        width: 15px;
+        height:15px;
         object-fit: contain;
         margin-bottom: 3px;
     }
