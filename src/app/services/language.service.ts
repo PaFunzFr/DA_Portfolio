@@ -22,17 +22,16 @@ export class LanguageService {
         title: 'About me',
         text: `My passion for IT has been with me since my youth. After several years of digitizing complex construction projects,
               I realized that my true passion lies not in architecture but in software development.<br><br>
-              Now, I am consciously and enthusiastically taking a new path as a web developer.
-              I am excited about combining modern frontend technologies like Angular with user-centered design.
-              My experience with complex structures, well-thought-out concepts, and clear design language allows me to create intuitive,
-              clean, and high-performance applications.`,
+              Now, I am taking a new path as a web developer.
+              I am excited about combining modern frontend technologies with solid backend logic.
+              My diverse experience enables me to create intuitive, clean, and high-performance applications.`,
       },
       skills: {
         title: "Didn't find the right skill?",
         text: `As a fullstack developer with a design background, I combine analytical thinking with visual intuition.
               I build systems that not only work — but feel right.
               My goal is to connect technology and design to create digital experiences with character.`,
-        mindset: `No problem - I enjoy learning new things.<br>Just <a class="contact-ref" href="#aContact">reach out</a> to me!`,
+        mindset: `No problem - I enjoy learning new things. Just <a class="contact-ref" href="#aContact">reach out</a> to me!`,
       },
       projects: {
         title: 'My Projects',

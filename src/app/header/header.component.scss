@@ -88,11 +88,17 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
     .hamburger {
         display: flex;
     }
 
-    .page-ref {
+    .page-ref, .header-name {
         display: none;
+    }
+    .main-logo {
+        >img {
+            width: 35px !important;
+        }
     }
 }

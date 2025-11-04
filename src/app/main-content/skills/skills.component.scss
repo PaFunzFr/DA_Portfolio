@@ -15,6 +15,16 @@
 .skill-top {
     @include dFlex(space-between, center, 20px);
     height: clamp(300px, 25vw, 400px);
+    .skill-title {
+        @include dFlex(center, center, 20px);
+        flex-direction: column;
+        width: 40%;
+        text-align: center;
+        .dashboard {
+            display: flex;
+            gap: clamp(10px, 5vw, 30px);
+        }
+    }
     .skills-bg {
         aspect-ratio: 1/1;
         width: 50%;
@@ -29,17 +39,6 @@
         mask-clip: content-box;
         animation: imageSwap 10s infinite ease-in-out;
         filter: brightness(1.4) contrast(1.1);
-    }
-}
-
-.skill-title {
-    @include dFlex(center, center, 20px);
-    flex-direction: column;
-    width: 40%;
-    text-align: center;
-    .dashboard {
-        display: flex;
-        gap: 30px;
     }
 }
 
@@ -144,6 +143,7 @@
 .mindset {
     @include dFlex(center, center, 18px);
     width: 100%;
+    max-width: 400px;
     margin-top: 20px;
     overflow: hidden;
     padding-bottom: 10px;
@@ -165,36 +165,60 @@
     }
 }
 
-.bg-img {
-    @include skillBg();
-}
 
-@media screen and (max-width: 768px) {
-
-
-    .mindset {
-        >div {
-            padding: 0 15px;
+@media screen and (max-width: 900px) {
+    .skills {
+        scroll-margin-top: 30px;
+    }
+    .skill-top {
+        @include dFlex(center, center);
+        flex-direction: column;
+        height: 100%;
+        max-height: auto;
+        .skill-title {
+            @include dFlex(center, center, 20px);
+            flex-direction: column;
+            width: 100%;
         }
+        .skills-bg {
+            width: 100%;
+            margin: -10vw 0 -5vw 0;
+        }
+    }
+    .skills-collection {
+        @include dFlex(center, center, 0);
+        margin: 20px 0;
+        flex-direction: column;
+        width: 100%;
+        .mindset-label {
+            position: absolute;
+            bottom: -40px;
+        }
+    }
+    .hide-mobile {
+        display: none;
     }
 }
 
 @media screen and (max-width: 400px) {
-
-    .mindset-contact {
-        >a {
-            font-size: 14px !important;
-            >img {
-                height: 50px !important;
+    .select-category{
+        gap: 10px !important;
+    }
+    .mindset {
+        gap: 9px !important;
+        >img {
+            display: none;
+        }
+        h6 {
+            color: $col-dev-main;
+        }
+        .mindset-text {
+            @include dFlex(center, center, 0);
+            flex-direction: column;
+            >p {
+                font-size: 16px;
+                line-height: 1.1;
             }
         }
     }
-    .mindset {
-        >div {
-            @include dFlex(flex-start, center, 20px);
-            flex-direction: column;
-        }
-    }
-
 }
-

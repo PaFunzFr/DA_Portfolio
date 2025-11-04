@@ -5,6 +5,17 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/img/noise.jpg');
+        opacity: 0.1;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+    }
+
+
     >div {
         pointer-events: auto;
         @include dFlex(center, center, 5%, absolute);
@@ -15,6 +26,7 @@
         width: 100vw;
         transition: all 0.5s ease;
         >a {
+            font-family: "Chillax";
             font-size: 30px;
             &:hover {
                 color: $col-des-main;

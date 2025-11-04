@@ -30,10 +30,10 @@ export class SkillsComponent implements OnInit {
   ]
 
   skillCategories = [
-    "Designer",
+    "Design",
     "Frontend",
     "Backend",
-    "Dev-Tools",
+    "Tools",
     "MINDSET"
   ]
 

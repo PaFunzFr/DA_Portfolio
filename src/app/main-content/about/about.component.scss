@@ -1,69 +1,57 @@
 @import './../../../assets/styles/mixins.scss';
 
+.about-title {
+    @include dFlex(flex-start, center);
+    width: 100%;
+}
+
+.contact-ref {
+    @include dFlex(center, flex-end, 12px, relative);
+    border-top: 1px solid white;
+    margin-top: 14px;
+    height: 45px;
+    >a>img {
+        height: 20px;
+    }
+}
+
 .about {
     @include dFlex(center, space-between);
-    flex-direction: column;
     @include maxWidthPadding(60px, 50px);
     margin: 0 auto;
     scroll-margin-top: 100vh;
     height: 100vh;
     max-height: 900px;
     overflow: hidden;
-
-    .about-title {
-        @include dFlex(flex-start, center);
-        width: 100%;
-    }
-
-    .contact-ref {
-        @include dFlex(center, flex-end, 12px, relative);
-        border-top: 1px solid white;
-        margin-top: 14px;
-        height: 45px;
-        >a>img {
-            height: 20px;
-        }
-    }
-
-    .about-content {
-        @include dFlex(center, center, 30px);
+    .about-left {
+        width: clamp(300px, 45vw, 700px);
+        background-size: cover;
+        background-position: center bottom;
         height: 100%;
-        .about-left {
-            @include dFlex(center, center, 0);
-            position: absolute;
-            left: 0;
-            width: clamp(300px, 45vw, 700px);
-            background-size: cover;
-            background-position: center bottom;
-            height: 100%;
-            mask-image: url('../../../assets/img/about/mask_hero.png');
-            mask-repeat: no-repeat;
-            mask-position: left;          
-            mask-size: contain;
-            mask-origin: content-box;
-            mask-clip: content-box;
-            animation: imageSwap 10s infinite ease-in-out;
-        }
+        mask-image: url('../../../assets/img/about/mask_hero.png');
+        mask-repeat: no-repeat;
+        mask-position: left;          
+        mask-size: contain;
+        animation: imageSwap 10s infinite ease-in-out;
+    }
 
-        .about-right {
-            @include dFlex(center, center, 5px);
-            position: absolute;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            flex-direction: column;
-            section {
-                min-height: 300px;
-                overflow-wrap: break-word;
-                word-wrap: break-word;
-                text-align: center;
-                p {
-                    margin-top: 10px;
-                }
+    .about-right {
+        @include dFlex(center, center, 5px);
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        section {
+            min-height: 300px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            text-align: center;
+            p {
+                margin-top: 10px;
             }
         }
     }
 }
+
 
 .about-info {
     @include dFlex(space-evenly, center, 0);
@@ -103,49 +91,24 @@
     }
 }
 
-@media screen and (max-width: 976px) {
-    .about-left {
-        @include dFlex(center, flex-end, 0);
-        flex: 3;
-        background-image:
-            linear-gradient(to top right, rgba(0,0,0,.8), rgba(0,0,0,0) 30%),
-            url('../../../assets/img/about/hero_about.jpg') !important;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .contact-ref {
-        @include dFlex(center, center, 12px, relative !important);
-        transform: translateY(-10px);
-    }
-    .about-title {
+@media screen and (max-width: 900px) {
+    .about {
+        @include dFlex(center, center);
         flex-direction: column;
-        padding-bottom: 20px;
-    }
+        height: 100%;
+        max-height: auto;
+        .about-left {
+            height: 100%;
+            aspect-ratio: 1/1;
+            mask-position: center;  
+        }
 
-    .about-content {
-        @include dFlex(center, center, 10%);
-        flex-direction: column;
-        .about-left,
         .about-right {
             width: 100%;
         }
-        .about-left {
-            @include dFlex(center !important, flex-end, 30px !important);
-            margin-top: 30px;
-            >figure {
-                img {
-                    height: 60px !important;
-                }
-            }
-        }
-        .about-right {
-            min-width: 100% !important;
-            padding: 0 2px;
-        }
     }
-}
-
-a {
-    @include hoverEffect();
+    .about-info {
+        margin-top: 14px;
+    }
 }

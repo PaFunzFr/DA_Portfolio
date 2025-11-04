@@ -45,7 +45,7 @@
                     <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
                     <label (click)="setSkillCategory(index); stopAnimation()" [for]="'skill'+index">{{skill}}</label>
                 } @else {
-                    <p>|</p>
+                    <p class="hide-mobile">|</p>
                     <input type="radio" name="skill" [id]="'skill'+index" [checked]="currentSkillCategory() === index">
                     <label class="mindset-label" (click)="selectMindset()" [for]="'skill'+index" >{{skill}}</label>
                 }

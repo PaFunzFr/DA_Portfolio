@@ -40,3 +40,14 @@
     opacity: 0;
 }
 
+@media screen and (max-width: 500px) {
+    .skill {
+        padding: 5px 5px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skill {
+        padding: 5px 3px !important;
+    }
+}
