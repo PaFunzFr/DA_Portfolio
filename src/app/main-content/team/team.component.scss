@@ -19,16 +19,66 @@
     flex-direction: column;
 }
 
+.member-wrapper {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.member-track {
+    @include dFlex(center, center, 20px, absolute);
+    flex-direction: column;
+    width: 100%;
+    height: calc(4 * 220px);
+    animation: scrollUp 6s linear infinite;
+    span {
+        display: flex;
+        color: white;
+        border: 1px solid white;
+        width: 100%;
+        min-height: 200px;
+        overflow: hidden;
+        padding: 20px;
+    }
+    span:first-child {
+        margin-top: 20px;
+        background-color: green;
+    }
+}
+
+
+.track2 {
+    top: 880px;
+}
+
+@keyframes scrollUp {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
 figure {
     aspect-ratio: 1/1;
     height: clamp(200px, 50vw, 600px);
-    background-image: url('../../../assets/img/team/teamwork.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
     mask-image: url('../../../assets/img/team/teamwork_mask.png');
     mask-size: contain;
     mask-position: right;
+    animation: imageSwap 10s infinite ease-in-out;
+}
+
+@keyframes imageSwap {
+    0% {
+        background-image: url('../../../assets/img/team/teamwork.jpg');
+    }
+    50% {
+        background-image: url('../../../assets/img/team/teamwork_comic.jpg');
+    }
+    100% {
+        background-image: url('../../../assets/img/team/teamwork.jpg');
+    }
 }
 
 @media screen and (max-width: 768px) {

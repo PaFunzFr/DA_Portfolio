@@ -7,9 +7,30 @@
         >
             {{ languages.getTranslation('team', 'title') }}
         </h3>
-        <app-testimonial [testimonial]="teamMembers()[2]"></app-testimonial>
+        <div class="member-wrapper">
+            <div class="member-track">
+                @for (member of teamMembers(); track member; let index=$index) {
+                    <span>
+                        {{ languages.getProjectTestimonial('member'+ (index + 1)) }}
+                        {{member.name}}
+                    </span>
+                }
+            </div>
+
+            <div class="member-track track2">
+                @for (member of teamMembers(); track member; let index=$index) {
+                    <span>
+                        {{ languages.getProjectTestimonial('member'+ (index + 1)) }}
+                        {{member.name}}
+                    </span>
+                } 
+            </div>
+        </div>
     </section>
     <figure></figure>
 </section>
 
+<!-- @for (member of teamMembers(); track member; let index=$index) {
+    <app-testimonial [testimonial]="teamMembers()[index]"></app-testimonial>
+} -->
 

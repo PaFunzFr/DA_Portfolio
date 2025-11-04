@@ -4,6 +4,7 @@
     @include dFlex(center, center);
     flex-direction: column;
     text-align: center;
+ 
     z-index: 2;
     .testimonial-text {
         @include dFlex(center, center, 5px);
