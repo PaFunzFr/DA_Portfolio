@@ -61,8 +61,7 @@ export class LanguageService {
                     Working with him was defined by honesty, focus, and mutual respect. He’s not just a skilled developer, but a co-creator who embodies responsibility and quality.`,
           member3: `Patrick was a key team member who led planning with structure and clarity. His supportive nature, team awareness, and patient explanations made collaboration smooth and inclusive. 
                     Working with him was a real pleasure.`,
-          member4: `Patrick consistently enriched the team by asking the right questions and exploring solutions independently, which greatly deepened his and our understanding. 
-                    He always had a strong overview of the bigger picture and was a valuable asset in group discussions. His own design ideas were not only creative but also executed with impressive precision and quality.`,
+          member4: `Patrick always had a strong overview of the bigger picture and was a valuable asset in group discussions. His own design ideas were not only creative but also executed with impressive precision and quality.`,
         },
       },
       contact: {
@@ -343,15 +342,14 @@ export class LanguageService {
         title: 'Teamplayer gesucht?',
         testimonials: {
           member1: `Patrick beeindruckte mit diplomatischem Geschick, brachte das Team mit Freundlichkeit und Humor zusammen und schuf ein positives Miteinander. 
-                    Sein schnelles Auffassungsvermögen und fundiertes Wissen in Angular und Firebase waren ebenso wertvoll wie sein Planungstalent und der Blick fürs große Ganze. Die Zusammenarbeit mit ihm war eine echte Freude – danke!`,
-          member2: `Patrick überzeugte mit seiner proaktiven Art, seinem Verantwortungsbewusstsein und seinem Blick fürs Ganze. Er brachte sich in Entwicklung, Planung und Testing ein und war stets offen für Feedback. 
-                    Die Zusammenarbeit mit ihm war geprägt von Vertrauen, Fokus und gegenseitigem Respekt – er stand für Qualität, fachlich wie menschlich.`,
-          member3: `Patrick war eine zentrale Stütze im Team, er übernahm Planung und Firebase-Integration mit Überblick und Struktur. 
-                    Besonders schätzte ich seine hilfsbereite Art und sein Gespür fürs Team. Er erklärte geduldig, bezog alle ein und sorgte dafür, dass niemand auf der Strecke blieb. 
-                    Fachlich stark, menschlich verbindend, mit ihm zu arbeiten war einfach rundum angenehm.`,
-          member4: `Patrick hat das Team kontinuierlich bereichert, indem er die richtigen Fragen stellte und eigenständig Lösungen erarbeitete – 
-                    was sein eigenes wie auch unser Verständnis deutlich vertiefte. Er behielt stets das große Ganze im Blick und war eine wertvolle Stimme in Gruppendiskussionen. 
-                    Seine eigenen Designideen waren nicht nur kreativ, sondern auch mit beeindruckender Präzision und Qualität umgesetzt.`,
+                    Sein schnelles Auffassungsvermögen waren ebenso wertvoll wie sein Planungstalent und der Blick fürs große Ganze.`,
+          member2: `Patrick überzeugte mit seiner proaktiven Art, seinem Verantwortungsbewusstsein und seinem Blick fürs Ganze.  
+                    Die Zusammenarbeit mit ihm war geprägt von Vertrauen, Fokus und gegenseitigem Respekt.`,
+          member3: `Patrick war eine zentrale Stütze im Team, er übernahm Planung mit Überblick und Struktur. 
+                    Besonders schätzte ich seine hilfsbereite Art und sein Gespür fürs Team. 
+                    Fachlich stark, menschlich verbindend - mit ihm zu arbeiten war einfach rundum angenehm.`,
+          member4: `Patrick behielt stets das große Ganze im Blick und war eine wertvolle Stimme in Gruppendiskussionen. 
+                    Seine eigenen Ideen waren nicht nur kreativ, sondern auch mit beeindruckender Präzision und Qualität umgesetzt.`,
         },
       },
       contact: {

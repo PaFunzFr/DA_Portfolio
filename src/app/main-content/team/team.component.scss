@@ -19,42 +19,72 @@
     flex-direction: column;
 }
 
+a {
+    @include dFlex(center, center, 8px);
+    font-family: "Chillax";
+    padding-top: 6px;
+    border-top: 1px solid white;
+    width: 100%;
+    >img {
+        width: 20px;
+        height:20px;
+        object-fit: contain;
+        margin-bottom: 3px;
+    }
+}
+
 .member-wrapper {
     position: relative;
     height: 300px;
     overflow: hidden;
     width: 100%;
-}
 
-.member-track {
-    @include dFlex(center, center, 20px, absolute);
-    flex-direction: column;
-    width: 100%;
-    height: calc(4 * 220px);
-    animation: scrollUp 6s linear infinite;
-    span {
-        display: flex;
-        color: white;
-        border: 1px solid white;
+    &:hover .member-track {
+        animation-play-state: paused;
+    }
+
+    mask-image: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(0, 0, 0, 1) 20%,
+                rgba(0, 0, 0, 1) 80%,
+                transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            transparent 100%);
+
+    .member-track {
+        @include dFlex(center, center, 10px, absolute);
+        flex-direction: column;
+        left: 50%;
         width: 100%;
-        min-height: 200px;
-        overflow: hidden;
-        padding: 20px;
-    }
-    span:first-child {
-        margin-top: 20px;
-        background-color: green;
+        max-width: 500px;
+        height: calc(4 * 190px);
+        animation: scrollUp 36s linear infinite;
+        span {
+            @include dFlex(center, center, 5px);
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            width: 100%;
+            min-height: 180px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        span:first-child {
+            margin-top: 10px;
+        }
     }
 }
-
 
 .track2 {
-    top: 880px;
+    top: 760px;
 }
 
 @keyframes scrollUp {
-    0%   { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
+    0%   { transform: translateY(0) translateX(-50%); }
+    100% { transform: translateY(-100%) translateX(-50%); }
 }
 
 figure {

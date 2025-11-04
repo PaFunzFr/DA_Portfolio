@@ -10,19 +10,24 @@
         <div class="member-wrapper">
             <div class="member-track">
                 @for (member of teamMembers(); track member; let index=$index) {
-                    <span>
-                        {{ languages.getProjectTestimonial('member'+ (index + 1)) }}
-                        {{member.name}}
-                    </span>
+                <span>
+                    {{ languages.getProjectTestimonial('member'+ (index + 1)) }}
+                    <a href="{{ member.profile }}" target="_blank">
+                        {{ member.name }} |
+                        <img src="./assets/img/social/linkedin.svg" alt="">
+                    </a>
+                </span>
                 }
             </div>
-
             <div class="member-track track2">
                 @for (member of teamMembers(); track member; let index=$index) {
-                    <span>
-                        {{ languages.getProjectTestimonial('member'+ (index + 1)) }}
-                        {{member.name}}
-                    </span>
+                <span>
+                    {{ languages.getProjectTestimonial('member'+ (index + 1)) }}
+                    <a href="{{ member.profile }}" target="_blank">
+                        {{ member.name }} |
+                        <img src="./assets/img/social/linkedin.svg" alt="">
+                    </a>
+                </span>
                 } 
             </div>
         </div>
