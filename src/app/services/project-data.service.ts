@@ -109,8 +109,8 @@ export class ProjectDataService {
     {
       id: 'Videoflix',
       type: 'Backend',
-      appImg: './assets/img/projects/project_placeholder.png', // has to be fixed / changed
-      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      appImg: './assets/img/projects/project_videoflix.png',
+      background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
         this.getSkillImgSrc('python', this.skillsDevBE),
         this.getSkillImgSrc('django', this.skillsDevBE),
@@ -121,7 +121,7 @@ export class ProjectDataService {
         this.getSkillImgSrc('docker', this.skillsDevBE),
       ],
       desTools: [],
-      projectUrl: 'http://join.p-frey.com', // has to be fixed / changed
+      projectUrl: 'http://videoflix.p-frey.com',
       projectGithub: 'https://github.com/PaFunzFr/Videoflix-backend',
       projectTextId: 'videoflix'
     },
