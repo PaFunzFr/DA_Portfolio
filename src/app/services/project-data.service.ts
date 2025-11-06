@@ -12,6 +12,7 @@ interface ProjectsDataInterface {
   projectUrl: string;
   projectGithub: string;
   projectTextId: string;
+  projectDocumentation?: string;
 }
 
 @Injectable({
@@ -51,40 +52,22 @@ export class ProjectDataService {
       projectTextId: 'dabubble'
     },
     {
-      id: 'Quizly',
+      id: 'Kanmind',
       type: 'Backend',
-      appImg: './assets/img/projects/project_placeholder.png', // has to be fixed / changed
-      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      appImg: './assets/img/projects/project_kanmind.png',
+      background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
         this.getSkillImgSrc('python', this.skillsDevBE),
         this.getSkillImgSrc('django', this.skillsDevBE),
-        this.getSkillImgSrc('pytest', this.skillsDevBE),
         this.getSkillImgSrc('sql', this.skillsDevBE),
         this.getSkillImgSrc('api', this.skillsDevBE),
-        this.getSkillImgSrc('docker', this.skillsDevBE),
+        this.getSkillImgSrc('postman', this.skillsDevBE),
       ],
       desTools: [],
-      projectUrl: '', // has to be fixed / changed
-      projectGithub: 'https://github.com/PaFunzFr/Quizly-backend',
-      projectTextId: 'quizly'
-    },
-    {
-      id: 'Pokedex',
-      type: 'Frontend',
-      appImg: './assets/img/projects/project_pokedex.png',
-      background: './assets/img/projects/bg_mobile.jpg',
-      devTools: [
-        this.getSkillImgSrc('javascript', this.skillsDevFE),
-        this.getSkillImgSrc('html', this.skillsDevFE),
-        this.getSkillImgSrc('css', this.skillsDevFE),
-        this.getSkillImgSrc('api', this.skillsDevBE),
-      ],
-      desTools: [
-        this.getSkillImgSrc('adesigner', this.skillsDes),
-      ],
-      projectUrl: 'http://pokedex.p-frey.com',
-      projectGithub: 'https://github.com/PaFunzFr/DA_Pokedex',
-      projectTextId: 'pokedex'
+      projectUrl: 'http://kanmind.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/KanMind-backend',
+      projectTextId: 'kanmind',
+      projectDocumentation: 'http://kanmind-api.p-frey.com/schema/swagger-ui'
     },
     {
       id: 'Join',
@@ -110,7 +93,7 @@ export class ProjectDataService {
       id: 'Videoflix',
       type: 'Backend',
       appImg: './assets/img/projects/project_videoflix.png',
-      background: './assets/img/projects/bg_notebook.jpg',
+      background: './assets/img/projects/bg_gaming.jpg',
       devTools: [
         this.getSkillImgSrc('python', this.skillsDevBE),
         this.getSkillImgSrc('django', this.skillsDevBE),
@@ -123,7 +106,26 @@ export class ProjectDataService {
       desTools: [],
       projectUrl: 'http://videoflix.p-frey.com',
       projectGithub: 'https://github.com/PaFunzFr/Videoflix-backend',
-      projectTextId: 'videoflix'
+      projectTextId: 'videoflix',
+      projectDocumentation: 'http://videoflix-api.p-frey.com/schema/swagger-ui'
+    },
+    {
+      id: 'BnB-Saga',
+      type: 'Frontend',
+      appImg: './assets/img/projects/project_bnbsaga.png',
+      background: './assets/img/projects/bg_gaming.jpg',
+      devTools: [
+        this.getSkillImgSrc('javascript', this.skillsDevFE),
+        this.getSkillImgSrc('html', this.skillsDevFE),
+        this.getSkillImgSrc('css', this.skillsDevFE),
+      ],
+      desTools: [
+        this.getSkillImgSrc('photoshop', this.skillsDes),
+        this.getSkillImgSrc('davinci', this.skillsDes),
+      ],
+      projectUrl: 'http://bnb.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_2D_Plattformer',
+      projectTextId: 'bnbsaga'
     },
     {
       id: 'Portfolio',
@@ -163,42 +165,44 @@ export class ProjectDataService {
       desTools: [],
       projectUrl: 'http://coderr.p-frey.com/',
       projectGithub: 'https://github.com/PaFunzFr/Coderr-backend',
-      projectTextId: 'coderr'
+      projectTextId: 'coderr',
+      projectDocumentation: 'http://coderr-api.p-frey.com/schema/swagger-ui'
     },
     {
-      id: 'BnB-Saga',
+      id: 'Pokedex',
       type: 'Frontend',
-      appImg: './assets/img/projects/project_bnbsaga.png',
-      background: './assets/img/projects/bg_gaming.jpg',
+      appImg: './assets/img/projects/project_pokedex.png',
+      background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
         this.getSkillImgSrc('javascript', this.skillsDevFE),
         this.getSkillImgSrc('html', this.skillsDevFE),
         this.getSkillImgSrc('css', this.skillsDevFE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
       ],
       desTools: [
-        this.getSkillImgSrc('photoshop', this.skillsDes),
-        this.getSkillImgSrc('davinci', this.skillsDes),
+        this.getSkillImgSrc('adesigner', this.skillsDes),
       ],
-      projectUrl: 'http://bnb.p-frey.com',
-      projectGithub: 'https://github.com/PaFunzFr/DA_2D_Plattformer',
-      projectTextId: 'bnbsaga'
+      projectUrl: 'http://pokedex.p-frey.com',
+      projectGithub: 'https://github.com/PaFunzFr/DA_Pokedex',
+      projectTextId: 'pokedex'
     },
     {
-      id: 'Kanmind',
+      id: 'Quizly',
       type: 'Backend',
-      appImg: './assets/img/projects/project_placeholder.png', // has to be fixed / changed
-      background: './assets/img/projects/bg_notebook.jpg', // has to be fixed / changed
+      appImg: './assets/img/projects/project_placeholder.png',
+      background: './assets/img/projects/bg_gaming.jpg',
       devTools: [
         this.getSkillImgSrc('python', this.skillsDevBE),
         this.getSkillImgSrc('django', this.skillsDevBE),
+        this.getSkillImgSrc('pytest', this.skillsDevBE),
         this.getSkillImgSrc('sql', this.skillsDevBE),
         this.getSkillImgSrc('api', this.skillsDevBE),
-        this.getSkillImgSrc('postman', this.skillsDevBE),
+        this.getSkillImgSrc('docker', this.skillsDevBE),
       ],
       desTools: [],
-      projectUrl: '', // has to be fixed / changed
-      projectGithub: 'https://github.com/PaFunzFr/KanMind-backend',
-      projectTextId: 'kanmind'
+      projectUrl: '', // no demo avaliable
+      projectGithub: 'https://github.com/PaFunzFr/Quizly-backend',
+      projectTextId: 'quizly',
     },
   ];
 

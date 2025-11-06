@@ -1,4 +1,4 @@
-<p class="description">{{ getProjectText(this.projectData[cardNumber].projectTextId) }}</p>
+<p class="description">{{ getProjectText(projectData[cardNumber].projectTextId) }}</p>
 
 <div class="project-footer">
     <div class="tech-stack">
@@ -11,9 +11,18 @@
             <img src="./assets/img/social/github.svg" alt="">
             <p>Code</p>
         </a>
-        <a [href]="projectData[cardNumber].projectUrl" target="_blank">
-            <img src="./assets/img/social/web.svg" alt="">
-            <p>Demo</p>
+        @if (projectData[cardNumber].type == 'Backend' && projectData[cardNumber].id !='Quizly') {
+            <a [href]="projectData[cardNumber].projectGithub" target="_blank">
+                <!-- Icon for Docs to be set -->
+            <img src="./assets/img/social/web.svg" alt=""> 
+            <p>Docs</p>
         </a>
+        }
+        @if (projectData[cardNumber].id !='Quizly') {
+            <a [href]="projectData[cardNumber].projectUrl" target="_blank">
+                <img src="./assets/img/social/web.svg" alt="">
+                <p>Demo</p>
+            </a>
+        }
     </div>
 </div>
