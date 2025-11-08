@@ -1,10 +1,10 @@
 <section class="about" id="aAbout">
-        <div data-aos="fade-right" class="about-left"></div>
-        <div data-aos="fade-left" class="about-right">
+        <div data-aos="fade-right" data-aos-offset="200" class="about-left"></div>
+        <div data-aos="fade-left" data-aos-offset="200" class="about-right">
             <section>
                 <h3>{{ aboutTitle }}</h3>
                 <p [innerHTML]="aboutText"></p>
-                <div data-aos="fade-right" class="about-info">
+                <div class="about-info">
                     @for (item of aboutItems; track $index) {
                         @if ($index == 2) {
                             <figure (click)="scrollTo('aContact')" class="hover">

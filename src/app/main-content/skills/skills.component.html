@@ -1,7 +1,7 @@
 <section class="skills" id="aSkills">
     
     <section class="skill-top">
-        <div data-aos="fade-right" data-aos-easing="ease-in-back" class="skill-title">
+        <div data-aos="fade-up" data-aos-offset="200" class="skill-title">
             <h3 >Skills</h3>
             <p>{{skillText}}</p>
             <div class="dashboard">
@@ -11,7 +11,8 @@
             </div>
         </div>
         <figure
-            data-aos="fade-left"
+            data-aos="fade-up"
+            data-aos-offset="200"
             class="skills-bg">
         </figure>
     </section>
@@ -19,7 +20,7 @@
     <section
         class="skills-collection"
         data-aos="fade-down"
-        data-aos-offset="50"
+        data-aos-offset="100"
         (mouseenter)="stopAnimation()"
         (mouseleave)="this.showMindset ? stopAnimation() : startAnimation()">
 

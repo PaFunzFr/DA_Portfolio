@@ -1,12 +1,11 @@
 <section class="projects" id="aProjects" (mouseleave)="isHovered = false">
-    <h3 data-aos="fade-up" data-aos-easing="ease-in-back">
+    <h3 data-aos="fade-up" data-aos-offset="200">
         {{ projectsTitle }}
     </h3>
     <div
         class="projects-container"
         data-aos="fade-up"
-        data-aos-easing="ease-in-back"
-        data-aos-offset="100"
+        data-aos-offset="200"
         (mouseenter)="handleHoverState(true)"
         (mouseleave)="handleHoverState(false)"
         >
@@ -37,7 +36,9 @@
         </div>
     </div>
 
-    <section class="timeline-container">
+    <section
+        class="timeline-container"
+        data-aos="fade-down">
         <span>
             <p class="current">
                 <span> Project</span>
@@ -52,6 +53,7 @@
     </section>
 
     <app-project-info
+        data-aos="fade-down"
         [cardNumber]="previousNumber"
         [class]="isSliding? 'fade-out':'fade-in'">
     </app-project-info>

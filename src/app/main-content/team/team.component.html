@@ -1,10 +1,6 @@
 <section class="team">
-    <section class="team-container">
-        <h3
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-offset="0"
-        >
+    <section class="team-container" data-aos="fade-left" data-aos-offset="200">
+        <h3>
             {{ languages.getTranslation('team', 'title') }}
         </h3>
         <div class="member-wrapper">
@@ -32,7 +28,7 @@
             </div>
         </div>
     </section>
-    <figure></figure>
+    <figure data-aos="fade-right" data-aos-offset="200"></figure>
 </section>
 
 <!-- @for (member of teamMembers(); track member; let index=$index) {

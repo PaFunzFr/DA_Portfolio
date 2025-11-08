@@ -12,9 +12,9 @@
             <p>Code</p>
         </a>
         @if (projectData[cardNumber].type == 'Backend' && projectData[cardNumber].id !='Quizly') {
-            <a [href]="projectData[cardNumber].projectGithub" target="_blank">
+            <a [href]="projectData[cardNumber].projectDocumentation" target="_blank">
                 <!-- Icon for Docs to be set -->
-            <img src="./assets/img/social/web.svg" alt=""> 
+            <img src="./assets/img/social/doc.svg" alt=""> 
             <p>Docs</p>
         </a>
         }

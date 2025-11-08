@@ -36,7 +36,7 @@ export class ProjectDataService {
       id: 'Collabeya',
       type: 'Fullstack',
       appImg: './assets/img/projects/project_collabeya.png',
-      background: './assets/img/projects/bg_notebook.jpg',
+      background: './assets/img/projects/bg_mobile.jpg',
       devTools: [
         this.getSkillImgSrc('angular', this.skillsDevFE),
         this.getSkillImgSrc('typescript', this.skillsDevFE),
@@ -50,6 +50,26 @@ export class ProjectDataService {
       projectUrl: 'http://collabeya.p-frey.com',
       projectGithub: 'https://github.com/PaFunzFr/Collabeya',
       projectTextId: 'dabubble'
+    },
+    {
+      id: 'Coderr',
+      type: 'Backend',
+      appImg: './assets/img/projects/project_coderr.png',
+      background: './assets/img/projects/bg_notebook.jpg',
+      devTools: [
+        this.getSkillImgSrc('python', this.skillsDevBE),
+        this.getSkillImgSrc('django', this.skillsDevBE),
+        this.getSkillImgSrc('pytest', this.skillsDevBE),
+        this.getSkillImgSrc('sql', this.skillsDevBE),
+        this.getSkillImgSrc('api', this.skillsDevBE),
+        this.getSkillImgSrc('docker', this.skillsDevBE),
+        this.getSkillImgSrc('postman', this.skillsDevBE),
+      ],
+      desTools: [],
+      projectUrl: 'http://coderr.p-frey.com/',
+      projectGithub: 'https://github.com/PaFunzFr/Coderr-backend',
+      projectTextId: 'coderr',
+      projectDocumentation: 'http://coderr-api.p-frey.com/api/schema/swagger-ui'
     },
     {
       id: 'Kanmind',
@@ -67,7 +87,7 @@ export class ProjectDataService {
       projectUrl: 'http://kanmind.p-frey.com',
       projectGithub: 'https://github.com/PaFunzFr/KanMind-backend',
       projectTextId: 'kanmind',
-      projectDocumentation: 'http://kanmind-api.p-frey.com/schema/swagger-ui'
+      projectDocumentation: 'http://kanmind-api.p-frey.com/api/schema/swagger-ui'
     },
     {
       id: 'Join',
@@ -93,7 +113,7 @@ export class ProjectDataService {
       id: 'Videoflix',
       type: 'Backend',
       appImg: './assets/img/projects/project_videoflix.png',
-      background: './assets/img/projects/bg_gaming.jpg',
+      background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
         this.getSkillImgSrc('python', this.skillsDevBE),
         this.getSkillImgSrc('django', this.skillsDevBE),
@@ -107,7 +127,7 @@ export class ProjectDataService {
       projectUrl: 'http://videoflix.p-frey.com',
       projectGithub: 'https://github.com/PaFunzFr/Videoflix-backend',
       projectTextId: 'videoflix',
-      projectDocumentation: 'http://videoflix-api.p-frey.com/schema/swagger-ui'
+      projectDocumentation: 'http://videoflix-api.p-frey.com/api/schema/swagger-ui'
     },
     {
       id: 'BnB-Saga',
@@ -149,9 +169,9 @@ export class ProjectDataService {
       projectTextId: 'portfolio'
     },
     {
-      id: 'Coderr',
+      id: 'Quizly',
       type: 'Backend',
-      appImg: './assets/img/projects/project_coderr.png',
+      appImg: './assets/img/projects/project_quizly.png',
       background: './assets/img/projects/bg_notebook.jpg',
       devTools: [
         this.getSkillImgSrc('python', this.skillsDevBE),
@@ -160,13 +180,11 @@ export class ProjectDataService {
         this.getSkillImgSrc('sql', this.skillsDevBE),
         this.getSkillImgSrc('api', this.skillsDevBE),
         this.getSkillImgSrc('docker', this.skillsDevBE),
-        this.getSkillImgSrc('postman', this.skillsDevBE),
       ],
       desTools: [],
-      projectUrl: 'http://coderr.p-frey.com/',
-      projectGithub: 'https://github.com/PaFunzFr/Coderr-backend',
-      projectTextId: 'coderr',
-      projectDocumentation: 'http://coderr-api.p-frey.com/schema/swagger-ui'
+      projectUrl: '', // no demo avaliable
+      projectGithub: 'https://github.com/PaFunzFr/Quizly-backend',
+      projectTextId: 'quizly',
     },
     {
       id: 'Pokedex',
@@ -186,24 +204,7 @@ export class ProjectDataService {
       projectGithub: 'https://github.com/PaFunzFr/DA_Pokedex',
       projectTextId: 'pokedex'
     },
-    {
-      id: 'Quizly',
-      type: 'Backend',
-      appImg: './assets/img/projects/project_placeholder.png',
-      background: './assets/img/projects/bg_gaming.jpg',
-      devTools: [
-        this.getSkillImgSrc('python', this.skillsDevBE),
-        this.getSkillImgSrc('django', this.skillsDevBE),
-        this.getSkillImgSrc('pytest', this.skillsDevBE),
-        this.getSkillImgSrc('sql', this.skillsDevBE),
-        this.getSkillImgSrc('api', this.skillsDevBE),
-        this.getSkillImgSrc('docker', this.skillsDevBE),
-      ],
-      desTools: [],
-      projectUrl: '', // no demo avaliable
-      projectGithub: 'https://github.com/PaFunzFr/Quizly-backend',
-      projectTextId: 'quizly',
-    },
+
   ];
 
 }

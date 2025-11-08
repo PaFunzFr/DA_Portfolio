@@ -75,8 +75,8 @@ export class LanguageService {
       },
       contact: {
         title: 'Let´s get in touch',
-        text: `Interested in working with me? If you think I could be a good fit for your company or project, 
-        let me know! If I don't have all the tools you're looking for yet, don't hesitate to reach out. I'm eager to 
+        text: `If you think I could be a good fit for your company or project, 
+        let me know! If I don't have all the tools you're looking for, don't hesitate to reach out. I'm eager to 
         learn new technologies and put them into action successfully!`,
         sent: `Message was sent.`,
       },
@@ -315,12 +315,10 @@ export class LanguageService {
       },
       about: {
         title: 'Über mich',
-        text: `Meine Begeisterung für IT begleitet mich seit meiner Jugend. Nach mehreren Jahren in der Digitalisierung komplexer Bauprojekte habe ich erkannt,
-            dass meine Leidenschaft nicht in der Architektur, sondern in der Softwareentwicklung liegt.
-            Jetzt schlage ich bewusst und motiviert einen neuen Weg als Web-Entwickler ein.
-            Moderne Frontend-Technologien wie Angular mit nutzerzentriertem Design zu verbinden, begeistert mich.
-            Meine Erfahrung mit komplexen Zusammenhängen, durchdachten Konzepten und klarer Designsprache setze ich gezielt ein,
-            um intuitive, saubere und leistungsstarke Anwendungen zu entwickeln.`,
+        text: `Meine Leidenschaft für IT begleitet mich schon seit meiner Jugend. Nach mehreren Jahren in der Digitalisierung komplexer Bauprojekte
+              wurde mir klar, dass meine Passion nicht in der Architektur liegt - sondern in der Softwareentwicklung.<br><br>
+              Nun gehe ich einen neuen Weg als Webentwickler. Ich freue mich darauf, moderne Frontend-Technologien mit solider Backend-Logik zu kombinieren. 
+              Meine vielfältige Berufserfahrung befähigt mich, intuitive, saubere und leistungsstarke Anwendungen zu entwickeln.`,
       },
       skills: {
         title: 'Passender Skill nicht dabei?',
@@ -372,8 +370,8 @@ export class LanguageService {
       },
       contact: {
         title: 'Interessiert?',
-        text: `Interessiert an einer Zusammenarbeit? Wenn du der Meinung bist, dass ich gut in dein Unternehmen oder Projekt passe, 
-              freue ich mich, von dir zu hören! Sollten noch nicht alle gewünschten Kenntnisse vorhanden sein, ist das kein Problem – ich bin sehr motiviert, 
+        text: `Wenn du der Meinung bist, dass ich gut in dein Unternehmen oder Projekt passe, 
+              freue ich mich, von dir zu hören! Sollten nicht alle gewünschten Kenntnisse vorhanden sein, ist das kein Problem – ich bin stets motiviert, 
               neue Technologien zu erlernen und erfolgreich in die Praxis umzusetzen.`,
         sent: `Nachricht wurde versendet.`,
       },
